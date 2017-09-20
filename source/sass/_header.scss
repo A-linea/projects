@@ -1,0 +1,46 @@
+//@media (min-width: $screen-xs) {
+//
+// }
+
+/*@media (min-width: $screen-sm) {
+}*/
+/*
+@media (min-width: $screen-md) {
+}*/
+/*
+
+@media (min-width: $screen-lg) {
+}*/
+/*
+@media (min-width: $screen-xl) {
+
+}*/
+/*
+@media (min-width: $screen-xxl) {
+
+}*/
+.main-header {
+}
+.main-header__contacts {
+  background-color: #f0f2f4;
+}
+.main-header__contacts-container {
+  @include container();
+}
+.main-header__contacts-wrapper {
+  @include row();
+}
+.main-header__contacts-items {
+  @include make-col(4);
+  @include col-offset(xs, 8);
+}
+.main-header__contacts {
+  &-phone {
+    margin-left: 15px;
+  }
+  &-mail {
+    margin-left: 15px;
+    padding-right: 30px;
+  }
+}
+

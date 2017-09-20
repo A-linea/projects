@@ -3,10 +3,11 @@
 @import "global/normalize.scss";
 @import "global/fonts.scss";
 @import "global/page.scss";
-@import "global/variables.scss";
 @import "global/functions.scss";
-
+/*---------Other styles--------*/
 @import "mixins.scss";
 @import "print.scss";
 /*---------block styles--------*/
 @import "header";
+@import "variables";
+@import "footer";
