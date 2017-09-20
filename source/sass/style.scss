@@ -1,6 +1,7 @@
 //Aбсолютный путь: @import './source/scss/global/variables.scss';
 /*---------global styles--------*/
 @import "global/normalize.scss";
+@import "global/variables.scss";
 @import "global/fonts.scss";
 @import "global/page.scss";
 @import "global/functions.scss";
@@ -9,5 +10,4 @@
 @import "print.scss";
 /*---------block styles--------*/
 @import "header";
-@import "variables";
 @import "footer";

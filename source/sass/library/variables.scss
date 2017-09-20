@@ -1,9 +1,15 @@
 /// Базовые цвета https://colorscheme.ru/color-converter.html
 
 $black:                       hsl(0, 0%, 0%);
-$gray-darkest:                hsl(0, 0%, 12%);
+$gray-darkest:                hsl(0, 0%, 10%);
 $gray-darker:                 hsl(0, 0%, 20%);
+$gray-darken:                 hsl(0, 0%, 30%);
+$gray-dark:                   hsl(0, 0%, 40%);
 $gray:                        hsl(0, 0%, 50%);
+$gray-light:                  hsl(0, 0%, 60%);
+$gray-lighten:                hsl(0, 0%, 70%);
+$gray-lighter:                hsl(0, 0%, 80%);
+$gray-lightest:               hsl(0, 0%, 90%);
 $white:                       hsl(0, 0%, 100%);
 
 $color-main:                  hsl(208, 98%, 43%);
@@ -12,16 +18,17 @@ $color-danger:                hsl(2, 64%, 58%);
 $color-warning:               hsl(35, 84%, 62%);
 
 
+
 // Семантические цвета
 
 $text-color:                  $gray-darkest;
 $text-color--muted:           $gray;
 $body-bg:                     #fff;
 
-$link-color:                  #de2b24;
-$link-color--hover:           darken(#de2b24, 15%);
+$link-color:                  $color-main;
+$link-color--hover:           darken($color-main, 15%);
 
-$border-color:                $gray;
+$border-color:                $gray-light;
 
 
 
@@ -38,7 +45,9 @@ $font-size--small:            0.75em;
 
 $line-height:                 1.375em;
 
-$font-family:                 -apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'Arial', sans-serif;
+$font-family:                 -apple-system, BlinkMacSystemFont, 'Roboto', 'Ubuntu', 'Droid Sans', 'Helvetica Neue', 'Arial', sans-serif;
+$font-family--serif:          'Georgia', 'Times New Roman', 'Times', serif;
+$font-family--monospace:      'Menlo', 'Monaco', 'Consolas', 'Liberation Mono', 'Courier New', monospace;
 $font-family--headings:       $font-family;
 
 

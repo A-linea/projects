@@ -7,13 +7,14 @@ html {
 }
 
 body {
+  background-color: $white;
+  color: $text-color;
+  font-family: $font-family;
+  font-size: $font-size;
+  font-weight: 400;
+  line-height: $line-height;
   margin: 0;
   padding: 0;
-/*   font-family: $font;
-  font-size: $font-size;
-  line-height: $line-height;
-  color: $font-color;
-  background-color: $white; */
 }
 
 figure {
@@ -30,6 +31,7 @@ blockquote {
 }
 
 img {
-  max-width: 100%;
   height: auto;
+  max-width: 100%;
 }
+

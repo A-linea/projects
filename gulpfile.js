@@ -4,9 +4,9 @@ var gulp = require('gulp');  // Подключаем Gulp
 var sass = require('gulp-sass');   //Подключаем Sass пакет
 var plumber = require('gulp-plumber');//Подключаем plumber для слежения за ошибками
 var postcss = require('gulp-postcss');
+var rigger = require('gulp-rigger') //Позволяет include HTML
 var autoprefixer = require('autoprefixer');  // Подключаем библиотеку для автоматического добавления префиксов
-var pug = require('gulp-pug');  //Подключаем препроцессор для HTML - pug(jade)  
-var server = require('browser-sync'); // Подключаем Browser Sync
+var server = require('browser-sync').create(); // Подключаем Browser Sync
 var mqpacker = require('css-mqpacker');
 var minify = require('gulp-csso');  // Подключаем gulp-csso (для сжатия и минификации css)
 var imagemin = require('gulp-imagemin');  // Подключаем библиотеку для работы с изображениями
@@ -17,7 +17,7 @@ var uglify = require('gulp-uglify');  // Подключаем gulp-uglify (дл�
 var del = require('del');  // Подключаем библиотеку для удаления файлов и папок
 var run = require('run-sequence'); //Плагин позволяющий последовательно запускать задачи (работа gulp по умолчанию асинхронно)
 var concat = require('gulp-concat');  // Подключаем gulp-concat (для конкатенации файлов)
-var cache = require('gulp-cache');
+var cache = require('gulp-cache'); //Используем для кеширования повторяющихся изображений
 
 /* ------------ Delete build folder ------------- */
 
@@ -35,11 +35,9 @@ gulp.task('clear', function() {
 
 gulp.task('copy', function() {
   return gulp.src([
-    'source/fonts/**/*.{woff, woff2}',
+    'source/fonts/**/*.{woff,woff2}',
     'source/img/**'
-   /*  'source/js/**',
-    'source/*.html' */
-  ], {
+    ], {
     base: 'source'
   })
   .pipe(gulp.dest('build'));
@@ -66,15 +64,14 @@ gulp.task('style', function() {
   .pipe(server.stream()); //Перезапускаем сборку при изменении файлов *.scss
 });
 
-/* ------------ Pug compile ------------- */
-gulp.task('html', function buildHTML() {
-  return gulp.src('source/template/*.pug')
-    .pipe(plumber())
-    .pipe(pug({
-      pretty: true
-    }))
-    .pipe(gulp.dest('build'))
-    .pipe(server.stream());
+/* ------------ HTML compile ------------- */
+
+gulp.task('html', function () {
+  gulp.src('source/template/*.html') //Выберем файлы по нужному пути
+  .pipe(plumber())
+  .pipe(rigger())
+  .pipe(gulp.dest('build')) //Выплюнем их в папку build
+  .pipe(server.stream()); //И перезагрузим наш сервер для обновлений
 });
 
 /* ------------ Scripts compile ------------- */
@@ -133,9 +130,9 @@ gulp.task('symbols', function() {    // Создаем task для создан�
   }))
   .pipe(rename('sprite.svg'))
   .pipe(gulp.dest('build/img'));
-});                
+});                   
 
-/* ------------ Server ------------- */
+/* ------------ Server settings ------------- */
 
 gulp.task('serve', function() {
   server.init({
@@ -145,11 +142,11 @@ gulp.task('serve', function() {
     logPrefix: 'Alinea'
   });
   gulp.watch('source/sass/**/*.{scss,sass}', ['style']);  // Наблюдение за scss/sass файлами в папке sass
-  gulp.watch('source/template/*.pug', ['html']);
+  gulp.watch('source/template/**/*.html', ['html']);
   gulp.watch('source/js/*.js', ['script']);
 });
 
-/* ------------ Build ------------- */
+/* ------------ Build settings ------------- */
 
 gulp.task('build', function(fn) {
   run(

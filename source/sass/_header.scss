@@ -20,27 +20,36 @@
 
 }*/
 .main-header {
-}
-.main-header__contacts {
-  background-color: #f0f2f4;
-}
-.main-header__contacts-container {
-  @include container();
-}
-.main-header__contacts-wrapper {
-  @include row();
-}
-.main-header__contacts-items {
-  @include make-col(4);
-  @include col-offset(xs, 8);
-}
-.main-header__contacts {
-  &-phone {
+  &__contacts {
+    background-color: #f0f2f4;    
+  }
+  &__contacts-container {
+    @include container();
+  }
+  &__contacts-wrapper {
+    @include row();  
+  }
+  &__contacts-items {
+    @include make-col(4);
+    @include col-offset(xs, 8);
+    padding-left: 40px;
+  }
+  &__contacts-phone {
     margin-left: 15px;
   }
-  &-mail {
+  &__contacts-mail {
     margin-left: 15px;
     padding-right: 30px;
+    position: relative;
+  }
+  &__contacts-fb {
+    fill: #185baa;
+    &:hover {
+      fill: darken(#185baa, 10%);
+      transition: $transition-time;
+    }
   }
 }
+
+
 
