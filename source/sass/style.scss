@@ -4,19 +4,27 @@
 @import "global/variables.scss";
 @import "global/fonts.scss";
 @import "global/page.scss";
-@import "global/functions.scss";
+@import "global/sprite.scss";
+/*@import "global/functions.scss";*/
 @import "global/btn.scss";
 /*---------Other styles--------*/
 @import "mixins.scss";
 @import "print.scss";
-/*----------------block styles----------------*/
+/*--------------------block styles--------------------*/
+
 /*----------Header----------*/
 @import "header";
 /*----------Main navigation----------*/
 @import "main-nav";
 /*----------Promo section----------*/
 @import "promo";
-/*----------Some section----------*/
-
-/*----------Footer----------*/
+/*----------About section----------*/
+@import "about";
+/*----------Approach section----------*/
+@import "approach";
+/*----------Work section----------*/
+@import "work";
+/*----------Application section----------*/
+@import "application";
+/*----------Footer section----------*/
 @import "footer";

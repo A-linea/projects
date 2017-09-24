@@ -1,0 +1,32 @@
+.work  {
+  background-color: $accent-color;
+  color: white;
+  &__container {
+    @include container();
+    padding-top: 50px;
+  }
+  &__title-wrapper {
+    text-align: center;
+    position: relative;
+    &::after {
+      content: '';
+      border-bottom: 5px solid white;
+      width: 50px;
+      height: 4px;
+      bottom: -15px;
+      @include centerer-x;
+    }
+  }
+  &__title {
+    font-size: $font-size--h2;
+  }
+  &__title-text {
+    font-size: 20px;
+  }
+  &__list {
+    @include row();
+  }
+  &__item {
+    @include make-col(3)
+  }
+}

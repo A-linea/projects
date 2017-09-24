@@ -1,6 +1,6 @@
 {
   "name": "a-linea",
-  "version": "0.7.0",
+  "version": "0.9.6",
   "private": true,
   "description": "Main template for projects",
   "author": "Yevhen Dmitrievskiy",
@@ -23,6 +23,7 @@
     "gulp-svgmin": "^1.2.4",
     "gulp-svgstore": "^6.1.0",
     "gulp-uglify": "^3.0.0",
+    "gulp.spritesmith": "^6.5.1",
     "run-sequence": "^2.1.0"
   },
   "scripts": {

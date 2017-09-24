@@ -10,8 +10,9 @@ var server = require('browser-sync').create(); // Подключаем Browser S
 var mqpacker = require('css-mqpacker');
 var minify = require('gulp-csso');  // Подключаем gulp-csso (для сжатия и минификации css)
 var imagemin = require('gulp-imagemin');  // Подключаем библиотеку для работы с изображениями
+var spritesmith = require('gulp.spritesmith'); //Библиотека спрайтов из png
 var rename = require('gulp-rename');  // Подключаем библиотеку для переименования файлов
-var svgstore = require('gulp-svgstore');
+var svgstore = require('gulp-svgstore');//Создание sprite из svg
 var svgmin = require('gulp-svgmin'); //Подключаем плагин для минификации svg
 var uglify = require('gulp-uglify');  // Подключаем gulp-uglify (для сжатия и минификации JS)
 var del = require('del');  // Подключаем библиотеку для удаления файлов и папок
@@ -119,13 +120,25 @@ gulp.task('images', function() {  // Создаем task для изображе
   ])))
   .pipe(gulp.dest('build/img'));                    // выгружаем все в папку назначения
 });
+/* ------------ png sprite ------------- */
+gulp.task('sprite', function(cb) {
+  var spriteData = gulp.src('source/img/icons_png/*.png')
+  .pipe(spritesmith({
+    imgName: 'sprite.png',
+    imgPath: 'build/img/sprite.png', 
+    cssName: 'sprite.scss'
+  }));
+  spriteData.img.pipe(gulp.dest('build/img/'));
+  spriteData.css.pipe(gulp.dest('source/sass/global/'));
+  cb();
+}); 
 
 /* ------------ svg ------------- */
 
 gulp.task('symbols', function() {    // Создаем task для создания спрайтов из svg
-  return gulp.src('source/img/icons/*.svg')
+  return gulp.src('source/img/icons_svg/*.svg')
   .pipe(svgmin())
-  .pipe(gulp.dest('build/img/icons'))
+  .pipe(gulp.dest('build/img/icons_svg'))
   .pipe(svgstore({
     inlineSvg: true
   }))
@@ -159,7 +172,8 @@ gulp.task('build', function(fn) {
     'style',
     'script',
     'images',
-    'symbols', 
+    'symbols',
+    'sprite', 
     fn
   );
 });

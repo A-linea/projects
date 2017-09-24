@@ -1,21 +1,17 @@
-//@media (min-width: $screen-xs) {
-//
-// }
+.main__footer {
+  background-color: #2a2a2a;
+  color: white;
+}
 
-/*@media (min-width: $screen-sm) {
-}*/
-/*
-@media (min-width: $screen-md) {
-}*/
-/*
 
-@media (min-width: $screen-lg) {
-}*/
-/*
-@media (min-width: $screen-xl) {
 
-}*/
-/*
-@media (min-width: $screen-xxl) {
 
-}*/
+
+.footer__copyright {
+  background-color: #515151;
+  text-align: center;
+  &-link {
+    display: inline-block;
+    vertical-align: top;
+  }
+}
