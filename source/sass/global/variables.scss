@@ -4,6 +4,7 @@ $black:                       hsl(0, 0%, 0%);
 $gray-darkest:                hsl(0, 0%, 12%);
 $gray-darker:                 hsl(0, 0%, 20%);
 $gray:                        hsl(0, 0%, 50%);
+$gray-lighten:                hsl(0, 0%, 80%);
 $white:                       hsl(0, 0%, 100%);
 
 $color-main:                  hsl(208, 98%, 43%);
@@ -17,9 +18,10 @@ $color-warning:               hsl(35, 84%, 62%);
 $text-color:                  $gray-darkest;
 $text-color--muted:           $gray;
 $body-bg:                     #fff;
+$accent-color:                #de2b24;
 
-$link-color:                  #de2b24;
-$link-color--hover:           darken(#de2b24, 15%);
+$link-color:                  $gray-darkest;
+$link-color--hover:           $accent-color;
 
 $border-color:                $gray;
 
@@ -82,3 +84,4 @@ $toggler-part-height:         3px;
 $toggler-part-bg-color:       #000;
 
 $z-index-modal:               100;
+

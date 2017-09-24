@@ -1,48 +1,62 @@
-//@media (min-width: $screen-xs) {
-//
-// }
-
-/*@media (min-width: $screen-sm) {
-}*/
-/*
-@media (min-width: $screen-md) {
-}*/
-/*
-
-@media (min-width: $screen-lg) {
-}*/
-/*
-@media (min-width: $screen-xl) {
-
-}*/
-/*
-@media (min-width: $screen-xxl) {
-
-}*/
 .main-header {
   &__contacts {
-    background-color: #f0f2f4;    
+    background-color: #f0f2f4;
+    border-bottom: 1px solid $gray-lighten;
   }
   &__contacts-container {
     @include container();
   }
   &__contacts-wrapper {
-    @include row();  
+    @include row();
+    @include outline();
   }
   &__contacts-items {
     @include make-col(4);
     @include col-offset(xs, 8);
+    @include outline();
     padding-left: 40px;
+    display: flex;
+    justify-content: space-around;
   }
-  &__contacts-phone {
-    margin-left: 15px;
-  }
+  &__contacts-phone,
   &__contacts-mail {
+    text-decoration: none;
+    color: $link-color;
+    padding-top: 8px;
     margin-left: 15px;
-    padding-right: 30px;
-    position: relative;
+    &:hover {
+      text-decoration: underline;
+    }
   }
+    &__contacts-phone {
+      position: relative;
+      &::before {
+        content: "";
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        top: 5px;
+        left: -20px;
+        background-image: url("../img/icons/ico-smartphone.svg");
+      }
+    }
+    &__contacts-mail {
+      position: relative;
+      padding-left: 20px;
+      &::before {
+        content: "";
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        top: 7px;
+        left: -5px;
+        background-image: url("../img/icons/ico-envelope.svg");
+      }
+    }
+
   &__contacts-fb {
+    padding-bottom: 0px;
+    padding-top: 3px;
     fill: #185baa;
     &:hover {
       fill: darken(#185baa, 10%);

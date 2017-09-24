@@ -123,8 +123,9 @@ gulp.task('images', function() {  // Создаем task для изображе
 /* ------------ svg ------------- */
 
 gulp.task('symbols', function() {    // Создаем task для создания спрайтов из svg
-  return gulp.src('source/img/ icons/*.svg')
+  return gulp.src('source/img/icons/*.svg')
   .pipe(svgmin())
+  .pipe(gulp.dest('build/img/icons'))
   .pipe(svgstore({
     inlineSvg: true
   }))

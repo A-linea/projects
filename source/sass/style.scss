@@ -5,9 +5,18 @@
 @import "global/fonts.scss";
 @import "global/page.scss";
 @import "global/functions.scss";
+@import "global/btn.scss";
 /*---------Other styles--------*/
 @import "mixins.scss";
 @import "print.scss";
-/*---------block styles--------*/
+/*----------------block styles----------------*/
+/*----------Header----------*/
 @import "header";
+/*----------Main navigation----------*/
+@import "main-nav";
+/*----------Promo section----------*/
+@import "promo";
+/*----------Some section----------*/
+
+/*----------Footer----------*/
 @import "footer";
