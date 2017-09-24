@@ -34,7 +34,7 @@
   &__services-2,
   &__services-3 {
     @include make-col(3);
-    @include col(xxl, 2, 12);
+    @include col(xxl, 4, 12);
     @include outline();
     margin-bottom: 40px;
     text-align: center;
