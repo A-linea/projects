@@ -1,10 +1,10 @@
-build/*
-design/
-source/design/
-.Saved/
-_arc/
+build/
 bower_components/
 node_modules/
+design/
+**/design/
+.Saved/
+_arc/
 .vscode/
 .DS_Store
 *.log
@@ -17,3 +17,4 @@ ex_files
 Thumbs.db
 __MACOSX
 package-lock.json
+
