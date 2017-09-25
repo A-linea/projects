@@ -1,0 +1,89 @@
+.approach {
+  background-color: #f3f3f3;
+  &__container {
+    @include container();
+    @include outline();
+    padding-top: 85px;
+    padding-bottom: 125px;
+    counter-reset: count;
+  }
+  &__title-wrapper {
+    text-align: center;
+    position: relative;
+    &::after {
+      content: '';
+      border-bottom: 5px solid black;
+      width: 50px;
+      height: 4px;
+      bottom: -15px;
+      @include centerer-x;
+    }
+  }
+  &__title {
+    font-size: $font-size--h2;
+    margin: 0;
+  }
+  &__title-text {
+    font-size: 20px;
+    margin: 0;
+  }
+  &__step {
+    @include row();
+    margin-top: 40px;
+    background-color: white;
+  }
+  &__image-wrapper {
+    @include make-col(4);
+    @include outline();
+    padding: 0;
+    position: relative;
+  }
+  &__box {
+    @include centerer-y;
+    border: 2px solid white;
+    color: white;
+    left: 290px;
+    text-align: center;
+    border-radius: 3px;
+    width: 90px;
+    height: 90px;
+    background-color: $accent-color;
+    &::before {
+      content: counter(count);
+      counter-increment: count;
+      display: block;
+      font-family: 'Georgia';
+      font-size: 44px;
+    }
+    &--right {
+      left: 5px;
+    }
+  }
+  &__image {
+    max-width: 390px;
+    height: auto;
+    vertical-align: top;
+    &--right {
+      float: right;
+
+    }
+  }
+  &__text {
+    @include make-col(8);
+    @include outline();
+    padding: 0 45px;
+  }
+  &__step-title {
+    font-size: $font-size--h4;
+    &--right {
+      text-align: right;
+    }
+  }
+  &__step-text {
+    font-size: 14px;
+    line-height: 1.5;
+    &--right {
+      text-align: right;
+    }
+  }
+}
