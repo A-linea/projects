@@ -1,0 +1,10 @@
+// миксин для подсветки блоков
+$outline-color: firebrick;
+$outline-width: 1px;
+$outline-style: solid;
+
+@mixin outline  {
+  outline-width: $outline-width;
+  outline-style: solid;
+  outline-color: $outline-color;
+}
