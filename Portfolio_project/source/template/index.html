@@ -18,10 +18,20 @@
 	<meta name="apple-mobile-web-app-status-bar-style" content="#000">
   <link rel="stylesheet" href="css/style.min.css">
   <link rel="stylesheet" href="css/libs.min.css">
-   
-  <title>Template</title>
+  <title>Portfolio</title>
 </head>
 <body>
+  <div class="loader">
+    <div class="loader-outter"></div>
+    <div class="loader-inner"></div>
+  </div>
+  <noscript>
+    <style>
+      html, body { opacity: 1 !important; }
+      .loader-outter, .loader-inner { display: none !important; }
+    </style>
+  </noscript>
+ 
   //= blocks/header.html
   <!--Content start-->
   //= blocks/promo.html
@@ -33,4 +43,5 @@
 </body>
 <script defer src="js/libs.min.js"></script>
 <script defer src="js/common.min.js"></script>
+
 </html>

@@ -1,5 +1,6 @@
 html {
   box-sizing: border-box;
+
 }
 
 *, *:before, *:after {
@@ -7,7 +8,7 @@ html {
 }
 
 body {
-  background-color: $white;
+  background-color: $gray-darken;
   color: $text-color;
   font-family: $font-family;
   font-size: $font-size;
@@ -49,5 +50,79 @@ img {
 .clearfix:before,
 .clearfix:after {
     content: " ";
-    display: table; 
+    display: table;
+}
+
+@-webkit-keyframes loader-1-outter {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes loader-1-outter {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes loader-1-inner {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(-360deg);
+    transform: rotate(-360deg);
+  }
+}
+
+@keyframes loader-1-inner {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(-360deg);
+    transform: rotate(-360deg);
+  }
+}
+
+/*LOADER-1*/
+
+.loader-outter {
+  position: absolute;
+  border: 6px solid white;
+  border-left-color: transparent;
+  left: calc(50% - 30px);
+  top: calc(50% - 30px);
+  border-bottom: 0;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  -webkit-animation: loader-1-outter 1s cubic-bezier(.42, .61, .58, .41) infinite;
+  animation: loader-1-outter 1s cubic-bezier(.42, .61, .58, .41) infinite;
+}
+
+.loader-inner {
+  position: absolute;
+  border: 6px solid white;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  left: calc(50% - 20px);
+  top: calc(50% - 20px);
+  border-right: 0;
+  border-top-color: transparent;
+  -webkit-animation: loader-1-inner 1s cubic-bezier(.42, .61, .58, .41) infinite;
+  animation: loader-1-inner 1s cubic-bezier(.42, .61, .58, .41) infinite;
 }
