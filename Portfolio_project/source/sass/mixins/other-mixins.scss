@@ -3,8 +3,18 @@ $outline-color: firebrick;
 $outline-width: 1px;
 $outline-style: solid;
 
-@mixin outline  {
+@mixin outline()  {
   outline-width: $outline-width;
   outline-style: solid;
   outline-color: $outline-color;
+}
+@mixin centerer-x() {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+@mixin centerer-y() {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
 }

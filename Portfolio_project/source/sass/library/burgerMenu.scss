@@ -1,0 +1,123 @@
+.main-nav {
+  &__container {
+    @include  container();
+  }
+  &__wrapper  {
+
+  }
+  &__btn {
+    position: relative;
+    float: right;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    margin-top: 20px;
+    margin-right: 100px;
+    height: 80px;
+    width: 80px;
+    padding: 10px;
+    z-index: 200;
+  }
+
+  $w: 60px;
+  $h: 6px;
+  &__sandwich {
+    display: block;
+    bottom: 0;
+    height:$h*10;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    right: 0;
+    top: 0;
+    width:$w;
+
+    &--topper {
+      position: absolute;
+      display: block;
+      top: 10px;
+      width: $w;
+      height: $h;
+      background: #fff;
+      border: none;
+      border-radius: 4px 4px 4px 4px;
+      transition: transform 0.5s, top 0.2s;
+    }
+
+    &--bottom {
+      position: absolute;
+      display: block;
+      width: $w;
+      height: $h;
+      top: 25px;
+      background: #fff;
+      border: none;
+      border-radius: 4px 4px 4px 4px;
+      transition: transform 0.5s, top 0.2s;
+      transition-delay: 0.2s, 0s;
+    }
+
+    &--footer {
+      position: absolute;
+      display: block;
+      width: $w;
+      height: $h;
+      top: 40px;
+      background: #fff;
+      border: none;
+      border-radius: 4px 4px 4px 4px;
+      transition: all 0.5s;
+      transition-delay: 0.1s;
+    }
+  }
+  &__sandwich--active {
+    & .main-nav__sandwich--topper{
+      top: 25px;
+      transform: rotate(45deg);
+    }
+    & .main-nav__sandwich--bottom{
+      top: 25px;
+      transform: rotate(-45deg);
+    }
+    & .main-nav__sandwich--footer{
+      opacity: 0;
+      top: 0;
+      transform: rotate(180deg);
+    }
+  }
+  &__list--wrapper {
+    display: none;
+    right: 0;
+    top: 0;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 20;
+  }
+  &__list {
+    margin: 0;
+    margin-top: 10%;
+   /* transform: translatey(-50%);*/
+    padding: 0;
+    list-style: none;
+  }
+  &__link {
+    text-decoration: none;
+    text-transform: uppercase;
+    display: block;
+    width: 100%;
+    padding: 10px 0;
+    background-color: transparent;
+    font-size: 38px;
+    font-weight: 300;
+    color: $text-color;
+    letter-spacing: 10px;
+    text-align: center;
+    &:hover {
+      background-color: rgba(51, 51, 51, 0.4);
+    }
+  }
+
+}

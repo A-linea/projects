@@ -11,7 +11,7 @@
 	<link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-touch-icon-114x114.png">
 
 	<!-- Chrome, Firefox OS and Opera -->
-	<meta name="theme-color" content="#000">
+	<meta name="theme-color" content="gray">
 	<!-- Windows Phone -->
 	<meta name="msapplication-navbutton-color" content="#000">
 	<!-- iOS Safari -->
@@ -22,13 +22,14 @@
 </head>
 <body>
   <div class="loader">
+    <span class="loader-text">Loading...</span>
     <div class="loader-outter"></div>
     <div class="loader-inner"></div>
   </div>
   <noscript>
     <style>
       html, body { opacity: 1 !important; }
-      .loader-outter, .loader-inner { display: none !important; }
+      .loader, .loader-text, .loader-outter, .loader-inner { display: none !important; }
     </style>
   </noscript>
  

@@ -98,13 +98,34 @@ img {
 }
 
 /*LOADER-1*/
-
+.loader {
+  background-repeat: repeat;
+  background-position: 0 0;
+  background-image: none;
+  background-color: hsl(0, 0%, 20%);
+  background-attachment: scroll;
+  bottom: 0;
+  height: 100%;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 100%;
+  z-index: 9999;
+}
+.loader-text {
+  position: absolute;
+  color: hsl(0, 0%, 90%);
+  top: 54%;
+  left: 46.3%;
+  font-size: 38px;
+}
 .loader-outter {
   position: absolute;
   border: 6px solid white;
   border-left-color: transparent;
   left: calc(50% - 30px);
-  top: calc(50% - 30px);
+  top: calc(45% - 30px);
   border-bottom: 0;
   width: 80px;
   height: 80px;
@@ -120,7 +141,7 @@ img {
   width: 60px;
   height: 60px;
   left: calc(50% - 20px);
-  top: calc(50% - 20px);
+  top: calc(45% - 20px);
   border-right: 0;
   border-top-color: transparent;
   -webkit-animation: loader-1-inner 1s cubic-bezier(.42, .61, .58, .41) infinite;
