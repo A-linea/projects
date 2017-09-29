@@ -14,12 +14,13 @@
   &__title {
     @include col(xs, 4, 12);
     position: relative;
+    font-size: $font-size--h2;
     &::after {
       content: '';
       @include centerer-x();
-      width: 100px;
+      width: 140px;
       bottom: -10px;
-      border-bottom: 2px solid $color-main;
+      border-bottom: 1px solid $color-main;
     }
   }
 }

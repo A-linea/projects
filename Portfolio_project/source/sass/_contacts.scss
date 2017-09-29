@@ -1,6 +1,6 @@
-.main-footer {
-  background-color:  $color-main;
-  color: $text-color--reverse;
+.contacts {
+  background-color:  $text-color--reverse;
+  color: $color-main;
   padding-top: 50px;
   &__container {
     @include container();
@@ -20,7 +20,7 @@
       @include centerer-x();
       width: 140px;
       bottom: -10px;
-      border-bottom: 1px solid $text-color--reverse;
+      border-bottom: 1px solid $color-main;
     }
   }
 }

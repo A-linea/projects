@@ -14,19 +14,19 @@
   &__title {
     @include col(xs, 4, 12);
     position: relative;
+    font-size: $font-size--h2;
     &::after {
       content: '';
       @include centerer-x();
-      width: 100px;
-      bottom: -10px;
-      border-bottom: 2px solid $text-color--reverse;
+      width: 120px;
+      bottom: -8px;
+      border-bottom: 1px solid $text-color--reverse;
+      z-index: -50px;
     }
-
   }
-  &__text-wrapper {
+  &__content {
     @include row();
     justify-content: center;
-
   }
   &__text{
     @include col(xs, 4, 12);

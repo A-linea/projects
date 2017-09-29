@@ -1,4 +1,4 @@
-.main-footer {
+.tools {
   background-color:  $color-main;
   color: $text-color--reverse;
   padding-top: 50px;
@@ -18,7 +18,7 @@
     &::after {
       content: '';
       @include centerer-x();
-      width: 140px;
+      width: 90px;
       bottom: -10px;
       border-bottom: 1px solid $text-color--reverse;
     }
