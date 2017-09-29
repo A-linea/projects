@@ -12,21 +12,19 @@ $gray-lighter:                hsl(0, 0%, 80%);
 $gray-lightest:               hsl(0, 0%, 90%);
 $white:                       hsl(0, 0%, 100%);
 
-$color-main:                  $gray-lighter;
-$color-success:               hsl(120, 39%, 54%);
-$color-danger:                hsl(2, 64%, 58%);
-$color-warning:               hsl(35, 84%, 62%);
+$color-main:                  $gray-lightest;
+$color-second:                $gray-darkest;
 
 
 
 // Семантические цвета
 
 
-$text-color:                  $gray-lighter;
-$text-color--muted:           $gray;
+$text-color:                  $color-main;
+$text-color--reverse:         $gray-darker;
 
-$link-color:                  $color-main;
-$link-color--hover:           darken($color-main, 15%);
+$link-color:                  $gray-darker;
+$link-color--hover:           darken($color-main, 40%);
 
 $border-color:                $gray-light;
 
@@ -83,7 +81,7 @@ $field-padding-horizontal:    0.7em;
 
 $border-radius:               3px;
 $opacity:                     0.7;
-$transition-time:             0.3s;
+$transition-time:             0.4s;
 $shadow:                      0 4px 2px -2px rgba(0, 0, 0, 0.3);
 
 $menu-desktop-width:          $screen-xl;

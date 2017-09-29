@@ -1,0 +1,53 @@
+.about {
+  background-color: $color-main;
+  color: $text-color--reverse;
+  padding-top: 50px;
+  &__container {
+    @include container();
+    @include outline();
+  }
+  &__title-wrapper {
+    @include row();
+    text-align: center;
+    justify-content: center;
+  }
+  &__title {
+    @include col(xs, 4, 12);
+    position: relative;
+    &::after {
+      content: '';
+      @include centerer-x();
+      width: 100px;
+      bottom: -10px;
+      border-bottom: 2px solid $text-color--reverse;
+    }
+
+  }
+  &__text-wrapper {
+    @include row();
+    justify-content: center;
+
+  }
+  &__text{
+    @include col(xs, 4, 12);
+    /*@include outline();*/
+    position: relative;
+    &--left {
+      margin-right: 20px;
+      text-align: right;
+      &::after {
+        content: '';
+        @include centerer-y();
+        right: -20px;
+        width: 2px;
+        height: 70%;
+        background-color:  $text-color--reverse;
+      }
+    }
+    &--right {
+      margin-left: 20px;
+      text-align: left;
+    }
+  }
+
+}

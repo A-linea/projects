@@ -10,11 +10,14 @@
 @import "mixins.scss";
 @import "print.scss";
 //---------Libraries--------
-@import "library/burgerMenu";
+@import "library/mainNav";
 /*--------------------block styles--------------------*/
 
 /*----------Header----------*/
 @import "header";
+@import "promo";
+@import "about";
+@import "portfolio";
 /*----------Main navigation----------*/
 //@import "main-nav";
 //*----------Promo section----------*/

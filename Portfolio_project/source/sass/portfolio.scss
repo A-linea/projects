@@ -1,0 +1,25 @@
+.portfolio {
+  background-color:  $text-color--reverse;
+  color: $color-main;
+  padding-top: 50px;
+  &__container {
+    @include container();
+    @include outline();
+  }
+  &__title-wrapper {
+    @include row();
+    text-align: center;
+    justify-content: center;
+  }
+  &__title {
+    @include col(xs, 4, 12);
+    position: relative;
+    &::after {
+      content: '';
+      @include centerer-x();
+      width: 100px;
+      bottom: -10px;
+      border-bottom: 2px solid $color-main;
+    }
+  }
+}
