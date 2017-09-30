@@ -1,2 +1,113 @@
-.main__header {
+.main-header {
+  /*h1 {
+    text-transform: none;//исправить
+  }*/
+  min-height: 620px;
+  background-image: url("../img/header_bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  position: relative;
+  /*z-index: -3;*/
+  &::before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    background-color: #394b5f;
+    opacity: 0.75;
+  }
+  &__top-section {
+    background-image: url("../img/top_gradient.png");
+    background-repeat: repeat-x;
+    min-height: 160px;
+    padding-top: 10px;
+    position: relative;
+  }
+  &__container {
+    @include container();
+    @include outline();
+  }
+  &__wrapper {
+    @include row();
+    justify-content: space-between;
+
+  }
+  &__logo {
+    @include col(xl, 2, 12);
+    @include col(lg, 2, 12, 0);
+    @include col(md, 2, 12);
+    @include col(sm, 4, 12);
+    @include col(xs, 4, 12);
+    @include outline();
+    order: 1;
+    img {
+      width: 70px;
+      opacity: 0.9;
+    }
+  }
+  &__phone {
+    @include col(xl, 2, 12, 0);
+    @include col(lg, 3, 12, 0);
+    @include col(md, 8, 12);
+    @include col(sm, 8, 12);
+    @include col(xs, 8, 12);
+    @include outline();
+    font-family: 'Roboto','Helvetica Neue', 'Arial', sans-serif;
+    font-size: 14px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    font-weight: 700;
+    color: white;
+    text-align: left;
+    order: 2;
+    position: relative;
+  }
+}
+@media (min-width: $screen-sm) {
+  .main-header__top-section {
+    padding-top: 15px;
+  }
+  .main-header__phone {
+    text-align: right;
+    padding-right: 100px;
+    font-size: 16px;
+  }
+  .main-header__logo {
+    img {
+      width: 100px;
+    }
+  }
+}
+
+@media (min-width: $screen-md) {
+  .main-header__top-section {
+    padding-top: 25px;
+  }
+  .main-header__phone {
+    padding-right: 120px;
+  }
+}
+@media (min-width: $screen-lg) {
+  .main-header__top-section {
+    padding-top: 45px;
+  }
+  .main-header__phone {
+    text-align: center;
+    padding-right: 0;
+    order: 3;
+    font-size: 20px;
+  }
+  .main-header__logo {
+    order: 1;
+  }
+
+}
+@media (min-width: $screen-xl) {
+
+}
+@media (min-width: $screen-xxl) {
+
 }

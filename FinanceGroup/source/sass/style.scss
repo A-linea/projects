@@ -3,16 +3,17 @@
 @import "global/normalize.scss";
 @import "global/variables.scss";
 @import "global/fonts.scss";
+@import "mixins.scss";
 @import "global/page.scss";
 /*@import "global/functions.scss";*/
 @import "global/btn.scss";
 //---------Other styles--------*/
-@import "mixins.scss";
 @import "print.scss";
 /*--------------------block styles--------------------*/
 
 /*----------Header----------*/
 @import "header";
+@import "nav";
 /*----------Main navigation----------*/
 //@import "main-nav";
 //*----------Promo section----------*/

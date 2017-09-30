@@ -1,0 +1,122 @@
+.main-nav {
+  @include col(xl, 6, 12);
+  @include col(lg, 7, 12);
+  @include col(md, 1, 12);
+  padding-left: 140px;
+  order: 3;
+  display: none;
+
+  &__list {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  &__item {
+    margin-left: 10px;
+    &:nth-last-child {
+      margin-left: 0;
+    }
+  }
+  &__link {
+    color: white;
+    display: inline-block;
+    vertical-align: top;
+    font-size: 14px;
+    text-decoration: none;
+    padding: 13px 0;
+    transition: $transition-time;
+    &--active {
+      text-decoration: underline;
+      color: $link-color;
+    }
+    &:hover {
+      text-decoration: underline;
+      color: $link-color;
+    }
+  }
+
+  &__toggle {
+    display: inline-block;
+    height: 28px;
+    right: 15px;
+    padding-top: 10px;
+    position: absolute;
+    top: 0;
+    vertical-align: top;
+    width: 28px;
+  }
+}
+.main-nav__toggle {
+  span:after,
+  span:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 9px;
+  }
+  span:after {
+    top: 18px;
+  }
+  span {
+    position: relative;
+    display: block;
+  }
+  span,
+  span:after,
+  span:before {
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+    transition: all 0.3s;
+    backface-visibility: hidden;
+    border-radius: 2px;
+  }
+  &.on span{
+    background-color: transparent;
+    &::before {
+      transform: rotate(45deg) translate(-1px, 0px);
+    }
+    &::after {
+      transform: rotate(-45deg) translate(6px, -7px);
+    }
+  }
+}
+.main-nav__toggle + #menu {
+  opacity: 1;
+  visibility: visible;
+}
+
+@media (min-width: $screen-sm) {
+  .main-nav__toggle {
+    right: 30px;
+    padding-top: 12px;
+    height: 30px;
+    width: 30px;
+  }
+}
+
+
+@media (min-width: $screen-md) {
+  .main-nav__toggle {
+    right: 40px;
+    height: 35px;
+    width: 35px;
+  }
+
+}
+@media (min-width: $screen-lg) {
+  .main-nav {
+    display: inherit;
+    order: 2;
+  }
+  .main-nav__toggle {
+    display: none;
+  }
+}
+@media (min-width: $screen-xl) {
+
+}
+@media (min-width: $screen-xxl) {
+
+}
