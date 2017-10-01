@@ -22,26 +22,34 @@ $border-radius:               3px !default;
   user-select: none;
   text-align: center;
   font-size: 16px;
-  font-family: inherit;
+  font-family: 'PF CentroSlabProBold', 'Helvetica Neue', Arial;
   line-height: $line-height;
   text-decoration: none;
   text-transform: none;
-  color: $text-color;
+  color: $gray-darkest;
+  border: none;
+  border-bottom: 2px solid darken($color-main, 20%);
   border-radius: $border-radius;
-  background-color: $gray-lightest;
+  background-color: $color-main;
   background-image: none;
   cursor: pointer;
+  transition: $transition-time;
 
   &:hover,
   &:focus {
     text-decoration: none;
     color: $text-color;
-    background-color: darken($gray-lightest, 10%);
-    border-color: darken($gray-lighter, 12%);
+    background-color: lighten($color-main, 10%);
+    border-color: lighten($color-main, 12%);
+    border-bottom: 2px solid lighten($color-main, 10%);
   }
 
   &:active,
-  &:focus {
+  &:focus {text-decoration: none;
+    color: $text-color;
+    background-color: darken($color-main, 10%);
+    border-color: darken($color-main, 12%);
+    border-bottom: 2px solid darken($color-main, 30%);
 
   }
 

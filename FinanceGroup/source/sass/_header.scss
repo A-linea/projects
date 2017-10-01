@@ -2,7 +2,7 @@
   /*h1 {
     text-transform: none;//исправить
   }*/
-  min-height: 620px;
+  min-height: 420px;
   background-image: url("../img/header_bg.jpg");
   background-size: cover;
   background-repeat: no-repeat;
@@ -25,6 +25,7 @@
     min-height: 160px;
     padding-top: 10px;
     position: relative;
+    padding-bottom: 20px;
   }
   &__container {
     @include container();
@@ -65,6 +66,66 @@
     order: 2;
     position: relative;
   }
+  &__content {
+    @include container();
+    @include outline();
+    position: relative;
+  }
+  &__content-wrapper {
+    @include row();
+    @include outline();
+  }
+
+  &__title-wrapper {
+    @include col(xl, 8, 12);
+    @include col(lg, 7, 12);
+    @include col(md, 6, 12);
+    @include col(sm, 12, 12);
+    @include outline();
+    margin: auto;
+    padding: 0 20px;
+  }
+  &__title-centerer {
+     width: 280px;
+     margin: 0 auto;
+   }
+  &__title {
+    margin-bottom: 20px;
+    display: inline-block;
+    vertical-align: top;
+    color: white;
+    text-transform: none;
+    padding-bottom: 10px;
+    border-bottom: 5px solid $color-main;
+  }
+
+  &__list {
+    display: block;
+    padding: 0;
+    font-weight: 600;
+
+  }
+  &__item {
+    list-style: none;
+  }
+  &__item-link {
+    color: white;
+    margin-bottom: 10px;
+    display: block;
+    font-size: 16px;
+    text-decoration: none;
+    transition: $transition-time;
+    position: relative;
+    padding-left: 20px;
+    &::before {
+      @include centerer-y();
+      left: 0px;
+      @include triangle(right, $color-main, 6px);
+    }
+    &:hover {
+      text-decoration: underline;
+    }
+  }
 }
 @media (min-width: $screen-sm) {
   .main-header__top-section {
@@ -80,6 +141,10 @@
       width: 100px;
     }
   }
+  .main-header__title-centerer {
+    min-width: 380px;
+    margin: 0 auto;
+  }
 }
 
 @media (min-width: $screen-md) {
@@ -89,8 +154,18 @@
   .main-header__phone {
     padding-right: 120px;
   }
+  .main-header__title {
+    font-size: 36px;
+  }
+  .main-header__title-centerer {
+    min-width: 360px;
+    margin: 0 auto;
+  }
 }
 @media (min-width: $screen-lg) {
+  .main-header {
+    min-height: 620px;
+  }
   .main-header__top-section {
     padding-top: 45px;
   }
@@ -103,10 +178,55 @@
   .main-header__logo {
     order: 1;
   }
-
+  .main-header__title-centerer {
+    min-width: 100%;
+    margin: 0;
+  }
+  .main-header__title-wrapper {
+    margin: 0;
+  }
+  .main-header__title {
+    border-bottom: 7px solid $color-main;
+    font-size: 40px;
+    color: white;
+    display: inline-block;
+    margin-top: 120px;
+    text-transform: none;
+    vertical-align: top;
+  }
+  .main-header__item {
+    list-style: none;
+  }
+  .main-header__item-link {
+    color: white;
+    margin-bottom: 10px;
+    display: block;
+    font-size: 20px;
+    text-decoration: none;
+    transition: $transition-time;
+    position: relative;
+    padding-left: 30px;
+    &::before {
+      @include centerer-y();
+      left: 0px;
+      @include triangle(right, $color-main, 10px);
+    }
+    &:hover {
+      text-decoration: underline;
+    }
+  }
 }
 @media (min-width: $screen-xl) {
 
+  .main-header__title {
+    border-bottom: 7px solid $color-main;
+    color: white;
+    display: inline-block;
+    font-size: $font-size--h1;
+    margin-top: 120px;
+    text-transform: none;
+    vertical-align: top;
+  }
 }
 @media (min-width: $screen-xxl) {
 

@@ -1,0 +1,20 @@
+.about__container {
+  @include container();
+  @include outline();
+}
+.about__wrapper {
+  @include row();
+  @include outline();
+}
+.one {
+  @include col(md, 3, 12);
+  @include outline();
+}
+.two {
+  @include col(md, 3, 12);
+  @include outline();
+}
+.three {
+  @include col(md, 6, 12);
+  @include outline();
+}
