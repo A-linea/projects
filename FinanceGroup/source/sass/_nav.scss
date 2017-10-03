@@ -37,6 +37,7 @@
         text-decoration: underline;
         color: $link-color;
         background-color: #1c242c;
+        font-weight: 700;
       }
     &:hover {
       text-decoration: none;
@@ -119,7 +120,6 @@
   }
 }
 
-
 @media (min-width: $screen-md) {
   .main-nav__toggle {
     right: 40px;
@@ -131,7 +131,6 @@
     align-self: auto;
     width: auto;
   }
-
 }
 @media (min-width: $screen-lg) {
   .main-nav {

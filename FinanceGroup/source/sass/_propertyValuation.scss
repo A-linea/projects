@@ -39,7 +39,7 @@
 
   }
   &__content--top {
-    padding-top: 70px;
+    padding-top: 30px;
     min-height: 300px;
     background-image: url(../img/s1_gray_bg.png);
     background-repeat: no-repeat;
@@ -77,11 +77,10 @@
   }
   &__container {
     @include container();
-    @include outline();
+
   }
   &__options {
     @include row();
-    @include outline();
     position: relative;
     justify-content: space-between;
     &--top {
@@ -108,12 +107,11 @@
     @include col(lg, 3, 12);
     @include col(xl, 3, 12);
     @include col(xxl, 3, 12);
-    @include outline();
     list-style: none;
     margin: 0;
     padding: 0;
     margin-top: 30px;
-    border-bottom: 1px solid gray;
+
     a {
       color: $color-main;
       font-family: 'PF CentroSlabPro', 'Helvetica Neue', Arial;
@@ -124,6 +122,11 @@
         text-decoration: none;
       }
     }
+    p {
+      border-bottom: 1px solid hsla(214, 12%, 88%, 0.7);
+      margin-bottom: 0;
+      padding-bottom: 15px;
+    }
   }
   &__item--4,
   &__item--5 {
@@ -131,6 +134,7 @@
     @include col(lg, 5, 12);
     @include col(xl, 5, 12);
     @include col(xxl, 4, 12);
+    align-self: center;
   }
   &__btn-wrapper {
     @include col(xs, 12, 12);
@@ -162,6 +166,9 @@
   }
   .property__text {
     line-height: 1.6;
+  }
+  .property__content--top {
+    padding-top: 70px;
   }
   .property__content--triangle {
     &::before {
@@ -206,6 +213,10 @@
   .property__item {
     margin-bottom: 60px;
   }
+  .property__item-wrapper {
+    width: 210px;
+    margin: 0;
+  }
   .property__item--1,
   .property__item--3,
   .property__item--7{
@@ -223,6 +234,7 @@
   padding-bottom: 40px;
   }
   .property__image {
+    display: block;
     position: relative;
     img {
       margin: 0;
@@ -251,6 +263,18 @@
       height: 74px;
     }
   }
+  .property__item-wrapper {
+    width: 200px;
+    margin: 0 auto;
+    &--right {
+      margin: 0;
+      margin-left: auto;
+    }
+    &--left {
+      margin: 0;
+      margin-right: auto;
+    }
+  }
   .property__image {
     img {
       width: 170px;
@@ -271,6 +295,9 @@
        height: 83px;
     }
   }
+  .property__item-wrapper {
+    width: 240px;
+  }
   .property__image {
     img {
       width: 170px;
@@ -283,6 +310,9 @@
     &::before {
       height: 55px;
     }
+  }
+  .property__item-wrapper {
+    width: 280px;
   }
   .property__image {
     img {

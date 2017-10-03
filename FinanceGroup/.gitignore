@@ -18,3 +18,5 @@ Thumbs.db
 __MACOSX
 package-lock.json
 .gitignore
+.stylelintrc
+

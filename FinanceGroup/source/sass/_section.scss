@@ -1,7 +1,6 @@
 .section {
   padding-top: 30px;
   background-color: #f9f9f9;
-  color: black;
   position: relative;
   &::before {
     content: '';
@@ -17,13 +16,71 @@
     background-color: $gray-lightest;
     text-align: center;
   }
+  &__title {
+    font-size: $font-size--h5;
+    text-align: center;
+    position: relative;
+    padding-bottom: 5px;
+    &::after {
+      content: '';
+      @include centerer-x();
+      bottom: -10px;
+      height: 3px;
+      width: 90px;
+      background-color: $color-main;
+    }
+  }
+  &__text-wrapper {
+    width: 320px;
+    margin: 0 auto;
+    padding: 0 20px;
+    margin-top: 25px;
+  }
+  &__text {
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    a {
+      text-decoration: underline;
+      color: $link-color;
+      font-weight: 700;
+      &:hover {
+        transition: $transition-time;
+        text-decoration: none;
+      }
+    }
+  }
 }
 @media (min-width: $screen-sm) {
-
+  .section__title {
+    font-size: $font-size--h3;
+    &::after {
+      height: 4px;
+      width: 150px;
+    }
+  }
+  .section__text-wrapper {
+    width: 460px;
+  }
+  .section__text {
+    line-height: 1.6;
+  }
 }
 @media (min-width: $screen-md) {
   .section {
     padding-top: 60px;
+  }
+  .section__title {
+    font-size: $font-size--h2;
+    &::after {
+      bottom: -20px;
+      height: 4px;
+      width: 190px;
+    }
+  }
+  .section__text-wrapper {
+    width: 740px;
+    margin-top: 40px;
   }
 
 }
@@ -31,6 +88,10 @@
 @media (min-width: $screen-lg) {
   .section {
     padding-top: 80px;
+  }
+  .section__text-wrapper {
+    margin-top: 45px;
+    width: 1010px;
   }
 
 }
