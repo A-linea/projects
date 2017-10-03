@@ -1,43 +1,5 @@
 
 .property {
-
-  &__title {
-    font-size: $font-size--h5;
-    text-align: center;
-    position: relative;
-    padding-bottom: 5px;
-    &::after {
-      content: '';
-      @include centerer-x();
-      bottom: -10px;
-      height: 3px;
-      width: 90px;
-      background-color: $color-main;
-    }
-  }
-  &__text-wrapper {
-    width: 320px;
-    margin: 0 auto;
-    padding: 0 20px;
-    margin-top: 25px;
-  }
-  &__text {
-    text-align: center;
-    margin: 0;
-    padding: 0;
-    a {
-      text-decoration: underline;
-      color: $link-color;
-      font-weight: 700;
-      &:hover {
-        transition: $transition-time;
-        text-decoration: none;
-      }
-    }
-  }
-  &__content{
-
-  }
   &__content--top {
     padding-top: 30px;
     min-height: 300px;
