@@ -1,0 +1,48 @@
+.advantages {
+  &__title {
+    text-align: center;
+    font-size: $font-size--h3;
+    padding: 0 20px;
+    a {
+      text-decoration: underline;
+      color: $link-color;
+      &:hover {
+        transition: $transition-time;
+        text-decoration: none;
+      }
+    }
+  }
+  &__btn-wrapper {
+  @include col(xs, 12, 12);
+  background-color: $gray-lightest;
+}
+  &__btn-centerer {
+  margin: 30px auto;
+  width: 220px;
+}
+  &__btn {
+  width: 100%;
+  height: 40px;
+  font-weight: 700;
+  }
+}
+@media (min-width: $screen-sm) {
+
+}
+@media (min-width: $screen-md) {
+  .advantages__btn-centerer {
+    width: 240px;
+  }
+  .advantages__btn {
+    height: 50px;
+  }
+}
+@media (min-width: $screen-lg) {
+
+}
+@media (min-width: $screen-xl) {
+
+}
+@media (min-width: $screen-xxl) {
+
+}
