@@ -7,6 +7,7 @@
 @import "global/page.scss";
 /*@import "global/functions.scss";*/
 @import "global/btn.scss";
+
 //---------Other styles--------*/
 @import "print.scss";
 /*--------------------block styles--------------------*/
@@ -15,11 +16,14 @@
 @import "header";
 @import "nav";
 @import "section";
+@import "card";
 @import "form";
 @import "propertyValuation";
 @import "deals";
 @import "accountingService";
 @import "advantages";
+@import "work";
+
 @import "about";
 /*----------Main navigation----------*/
 //@import "main-nav";

@@ -12,6 +12,85 @@
       }
     }
   }
+  &__container {
+    @include container();
+  }
+  &__cards {
+    @include row();
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    justify-content: center;
+
+  }
+  &__card-wrapper {
+    @include col(xs, 12, 12);
+    @include col(sm, 12, 12);
+    @include col(md, 6, 12);
+    @include col(lg, 4, 14);
+    @include col(xl, 3, 12);
+    @include col(xxl, 4, 20);
+    margin-top: 10px;
+    perspective: 550px;
+
+  }
+  &__item {
+    margin: 0 auto;
+    padding: 0 5px;
+    padding-top: 170px;
+    border-bottom: 4px solid hsl(240, 100%, 4%);
+    position: relative;
+    transition: $transition-time;
+    &:hover {
+      border-bottom: 4px solid $color-main;
+    }
+    &::before {
+      content: '';
+      @include centerer-x();
+      top: 15%;
+      @include circle(120px, $color-main);
+    }
+    &--discount {
+      ::after {
+        content: '';
+        @include centerer-x();
+        top: 26%;
+        height: 35px;
+        width: 92px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-image: url(../img/icons_svg/section_4/1.svg);
+      }
+    }
+    &--team {
+      ::after {
+        content: '';
+        @include centerer-x();
+        top: 26%;
+        height: 50px;
+        width: 78px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-image: url(../img/icons_svg/section_4/2.svg);
+      }
+    }
+    &--speed {
+      ::after {
+        content: '';
+        @include centerer-x();
+        top: 21.5%;
+        height: 73px;
+        width: 74px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-image: url(../img/icons_svg/section_4/3.svg);
+      }
+    }
+
+
+  }
+
   &__btn-wrapper {
   @include col(xs, 12, 12);
   background-color: $gray-lightest;
@@ -36,8 +115,23 @@
   .advantages__btn {
     height: 50px;
   }
+  .advantages__card-wrapper {
+    margin-top: 30px;
+  }
 }
 @media (min-width: $screen-lg) {
+  .advantages__item {
+    margin: 0;
+    &--discount {
+      margin-left: auto;
+    }
+    &--team {
+      margin: 0 auto;
+    }
+  }
+  .advantages__cards {
+    justify-content: center;
+  }
 
 }
 @media (min-width: $screen-xl) {

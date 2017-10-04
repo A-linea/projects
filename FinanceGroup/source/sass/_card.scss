@@ -1,0 +1,48 @@
+.card {
+  width: 260px;
+  margin: 0 auto;
+  min-height: 370px;
+  background-color: white;
+  font-family: "Raleway", 'Helvetica Neue', sans-serif;
+  font-weight: 400;
+  h4 {
+    font-size: $font-size--h4;
+    font-family: "Raleway", 'Helvetica Neue', sans-serif;
+    color: $gray-lightest;
+    font-weight: 700;
+  }
+  b {
+    color: $color-main;
+  }
+  &--darkblue {
+    background-color: hsl(213, 25%, 23%);
+    color: white;
+  }
+  &--gray {
+    background-color: $gray-lightest;
+  }
+  &--off {
+    transform: rotateY(120deg);
+
+    opacity: 0;
+  }
+  &--on {
+    transition: all 1s ease !important;
+    opacity: 1;
+  }
+}
+@media (min-width: $screen-sm) {
+
+}
+@media (min-width: $screen-md) {
+
+}
+@media (min-width: $screen-lg) {
+
+}
+@media (min-width: $screen-xl) {
+
+}
+@media (min-width: $screen-xxl) {
+
+}
