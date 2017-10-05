@@ -1,0 +1,46 @@
+{
+  "name": "a-linea",
+  "version": "1.0.0",
+  "private": true,
+  "description": "BeautySalon",
+  "author": "Yevhen Dmitrievskiy",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^7.1.4",
+    "browser-sync": "^2.18.13",
+    "css-mqpacker": "^6.0.1",
+    "del": "^3.0.0",
+    "gulp": "^3.9.1",
+    "gulp-cache": "^0.4.6",
+    "gulp-concat": "^2.6.1",
+    "gulp-csso": "^3.0.0",
+    "gulp-imagemin": "^3.3.0",
+    "gulp-plumber": "^1.1.0",
+    "gulp-postcss": "^7.0.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-rigger": "^0.5.8",
+    "gulp-sass": "^3.1.0",
+    "gulp-stylefmt": "^1.1.0",
+    "gulp-svgmin": "^1.2.4",
+    "gulp-svgstore": "^6.1.0",
+    "gulp-uglify": "^3.0.0",
+    "gulp.spritesmith": "^6.5.1",
+    "run-sequence": "^2.1.0",
+    "stylelint": "8.1.x",
+    "stylelint-config-htmlacademy": "0.1.x"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "gulp build",
+    "start": "npm run build && gulp serve"
+  },
+  "dependencies": {
+    "fotorama": "^4.6.4",
+    "install": "^0.10.1",
+    "jquery": "^3.2.1",
+    "magnific-popup": "^1.1.0",
+    "npm": "^5.4.2",
+    "owl.carousel": "^2.2.0",
+    "waypoints": "^4.0.1"
+  }
+}
