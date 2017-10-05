@@ -1,0 +1,132 @@
+.support {
+  &__title {
+    text-align: center;
+    font-size: $font-size--h3;
+    padding: 0 20px;
+    a {
+      text-decoration: underline;
+      color: $link-color;
+      &:hover {
+        transition: $transition-time;
+        text-decoration: none;
+      }
+    }
+  }
+  &__container {
+    @include container();
+  }
+  &__cards {
+    @include row();
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    justify-content: center;
+    padding-bottom: 40px;
+
+  }
+  &__card-wrapper {
+    @include col(xs, 12, 12);
+    @include col(sm, 12, 12);
+    @include col(md, 6, 12);
+    @include col(lg, 4, 14);
+    @include col(xl, 3, 12);
+    @include col(xxl, 4, 20);
+
+    margin-top: 10px;
+    perspective: 550px;
+  }
+  &__text {
+    margin-top: 50px;
+    font-weight:700;
+    font-size: 16px;
+  }
+  &__phone {
+    font-family: 'Roboto';
+    font-weight: 700;
+  }
+  &__item {
+    margin: 0 auto;
+    padding: 0 5px;
+    padding-top: 170px;
+    border-bottom: 4px solid $gray-light;
+    position: relative;
+    transition: $transition-time;
+    &:hover {
+      border-bottom: 4px solid $color-main;
+    }
+    &::before {
+      content: '';
+      @include centerer-x();
+      top: 15%;
+      @include circle(120px, $color-main);
+    }
+    &--photo-1 {
+      ::after {
+        content: '';
+        @include centerer-x();
+        top: 26%;
+        height: 35px;
+        width: 92px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-image: url(../img/icons_svg/section_4/1.svg);
+      }
+    }
+    &--photo-2 {
+      ::after {
+        content: '';
+        @include centerer-x();
+        top: 26%;
+        height: 50px;
+        width: 78px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-image: url(../img/icons_svg/section_4/2.svg);
+      }
+    }
+    &--photo-3 {
+      ::after {
+        content: '';
+        @include centerer-x();
+        top: 21.5%;
+        height: 73px;
+        width: 74px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-image: url(../img/icons_svg/section_4/3.svg);
+      }
+    }
+
+  }
+}
+@media (min-width: $screen-sm) {
+
+}
+@media (min-width: $screen-md) {
+
+  .support__card-wrapper {
+    margin-top: 30px;
+  }
+}
+@media (min-width: $screen-lg) {
+  .support__item {
+    margin: 0;
+    &--discount {
+      margin-left: auto;
+    }
+    &--team {
+      margin: 0 auto;
+    }
+  }
+  .support__cards {
+    justify-content: center;
+  }
+
+}
+@media (min-width: $screen-xl) {
+
+}
+@media (min-width: $screen-xxl) {
+
+}

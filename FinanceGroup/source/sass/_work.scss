@@ -14,7 +14,6 @@
   }
   &__container {
     @include container();
-    @include outline();
     color: white;
     font-family: 'PF CentroSlabPro';
     font-weight: 400;
@@ -23,7 +22,6 @@
   }
   &__arrows {
     @include row();
-    @include outline();
     list-style: none;
     margin: 50px 0;
     padding: 0;
@@ -35,9 +33,7 @@
     @include col(lg, 3, 12, 0);
     @include col(xl, 3, 12, 0);
     @include col(xxl, 3, 12, 0);
-    @include outline();
     margin: 0;
-
     padding: 0;
 
 
@@ -48,6 +44,14 @@
     display: inline-block;
     vertical-align: top;
     position: relative;
+    transition: all 0.5s ease;
+    &:hover {
+      transform: scale(1.10);
+      path {
+        fill-opacity: 0 !important;
+        stroke-opacity: 1 !important;
+      }
+    }
   }
   &__content {
     position: relative;

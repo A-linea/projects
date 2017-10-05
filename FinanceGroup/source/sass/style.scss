@@ -5,6 +5,7 @@
 @import "global/fonts.scss";
 @import "mixins.scss";
 @import "global/page.scss";
+@import "library/owlTheme";
 /*@import "global/functions.scss";*/
 @import "global/btn.scss";
 
@@ -23,6 +24,9 @@
 @import "accountingService";
 @import "advantages";
 @import "work";
+@import "ourSupport";
+@import "reviews";
+@import "awards";
 
 @import "about";
 /*----------Main navigation----------*/

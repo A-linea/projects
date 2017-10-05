@@ -1,3 +1,4 @@
+/*
 .about__container {
   @include container();
   @include outline();
@@ -17,4 +18,16 @@
 .three {
   @include col(md, 6, 12);
   @include outline();
+}*/
+.one,
+.two,
+.three {
+  height: 300px;
+  width: 300px;
+  background: #b22222;
+  margin: 30px 30px;
+  display: inline-block;
+  text-align: center;
+  font-size: 60px;
+  color: #bdbdbd;
 }

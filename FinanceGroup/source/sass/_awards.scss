@@ -1,0 +1,157 @@
+.awards {
+
+  &__container {
+    @include container();
+    @include outline();
+  }
+  &__content {
+    @include row();
+    @include outline();
+    padding-bottom: 30px;
+  }
+  &__content-wrapper {
+    @include col(sm, 12, 12);
+    @include col(md, 6, 12);
+    @include col(lg, 7, 12);
+    @include col(xl, 8, 12);
+    @include col(xxl, 8, 12);
+    @include outline();
+  }
+  &__title {
+    font-size: $font-size--h5;
+    position: relative;
+    text-align: center;
+    &::after {
+      content: '';
+      @include centerer-x();
+      bottom: -10px;
+      height: 3px;
+      width: 90px;
+      background-color: $color-main;
+    }
+  }
+  &__text {
+    text-align: center;
+  }
+  &__list{
+    margin: 0;
+    padding: 0;
+    margin-top: 30px;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+
+  }
+  &__item {
+    @include col(xs, 8, 12);
+    @include col(sm, 6, 12);
+    @include col(md, 6, 12);
+    @include col(lg, 6, 12);
+    @include col(xl, 3, 12);
+    @include col(xxl, 3, 12);
+    @include outline();
+    padding: 0;
+    padding-top: 110px;
+    position: relative;
+    margin: 0;
+
+    p {
+      font-weight: 700;
+      text-align: center;
+
+    }
+
+    &--1,
+    &--2,
+    &--3,
+    &--4 {
+      &::before {
+        content: '';
+        top: 10%;
+        @include centerer-x();
+        width: 80px;
+        height: 80px;
+      }
+    }
+    &--1 {
+      &::before {
+        background-image: url(../img/icons_svg/section_8/1.svg);
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+    }
+    &--2 {
+      &::before {
+        background-image: url(../img/icons_svg/section_8/2.svg);
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+    }
+    &--3 {
+      &::before {
+        background-image: url(../img/icons_svg/section_8/3.svg);
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+    }
+    &--4 {
+      &::before {
+        background-image: url(../img/icons_svg/section_8/4.svg);
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+    }
+  }
+}
+
+
+@media (min-width: $screen-sm) {
+
+}
+@media (min-width: $screen-md) {
+  .awards__content {
+    padding-bottom:50px;
+  }
+  .awards__title {
+    font-size: $font-size--h4;
+    display: inline-block;
+    &::after {
+      left: 40%;
+      width: 90px;
+      bottom: -20px;
+      height: 4px;
+      width: 190px;
+    }
+  }
+  .awards__text {
+    text-align: left;
+  }
+
+}
+
+@media (min-width: $screen-lg) {
+  .awards__content {
+    padding-bottom: 80px;
+  }
+  .awards__title {
+    font-size: $font-size--h3;
+    &::after {
+      left: 33%;
+    }
+  }
+}
+
+@media (min-width: $screen-xl) {
+  .awards__title {
+    font-size: $font-size--h2;
+    &::after {
+      left: 26%;
+
+    }
+  }
+}
+@media (min-width: $screen-xxl) {
+
+}

@@ -17,6 +17,11 @@
   background-color: transparentize(#243343, 0.3);
   color: white;
   border-bottom: 3px solid #1f2a36;
+  &--gray {
+    background-color: transparentize($gray-lightest, 0.1);
+    color: #1f2a36;
+    border-bottom: 3px solid $gray-light;
+  }
 }
 .form__title {
   font-size: $font-size--h2;
@@ -24,6 +29,9 @@
   text-transform: none;
   margin: 0;
   padding: 0;
+  &--gray {
+    color: #1f2a36;
+  }
 }
 .form__text {
   line-height: 24px;
@@ -51,6 +59,15 @@
   &:focus {
     box-shadow: -0 -6px $color-main;
     background-color: lighten(#34465a,5%);
+  }
+  &--gray {
+    color: #1f2a36 ;
+    box-shadow: -0 -4px $gray;
+    background-color: $gray-lighten;
+    &:focus {
+      box-shadow: -0 -6px $color-main;
+      background-color: darken($gray-lighten, 7%);
+    }
   }
 }
 .form__btn-wrapper {
