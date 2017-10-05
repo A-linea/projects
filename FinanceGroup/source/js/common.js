@@ -17,6 +17,11 @@ $(document).ready(function() {
     $('html, body').animate({scrollTop: $('.main-header').height()+130}, 'slow');
     return false;
   });
+  //анимация на scrollUp с footer на header
+  $('.arrow__top').click(function () {
+    $('html, body').animate({scrollTop: 0}, 'slow');
+    return false;
+  });
 //анимация элементов по waypoint необходим animate-css.js
   $('.section .section__text, .section .section__title')
     .animated('fadeInRight');
@@ -68,6 +73,25 @@ $('.work').waypoint(function (dir) { //добавляем waypoint для ани
     items:1,
     dots:true,
     autoplay: true
+  });
+  $('.property__btn').magnificPopup({
+    type:'inline',
+    midClick: true
+  });
+//Отправка формы
+  $(".form").submit(function() {
+    $.ajax({
+      type: "POST",
+      url: "mail.php",
+      data: $(this).serialize()
+    }).done(function() {
+      alert("Спасибо за заявку!");
+      setTimeout(function() {
+        $.magnificPopup.close();
+        $(".form").trigger("reset");
+      }, 1000);
+    });
+    return false;
   });
 
 
