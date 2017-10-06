@@ -1,0 +1,40 @@
+.main-nav {
+
+&__toggle {
+  position: absolute;
+  display: inline-block;
+  top: 55%;
+  right: 1%;
+  }
+}
+.hamburger-box  {
+  .hamburger-inner,
+  .hamburger-inner::before,
+  .hamburger-inner::after {
+    background-color: $color-main;
+    width: 35px;
+    height: 3px;
+}
+
+}
+
+
+@media (min-width: $screen-sm) {
+
+}
+
+@media (min-width: $screen-md) {
+
+}
+
+@media (min-width: $screen-lg) {
+
+}
+
+@media (min-width: $screen-xl) {
+
+}
+
+@media (min-width: $screen-xxl) {
+
+}

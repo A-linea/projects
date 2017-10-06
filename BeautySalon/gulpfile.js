@@ -19,7 +19,7 @@ var del = require('del');  // Подключаем библиотеку для �
 var run = require('run-sequence'); //Плагин позволяющий последовательно запускать задачи (работа gulp по умолчанию асинхронно)
 var concat = require('gulp-concat');  // Подключаем gulp-concat (для конкатенации файлов)
 var cache = require('gulp-cache'); //Используем для кеширования повторяющихся изображений
-var stylefmt = require('gulp-stylefmt');
+var stylefmt = require('gulp-stylefmt');//Библиотека для приведения кода к единому стилю
 
 /* ------------ Delete build folder ------------- */
 
@@ -95,6 +95,7 @@ gulp.task('libs', function() {
   return gulp.src([ // Берем все необходимые библиотеки
     'node_modules/jquery/dist/jquery.min.js', // jQuery библиотека
     'node_modules/magnific-popup/dist/jquery.magnific-popup.min.js', // Берем Magnific Popup
+    'source/libs/mmenu/js/jquery.mmenu.all.min.js',
     //'node_modules/mixitup/dist/mixitup.js', //сортировка плиток
     //'node_modules/parallax/parallax.js', //Parallax эффект
     'source/libs/selectize/js/selectize.min.js',

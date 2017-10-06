@@ -1,27 +1,23 @@
 //Aбсолютный путь: @import './source/scss/global/variables.scss';
-/*---------global styles--------*/
 @import "global/normalize.scss";
+/*---------global styles--------*/
 @import "global/variables.scss";
 @import "global/fonts.scss";
 @import "global/page.scss";
-/*@import "global/functions.scss";*/
 @import "global/btn.scss";
 //---------Other styles--------*/
 @import "mixins.scss";
 @import "print.scss";
-/*--------------------block styles--------------------*/
+//------------------------------------------block styles-------------------------------------------*/
 
-/*----------Header----------*/
+//------------------------------------------Header-------------------------------------------------*/
 @import "header";
-/*----------Main navigation----------*/
+@import "main-nav";
+//------------------------------------------Main navigation----------------------------------------*/
 //@import "main-nav";
-//*----------Promo section----------*/
+
 //@import "promo";
-//*----------About section----------*/
+//------------------------------------------About section------------------------------------------*/
 //@import "about";
-//*----------Work section----------*/
-//@import "work";
-//*----------Application section----------*/
-//@import "application";
-/*----------Footer section----------*/
+//------------------------------------------Footer section-----------------------------------------*/
 @import "footer";

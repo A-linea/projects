@@ -2,7 +2,9 @@ html {
   box-sizing: border-box;
 }
 
-*, *:before, *:after {
+*,
+*::before,
+*::after {
   box-sizing: inherit;
 }
 
@@ -15,13 +17,16 @@ body {
   line-height: $line-height;
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
+  opacity: 1;
 }
 
 figure {
   margin: 0;
 }
 
-fieldset, legend {
+fieldset,
+legend {
   margin: 0;
   padding: 0;
 }
@@ -34,20 +39,12 @@ img {
   height: auto;
   max-width: 100%;
 }
-
-.visuallyhidden {
-    border: 0;
-    clip: rect(0 0 0 0);
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
-    padding: 0;
-    position: absolute;
-    width: 1px;
+.sprite {
+  display: none;
 }
 
-.clearfix:before,
-.clearfix:after {
-    content: " ";
-    display: table; 
+.clearfix::before,
+.clearfix::after {
+  content: " ";
+  display: table;
 }
