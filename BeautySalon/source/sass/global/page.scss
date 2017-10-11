@@ -39,6 +39,17 @@ img {
   height: auto;
   max-width: 100%;
 }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: 1.3;
+  text-transform: uppercase;
+}
+
 .sprite {
   display: none;
 }

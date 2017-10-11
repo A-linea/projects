@@ -95,7 +95,7 @@ gulp.task('libs', function() {
   return gulp.src([ // Берем все необходимые библиотеки
     'node_modules/jquery/dist/jquery.min.js', // jQuery библиотека
     'node_modules/magnific-popup/dist/jquery.magnific-popup.min.js', // Берем Magnific Popup
-    'source/libs/mmenu/js/jquery.mmenu.all.min.js',
+    'source/libs/mmenu/jquery.mmenu.all.js',
     //'node_modules/mixitup/dist/mixitup.js', //сортировка плиток
     //'node_modules/parallax/parallax.js', //Parallax эффект
     'source/libs/selectize/js/selectize.min.js',
