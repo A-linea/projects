@@ -1,0 +1,122 @@
+.gallery {
+  background-image: url(../img/photos/foto-16.jpg);
+
+
+  &__container {
+    @include container();
+    @include outline();
+  }
+  &__content {
+    @include row();
+    @include outline();
+    position: relative;
+    justify-content: center;
+  }
+  &__description {
+    @include col(xs, 11, 12);
+    @include col(sm, 11, 12);
+    @include col(md, 8, 12);
+    @include col(lg, 5, 12);
+    @include col(xl, 5, 12);
+    @include col(xxl, 5, 12);
+    @include outline();
+  }
+  &__photos {
+    @include col(xs, 11, 12);
+    @include col(sm, 11, 12);
+    @include col(md, 8, 12, 0);
+    @include col(lg, 7, 12, 0);
+    @include col(xl, 7, 12, 0);
+    @include col(xxl, 7, 12, 0);
+    @include outline();
+    img {
+      background-color: rgba(#1a1a1a, 0.4);
+    }
+
+  }
+  &__title {
+    font-size: 18px;
+    font-weight: 800;
+    span {
+      color: $accent-color;
+    }
+
+  }
+  &__text {
+    font-size: 14px;
+    margin-top: 15px;
+  }
+}
+//стилизация галлереи
+.fotorama {
+  &__nav {
+    &-wrap {
+      position: absolute;
+      bottom: 15px;
+      padding: 0 30px;
+      width: 100%;
+    }
+  }
+  &__active {
+    .fotorama__thumb {
+      border-color: $color-second;
+    }
+  }
+  &__thumb {
+    border: 4px solid #fff;
+    transition: border-color 0.5s ease;
+    box-sizing: border-box;
+    &-border {
+      border-color: $color-second;
+    }
+  }
+  &__arr {
+    &--next,
+    &--prev {
+      height: 30px;
+      width: 30px;
+      background-size: cover;
+      background-position: center;
+    }
+    &--next {
+       background-image: url('../img/icons_svg/ico-next.svg');
+     }
+    &--prev {
+      background-image: url('../img/icons_svg/ico-back.svg');
+    }
+  }
+}
+@media (min-width: $screen-sm) {
+
+}
+
+@media (min-width: $screen-md) {
+  .gallery__title {
+    font-size: 30px;
+    font-weight: 800;
+  }
+  .gallery__text {
+    font-size: 18px;
+    margin-top: 30px;
+  }
+  .gallery__description {
+    margin-bottom: 30px;
+  }
+}
+
+@media (min-width: $screen-lg) {
+  .gallery__content{
+    justify-content: space-between;
+  }
+  .gallery__description {
+    margin-bottom: 0;
+  }
+}
+
+@media (min-width: $screen-xl) {
+
+}
+
+@media (min-width: $screen-xxl) {
+
+}
