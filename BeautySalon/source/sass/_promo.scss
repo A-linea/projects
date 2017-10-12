@@ -5,6 +5,8 @@
   &__wrapper {
     display: flex;
     height: 100%;
+    position: relative;
+    top: 0;
 
   }
   &__center {
@@ -45,7 +47,7 @@
     }
   }
   &__title {
-    font-size: 36px;
+    font-size: 28px;
     font-weight: 100;
     margin: 0;
     border-bottom: 1px solid white;
@@ -92,6 +94,9 @@
     padding: 12px 35px;
     font-size: 14px;
     letter-spacing: 3px;
+  }
+  .promo__title {
+    font-size: 36px;
   }
 }
 

@@ -8,12 +8,14 @@
 //---------Other styles--------*/
 @import "mixins.scss";
 @import "print.scss";
+@import "section";
 //------------------------------------------block styles-------------------------------------------*/
 
 //------------------------------------------Header-------------------------------------------------*/
 @import "header";
 @import "main-nav";
 @import "promo";
+@import "services";
 //------------------------------------------Main navigation----------------------------------------*/
 //@import "main-nav";
 

@@ -28,7 +28,7 @@ $border-radius:               3px !default;
   text-decoration: none;
   color: $text-color;
   border-radius: $border-radius;
-  background-color: darken($accent-color, 5%) ;
+  background-color: darken($accent-color, 5%);
   background-image: none;
   cursor: pointer;
   transition: $transition-time;

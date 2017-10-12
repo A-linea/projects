@@ -1,12 +1,10 @@
 .header {
   background-color: #1a1a1a;
   background-image: url('../img/top-bg.jpg');//можно указать бг инлайн для управления из CMS
-  min-height: 680px;
+  min-height: 580px;
   height: 100vh;
   background-repeat: no-repeat;
   position: relative;
-  background-size: cover;
-  background-position: center;
   &__top {
     padding-top: 40px;
     position: absolute;
@@ -86,16 +84,12 @@
   }
   &__contacts-container {
     @include container();
-
   }
   &__contacts {
     @include row();
     margin: 0;
     font-size: 14px;
     justify-content: center;
-
-
-
   }
   &__contacts-address {
     @include col(xs, 12, 12);
@@ -105,6 +99,7 @@
     @include col(xl, 4, 12);
     @include col(xxl, 4, 12);
     display: flex;
+    justify-content: center;
     p {
       margin: 0;
       padding: 0;
@@ -119,7 +114,7 @@
     @include col(xl, 4, 12);
     @include col(xxl, 4, 12);
     display: flex;
-    margin-top: 10px;
+    justify-content: center;
     a {
       font-family: 'Fira Sans';
       margin: 0;
@@ -176,6 +171,7 @@
 @media (min-width: $screen-lg) {
 .header__contacts-time {
   display: flex;
+  justify-content: center;
 }
 }
 
