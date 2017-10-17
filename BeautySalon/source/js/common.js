@@ -67,6 +67,35 @@ $(document).ready(function() {
     }
   });
 
+  $('.partners__list').owlCarousel({
+    nav: true,
+    //стилизуем навигацию
+    navText: ['<div class="partners__carousel-nav--right"></div>', '<div class="partners__carousel-nav--left"></div>'],
+    loop: true,
+    autoplay:false,
+    autoplayTimeout: 3000,
+    smartSpeed: 700, //время прокрутки
+    dots: false,
+    responsiveClass: true,
+    responsive: {
+      0: {
+        items:1
+      },
+      400: {
+        items: 1
+      },
+      800: {
+        items: 2
+      },
+      1200: {
+        items: 3
+      },
+      1600: {
+        items: 4
+      }
+    }
+  });
+
    // $('select').selectize({
    //
    // });

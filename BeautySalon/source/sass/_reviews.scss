@@ -1,5 +1,6 @@
 .reviews {
   background-image: url(../img/bg-2.jpg);
+  background-size: cover;
   &__container {
     @include container();
     @include outline();

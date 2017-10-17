@@ -47,4 +47,8 @@
       transition: opacity 200ms ease;
       border-radius: 30px; }
     .owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span {
-      background: hsl(40, 92%, 69%); }
+      background: hsl(40, 92%, 69%);
+      width: 11px;
+      height: 11px;
+      transition: 0.3s;
+    }
