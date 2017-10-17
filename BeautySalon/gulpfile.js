@@ -97,14 +97,13 @@ gulp.task('libs', function() {
     'node_modules/magnific-popup/dist/jquery.magnific-popup.min.js', // Берем Magnific Popup
     'source/libs/mmenu/jquery.mmenu.all.js',
     'source/libs/equalHeights/equalheights.js',//одинаковая высота контента при изменении его содержимого
-    //'node_modules/mixitup/dist/mixitup.js', //сортировка плиток
     //'node_modules/parallax/parallax.js', //Parallax эффект
-    'source/libs/selectize/js/selectize.min.js',
+    'source/libs/selectize/js/selectize.min.js', //стилизация выпадающего меню
     'source/libs/fotorama/fotorama.js', //конфликт с uglify
-    'node_modules/owl.carousel/dist/owl.carousel.js',
+    'node_modules/owl.carousel/dist/owl.carousel.js'
     //'node_modules/page-scroll-to-id/jquery.malihu.PageScroll2id.js', //скрол страницы по id
     //'node_modules/waypoints/lib/jquery.waypoints.js',
-    'source/libs/animate/animate-css.js' //
+    //'source/libs/animate/animate-css.js'
     ])
     .pipe(plumber())
     .pipe(concat('libs.js'))  // Собираем их в новом файле libs.min.js

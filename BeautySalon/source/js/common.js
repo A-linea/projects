@@ -52,6 +52,40 @@ $(document).ready(function() {
         ths.find('.services__image').css('min-height', thsHeight);
     });
   }carouselService();
+
+  $('.reviews__list').owlCarousel({
+    loop: true,
+    dots:true,
+    autoplay:true,
+    autoplayTimeout: 3000,
+    smartSpeed: 700, //время прокрутки
+    responsiveClass: true,
+    responsive: {
+      0: {
+        items:1
+      }
+    }
+  });
+
+   // $('select').selectize({
+   //
+   // });
+  //E-mail Ajax Send
+  $(".callback__form").submit(function() { //Change
+    var th = $(this);
+    $.ajax({
+      type: "POST",
+      url: "mail.php", //Change
+      data: th.serialize()
+    }).done(function() {
+      $(th).find('.callback__success').addClass('active').css("display", "flex").hide().fadeIn();
+      setTimeout(function() {
+        $(th).find('.callback__success').removeClass('active').fadeOut();
+        th.trigger("reset");
+      }, 1000);
+    });
+    return false;
+  });
 });
 
 

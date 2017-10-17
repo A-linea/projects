@@ -96,14 +96,12 @@
     letter-spacing: 2px;
     background-color: #fff;
     color: $color-second;
-    box-shadow: $shadow;
     &:hover,
     &:focus {
       text-decoration: none;
       color: #fff;
       background-color: darken($text-color, 15%);
       border-color: darken($text-color, 45%);
-      box-shadow: none;
     }
   }
 }

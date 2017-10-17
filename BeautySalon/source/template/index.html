@@ -221,7 +221,7 @@
            <p class="gallery__text">Дамам здесь предложат экстраординарный ассортимент косметологических процедур и качественный нейл-сервис, а мужчин порадуют услугами стилистов и уходом за лицом.</p>
          
          </div>
-          <div class="gallery__photos  fotorama" data-nav="thumbs" data-thumbwidth="110.5" data-thumbheight="66" data-thumbmargin="5" data-thumbborderwidth="5">
+          <div class="gallery__photos  fotorama" data-nav="thumbs" data-thumbwidth="110.5" data-thumbheight="66" data-thumbmargin="5" data-thumbborderwidth="5" data-width="100%">
             <img src="img/photos/small/foto-13.jpg" alt="Фото салона красоты">
             <img src="img/photos/small/foto-15.jpg" alt="Фото салона красоты">
             <img src="img/photos/small/foto-16.jpg" alt="Фото салона красоты">
@@ -229,9 +229,123 @@
             <img src="img/photos/small/foto-19.jpg" alt="Фото салона красоты">
             <img src="img/photos/small/foto-23.jpg" alt="Фото салона красоты">
             <img src="img/photos/small/foto-13.jpg" alt="Фото салона красоты">
-            <!--<img src="img/photos/small/foto-15.jpg" alt="Фото салона красоты">-->
-            <!--<img src="img/photos/small/foto-16.jpg" alt="Фото салона красоты">-->
-            <!--<img src="img/photos/small/foto-18.jpg" alt="Фото салона красоты">-->
+            <img src="img/photos/small/foto-15.jpg" alt="Фото салона красоты">
+            <img src="img/photos/small/foto-16.jpg" alt="Фото салона красоты">
+            <img src="img/photos/small/foto-18.jpg" alt="Фото салона красоты">
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="callback section">
+      <div class="callback__content-container">
+        <div class="callback__content">
+          <div class="callback__form-wrapper">
+            <!--не указывает action потому что форма ajax-->
+            <form class="callback__form">
+            <div class="callback__success"><span>Спасибо за заявку!</span>
+            </div>
+              <!--Hidden required fields-->
+              <input type="hidden" class="callback__input callback__input--hidden" name="project__name" value="SMITLER">
+              <input type="hidden" class="callback__input callback__input--hidden" name="admin__email" value="a.linea@yahoo.com">
+              <input type="hidden" class="callback__input callback__input--hidden" name="form__subject" value="Order from site SMITLER">
+              <!--END Hidden required fields-->
+              <input type="hidden" name="Страница" value="">
+              <b class="callback__form-head">Оcтавить заявку</b>
+              <p class="callback__form-text">Оставьте заявку и мы перезвоним вам в течении 15 минут.</p>
+              <input type="text" class="callback__input" name="Имя" placeholder="Ваше имя..." required>
+              <input type="text" class="callback__input" name="Телефон" placeholder="Ваше телефон..." required>
+              <select type="text" class="callback__select" name="Услуга">
+                <option value disabled selected>Выбрать услугу</option>
+                <option value="Парикмахерский сервис">Парикмахерский сервис</option>
+                <option value="Маникюрный сервис">Маникюрный сервис</option>
+                <option value="Косметологический сервис">Косметологический сервис</option>
+                <option value="Солярий">Солярий</option>
+                <option value="Массаж и SPA ">Массаж и SPA</option>
+              </select>
+            <button class="btn  callback__form-btn">Отправить</button>
+            
+            </form>
+          </div>
+        
+        </div>
+        
+        
+      </div>
+    
+    </section>
+    <section class="reviews section section--overlay">
+      <div class="reviews__container">
+        <div class="reviews__content">
+          <div class="reviews__content-wrapper">
+            <h2 class="reviews__title">Отзывы <span>наших клиентов</span></h2>
+            <ul class="reviews__list  owl-carousel  owl-theme">
+              <li class="reviews__item">
+                <b class="reviews__name">Александра</b>
+                <span class="reviews__service">22.09.2017 (Стрижка)</span>
+                <div class="reviews__rate">
+                  <svg class="reviews__ico">
+                    <use xlink:href="#ico-star-fill"></use>
+                  </svg>
+                  <svg class="reviews__ico">
+                    <use xlink:href="#ico-star-fill"></use>
+                  </svg>
+                  <svg class="reviews__ico">
+                    <use xlink:href="#ico-star-fill"></use>
+                  </svg>
+                  <svg class="reviews__ico">
+                    <use xlink:href="#ico-star-fill"></use>
+                  </svg>
+                  <svg class="reviews__ico">
+                    <use xlink:href="#ico-star-fill"></use>
+                  </svg>
+                </div>
+                <p>Мне очень повезло! Я случайно попала в салон красоты S&amp;Mitler, когда возвращалась с работы. Времени, записываться на стрижку, у меня не было. И, на удачу, я попала в смену стилиста Марины. Я сама не знала, как я хочу постричься, но Марина предлагала несколько вариантов. И в итоге я получила колоссальное удовольствие от конечного итога! Марина с моими волосами сделала что-то невероятно красивое! После стрижки волосы стали более объемными и гладкими! Спасибо Мариночке за индивидуальный подход и качество выполненной работы!!!</p>
+              </li>
+              <li class="reviews__item">
+                <b class="reviews__name">Ангелина</b>
+                <span class="reviews__service">22.08.2017 (Массаж&SPA)</span>
+                <div class="reviews__rate">
+                  <svg class="reviews__ico">
+                    <use xlink:href="#ico-star-fill"></use>
+                  </svg>
+                  <svg class="reviews__ico">
+                    <use xlink:href="#ico-star-fill"></use>
+                  </svg>
+                  <svg class="reviews__ico">
+                    <use xlink:href="#ico-star-fill"></use>
+                  </svg>
+                  <svg class="reviews__ico">
+                    <use xlink:href="#ico-star-fill"></use>
+                  </svg>
+                  <svg class="reviews__ico">
+                    <use xlink:href="#ico-star"></use>
+                  </svg>
+                </div>
+                <p>Мне очень повезло! Я случайно попала в салон красоты S&amp;Mitler, когда возвращалась с работы. Времени, записываться на стрижку, у меня не было. И, на удачу, я попала в смену стилиста Марины. Я сама не знала, как я хочу постричься, но Марина предлагала несколько вариантов. И в итоге я получила колоссальное удовольствие от конечного итога! Марина с моими волосами сделала что-то невероятно красивое! После стрижки волосы стали более объемными и гладкими! Спасибо Мариночке за индивидуальный подход и качество выполненной работы!!!</p>
+              </li>
+              <li class="reviews__item">
+                <b class="reviews__name">Юлия</b>
+                <span class="reviews__service">07.08.2017 (Маникюр)</span>
+                <div class="reviews__rate">
+                  <svg class="reviews__ico">
+                    <use xlink:href="#ico-star-fill"></use>
+                  </svg>
+                  <svg class="reviews__ico">
+                    <use xlink:href="#ico-star-fill"></use>
+                  </svg>
+                  <svg class="reviews__ico">
+                    <use xlink:href="#ico-star-fill"></use>
+                  </svg>
+                  <svg class="reviews__ico">
+                    <use xlink:href="#ico-star"></use>
+                  </svg>
+                  <svg class="reviews__ico">
+                    <use xlink:href="#ico-star"></use>
+                  </svg>
+                </div>
+                <p>Мне очень повезло! Я случайно попала в салон красоты S&amp;Mitler, когда возвращалась с работы. Времени, записываться на стрижку, у меня не было. И, на удачу, я попала в смену стилиста Марины. Я сама не знала, как я хочу постричься, но Марина предлагала несколько вариантов. И в итоге я получила колоссальное удовольствие от конечного итога!</p>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
