@@ -39,11 +39,9 @@
   }
   &__content-container {
     @include container();
-    @include outline();
   }
   &__content {
     @include row();
-    @include outline();
   }
   &__form-wrapper {
     @include col-offset(md, 6, 12);
@@ -53,7 +51,6 @@
     @include col(lg, 6, 12);
     @include col(xl, 6, 12);
     @include col(xxl, 6, 12);
-    @include outline();
     position: relative;
   }
   &__form {

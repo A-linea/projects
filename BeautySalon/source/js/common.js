@@ -95,6 +95,17 @@ $(document).ready(function() {
       }
     }
   });
+  //кнопка навверх
+  $(window).scroll(function () {
+    if ($(this).scrollTop() > $(this).height()) {
+      $('.btn__top').addClass('btn__active');
+    } else {
+      $('.btn__top').removeClass('btn__active');
+    }
+    $('.btn__top').click(function () {
+      $('html, body').stop().animate({scrollTop:0}, 'slow', 'swing')
+    });
+  });
 
    // $('select').selectize({
    //
@@ -115,6 +126,9 @@ $(document).ready(function() {
     });
     return false;
   });
+});
+$(window).on('load', function () {
+  $('.preloader').delay(1000).fadeOut('slow');
 });
 
 

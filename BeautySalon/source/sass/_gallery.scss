@@ -3,11 +3,9 @@
 
   &__container {
     @include container();
-    @include outline();
   }
   &__content {
     @include row();
-    @include outline();
     position: relative;
     justify-content: center;
   }
@@ -18,7 +16,6 @@
     @include col(lg, 5, 12);
     @include col(xl, 5, 12);
     @include col(xxl, 5, 12);
-    @include outline();
   }
   &__photos {
     @include col(xs, 11, 12);
@@ -27,7 +24,6 @@
     @include col(lg, 7, 12, 0);
     @include col(xl, 7, 12, 0);
     @include col(xxl, 7, 12, 0);
-    @include outline();
     img {
       background-color: rgba(#1a1a1a, 0.4);
     }

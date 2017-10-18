@@ -6,11 +6,9 @@
   
   &__container {
     @include container();
-    @include outline();
   }
   &__wrapper {
     @include row();
-    @include outline();
   }
   &__social {
      @include col(xs, 12, 12);
@@ -19,7 +17,6 @@
      @include col(lg, 4, 12);
      @include col(xl, 2, 12);
      @include col(xxl, 2, 12);
-    @include outline();
     p {
       color: #737373;
       margin: 0;
@@ -35,7 +32,6 @@
     @include col(lg, 4, 12);
     @include col(xl, 3, 12);
     @include col(xxl, 3, 12);
-    @include outline();
   }
   &__contacts {
     @include col(xs, 12, 12);
@@ -44,7 +40,6 @@
     @include col(lg, 4, 12);
     @include col(xl, 3, 12);
     @include col(xxl, 3, 12);
-    @include outline();
     a {
       color: #979797;
       font-family: 'Fira Sans', sans-serif;
@@ -63,6 +58,9 @@
     &-phone {
       margin-top: 20px;
     }
+    &-address {
+      margin-top: 10px;
+    }
   }
   &__map {
     @include col(xs, 12, 12);
@@ -71,9 +69,9 @@
     @include col(lg, 4, 12);
     @include col(xl, 4, 12);
     @include col(xxl, 4, 12);
-    @include outline();
   }
   &__logo {
+    margin-top: 10px;
     width: 130px;
   }
   &__social-ico {
@@ -100,6 +98,9 @@
     list-style: none;
     margin: 0;
     padding: 0;
+  }
+  &__menu {
+    margin-top: 10px;
   }
   &__menu-link {
     color: #979797;

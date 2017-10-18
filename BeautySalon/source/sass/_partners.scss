@@ -13,17 +13,14 @@
   }
   &__container {
     @include container();
-    @include outline();
   }
   &__content {
     @include row();
-    @include outline();
     position: relative;
     padding-top: 30px;
     padding-bottom: 50px;
   }
   &__content-wrapper {
-    @include outline();
     @include col-offset(xs, 1, 12);
     @include col(xs, 10, 12);
     padding-bottom: 10px;

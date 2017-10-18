@@ -1,20 +1,18 @@
 .promo {
   @include row();
-  @include outline();
+
   text-align: center;
   &__wrapper {
     display: flex;
     height: 100%;
     position: relative;
     top: 0;
-
   }
   &__center {
     margin: auto;
   }
   &__container {
     @include container();
-    @include outline();
   }
   &__welcome {
     @include col(xs, 10, 12);
@@ -23,7 +21,6 @@
     @include col(lg, 7, 12);
     @include col(xl, 7, 12);
     @include col(xxl, 5, 12);
-    @include outline();
     p {
       font-size: 12px;
 
