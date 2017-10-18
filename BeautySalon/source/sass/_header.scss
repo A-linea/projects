@@ -63,6 +63,9 @@
     justify-content: center;
     align-items: center;
   }
+  &__social-link {
+    text-decoration: none;
+  }
   &__social-ico {
     height: 35px;
     margin-top: 20px;
@@ -164,6 +167,7 @@
     margin: 0 auto;
   }
   .header__contacts-ico {
+  margin-left: 30px;
   margin-left: 30px;
   }
 }

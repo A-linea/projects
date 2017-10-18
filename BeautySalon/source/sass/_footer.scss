@@ -1,2 +1,158 @@
-.main__footer {
+.main-footer {
+  background-color: #242424;
+  padding: 50px 0;
+  color: #fff;
+  font-size: 14px;
+  
+  &__container {
+    @include container();
+    @include outline();
+  }
+  &__wrapper {
+    @include row();
+    @include outline();
+  }
+  &__social {
+     @include col(xs, 12, 12);
+     @include col(sm, 12, 12);
+     @include col(md, 4, 12);
+     @include col(lg, 4, 12);
+     @include col(xl, 2, 12);
+     @include col(xxl, 2, 12);
+    @include outline();
+    p {
+      color: #737373;
+      margin: 0;
+      padding: 0;
+      margin-top: 15px;
+      line-height: 1.4;
+    }
+   }
+  &__nav {
+    @include col(xs, 12, 12);
+    @include col(sm, 12, 12);
+    @include col(md, 4, 12);
+    @include col(lg, 4, 12);
+    @include col(xl, 3, 12);
+    @include col(xxl, 3, 12);
+    @include outline();
+  }
+  &__contacts {
+    @include col(xs, 12, 12);
+    @include col(sm, 12, 12);
+    @include col(md, 4, 12);
+    @include col(lg, 4, 12);
+    @include col(xl, 3, 12);
+    @include col(xxl, 3, 12);
+    @include outline();
+    a {
+      color: #979797;
+      font-family: 'Fira Sans', sans-serif;
+      text-decoration: none;
+      font-size: 22px;
+      font-weight: 700;
+    }
+    p {
+      margin: 0;
+      padding: 0;
+      display: inline-block;
+      vertical-align: top;
+    }
+    &-address,
+    &-time,
+    &-phone {
+      margin-top: 20px;
+    }
+  }
+  &__map {
+    @include col(xs, 12, 12);
+    @include col(sm, 12, 12);
+    @include col(md, 2, 12);
+    @include col(lg, 4, 12);
+    @include col(xl, 4, 12);
+    @include col(xxl, 4, 12);
+    @include outline();
+  }
+  &__logo {
+    width: 130px;
+  }
+  &__social-ico {
+    height: 35px;
+    margin-top: 20px;
+    width: 35px;
+    fill: #555;
+    transition: $transition-time;
+    &:hover {
+      fill: lighten(#555, 20%);
+    }
+  }
+  &__social-link {
+    margin: 0;
+    margin-top: 20px;
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 15px;
+    padding: 0;
+    text-decoration: none;
+  }
+  &__menu,
+  li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  &__menu-link {
+    color: #979797;
+    display: block;
+    padding-bottom: 2px;
+    padding-left: 25px;
+    transition: $transition-time;
+    position: relative;
+    &--active {
+      color: $accent-color;
+    }
+    &::before {
+      content: '';
+      @include centerer-y();
+      width: 13px;
+      left: 0;
+      height: 13px;
+      background-image: url("../img/icons_svg/ico-diamond.svg");
+      background-repeat: no-repeat;
+    }
+    &:hover {
+      color: $accent-color;
+      text-decoration: none;
+    }
+  }
+  &__icon {
+    margin-right: 10px;
+    width: 17px;
+    height: 17px;
+    fill: #555;
+    transition: $transition-time;
+    &:hover {
+      fill: $text-color;
+    }
+  }
+
+}
+@media (min-width: $screen-sm) {
+
+}
+
+@media (min-width: $screen-md) {
+
+}
+
+@media (min-width: $screen-lg) {
+
+}
+
+@media (min-width: $screen-xl) {
+
+}
+
+@media (min-width: $screen-xxl) {
+
 }
