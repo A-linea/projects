@@ -66,14 +66,13 @@
     }
   }
   &__promo-centerer {
-    position: relative;
     text-align: center;
     @include col-offset(xxl, 3, 12);
+    @include col-offset(xl, 2, 12);
     @include col(xxl, 6, 12);
-    @include col(xl, 2, 12);
+    @include col(xl, 8, 12);
     @include outline();
     padding-top: 160px;
-    padding-bottom: 180px;
   }
   &__promo-title {
     position: relative;
@@ -83,6 +82,7 @@
     text-shadow: 0 1px 0 #3d3029;
   }
   &__promo-text {
+    position: relative;
     margin-top: 100px;
     padding: 0 100px;
     text-align: center;
@@ -93,6 +93,7 @@
     text-shadow: 0 1px 0 #3d3029;
   }
   &__btn {
+    position: relative;
     text-transform: uppercase;
     font-size: 14px;
     letter-spacing: 2.5px;
@@ -105,7 +106,9 @@
 
 
 @media (max-width: $screen-xl) {
-
+  .main-header__promo-centerer {
+    padding-top: 80px;
+  }
 }
 @media (max-width: $screen-lg) {
 

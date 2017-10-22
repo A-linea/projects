@@ -36,8 +36,8 @@ $border-radius:               3px !default;
   &:focus {
     text-decoration: none;
     color: $text-color;
-    border: solid 1px darken($gray-lighter, 12%) ;
-    background-color: darken($gray-lightest, 10%);
+    border: solid 1px darken(rgba($white, 0.3), 2%) ;
+    background-color: darken(rgba($gray-lightest, 0.6),10%);
   }
 
   &:active,

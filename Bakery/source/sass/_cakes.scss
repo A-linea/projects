@@ -3,7 +3,131 @@
   background-repeat: no-repeat;
   background-size: cover;
   border-top: 10px solid white;
-  
+  &::before {
+    content: '';
+    @include centerer-x();
+    @include circle(80px, white);
+    box-shadow: 0 8px 9px rgba(0, 0, 0, 0.1);
+    top: -50px;
+    background-image: url(../img/Section-1/bread.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+  &::after {
+    content: '';
+    @include centerer-x();
+    top: -65px;
+    width: 110px;
+    height: 110px;
+    background-image: url(../img/Section-1/curves.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+  }
+  &__content {
+    @include row();
+    @include outline();
+  }
+  &__text-side {
+    @include col(xl, 6, 12);
+    @include col(lg, 6, 12);
+    @include col(md, 6, 12);
+    @include col(sm, 6, 12);
+    @include col(xs, 6, 12);
+    @include outline();
+    text-align: center;
+  }
+  &__title {
+
+  }
+  span {
+    font-family: $font-family--serif;
+    color: $color-accent;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+  }
+  &__text-wrapper {
+    width: 85%;
+    margin: auto;
+  }
+  &__chef {
+    margin-top: 45px;
+    h4 {
+      margin-bottom: 55px;
+    }
+    b {
+      display: inline-block;
+      vertical-align: top;
+      font-size: 24px;
+      border-bottom: 1px solid $text-color;
+      border-top: 1px solid $text-color;
+      padding: 10px 10px;
+      margin: 20px 0 10px 0;
+    }
+    cite {
+      display: block;
+      padding: 10px 150px;
+      font-family: 'Scriptina', sans-serif;
+      font-size: 28px;
+      color: $color-accent;
+      position: relative;
+
+
+      &::before,
+      &::after {
+        position: absolute;
+        font-size: 56px;
+        font-family: 'Times New Roman';
+      }
+      &::before {
+        content: '\201c';
+        left: 100px;
+        top: 0;
+      }
+      &::after {
+        content: '\201d';
+        right: 100px;
+        bottom: -20px;
+      }
+    }
+  }
+  &__chef-img {
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 25px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    overflow: hidden;
+    box-shadow: 0 0 0 5px white;
+    img {
+      height: auto;
+      max-width: 100%;
+    }
+  }
+  &__photo-side {
+    @include col(xl, 6, 12);
+    @include col(lg, 6, 12);
+    @include col(md, 6, 12);
+    @include col(sm, 6, 12);
+    @include col(xs, 6, 12);
+    @include outline();
+    figure {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
+  &__image {
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 15px;
+    margin-right: 20px;
+    &:nth-child(2n) {
+      margin-right: 0;
+    }
+  }
+
 }
 @media (max-width: $screen-xl) {
 
