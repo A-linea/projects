@@ -22,13 +22,13 @@ $border-radius:               3px !default;
   user-select: none;
   text-align: center;
   font-size: 16px;
-  font-family: inherit;
+  font-family: $font-family--serif;
   line-height: $line-height;
   text-decoration: none;
   text-transform: none;
-  color: $text-color;
-  border-radius: $border-radius;
-  background-color: $gray-lightest;
+  color: $white;
+  border: dashed 1px rgba(white, 0.4);
+  background-color: rgba(86, 83, 76, 0.53);
   background-image: none;
   cursor: pointer;
 
@@ -36,8 +36,8 @@ $border-radius:               3px !default;
   &:focus {
     text-decoration: none;
     color: $text-color;
+    border: solid 1px darken($gray-lighter, 12%) ;
     background-color: darken($gray-lightest, 10%);
-    border-color: darken($gray-lighter, 12%);
   }
 
   &:active,

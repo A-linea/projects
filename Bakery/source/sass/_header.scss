@@ -4,6 +4,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   color: white;
+
   &__top-wrapper {
     @include row();
     @include outline();
@@ -54,6 +55,50 @@
   &__promo {
     @include row();
     @include outline();
+    position: relative;
+    &::before {
+      content: '';
+      @include centerer-xy();
+      width: 100%;
+      height: 100%;
+      opacity: 0.71;
+      background-image: radial-gradient(circle 250px at center, #564f4c 0%, transparent 120%);
+    }
+  }
+  &__promo-centerer {
+    position: relative;
+    text-align: center;
+    @include col-offset(xxl, 3, 12);
+    @include col(xxl, 6, 12);
+    @include col(xl, 2, 12);
+    @include outline();
+    padding-top: 160px;
+    padding-bottom: 180px;
+  }
+  &__promo-title {
+    position: relative;
+    font-family: 'PlayfairDisplay', Serif;
+    font-size: 92px;
+    color: white;
+    text-shadow: 0 1px 0 #3d3029;
+  }
+  &__promo-text {
+    margin-top: 100px;
+    padding: 0 100px;
+    text-align: center;
+    color: white;
+    font-size: 24px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    text-shadow: 0 1px 0 #3d3029;
+  }
+  &__btn {
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: 2.5px;
+    margin-top: 30px;
+    padding: 13px 45px;
+    transition: $transition-time;
   }
 
 }
