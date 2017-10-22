@@ -1,0 +1,75 @@
+.main-header {
+  background-image: url('../img/hero-bg.jpg');
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+  &__top-wrapper {
+    @include row();
+    @include outline();
+  }
+  &__top {
+    width: 100%;
+    background-color: rgba(86, 83, 76, 0.53);
+  }
+  &__logo {
+    @include col(xxl, 2, 12);
+    @include col(xl, 2, 12);
+    @include outline();
+    padding: 0px 0;
+    span {
+      font-family: 'Scriptina', sans-serif;
+      font-size: 30px;
+      line-height: 1.8;
+      display: block;
+      width: 45%;
+      margin: auto;
+    }
+  }
+  &__social {
+    @include col(xxl, 2, 12);
+    @include col(xl, 2, 12);
+    @include outline();
+    padding: 20px 0;
+    a {
+      text-decoration: none;
+    }
+  }
+  &__social-centerer {
+    width: 130px;
+    margin: auto;
+    display: flex;
+    padding-top: 5px;
+    justify-content: space-between;
+  }
+  &__icon {
+    width: 20px;
+    height: 18px;
+    fill: white;
+    transition: $transition-time;
+    &:hover {
+      fill: $link-color--hover;
+    }
+  }
+  &__promo {
+    @include row();
+    @include outline();
+  }
+
+}
+
+
+@media (max-width: $screen-xl) {
+
+}
+@media (max-width: $screen-lg) {
+
+}
+@media (max-width: $screen-md) {
+
+}
+@media (max-width: $screen-sm) {
+
+}
+
+

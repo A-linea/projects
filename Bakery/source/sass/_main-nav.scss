@@ -1,0 +1,39 @@
+.main-nav {
+@include col(xxl, 8, 12);
+@include col(xl, 8, 12);
+
+&__list {
+  list-style: none;
+  font-size: 16px;
+  text-transform: uppercase;
+  margin:0;
+  padding: 25px 20px;
+  display: flex;
+  font-family: 'Alegreya', Serif;
+  justify-content: space-around;
+  }
+  &__item {
+    &::after {
+      content: '~';
+      padding-left: 65px;
+    }
+    &:last-child {
+      &::after {
+        content: '';
+        padding: 0;
+      }
+    }
+  }
+  &__link {
+    display: inline-block;
+    vertical-align: top;
+    text-decoration: none;
+    color: $link-color;
+    transition: $transition-time;
+    &:hover {
+      color: $link-color--hover;
+      text-decoration: underline;
+    }
+
+  }
+}
