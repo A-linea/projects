@@ -36,9 +36,6 @@
     @include outline();
     text-align: center;
   }
-  &__title {
-
-  }
   span {
     font-family: $font-family--serif;
     color: $color-accent;
@@ -49,6 +46,9 @@
   &__text-wrapper {
     width: 85%;
     margin: auto;
+    margin-top: 40px;
+    line-height: 1.8;
+    font-weight: 700;
   }
   &__chef {
     margin-top: 45px;
@@ -56,6 +56,7 @@
       margin-bottom: 55px;
     }
     b {
+      font-family: $font-family--serif;
       display: inline-block;
       vertical-align: top;
       font-size: 24px;
@@ -71,8 +72,6 @@
       font-size: 28px;
       color: $color-accent;
       position: relative;
-
-
       &::before,
       &::after {
         position: absolute;
@@ -103,6 +102,7 @@
     img {
       height: auto;
       max-width: 100%;
+
     }
   }
   &__photo-side {
@@ -116,13 +116,41 @@
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
+      position: relative;
+      &::before {
+        content: '';
+        @include centerer-xy();
+        margin-top: 10px;
+        width: 250px;
+        height: 250px;
+        background-image: url(../img/Section-1/curves-bg.png);
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        opacity: 0.90;
+      }
+      &::after {
+        content: 'tastes so good!';
+        @include centerer-xy();
+        width: 100px;
+        text-align: center;
+        color: $color-accent;
+        font-size: 22px;
+        text-transform: uppercase;
+        font-family: $font-family--serif;
+
+      }
     }
   }
   &__image {
     display: inline-block;
     vertical-align: top;
+    max-width: 278px;
+    max-height: 238px;
     margin-top: 15px;
     margin-right: 20px;
+    outline: 5px solid white;
+    outline-offset: -10px;
     &:nth-child(2n) {
       margin-right: 0;
     }

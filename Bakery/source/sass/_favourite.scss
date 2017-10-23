@@ -1,0 +1,196 @@
+.favourite {
+  background-image: url(../img/Section-2/bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  &__wrapper {
+    @include row();
+  }
+  &__centerer {
+    @include col-offset(xxl, 2, 12);
+    @include col-offset(xl, 2, 12);
+    @include col(xxl, 8, 12);
+    @include col(xl, 8, 12);
+    @include outline();
+  }
+  &__content {
+    @include row();
+    @include outline();
+    align-content: stretch;
+  }
+  &__rate {
+    @include col(xxl, 5, 12, 0);
+    @include outline();
+  }
+  &__img {
+    position: relative;
+
+    img {
+      width: 100%;
+      box-shadow: -6px 8px 40px 5px rgba(0, 0, 0, 0.16), 11px -25px 50px 0px rgba(0, 0, 0, 0.16) inset;
+      height: auto;
+      display: inline-block;
+      vertical-align: top;
+    }
+  }
+  &__icons {
+    display: block;
+    margin: auto;
+    margin-left: 10px;
+    width: 30px;
+    height: auto;
+    position: absolute;
+    @include centerer-y();
+  }
+  &__icon {
+    fill: white;
+    height: 20px;
+    width: 20px;
+  }
+  &__descr {
+    @include col(xxl, 7, 12, 0);
+    @include outline();
+  }
+  &__descr-container {
+    width: 80%;
+    height: 100%;
+    padding-top: 40px;
+    margin-left: 1px;
+    text-align: left;
+    background-color: #fff;
+    box-shadow: 0px 0px 40px 5px rgba(0, 0, 0, 0.16);
+    position: relative;
+    &::before {
+      content: '';
+      position: absolute;
+      background-image: url(../img/Section-2/windmill.png);
+      background-repeat: no-repeat;
+      width: 300px;
+      height: 300px;
+      bottom: 0;
+      right: 0;
+      background-size: cover;
+      background-position: right 0;
+    }
+  }
+  &__time {
+    width: 200px;
+    background-color: #fff;
+    height: 200px;
+    box-shadow: 0px 0px 40px 5px rgba(0, 0, 0, 0.16);
+    position: absolute;
+    top: -50px;
+    right: -100px;
+    background-image: url(../img/Section-2/fields.png);
+    background-repeat: no-repeat;
+    span {
+      display: block;
+      text-align: center;
+      font-family: $font-family--serif;
+      color: $color-accent;
+      font-weight: 700;
+    }
+  }
+  &__time-top {
+    margin-top: 20px;
+    font-size: 18px;
+    text-transform: uppercase;
+  }
+  &__time-min {
+    font-size: 86px;
+    text-transform: uppercase;
+  }
+  &__time-bot {
+    margin-top: 10px;
+    text-transform: lowercase;
+  }
+  &__title {
+    margin-left: 50px;
+  }
+  &__sub {
+    font-family: $font-family--serif;
+    color: $color-accent;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    margin-left: 50px;
+  }
+  &__text {
+    margin-top: 60px;
+    padding: 0 50px;
+    text-align: left;
+    line-height: 1.8;
+    font-weight: 700;
+  }
+  .owl-nav {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 15%;
+  }
+  &__carousel.owl-carousel {
+    width: 80%;
+    margin: auto;
+    margin-top: 70px;
+    position: relative;
+     .owl-stage-outer {
+        width: 100%;
+    }
+  }
+  .favourite__carousel-nav--left,
+  .favourite__carousel-nav--right {
+    display: block;
+    position: absolute;
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+    width: 30px;
+    height: 30px;
+  }
+  .favourite__carousel-nav--left {
+    background-image: url(../img/Section-2/ico-arrow-left.svg);
+    left: -26px;
+    transition: $transition-time;
+    &:hover {
+      background-image: url(../img/Section-2/ico-arrow-left-hover.svg);
+      &:active {
+        width: 29px;
+        height: 29px;
+      }
+    }
+  }
+  .favourite__carousel-nav--right {
+    background-image: url(../img/Section-2/ico-arrow-right.svg);
+    right: -26px;
+    transition: $transition-time;
+    &:hover {
+      background-image: url(../img/Section-2/ico-arrow-right-hover.svg);
+      &:active {
+        width: 29px;
+        height: 29px;
+      }
+    }
+
+  }
+    &__carousel-item {
+      width: 100px;
+      margin: auto;
+      margin-bottom: 30px;
+      height: auto;
+      border: 1px;
+      border-radius: 250px;
+      overflow: hidden;
+    }
+}
+
+@media (max-width: $screen-xl) {
+
+}
+@media (max-width: $screen-lg) {
+
+}
+@media (max-width: $screen-md) {
+
+}
+@media (max-width: $screen-sm) {
+
+}
