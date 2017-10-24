@@ -1,6 +1,7 @@
 //Aбсолютный путь: @import './source/scss/global/variables.scss';
 /*---------global styles--------*/
 @import "global/normalize.scss";
+@import "global/px-to-rem.scss";
 @import "global/variables.scss";
 @import "mixins.scss";
 @import "global/fonts.scss";

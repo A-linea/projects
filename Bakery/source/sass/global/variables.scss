@@ -36,14 +36,14 @@ $border-color:                $gray-light;
 
 // Базовая типографика
 
-$font-size:                   14px;
-$font-size--h1:               96px;
-$font-size--h2:               46px;
-$font-size--h3:               30px;
-$font-size--h4:               24px;
-$font-size--h5:               16px;
-$font-size--h6:               14px;
-$font-size--small:            0.75em;
+$font-size:                   rem(14px);
+$font-size--h1:               rem(96px);
+$font-size--h2:               rem(46px);
+$font-size--h3:               rem(30px);
+$font-size--h4:               rem(24px);
+$font-size--h5:               rem(16px);
+$font-size--h6:               rem(14px);
+$font-size--small:            rem(12px);;
 
 $line-height:                 1.3;
 
@@ -74,7 +74,7 @@ $container-xxl:               $screen-xxl - 30;
 // Модульная сетка
 
 $grid-columns:                12;
-$grid-gutter-width:           30px;
+$grid-gutter-width:           rem(30px);
 
 
 
@@ -83,10 +83,10 @@ $grid-gutter-width:           30px;
 $field-padding-vertical:      0.3em;
 $field-padding-horizontal:    0.7em;
 
-$border-radius:               3px;
+$border-radius:               rem(3px);
 $opacity:                     0.7;
 $transition-time:             0.3s;
-$shadow:                      0 4px 2px -2px rgba(0, 0, 0, 0.3);
+$shadow:                      rem(0 4px 2px -2px rgba(0, 0, 0, 0.3));
 
 $menu-desktop-width:          $screen-xl;
 $toggler-part-height:         3px;

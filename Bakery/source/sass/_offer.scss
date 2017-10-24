@@ -2,4 +2,174 @@
   background-image: url(../img/Section-3/bg-2.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+  &__wrapper {
+    @include row();
+    @include outline();
+
+  }
+
+  &__breakfast {
+    @include col-offset(xxl, 1, 12);
+    @include col(xxl, 5, 12);
+    @include outline();
+
+  }
+  &__aside {
+    @include col(xxl, 5, 12);
+    @include outline();
+    display: flex;
+    justify-content: flex-end;
+  }
+  &__title {
+    text-align: center;
+    color: white;
+    font-size: rem(60px);
+    line-height: 0.9;
+  }
+  &__subtitle {
+    display: block;
+    text-align: center;
+    font-family: $font-family--serif;
+    color: #c8a593;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: rem(18px);
+  }
+  &__dishes {
+    margin-top: rem(50px);
+    text-align: center;
+    color: white;
+  }
+  &__dish {
+    font-size: 30px;
+    letter-spacing: rem(1.9px);
+    &:nth-child(n+2) {
+      margin-top: rem(15px);
+    }
+  }
+  &__descr {
+    margin-top: 0;
+    margin-bottom: rem(20px);
+    font-size: rem(16px);
+  }
+  &__price {
+    font-size: rem(36px);
+    display: block;
+    font-family: $font-family--serif;
+    color: $color-gold;
+    padding-bottom: rem(30px);
+    position: relative;
+    &::after {
+      content: '';
+      @include centerer-x();
+      width: rem(90px);
+      height: rem(27px);
+      bottom: rem(0px);
+      background-image: url(../img/Section-3/Branch.png);
+      background-repeat: no-repeat;
+    }
+    &:last-child {
+      &::after {
+        background: none;
+      }
+    }
+  }
+
+  &__aside-content {
+    background-image: url(../img/Section-3/descr.png);
+    background-repeat: no-repeat;
+    width: 70%;
+    margin-left: auto;
+    position: relative;
+    &::after {
+      content: '';
+      position: absolute;
+      background-image: url(../img/Section-3/spikelet.png);
+      bottom: 35px;
+      right: -60px;
+      width: 250px;
+      height: 120px;
+      background-repeat: no-repeat;
+      background-position: top left;
+    }
+  }
+  &__aside-top {
+    text-transform: uppercase;
+    font-family: $font-family--serif;
+    font-size: rem(18px);
+    margin-top: rem(30px);
+    display: flex;
+    position: relative;
+    &::before {
+      content: '';
+      background-color: rgba($color-main, 0.4);
+      @include centerer-xy();
+      width: 50%;
+      height: 0.5px;
+    }
+    &::after {
+      content: '';
+      width: 50px;
+      height: 50px;
+      border: 1px solid rgba($color-main, 0.4);
+      border-radius: 60px;
+      @include centerer-xy();
+      background-color: #f3f1e9;
+      background-image: url(../img/Section-3/bun.png);
+      background-repeat: no-repeat;
+      background-position: center center;
+    }
+    
+  }
+  &__aside-head {
+    align-self: flex-start;
+    padding: rem(0 60px);
+  }
+  &__aside-head--right {
+    margin-left: auto;
+  }
+  &__aside-inner {
+    text-align: center;
+    margin-top: rem(80px);
+    margin-right: rem(30px);
+    margin-left: rem(30px);
+    p {
+      margin-top: rem(50px);
+      margin-right: rem(30px);
+      margin-left: rem(30px);
+      line-height: 1.8;
+    }
+  }
+  &__btn {
+    margin-top: rem(30px);
+    background: none;
+    text-transform: uppercase;
+    color: $color-accent;
+    border: 1px solid $color-main;
+    font-weight: 700;
+    padding: rem(10px 60px);
+    transition: all 0.2s ease;
+    overflow:hidden;
+    z-index: 1;
+    position: relative;
+    &:hover {
+      color: white;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      background: $color-accent;
+      bottom: 0;
+      left: 0;
+      right: 100%;
+      top: 0;
+      z-index: -1;
+      transition: all .2s ease-in;
+    }
+    &:hover::before {
+      top: 0;
+      right: 0;
+    }
+  }
+
 }
