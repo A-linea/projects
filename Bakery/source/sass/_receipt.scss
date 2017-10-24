@@ -1,0 +1,157 @@
+.receipt {
+  background-color: #f3f1e9;
+  position: relative;
+  &::after {
+    content: '';
+    width: 707px;
+    height: 142px;
+    top: 0;
+    opacity: 0.8;
+    @include centerer-x();
+    background-image: url(../img/Section-4/village.png);
+    background-repeat: no-repeat;
+  }
+  &__header {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+  }
+  &__subtitle {
+    color: $color-accent;
+    font-family: $font-family--serif;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: rem(14px);
+  }
+  &__wrapper {
+    @include row();
+    @include outline();
+  }
+  &__inner {
+    @include col-offset(xxl, 1, 12);
+    @include col(xxl, 10, 12);
+    @include outline();
+  }
+  &__content {
+    @include row();
+    @include outline();
+  }
+  &__descr {
+    @include col(xxl, 4, 12);
+    @include outline();
+  }
+  &__inner-wrapper {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+  }
+  &__img {
+    vertical-align: top;
+    box-shadow: $shadow;
+    overflow: hidden;
+    border: rem(1px solid white);
+    border-radius: rem(50px);
+  }
+  &__inner-title {
+    color: $color-accent;
+    margin-top: rem(10px);
+    font-weight: 700;
+  }
+  &__text {
+    margin-top: 0;
+    margin-bottom: rem(50px);
+  }
+  &__picture {
+    @include col(xxl, 8, 12);
+    @include outline();
+    margin: auto;
+  }
+  &__picture-wrapper {
+    position: relative;
+  }
+  &__sticker {
+    font-family: $font-family--serif;
+    position: absolute;
+    top: -20px;
+    right: 0;
+    width: rem(200px);
+    height: rem(200px);
+    background-color: #fff;
+    text-align: center;
+    opacity: 0.8;
+    box-shadow: 14px 1px 55px -20px rgba(0, 0, 0, 0.3);
+    span {
+      display: block;
+      letter-spacing: rem(1.4px);
+    }
+    &--middle {
+      top: 180px;
+
+    }
+    &--bottom {
+      top: 380px;
+    }
+    &--fill {
+      opacity: 1;
+      background-image: url(../img/Section-4/fields.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  }
+  &__sticker-top {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: $color-accent;
+  }
+  &__sticker-min {
+    font-size: 86px;
+    line-height: 1.1;
+    text-transform: uppercase;
+    &--gold {
+      color: $color-gold;
+      font-weight: 700;
+    }
+  }
+  &__sticker-bot {
+    margin-top: 10px;
+    text-transform: lowercase;
+    font-weight: 700;
+
+  }
+  &__btn {
+    position: absolute;
+    bottom: rem(65px);
+    left: rem(-15px);
+    margin-top: rem(30px);
+    background: rgba($color-accent,0.95);
+    text-transform: uppercase;
+    color: white;
+    border: 1px solid white;
+    font-weight: 700;
+    padding: rem(10px 30px);
+    transition: all 0.2s ease;
+    overflow: hidden;
+    z-index: 1;
+    position: relative;
+    &:hover {
+      color: $color-accent;;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      background: white;
+      bottom: 0;
+      left: 0;
+      right: 100%;
+      top: 0;
+      z-index: -1;
+      transition: all .2s ease-in;
+    }
+    &:hover::before {
+      top: 0;
+      right: 0;
+    }
+  }
+}

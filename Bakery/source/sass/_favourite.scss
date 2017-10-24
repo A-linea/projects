@@ -6,10 +6,12 @@
     @include row();
   }
   &__centerer {
-    @include col-offset(xxl, 2, 12);
     @include col-offset(xl, 2, 12);
     @include col(xxl, 8, 12);
     @include col(xl, 8, 12);
+    @include col(lg, 8, 12);
+    @include col(md, 8, 12);
+    @include col(sm, 8, 12);
     @include outline();
   }
   &__content {
@@ -19,6 +21,10 @@
   }
   &__rate {
     @include col(xxl, 5, 12, 0);
+    @include col(xl, 5, 12, 0);
+    @include col(lg, 5, 12, 0);
+    @include col(md, 5, 12, 0);
+    @include col(sm, 5, 12);
     @include outline();
   }
   &__img {
@@ -47,7 +53,12 @@
     width: 20px;
   }
   &__descr {
-    @include col(xxl, 7, 12, 0);
+    @include col(xxl, 7, 12);
+    @include col(xl, 7, 12);
+    @include col(lg, 7, 12);
+    @include col(md, 7, 12);
+    @include col(sm, 7, 12);
+
     @include outline();
   }
   &__descr-container {

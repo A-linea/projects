@@ -1,8 +1,10 @@
 .main-header {
+  background-color: rgba(86, 83, 76, 0.53);
   background-image: url('../img/hero-bg.jpg');
   height: 100vh;
   background-repeat: no-repeat;
   background-size: cover;
+  min-height: 580px;
   color: white;
 
   &__top-wrapper {
@@ -14,13 +16,17 @@
     background-color: rgba(86, 83, 76, 0.53);
   }
   &__logo {
-    @include col(xxl, 2, 12);
+    @include col(xs, 2, 12);
+    @include col(sm, 2, 12);
+    @include col(md, 2, 12);
+    @include col(lg, 2, 12);
     @include col(xl, 2, 12);
+    @include col(xxl, 2, 12);
     @include outline();
     padding: 0px 0;
     span {
       font-family: 'Scriptina', sans-serif;
-      font-size: 30px;
+      font-size: rem(30px);
       line-height: 1.8;
       display: block;
       width: 45%;
@@ -28,8 +34,12 @@
     }
   }
   &__social {
-    @include col(xxl, 2, 12);
+    @include col(xs, 2, 12);
+    @include col(sm, 2, 12);
+    @include col(md, 2, 12);
+    @include col(lg, 2, 12);
     @include col(xl, 2, 12);
+    @include col(xxl, 2, 12);
     @include outline();
     padding: 20px 0;
     a {
@@ -37,15 +47,15 @@
     }
   }
   &__social-centerer {
-    width: 130px;
+    width: rem(130px);
     margin: auto;
     display: flex;
-    padding-top: 5px;
+    padding-top: rem(5px);
     justify-content: space-between;
   }
   &__icon {
-    width: 20px;
-    height: 18px;
+    width: rem(20px);
+    height: rem(18px);
     fill: white;
     transition: $transition-time;
     &:hover {
@@ -67,38 +77,45 @@
   }
   &__promo-centerer {
     text-align: center;
-    @include col-offset(xxl, 3, 12);
+    @include col-offset(xxl, 2, 12);
     @include col-offset(xl, 2, 12);
-    @include col(xxl, 6, 12);
+    @include col-offset(lg, 2, 12);
+    @include col-offset(md, 2, 12);
+    @include col-offset(sm, 1, 12);
+    @include col(xxl, 8, 12);
     @include col(xl, 8, 12);
+    @include col(lg, 8, 12);
+    @include col(md, 8, 12);
+    @include col(sm, 10, 12);
+
     @include outline();
-    padding-top: 160px;
+    padding-top: rem(160px);
   }
   &__promo-title {
     position: relative;
     font-family: 'PlayfairDisplay', Serif;
-    font-size: 92px;
+    font-size: rem(92px);
     color: white;
     text-shadow: 0 1px 0 #3d3029;
   }
   &__promo-text {
     position: relative;
-    margin-top: 100px;
-    padding: 0 100px;
+    margin-top: rem(100px);
+    padding: rem(0 100px);
     text-align: center;
     color: white;
-    font-size: 24px;
+    font-size: rem(24px);
     font-weight: 400;
-    letter-spacing: 2px;
+    letter-spacing: rem(2px);
     text-shadow: 0 1px 0 #3d3029;
   }
   &__btn {
     position: relative;
     text-transform: uppercase;
-    font-size: 14px;
+    font-size: rem(14px);
     letter-spacing: 2.5px;
-    margin-top: 30px;
-    padding: 13px 45px;
+    margin-top: rem(30px);
+    padding: rem(13px 45px);
     transition: $transition-time;
   }
 
@@ -107,16 +124,47 @@
 
 @media (max-width: $screen-xl) {
   .main-header__promo-centerer {
-    padding-top: 80px;
+    padding-top: rem(80px);
   }
 }
 @media (max-width: $screen-lg) {
-
+  .main-header__promo-title {
+    font-size: rem(86px);
+  }
+  .main-header__logo {
+    @include visuallyhidden();
+  }
+  .main-header__social-centerer {
+    width: rem(100px);
+  }
 }
 @media (max-width: $screen-md) {
+  .main-header__promo-centerer {
+    padding-top: rem(50px);
+  }
+  .main-header__promo-title {
+    font-size: rem(60px);
+  }
+  .main-header__promo-text {
+    margin-top: rem(30px);
+    padding: rem(0 30px);
+    font-size: rem(18px);
+  }
+  .main-header__social {
+    display: none;
+  }
+  .main-header__btn {
+    font-size: rem(14px);
+    letter-spacing: 2.2px;
+    margin-top: rem(15px);
+    padding: rem(10px 35px);
+  }
 
 }
 @media (max-width: $screen-sm) {
+  .main-header__promo-title {
+    font-size: rem(50px);
+  }
 
 }
 

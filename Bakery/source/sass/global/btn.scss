@@ -7,10 +7,10 @@ $gray-lightest:               hsl(0, 0%, 90%) !default;
 $text-color:                  hsl(0, 0%, 10%) !default;
 $line-height:                 1.3;
 
-$field-padding-vertical:      5px !default;
-$field-padding-horizontal:    12px !default;
+$field-padding-vertical:      rem(5px) !default;
+$field-padding-horizontal:    rem(12px) !default;
 
-$border-radius:               3px !default;
+$border-radius:               rem(3px) !default;
 
 .btn {
   box-sizing: border-box;
@@ -21,7 +21,7 @@ $border-radius:               3px !default;
   vertical-align: middle;
   user-select: none;
   text-align: center;
-  font-size: 16px;
+  font-size: rem(16px);
   font-family: $font-family--serif;
   line-height: $line-height;
   text-decoration: none;

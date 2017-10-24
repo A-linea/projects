@@ -188,7 +188,7 @@ $grid-gutter-width:           30px !default;
 @mixin get-width ($column: 1, $columns: $grid-columns) {
   $width: (100% / $columns) * $column;
   flex: 0 0 $width;
-  max-width: $width;
+  min-width: $width;
 }
 
 
@@ -242,35 +242,35 @@ $grid-gutter-width:           30px !default;
 
   @if ($screen == sm) {
 
-    @media (max-width: $screen-sm) {
+    @media (maxn-width: $screen-sm) {
       @include make-col($column, $columns, $gutter);
     }
   }
 
   @if ($screen == md) {
 
-    @media (max-width: $screen-md) {
+    @media (min-width: $screen-md) {
       @include make-col($column, $columns, $gutter);
     }
   }
 
   @if ($screen == lg) {
 
-    @media (max-width: $screen-lg) {
+    @media (min-width: $screen-lg) {
       @include make-col($column, $columns, $gutter);
     }
   }
 
   @if ($screen == xl) {
 
-    @media (max-width: $screen-xl) {
+    @media (min-width: $screen-xl) {
       @include make-col($column, $columns, $gutter);
     }
   }
 
   @if ($screen == xxl) {
 
-    @media (max-width: $screen-xxl) {
+    @media (min-width: $screen-xxl) {
       @include make-col($column, $columns, $gutter);
     }
   }
@@ -299,35 +299,35 @@ $grid-gutter-width:           30px !default;
 
   @if ($screen == sm) {
 
-    @media (max-width: $screen-sm) {
+    @media (min-width: $screen-sm) {
       margin-left: ($column * 100% / $columns);
     }
   }
 
   @if ($screen == md) {
 
-    @media (max-width: $screen-md) {
+    @media (min-width: $screen-md) {
       margin-left: ($column * 100% / $columns);
     }
   }
 
   @if ($screen == lg) {
 
-    @media (max-width: $screen-lg) {
+    @media (min-width: $screen-lg) {
       margin-left: ($column * 100% / $columns);
     }
   }
 
   @if ($screen == xl) {
 
-    @media (max-width: $screen-xl) {
+    @media (min-width: $screen-xl) {
       margin-left: ($column * 100% / $columns);
     }
   }
 
   @if ($screen == xxl) {
 
-    @media (max-width: $screen-xxl) {
+    @media (min-width: $screen-xxl) {
       margin-left: ($column * 100% / $columns);
     }
   }

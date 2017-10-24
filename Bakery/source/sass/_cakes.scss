@@ -31,8 +31,8 @@
     @include col(xl, 6, 12);
     @include col(lg, 6, 12);
     @include col(md, 6, 12);
-    @include col(sm, 6, 12);
-    @include col(xs, 6, 12);
+    @include col(sm, 12, 12);
+    @include col(xs, 12, 12);
     @include outline();
     text-align: center;
   }
@@ -41,76 +41,76 @@
     color: $color-accent;
     text-transform: uppercase;
     font-weight: 700;
-    letter-spacing: 1.5px;
+    letter-spacing: rem(1.5px);
   }
   &__text-wrapper {
     width: 85%;
     margin: auto;
-    margin-top: 40px;
+    margin-top: rem(40px);
     line-height: 1.8;
     font-weight: 700;
   }
   &__chef {
-    margin-top: 45px;
+    margin-top: rem(45px);
     h4 {
-      margin-bottom: 55px;
+      margin-bottom: rem(55px);
     }
     b {
       font-family: $font-family--serif;
       display: inline-block;
       vertical-align: top;
-      font-size: 24px;
+      font-size: rem(24px);
       border-bottom: 1px solid $text-color;
       border-top: 1px solid $text-color;
-      padding: 10px 10px;
-      margin: 20px 0 10px 0;
+      padding: rem(10px 10px);
+      margin: rem(20px 0 10px 0);
     }
     cite {
       display: block;
-      padding: 10px 150px;
+      padding: rem(10px 150px);
+      letter-spacing: rem(3px);
       font-family: 'Scriptina', sans-serif;
-      font-size: 28px;
+      font-size: rem(28px);
       color: $color-accent;
       position: relative;
       &::before,
       &::after {
         position: absolute;
-        font-size: 56px;
+        font-size: rem(56px);
         font-family: 'Times New Roman';
       }
       &::before {
         content: '\201c';
-        left: 100px;
+        left: rem(100px);
         top: 0;
       }
       &::after {
         content: '\201d';
-        right: 100px;
-        bottom: -20px;
+        right: rem(100px);
+        bottom: rem(-20px);
       }
     }
   }
   &__chef-img {
     display: inline-block;
     vertical-align: top;
-    margin: 0 25px;
-    width: 100px;
-    height: 100px;
-    border-radius: 50px;
+    margin: rem(0 25px);
+    width: rem(100px);
+    height: rem(100px);
+    border-radius: rem(50px);
     overflow: hidden;
     box-shadow: 0 0 0 5px white;
     img {
       height: auto;
       max-width: 100%;
-
     }
   }
   &__photo-side {
     @include col(xl, 6, 12);
     @include col(lg, 6, 12);
     @include col(md, 6, 12);
-    @include col(sm, 6, 12);
-    @include col(xs, 6, 12);
+    @include col(sm, 12, 12);
+    @include col(xs, 12, 12);
     @include outline();
     figure {
       display: flex;
@@ -120,9 +120,9 @@
       &::before {
         content: '';
         @include centerer-xy();
-        margin-top: 10px;
-        width: 250px;
-        height: 250px;
+        margin-top: rem(10px);
+        width: rem(250px);
+        height: rem(250px);
         background-image: url(../img/Section-1/curves-bg.png);
         background-repeat: no-repeat;
         background-position: center center;
@@ -132,38 +132,176 @@
       &::after {
         content: 'tastes so good!';
         @include centerer-xy();
-        width: 100px;
+        width: rem(100px);
         text-align: center;
         color: $color-accent;
-        font-size: 22px;
+        font-size: rem(22px);
         text-transform: uppercase;
         font-family: $font-family--serif;
-
       }
     }
   }
   &__image {
     display: inline-block;
     vertical-align: top;
-    max-width: 278px;
-    max-height: 238px;
-    margin-top: 15px;
-    margin-right: 20px;
+    max-width: rem(278px);
+    max-height: rem(238px);
+    margin-top: rem(15px);
+    margin-right: rem(20px);
     outline: 5px solid white;
-    outline-offset: -10px;
+    outline-offset: rem(-10px);
     &:nth-child(2n) {
       margin-right: 0;
     }
   }
 
 }
-@media (max-width: $screen-xl) {
+@media (max-width: $screen-xxl) {
+  .cakes__photo-side {
+    display: flex;
+  }
+  .cakes__photo-side figure {
+    margin: auto;
+    &::before {
+      margin-top: rem(10px);
+      width: rem(200px);
+      height: rem(200px);
+    }
+  }
+  .cakes__image {
+    max-height: rem(200px);
+  }
+  .cakes__chef cite {
+    padding: rem(10px 100px);
+    &::before,
+    &::after {
+      position: absolute;
+      font-size: rem(46px);
+    }
+    &::before {
+      left: rem(80px);
 
+    }
+    &::after {
+      content: '\201d';
+      right: rem(80px);
+      bottom: rem(-30px);
+    }
+  }
 }
+@media (max-width: $screen-xl) {
+  .cakes__photo-side figure {
+    &::before {
+      margin-top: rem(10px);
+      width: rem(200px);
+      height: rem(200px);
+    }
+  }
+  .cakes__image {
+    max-height: rem(160px);
+  }
+  .cakes__photo-side figure {
+    margin: auto;
+    &::before {
+      margin-top: rem(10px);
+      width: rem(160px);
+      height: rem(160px);
+    }
+    &::after {
+      font-size: rem(18px);
+    }
+  }
+  .cakes__chef {
+    margin-top: rem(25px);
+    h4 {
+      margin-bottom: rem(35px);
+    }
+
+  }
+  .cakes__chef cite {
+    padding: rem(10px 60px);
+    font-size: rem(22px);
+    &::before,
+    &::after {
+      font-size: rem(40px);
+    }
+    &::before {
+      content: '\201c';
+      left: rem(60px);
+      top: 0;
+    }
+    &::after {
+      content: '\201d';
+      right: rem(60px);
+      bottom: rem(-25px);
+    }
+  }
+}
+
 @media (max-width: $screen-lg) {
+  .cakes__chef cite {
+    padding: rem(10px 40px);
+    &::before {
+      content: '\201c';
+      left: rem(25px);
+      top: 0;
+    }
+    &::after {
+      content: '\201d';
+      right: rem(25px);
+      bottom: rem(-25px);
+    }
+  }
+  .cakes__chef{
+    b {
+      font-size: rem(20px);
+      padding: rem(10px 10px);
+      margin: rem(10px 0);
+    }
+  }
+  .cakes__chef-img {
+    margin: rem(0 15px);
+    width: rem(80px);
+    height: rem(80px);
+  }
+  .cakes__image {
+    max-height: rem(140px);
+  }
+  .cakes__photo-side figure {
+    margin: auto;
+    &::before {
+      margin-top: rem(5px);
+      width: rem(130px);
+      height: rem(130px);
+    }
+    &::after {
+      font-size: rem(16px);
+    }
+  }
 
 }
 @media (max-width: $screen-md) {
+  .cakes {
+    padding: rem(40px);
+  }
+  .cakes__image {
+    max-height: rem(175px);
+  }
+  .cakes__photo-side figure {
+    &::before {
+      margin-top: rem(10px);
+      width: rem(160px);
+      height: rem(160px);
+    }
+    &::after {
+      font-size: rem(18px);
+    }
+  }
+}
+@media (max-width: 644px) {
+  .cakes__image {
+    max-height: rem(140px);
+  }
 
 }
 @media (max-width: $screen-sm) {
