@@ -1,4 +1,28 @@
 .section {
-  padding: 100px 0;
+  padding: rem(100px 0);
   position: relative;
+}
+
+@media (max-width: $screen-xxl) {
+
+}
+@media (max-width: $screen-xl) {
+  .section {
+    padding: rem(80px 0);
+    position: relative;
+  }
+}
+@media (max-width: $screen-lg) {
+  .section {
+    padding: rem(40px 0);
+    position: relative;
+  }
+
+}
+@media (max-width: $screen-md) {
+
+
+}
+@media (max-width: $screen-sm) {
+
 }

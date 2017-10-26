@@ -9,7 +9,6 @@
 
   &__top-wrapper {
     @include row();
-    @include outline();
   }
   &__top {
     width: 100%;
@@ -22,7 +21,6 @@
     @include col(lg, 2, 12);
     @include col(xl, 2, 12);
     @include col(xxl, 2, 12);
-    @include outline();
     padding: 0px 0;
     span {
       font-family: 'Scriptina', sans-serif;
@@ -40,7 +38,6 @@
     @include col(lg, 2, 12);
     @include col(xl, 2, 12);
     @include col(xxl, 2, 12);
-    @include outline();
     padding: 20px 0;
     a {
       text-decoration: none;
@@ -64,7 +61,6 @@
   }
   &__promo {
     @include row();
-    @include outline();
     position: relative;
     &::before {
       content: '';
@@ -87,8 +83,6 @@
     @include col(lg, 8, 12);
     @include col(md, 8, 12);
     @include col(sm, 10, 12);
-
-    @include outline();
     padding-top: rem(160px);
   }
   &__promo-title {

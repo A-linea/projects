@@ -25,7 +25,6 @@
   }
   &__content {
     @include row();
-    @include outline();
   }
   &__text-side {
     @include col(xl, 6, 12);
@@ -33,7 +32,6 @@
     @include col(md, 6, 12);
     @include col(sm, 12, 12);
     @include col(xs, 12, 12);
-    @include outline();
     text-align: center;
   }
   span {
@@ -111,7 +109,6 @@
     @include col(md, 6, 12);
     @include col(sm, 12, 12);
     @include col(xs, 12, 12);
-    @include outline();
     figure {
       display: flex;
       flex-wrap: wrap;
@@ -240,7 +237,7 @@
 
 @media (max-width: $screen-lg) {
   .cakes__chef cite {
-    padding: rem(10px 40px);
+    padding: rem(20px 40px);
     &::before {
       content: '\201c';
       left: rem(25px);
@@ -278,8 +275,18 @@
       font-size: rem(16px);
     }
   }
-
 }
+@media (max-width: 790px) {
+  .cakes__image {
+    max-height: rem(125px);
+  }
+}
+@media (min-width: 768px) and (max-width: 769px) {
+  .cakes__image {
+    max-height: rem(120px);
+  }
+}
+
 @media (max-width: $screen-md) {
   .cakes {
     padding: rem(40px);
@@ -302,8 +309,49 @@
   .cakes__image {
     max-height: rem(140px);
   }
-
 }
 @media (max-width: $screen-sm) {
+  .cakes__text-wrapper {
+    width: 100%;
+    margin-top: rem(20px);
+  }
+  .cakes__chef {
+    h4 {
+      margin-bottom: rem(10px);
+    }
+    b {
+      display: block;
+      width: 55%;
+      margin: rem(15px auto);
+      padding: rem(5px 0);
 
+    }
+    cite {
+      padding: rem(20px 30px);
+      font-size: rem(18px);
+      &::before,
+      &::after {
+        font-size: rem(40px);
+      }
+      &::before {
+        content: '\201c';
+        left: rem(10px);
+        top: 0;
+      }
+      &::after {
+        content: '\201d';
+        right: rem(10px);
+        bottom: rem(-25px);
+      }
+    }
+  }
+  .cakes__photo-side figure {
+    img {
+     display: none;
+    }
+    &::before,
+    &::after {
+     display: none;
+    }
+  }
 }

@@ -6,26 +6,27 @@
     @include row();
   }
   &__centerer {
-    @include col-offset(xl, 2, 12);
+    @include col-offset(xxl, 2, 12);
+    @include col-offset(md, 1, 12);
     @include col(xxl, 8, 12);
-    @include col(xl, 8, 12);
-    @include col(lg, 8, 12);
-    @include col(md, 8, 12);
-    @include col(sm, 8, 12);
-    @include outline();
+    @include col(xl, 10, 12);
+    @include col(lg, 10, 12);
+    @include col(md, 10, 12);
+    @include col(sm, 12, 12);
+    @include col(xs, 12, 12);
   }
   &__content {
-    @include row();
-    @include outline();
-    align-content: stretch;
+    @include row(0);
   }
   &__rate {
     @include col(xxl, 5, 12, 0);
     @include col(xl, 5, 12, 0);
     @include col(lg, 5, 12, 0);
     @include col(md, 5, 12, 0);
-    @include col(sm, 5, 12);
-    @include outline();
+    @include col-offset(md, 0, 12);
+    @include col-offset(sm, 2, 14);
+    @include col(sm, 10, 14);
+    @include col(xs, 14, 14);
   }
   &__img {
     position: relative;
@@ -41,31 +42,32 @@
   &__icons {
     display: block;
     margin: auto;
-    margin-left: 10px;
-    width: 30px;
+    margin-left: rem(10px);
+    width: rem(30px);
     height: auto;
     position: absolute;
     @include centerer-y();
   }
   &__icon {
     fill: white;
-    height: 20px;
-    width: 20px;
+    height: rem(20px);
+    width: rem(20px);
   }
   &__descr {
     @include col(xxl, 7, 12);
     @include col(xl, 7, 12);
-    @include col(lg, 7, 12);
-    @include col(md, 7, 12);
-    @include col(sm, 7, 12);
-
-    @include outline();
+    @include col(lg, 7, 12, 0);
+    @include col(md, 7, 12, 0);
+    @include col-offset(md, 0, 12);
+    @include col-offset(sm, 2, 14);
+    @include col(sm, 10, 14);
+    @include col(xs, 14, 14);
   }
   &__descr-container {
     width: 80%;
     height: 100%;
-    padding-top: 40px;
-    margin-left: 1px;
+    padding-top: rem(40px);
+    margin-left: rem(1px);
     text-align: left;
     background-color: #fff;
     box-shadow: 0px 0px 40px 5px rgba(0, 0, 0, 0.16);
@@ -75,8 +77,8 @@
       position: absolute;
       background-image: url(../img/Section-2/windmill.png);
       background-repeat: no-repeat;
-      width: 300px;
-      height: 300px;
+      width: rem(300px);
+      height: rem(300px);
       bottom: 0;
       right: 0;
       background-size: cover;
@@ -84,13 +86,13 @@
     }
   }
   &__time {
-    width: 200px;
+    width: rem(200px);
     background-color: #fff;
-    height: 200px;
+    height: rem(200px);
     box-shadow: 0px 0px 40px 5px rgba(0, 0, 0, 0.16);
     position: absolute;
-    top: -50px;
-    right: -100px;
+    top: rem(-50px);
+    right: rem(-100px);
     background-image: url(../img/Section-2/fields.png);
     background-repeat: no-repeat;
     span {
@@ -102,35 +104,36 @@
     }
   }
   &__time-top {
-    margin-top: 20px;
-    font-size: 18px;
+    margin-top: rem(20px);
+    font-size: rem(18px);
     text-transform: uppercase;
   }
   &__time-min {
-    font-size: 86px;
+    font-size: rem(86px);
     text-transform: uppercase;
   }
   &__time-bot {
-    margin-top: 10px;
+    margin-top: rem(10px);
     text-transform: lowercase;
   }
   &__title {
-    margin-left: 50px;
+    margin-left: rem(50px);
   }
   &__sub {
     font-family: $font-family--serif;
     color: $color-accent;
     text-transform: uppercase;
     font-weight: 700;
-    letter-spacing: 1.5px;
-    margin-left: 50px;
+    letter-spacing: rem(1.5px);
+    margin-left: rem(50px);
   }
   &__text {
-    margin-top: 60px;
-    padding: 0 50px;
+    margin-top: rem(60px);
+    padding: rem(0 50px);
     text-align: left;
     line-height: 1.8;
     font-weight: 700;
+    position: relative;
   }
   .owl-nav {
     position: absolute;
@@ -141,7 +144,7 @@
   &__carousel.owl-carousel {
     width: 80%;
     margin: auto;
-    margin-top: 70px;
+    margin-top: rem(70px);
     position: relative;
      .owl-stage-outer {
         width: 100%;
@@ -154,54 +157,123 @@
     background-color: transparent;
     cursor: pointer;
     border: none;
-    width: 30px;
-    height: 30px;
+    width: rem(30px);
+    height: rem(30px);
   }
   .favourite__carousel-nav--left {
     background-image: url(../img/Section-2/ico-arrow-left.svg);
-    left: -26px;
+    left: rem(-26px);
     transition: $transition-time;
     &:hover {
       background-image: url(../img/Section-2/ico-arrow-left-hover.svg);
       &:active {
-        width: 29px;
-        height: 29px;
+        width: rem(29px);
+        height: rem(29px);
       }
     }
   }
   .favourite__carousel-nav--right {
     background-image: url(../img/Section-2/ico-arrow-right.svg);
-    right: -26px;
+    right: rem(-26px);
     transition: $transition-time;
     &:hover {
       background-image: url(../img/Section-2/ico-arrow-right-hover.svg);
       &:active {
-        width: 29px;
-        height: 29px;
+        width: rem(29px);
+        height: rem(29px);
       }
     }
 
   }
     &__carousel-item {
-      width: 100px;
+      width: rem(100px);
       margin: auto;
-      margin-bottom: 30px;
+      margin-bottom: rem(30px);
       height: auto;
-      border: 1px;
-      border-radius: 250px;
+      border: rem(1px);
+      border-radius: rem(250px);
       overflow: hidden;
     }
 }
-
+@media (max-width: $screen-xxl) {
+  .favourite__time {
+    width: rem(160px);
+    height: rem(160px);
+  }
+  .favourite__time-min {
+    font-size: rem(68px);
+  }
+  .favourite__time-bot {
+    margin-top: rem(5px);
+  }
+}
 @media (max-width: $screen-xl) {
+  .favourite__descr-container {
+    width: 100%;
+  }
+  .favourite__carousel-item {
+    width: rem(80px);
+  }
+  .favourite__time {
+    width: rem(140px);
+    height: rem(140px);
+    right: rem(-80px);
+  }
+  .favourite__time-min {
+    font-size: rem(58px);
+  }
+  .favourite__text {
+    margin-top: rem(40px);
+  }
+  .favourite__carousel.owl-carousel {
+    margin-top: rem(30px);
+  }
 
 }
 @media (max-width: $screen-lg) {
+  .favourite__carousel-item {
+    width: rem(70px);
+  }
+  .favourite__time {
+   display: none;
+  }
+  .favourite__time-min {
+    font-size: rem(48px);
+  }
+  .favourite__time-bot {
+    margin-top: rem(5px);
+  }
 
 }
 @media (max-width: $screen-md) {
 
+  .favourite__descr {
+    margin-top: rem(20px);
+  }
+  .favourite__carousel-item {
+    width: rem(60px);
+  }
+  .favourite__time {
+    display: block;
+    width: rem(120px);
+    height: rem(120px);
+    top: rem(-60px);
+    right: rem(-60px);
+  }
+  .favourite__time-top {
+    margin-top: rem(15px);
+    font-size: rem(15px);
+    text-transform: uppercase;
+  }
+  .favourite__time-min {
+    font-size: rem(44px);
+  }
+  .favourite__text {
+    margin-top: rem(40px);
+  }
 }
 @media (max-width: $screen-sm) {
-
+  .favourite__time {
+    display: none;
+  }
 }
