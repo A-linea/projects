@@ -7,8 +7,6 @@
   @include col(xxl, 8, 12);
   @include col-offset (sm, 1, 12);
   @include col-offset (md, 0, 12);
-
-
   &__list {
   list-style: none;
   font-size: rem(15px);
@@ -55,8 +53,6 @@
   }
 }
 @media (max-width: $screen-xl) {
-  .main-nav {
-  }
   .main-nav__item {
     &::after {
       content: '';
@@ -87,19 +83,24 @@
 
   }
 }
+@media (min-width: 481px) {
+  .main-nav {
+    display: block !important;
+  }
+}
 @media (max-width: $screen-sm) {
   .main-nav {
     display: none;
   }
   .main-nav__toggle {
     display: inline-block;
-    height: 28px;
+    height: 38px;
     right: 15px;
-    padding-top: 10px;
+    padding: rem(10px);
     position: absolute;
     top: 0;
     vertical-align: top;
-    width: 28px;
+    width: 48px;
   }
 
   .main-nav__toggle {
@@ -165,5 +166,4 @@
       background-color: rgba(#000, 0.2);
     }
   }
-
 }

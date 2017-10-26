@@ -271,9 +271,13 @@
   .favourite__text {
     margin-top: rem(40px);
   }
+  .favourite__rate {
+    display: none;
+  }
 }
 @media (max-width: $screen-sm) {
   .favourite__time {
     display: none;
   }
+
 }
