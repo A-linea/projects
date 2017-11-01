@@ -1,3 +1,7 @@
+.main-nav__wrapper {
+  @include row();
+  @include outline();
+}
 .main-nav {
   @include col(xs, 16, 16);
   @include col(sm, 10, 16);
@@ -5,6 +9,8 @@
   @include col(lg, 8, 16);
   @include col(xl, 8, 16);
   @include col(xxl, 8, 16);
+  @include outline();
+
 
   &__list {
     list-style: none;
@@ -34,9 +40,7 @@
 }
 
 @media (min-width: $screen-sm) {
-  .main-nav {
-    display: none;
-  }
+
   .main-nav__toggle {
     display: inline-block;
     height: 38px;
@@ -127,10 +131,7 @@
 
 @media (min-width: $screen-lg) {
 
-  .main-nav {
-    order: 2;
-  }
-  .main-nav__link {
+    .main-nav__link {
     display: inline-block;
     vertical-align: top;
     text-decoration: none;
