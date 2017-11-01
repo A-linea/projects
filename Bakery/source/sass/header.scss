@@ -68,7 +68,7 @@
       width: 100%;
       height: 100%;
       opacity: 0.71;
-      background-image: radial-gradient(circle 250px at center, #564f4c 0%, transparent 120%);
+      background-image: radial-gradient(circle 250px at center, #564f4c 0%, transparent 65%);
     }
   }
   &__promo-centerer {
@@ -144,18 +144,23 @@
     padding: rem(0 30px);
     font-size: rem(18px);
   }
-  .main-header__social {
-    display: none;
-  }
+
   .main-header__btn {
     font-size: rem(14px);
     letter-spacing: 2.2px;
     margin-top: rem(15px);
     padding: rem(10px 35px);
   }
-
+}
+@media (max-width: 767px) {
+  .main-header__social {
+    display: none;
+  }
 }
 @media (max-width: $screen-sm) {
+  .main-header__promo {
+    margin-top: 50%;
+  }
   .main-header__promo-title {
     font-size: rem(50px);
   }

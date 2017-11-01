@@ -1,0 +1,211 @@
+// SCSS variables are information about icon's compiled state, stored under its original file name
+//
+// .icon-home {
+//   width: $icon-home-width;
+// }
+//
+// The large array-like variables contain all information about a single icon
+// $icon-home: x y offset_x offset_y width height total_width total_height image_path;
+//
+// At the bottom of this section, we provide information about the spritesheet itself
+// $spritesheet: width height image $spritesheet-sprites;
+$ico-ambulance-name: 'ico-ambulance';
+$ico-ambulance-x: 51px;
+$ico-ambulance-y: 151px;
+$ico-ambulance-offset-x: -51px;
+$ico-ambulance-offset-y: -151px;
+$ico-ambulance-width: 44px;
+$ico-ambulance-height: 42px;
+$ico-ambulance-total-width: 270px;
+$ico-ambulance-total-height: 197px;
+$ico-ambulance-image: '../img/sprite.png';
+$ico-ambulance: (51px, 151px, -51px, -151px, 44px, 42px, 270px, 197px, '../img/sprite.png', 'ico-ambulance', );
+$ico-emergency-name: 'ico-emergency';
+$ico-emergency-x: 0px;
+$ico-emergency-y: 151px;
+$ico-emergency-offset-x: 0px;
+$ico-emergency-offset-y: -151px;
+$ico-emergency-width: 51px;
+$ico-emergency-height: 46px;
+$ico-emergency-total-width: 270px;
+$ico-emergency-total-height: 197px;
+$ico-emergency-image: '../img/sprite.png';
+$ico-emergency: (0px, 151px, 0px, -151px, 51px, 46px, 270px, 197px, '../img/sprite.png', 'ico-emergency', );
+$ico-hands-name: 'ico-hands';
+$ico-hands-x: 0px;
+$ico-hands-y: 0px;
+$ico-hands-offset-x: 0px;
+$ico-hands-offset-y: 0px;
+$ico-hands-width: 91px;
+$ico-hands-height: 80px;
+$ico-hands-total-width: 270px;
+$ico-hands-total-height: 197px;
+$ico-hands-image: '../img/sprite.png';
+$ico-hands: (0px, 0px, 0px, 0px, 91px, 80px, 270px, 197px, '../img/sprite.png', 'ico-hands', );
+$ico-health-name: 'ico-health';
+$ico-health-x: 182px;
+$ico-health-y: 103px;
+$ico-health-offset-x: -182px;
+$ico-health-offset-y: -103px;
+$ico-health-width: 43px;
+$ico-health-height: 45px;
+$ico-health-total-width: 270px;
+$ico-health-total-height: 197px;
+$ico-health-image: '../img/sprite.png';
+$ico-health: (182px, 103px, -182px, -103px, 43px, 45px, 270px, 197px, '../img/sprite.png', 'ico-health', );
+$ico-heart-name: 'ico-heart';
+$ico-heart-x: 0px;
+$ico-heart-y: 80px;
+$ico-heart-offset-x: 0px;
+$ico-heart-offset-y: -80px;
+$ico-heart-width: 80px;
+$ico-heart-height: 71px;
+$ico-heart-total-width: 270px;
+$ico-heart-total-height: 197px;
+$ico-heart-image: '../img/sprite.png';
+$ico-heart: (0px, 80px, 0px, -80px, 80px, 71px, 270px, 197px, '../img/sprite.png', 'ico-heart', );
+$ico-helicop-name: 'ico-helicop';
+$ico-helicop-x: 80px;
+$ico-helicop-y: 80px;
+$ico-helicop-offset-x: -80px;
+$ico-helicop-offset-y: -80px;
+$ico-helicop-width: 91px;
+$ico-helicop-height: 62px;
+$ico-helicop-total-width: 270px;
+$ico-helicop-total-height: 197px;
+$ico-helicop-image: '../img/sprite.png';
+$ico-helicop: (80px, 80px, -80px, -80px, 91px, 62px, 270px, 197px, '../img/sprite.png', 'ico-helicop', );
+$ico-lungs-name: 'ico-lungs';
+$ico-lungs-x: 91px;
+$ico-lungs-y: 0px;
+$ico-lungs-offset-x: -91px;
+$ico-lungs-offset-y: 0px;
+$ico-lungs-width: 91px;
+$ico-lungs-height: 73px;
+$ico-lungs-total-width: 270px;
+$ico-lungs-total-height: 197px;
+$ico-lungs-image: '../img/sprite.png';
+$ico-lungs: (91px, 0px, -91px, 0px, 91px, 73px, 270px, 197px, '../img/sprite.png', 'ico-lungs', );
+$ico-microscope-name: 'ico-microscope';
+$ico-microscope-x: 229px;
+$ico-microscope-y: 0px;
+$ico-microscope-offset-x: -229px;
+$ico-microscope-offset-y: 0px;
+$ico-microscope-width: 41px;
+$ico-microscope-height: 53px;
+$ico-microscope-total-width: 270px;
+$ico-microscope-total-height: 197px;
+$ico-microscope-image: '../img/sprite.png';
+$ico-microscope: (229px, 0px, -229px, 0px, 41px, 53px, 270px, 197px, '../img/sprite.png', 'ico-microscope', );
+$ico-pills-name: 'ico-pills';
+$ico-pills-x: 95px;
+$ico-pills-y: 151px;
+$ico-pills-offset-x: -95px;
+$ico-pills-offset-y: -151px;
+$ico-pills-width: 45px;
+$ico-pills-height: 41px;
+$ico-pills-total-width: 270px;
+$ico-pills-total-height: 197px;
+$ico-pills-image: '../img/sprite.png';
+$ico-pills: (95px, 151px, -95px, -151px, 45px, 41px, 270px, 197px, '../img/sprite.png', 'ico-pills', );
+$ico-react-name: 'ico-react';
+$ico-react-x: 182px;
+$ico-react-y: 0px;
+$ico-react-offset-x: -182px;
+$ico-react-offset-y: 0px;
+$ico-react-width: 47px;
+$ico-react-height: 53px;
+$ico-react-total-width: 270px;
+$ico-react-total-height: 197px;
+$ico-react-image: '../img/sprite.png';
+$ico-react: (182px, 0px, -182px, 0px, 47px, 53px, 270px, 197px, '../img/sprite.png', 'ico-react', );
+$ico-staff-name: 'ico-staff';
+$ico-staff-x: 229px;
+$ico-staff-y: 53px;
+$ico-staff-offset-x: -229px;
+$ico-staff-offset-y: -53px;
+$ico-staff-width: 31px;
+$ico-staff-height: 54px;
+$ico-staff-total-width: 270px;
+$ico-staff-total-height: 197px;
+$ico-staff-image: '../img/sprite.png';
+$ico-staff: (229px, 53px, -229px, -53px, 31px, 54px, 270px, 197px, '../img/sprite.png', 'ico-staff', );
+$treatment-name: 'treatment';
+$treatment-x: 182px;
+$treatment-y: 53px;
+$treatment-offset-x: -182px;
+$treatment-offset-y: -53px;
+$treatment-width: 45px;
+$treatment-height: 50px;
+$treatment-total-width: 270px;
+$treatment-total-height: 197px;
+$treatment-image: '../img/sprite.png';
+$treatment: (182px, 53px, -182px, -53px, 45px, 50px, 270px, 197px, '../img/sprite.png', 'treatment', );
+$spritesheet-width: 270px;
+$spritesheet-height: 197px;
+$spritesheet-image: '../img/sprite.png';
+$spritesheet-sprites: ($ico-ambulance, $ico-emergency, $ico-hands, $ico-health, $ico-heart, $ico-helicop, $ico-lungs, $ico-microscope, $ico-pills, $ico-react, $ico-staff, $treatment, );
+$spritesheet: (270px, 197px, '../img/sprite.png', $spritesheet-sprites, );
+
+// The provided mixins are intended to be used with the array-like variables
+//
+// .icon-home {
+//   @include sprite-width($icon-home);
+// }
+//
+// .icon-email {
+//   @include sprite($icon-email);
+// }
+//
+// Example usage in HTML:
+//
+// `display: block` sprite:
+// <div class="icon-home"></div>
+//
+// To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+//
+// // CSS
+// .icon {
+//   display: inline-block;
+// }
+//
+// // HTML
+// <i class="icon icon-home"></i>
+@mixin sprite-width($sprite) {
+  width: nth($sprite, 5);
+}
+
+@mixin sprite-height($sprite) {
+  height: nth($sprite, 6);
+}
+
+@mixin sprite-position($sprite) {
+  $sprite-offset-x: nth($sprite, 3);
+  $sprite-offset-y: nth($sprite, 4);
+  background-position: $sprite-offset-x  $sprite-offset-y;
+}
+
+@mixin sprite-image($sprite) {
+  $sprite-image: nth($sprite, 9);
+  background-image: url(#{$sprite-image});
+}
+
+@mixin sprite($sprite) {
+  @include sprite-image($sprite);
+  @include sprite-position($sprite);
+  @include sprite-width($sprite);
+  @include sprite-height($sprite);
+}
+
+// The `sprites` mixin generates identical output to the CSS template
+//   but can be overridden inside of SCSS
+//
+// @include sprites($spritesheet-sprites);
+@mixin sprites($sprites) {
+  @each $sprite in $sprites {
+    $sprite-name: nth($sprite, 10);
+    .#{$sprite-name} {
+      @include sprite($sprite);
+    }
+  }
+}

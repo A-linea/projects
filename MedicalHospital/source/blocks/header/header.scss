@@ -1,0 +1,72 @@
+.main-header {
+  &__top-line {
+    padding-top: rem(30px);
+    @include row();
+    @include outline();
+  }
+  &__logo-container {
+    @include col(xl, 3, 16, 0);
+    @include outline();
+  }
+  &__contacts--worktime {
+    @include col-offset(xl, 2, 16);
+    @include col(xl, 4, 16);
+    @include outline();
+  }
+  &__contacts--mailus {
+    @include col(xl, 4, 16);
+    @include outline();
+  }
+  &__contacts--call {
+    @include col(xl, 3, 16);
+    @include outline();
+  }
+}
+@media (min-width: $screen-sm) {
+  .main-header {
+  }
+}
+@media (min-width: $screen-md) {
+  .main-header {
+    &__contacts {
+      font-size: rem(15px);
+    }
+    &__contacts-wrapper {
+      padding-left: rem(50px);
+      padding-top: rem(7px);
+      position: relative;
+      &::before {
+        content: '';
+        left: 0;
+        @include centerer-y();
+        height: rem(40px);
+        width: rem(40px);
+        //background-image: url();
+        background-color: $accent-color;
+        border-radius: rem(20px);
+        &--worktime {
+          background-image: url(img/ico);
+
+        }
+
+      }
+    }
+    &__contacts-text {
+      margin: 0;
+      padding: 0;
+    }
+  }
+}
+@media (min-width: $screen-lg) {
+  .main-header {
+  }
+}
+@media (min-width: $screen-xl) {
+  .main-header {
+
+  }
+}
+
+@media (min-width: $screen-xxl) {
+
+}
