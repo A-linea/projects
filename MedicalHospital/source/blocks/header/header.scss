@@ -35,6 +35,16 @@
     @include outline();
   }
 }
+.main-header__middle {
+  @include row();
+  @include outline();
+}
+.main-header__social {
+  @include col-offset(xl, 5, 16);
+  @include col(md, 3, 16);
+  @include outline();
+  display: flex;
+}
 @media (min-width: $screen-sm) {
   .main-header {
   }
@@ -57,7 +67,6 @@
         @include centerer-y();
         height: rem(40px);
         width: rem(40px);
-        //background-image: url(../img/ico-time.svg);
         background-color: $accent-color;
         border-radius: rem(20px);
       }
@@ -108,6 +117,50 @@
       &:hover {
         color: $link-color--hover;
         font-weight: bold;
+      }
+    }
+    &__icons-container {
+      margin: auto;
+            width: 200px;
+      display: flex;
+      justify-content: space-between;
+      a {
+        text-decoration: none;
+        display: inline-block;
+        vertical-align: top;
+        width: 30px;
+        margin: auto;
+
+      }
+    }
+    &__icon  {
+      width: rem(25px);
+      height: rem(25px);
+      transition: $transition-time;
+      &--fb,
+      &--vk {
+        padding-bottom: 3px;
+        &:hover {
+          fill: #4267B2;
+        }
+      }
+      &--google {
+        width: rem(30px);
+        height: rem(35px);
+        &:hover {
+          fill: gray;
+        }
+      }
+      &--tube {
+        &:hover {
+          fill: #FF0000;
+        }
+      }
+      &--in {
+        padding-bottom: 3px;
+        &:hover {
+          fill: #0077b5;
+        }
       }
     }
   }

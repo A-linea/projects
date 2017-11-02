@@ -149,7 +149,7 @@ gulp.task('webp', function () {
 /* ------------ png sprite ------------- */
 
 gulp.task('sprite', function(cb) {
-  ('*********** создание спрайта png');
+  console.log('*********** создание спрайта png');
   const spriteData = gulp.src('source/img/icons_png/*.png')
   .pipe(spritesmith({
     imgName: 'sprite.png',
@@ -164,7 +164,7 @@ gulp.task('sprite', function(cb) {
 /* ------------ svg ------------- */
 
 gulp.task('symbols', function() {    // Создаем task для создания спрайтов из svg
-  ('*********** создание спрайта svg');
+  console.log('*********** создание спрайта svg');
   return gulp.src('source/img/icons_svg/*.svg')
   .pipe(svgmin())
   .pipe(gulp.dest('build/img/icons_svg'))
@@ -197,6 +197,7 @@ gulp.task('critical', function () {
 /* ------------ Server settings ------------- */
 
 gulp.task('serve', function() {
+  console.log('*********** запускаем сервер');
   server.init({
     server: 'build',
     notify: false, 

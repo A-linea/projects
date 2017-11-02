@@ -1,7 +1,4 @@
-.main-nav__wrapper {
-  @include row();
-  @include outline();
-}
+
 .main-nav {
   @include col(xs, 16, 16);
   @include col(sm, 10, 16);
@@ -16,24 +13,18 @@
     list-style: none;
     font-size: rem(16px);
     text-transform: none;
-    margin: 0;
-    padding: rem(25px 20px);
-    display: flex;
     font-family: 'Nexa', 'Open Sans', 'Ubuntu', 'Droid Sans', 'Helvetica Neue', 'Arial', sans-serif;
-    justify-content: space-around;
+    font-weight: 400;
+
   }
 
   &__link {
-    display: inline-block;
     font-family: 'Nexa', 'Open Sans', 'Ubuntu', 'Droid Sans', 'Helvetica Neue', 'Arial', sans-serif;
-    vertical-align: top;
     text-decoration: none;
-    letter-spacing: rem(2.5px);
     color: $link-color;
     transition: $transition-time;
     &:hover {
-      color: $link-color--hover;
-      text-decoration: underline;
+
     }
 
   }
@@ -42,7 +33,7 @@
 @media (min-width: $screen-sm) {
 
   .main-nav__toggle {
-    display: inline-block;
+    display: block;
     height: 38px;
     right: 15px;
     padding: rem(10px);
@@ -92,60 +83,43 @@
     visibility: visible;
   }
   .main-nav__list {
-    display: block;
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    justify-content: center;
   }
   .main-nav__item {
-    margin: 0;
-    padding: 0;
-    width: 100%;
+
   }
-  .main-nav__link {
-    display: block;
-    font-size: rem(18px);
-    border-bottom: 1px solid rgba(#fff, 0.3);
-    background-color: rgba(#000, 0.5);
-    text-align: center;
-    padding: rem(10px 0);
-    &:hover {
-      text-decoration: none;
-      background-color: rgba(#000, 0.2);
-    }
-  }
+
 }
 
 @media (min-width: $screen-md) {
   .main-nav {
-    order: 2;
-  }
-  .main-nav__list {
-    font-size: rem(13px);
-    padding: rem(20px 5px);
-    justify-content: space-between;
 
+  }
+
+  .main-nav__list {
+    display: flex;
+    justify-content: space-around;
+    font-size: rem(13px);
+    padding: rem(0 5px);
+  }
+  .main-nav__link {
+    font-size: rem(20px);
+    &:hover {
+      color: $link-color--hover;
+      text-decoration: underline;
+      &--active {
+        &:hover {
+          text-decoration: none;
+      }
+    }
   }
 }
 
 @media (min-width: $screen-lg) {
 
-    .main-nav__link {
-    display: inline-block;
-    vertical-align: top;
-    text-decoration: none;
-    letter-spacing: rem(1px);
-  }
 }
 
 @media (min-width: $screen-xl) {
-  .main-nav__item {
-    &::after {
-      content: '';
-      padding-left: 0;
-    }
-  }
+
 }
 
 @media (min-width: $screen-xxl) {
