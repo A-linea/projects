@@ -106,9 +106,11 @@
     &:hover {
       color: $link-color--hover;
       text-decoration: underline;
-      &--active {
-        &:hover {
-          text-decoration: none;
+    }
+    &--active {
+      &:hover {
+        color: $link-color;
+        text-decoration: none;
       }
     }
   }

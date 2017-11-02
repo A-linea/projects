@@ -1,0 +1,56 @@
+
+.hero {
+  background-image: url(../img/hero-bg.jpg);
+  background-repeat: no-repeat;
+  display: flex;
+  min-height: rem(320px);
+  background-size: cover;
+  &__inner {
+    @include row();
+    @include outline();
+    padding: rem(215px 0);
+  }
+  &__container {
+    @include col(md, 8, 16);
+    @include outline();
+    text-align: center;
+  }
+
+
+}
+
+
+
+@media (min-width: $screen-sm) {
+}
+
+@media (min-width: $screen-md) {
+  .hero__title {
+    color: $link-color--hover;
+    font-family: 'Montserrat', 'Open Sans', sans-serif;
+    font-size: rem(48px);
+    font-weight: 700;
+  }
+  .hero__text {
+    color: $gray-darker;
+    font-size: rem(17px);
+    margin-top: rem(50px);
+    line-height: 1.7;
+  }
+  .hero__btn {
+    margin-top: rem(40px);
+  }
+}
+
+@media (min-width: $screen-lg) {
+  .hero__inner {
+    padding: rem(215px 0);
+  }
+}
+
+@media (min-width: $screen-xl) {
+
+}
+@media (min-width: $screen-xxl) {
+
+}
