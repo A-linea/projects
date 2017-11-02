@@ -101,12 +101,13 @@ gulp.task('script', function() {
     console.log('*********** Компиляция js');
   return gulp.src([ // Берем все необходимые библиотеки
     'node_modules/jquery/dist/jquery.min.js', // jQuery библиотека
-    'node_modules/magnific-popup/dist/jquery.magnific-popup.min.js', // Берем Magnific Popup
-    'node_modules/parallax/parallax.js', //Parallax эффект
+    //'node_modules/magnific-popup/dist/jquery.magnific-popup.min.js', // Берем Magnific Popup
+    //'node_modules/parallax/parallax.js', //Parallax эффект
     'node_modules/owl.carousel/dist/owl.carousel.js',
     'node_modules/page-scroll-to-id/jquery.malihu.PageScroll2id.js', //скрол страницы по id
     'node_modules/waypoints/lib/jquery.waypoints.js',
     'source/libs/animate/animate-css.js',
+    'source/libs/countTo/counTo.js',
 	  'source/js/script.js' //подключаем пользовательский скрипт
     ])
     .pipe(plumber())
@@ -141,7 +142,7 @@ gulp.task('webp', function () {
   console.log('*********** создание webp');
   return gulp.src('build/img/webp/*.{png,jpg}')
     .pipe(webp({
-      quality: 50
+      quality: 90
     }))
     .pipe(gulp.dest("build/img/webp"));
 });
@@ -153,7 +154,7 @@ gulp.task('sprite', function(cb) {
   const spriteData = gulp.src('source/img/icons_png/*.png')
   .pipe(spritesmith({
     imgName: 'sprite.png',
-    imgPath: '../img/sprite.png', 
+    imgPath: '../img/sprite.png',
     cssName: 'sprite-png.scss'
   }));
   spriteData.img.pipe(gulp.dest('build/img/'));

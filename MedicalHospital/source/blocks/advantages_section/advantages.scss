@@ -1,0 +1,125 @@
+.advantages {
+  padding-top: rem(30px);
+  &__header {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+  }
+  &__content {
+    @include row();
+    @include outline();
+  }
+  &__title {
+    color: $gray-darker;
+    font-size: $font-size--h4;
+    position: relative;
+
+  }
+  &__side {
+    @include col(md, 5, 16);
+    @include outline();
+  }
+  &__photo {
+    @include col(md, 6, 16);
+    @include outline();
+  }
+  &__inner-title {
+    padding: rem(20px 0);
+    padding-left: rem(60px);
+    position: relative;
+    &::before,
+    &::after {
+      content: '';
+      @include centerer-y();
+    }
+    &::before {
+      border-radius: rem(35px);
+      left: 0px;
+      width: rem(62px);
+      height: rem(62px);
+      background-color: $accent-color;
+    }
+    &--listen {
+      &::after {
+        left: 9px;
+        @include sprite($ico-health);
+        background-repeat: no-repeat;
+      }
+    }
+    &--prof {
+      &::after {
+        left: 14px;
+        @include sprite($ico-microscope);
+        background-repeat: no-repeat;
+      }
+    }
+    &--passionate {
+      &::after {
+        left: 7px;
+        @include sprite($ico-pills);
+        background-repeat: no-repeat;
+      }
+    }
+    &--exp {
+      &::after {
+        left: 7px;
+        @include sprite($ico-react);
+        background-repeat: no-repeat;
+
+      }
+    }
+  }
+}
+
+@media (min-width: $screen-sm) {
+  .advantages {
+    padding-top: rem(50px);
+
+  }
+}
+
+@media (min-width: $screen-md) {
+  .advantages {
+    padding-top: rem(80px);
+    &__title {
+      font-size: $font-size--h3;
+    }
+    &__image-wrapper {
+      width: rem(325px);
+      margin: 0 auto;
+    }
+  }
+}
+
+@media (min-width: $screen-lg) {
+  .advantages {
+    padding-top: rem(100px);
+    &__title {
+      font-size: $font-size--h1;
+      line-height: 1.1;
+    }
+    &__text {
+      line-height: 1.8;
+    }
+    &__inner {
+      margin-top: rem(100px);
+    }
+    &__inner-text {
+      line-height: 1.6;
+    }
+    &__inner-title {
+      font-size: $font-size--h3;
+      padding: rem(5px 0);
+      line-height: 1.4;
+      padding-left: rem(90px);
+    }
+  }
+}
+
+
+@media (min-width: $screen-xl) {
+
+}
+@media (min-width: $screen-xxl) {
+
+}

@@ -1,0 +1,102 @@
+.achievements {
+  background-color: #0082bc;
+  background-image: url(../img/section-2/Background.jpg);
+  padding: rem(170px 0);
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: cover;
+  &__data-wrapper {
+    @include row();
+    @include outline();
+    padding: 0;
+  }
+  &__data  {
+    @include col(md, 4, 16);
+    @include col(lg, 4, 16);
+    @include col(xl, 4, 16);
+    @include col(xxl, 4, 16);
+    @include outline();
+    color: white;
+    font-family: 'Montserrat', 'Open Sans', sans-serif;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    padding-bottom: rem(20px);
+    padding-top: rem(100px);
+    position: relative;
+    text-align: center;
+    &::before {
+      content: '';
+      @include centerer-x();
+      top: 10px;
+      @include sprite($ico-hands);
+      height: 80px;
+      width: 91px;
+      background-repeat: no-repeat;
+    }
+    &--hospitality {
+      &::before {
+        height: 70px;
+        @include sprite($ico-heart);
+        top: 20px;
+        width: 80px;
+      }
+    }
+    &--innovation {
+      &::before {
+        height: 70px;
+        @include sprite($ico-helicop);
+        top: 20px;
+        width: 90px;
+      }
+    }
+    &--lung {
+      &::before {
+        top: 10px;
+        @include sprite($ico-lungs);
+      }
+    }
+  }
+  &__count {
+    font-size: rem(60px);
+    font-weight: 600;
+    padding-bottom: rem(30px);
+    position: relative;
+    &::after {
+      content: '';
+      @include centerer-x();
+      bottom: 0;
+      height: 4px;
+      width: 40%;
+      background-color: #fff;
+    }
+  }
+  &__text {
+    margin: auto;
+    margin-top: 50px;
+    font-size: rem(25px);
+    font-weight: 700;
+    line-height: 1.6;
+    width: 60%;
+  }
+
+}
+
+
+@media (min-width: $screen-sm) {
+}
+
+@media (min-width: $screen-md) {
+
+}
+
+@media (min-width: $screen-lg) {
+
+}
+
+@media (min-width: $screen-xl) {
+
+}
+@media (min-width: $screen-xxl) {
+
+}

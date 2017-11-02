@@ -1,0 +1,58 @@
+.about {
+  padding: rem(95px 0);
+
+  &__content-wrapper {
+    @include row();
+    @include outline();
+  }
+
+  &__content--right {
+    @include col(lg, 10, 16);
+    @include outline();
+
+  }
+  &__content--left {
+    @include col(lg, 6, 16);
+    @include outline();
+  }
+  &__title {
+    color: $gray-darker;
+
+  }
+
+}
+@media (min-width: $screen-sm) {
+  .about {
+
+    &__title {
+
+    }
+
+  }
+}
+
+@media (min-width: $screen-md) {
+  .about {
+    &__title {
+
+    }
+  }
+}
+
+@media (min-width: $screen-lg) {
+  .about {
+    &__title {
+      font-size: $font-size--h2;
+
+    }
+  }
+}
+
+@media (min-width: $screen-xl) {
+  .about {
+
+  }
+}
+@media (min-width: $screen-xxl) {
+
+}

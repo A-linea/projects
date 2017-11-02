@@ -6,6 +6,7 @@
 @import "global/fonts.scss";
 @import "global/page.scss";
 @import "libs.scss";
+@import "global/sprite-png";
 //---------Other styles--------*/
 @import "print.scss";
 /*--------------------block styles--------------------*/
@@ -18,6 +19,13 @@
 @import "../blocks/main-nav/main-nav";
 /*----------Hero section----------*/
 @import "../blocks/hero_section/hero_section";
-
+/*----------Features section----------*/
+@import "../blocks/color_cards/color_cards";
+/*----------Advantages section----------*/
+@import "../blocks/advantages_section/advantages";
+/*----------Advantages section----------*/
+@import "../blocks/counter/counter";
+/*----------About section----------*/
+@import "about";
 /*----------Footer ------------*/
 @import "../blocks/footer/footer";
