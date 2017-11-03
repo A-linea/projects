@@ -17,9 +17,96 @@
   }
   &__title {
     color: $gray-darker;
-
+  }
+  &__text {
+    line-height: 1.7;
+  }
+  &__article-wrapper {
+    @include row(30);
+    @include outline();
+  }
+  &__article--left,
+  &__article--right {
+    @include col(lg, 6, 12);
+    @include outline();
+  }
+  &__article-title {
+    margin: rem(5px 0);
+    padding: 0;
+    line-height: 1.6;
+  }
+  &__article-date,
+  &__article-name  {
+    display: inline-block;
+    color: $accent-color;
+  }
+  &__article-date {
+    padding-right: rem(10px);
+    position: relative;
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 2px;
+      height: 100%;
+      background-color: $accent-color;
+    }
+  }
+  &__article-name {
+    padding-left: rem(5px);
   }
 
+  &__image {
+  width: rem(334px);
+  margin: 0 auto;
+  margin-top: rem(30px);
+  }
+  &__article-text {
+    font-size: rem(15px);
+    line-height: 1.6;
+  }
+  &__btn-wrapper {
+    width: rem(155px);
+    margin: 0 auto;
+    margin-top: rem(20px);
+  }
+  &__player-btn {
+    display: block;
+    border: none;
+    box-shadow: none;
+    background-color: $gray-lighter;
+    text-transform: inherit;
+    text-align: left;
+    padding: rem(17px 0);
+    padding-left: rem(80px);
+    margin-bottom: rem(22px);
+    width: 100%;
+    position: relative;
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: $accent-color;
+    }
+    &::before {
+      content: '';
+      @include centerer-y();
+      left: 10px;
+      @include circle(40px, $white);
+    }
+    &::after {
+      @include centerer-y();
+      left: 28px;
+      @include triangle(right, $accent-color, 7px);
+    }
+    &--active {
+      background-color: $accent-color;
+    }
+  }
+  &__player-descr {
+    line-height: 1.7;
+    margin: rem(30px 0);
+  }
 }
 @media (min-width: $screen-sm) {
   .about {
