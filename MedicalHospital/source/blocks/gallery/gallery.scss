@@ -8,13 +8,16 @@
     text-align: center;
     color: #fff;
   }
+  &__images {
+    @include col(xs, 16, 16);
+    @include outline();
+    text-align: center;
+    color: #fff;
+  }
   &__titile {
     margin-bottom: rem(20px);
   }
 
-}
-.owl-carousel {
-  //padding: rem(0 20px) ;
 }
 .owl-carousel.off {
   display: inline-block;

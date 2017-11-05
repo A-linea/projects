@@ -1,70 +1,112 @@
 <footer class="main-footer">
   <div class="container">
     <div class="footer__inner">
-      <div class="footer__contacts">
-        <h3 class="footer__contacts-title"></h3>
-        <div class="footer__contacts-mail"></div>
-        <div class="footer__contacts-phone"></div>
-        <div class="footer__contacts-address"></div>
-        <div class="footer__contacts-social"><span
-          class="footer__contacts-icon  footer__contacts-icon--fb"></span><span
-          class="footer__contacts-icon  footer__contacts-icon--google"></span><span
-          class="footer__contacts-icon  footer__contacts-icon--vk"></span><span
-          class="footer__contacts-icon  footer__contacts-icon--tube"></span><span
-          class="footer__contacts-icon  footer__contacts-icon--in"></span></div>
+      <div class="footer__contacts-wrapper">
+        <h3 class="footer__title">Get in touch</h3>
+        <div class="footer__contacts  footer__contacts--mail">
+          <svg class="footer__contacts-ico  footer__contacts-ico--mail">
+            <use xlink:href="img/sprite.svg#ico-envelope"></use>
+          </svg>
+          <a class="footer__contacts-link  footer__contacts-link--mail"
+             href="mailto:bestdoctor@example.com?Subject=Hello%20" target="_top">bestdoctor@example.com</a>
+        </div>
+        <div class="footer__contacts  footer__contacts--phone">
+          <svg class="footer__contacts-ico  footer__contacts-ico--phone">
+            <use xlink:href="img/sprite.svg#ico-phone"></use>
+          </svg>
+          <a class="footer__contacts-link  footer__contacts-link--phone"
+             href="tel:+1234567890">+4234567890</a>
+        </div>
+        <div class="footer__contacts footer__contacts--address">
+          <svg class="footer__contacts-ico  footer__contacts-ico--address">
+            <use xlink:href="img/sprite.svg#ico-placeholder"></use>
+          </svg>
+          <p class="footer__contacts-text">
+            123, Main Road, New City, My Country 123456
+          </p>
+        </div>
+        <div class="footer__contacts  footer__contacts-social">
+          <div class="footer__icons-container">
+            <a href="#">
+              <svg class="footer__icon  footer__icon--fb">
+                <use xlink:href="img/sprite.svg#ico-facebook"></use>
+              </svg>
+            </a>
+            <a href="#">
+              <svg class="footer__icon  footer__icon--google">
+                <use xlink:href="img/sprite.svg#ico-google-plus"></use>
+              </svg>
+            </a>
+            <a href="#">
+              <svg class="footer__icon  footer__icon--vk">
+                <use xlink:href="img/sprite.svg#ico-vk"></use>
+              </svg>
+            </a>
+            <a href="#">
+              <svg class="footer__icon  footer__icon--tube">
+                <use xlink:href="img/sprite.svg#ico-youtube"></use>
+              </svg>
+            </a>
+            <a href="#">
+              <svg class="footer__icon  footer__icon--in">
+                <use xlink:href="img/sprite.svg#ico-linkedin"></use>
+              </svg>
+            </a>
+          </div>
+        </div>
       </div>
       <div class="footer__nav">
-        <h3 class="footer__nav-title"></h3>
-        <ul class="footer__nav-list">
-          <li class="footer__nav-items">
-            <a href="#" class="footer__nav-link">About us</a>
+        <h3 class="footer__title">Quick links</h3>
+        <ul class="footer__list">
+          <li class="footer__items">
+            <a href="#" class="footer__link">About us</a>
           </li>
-          <li class="footer__nav-items">
-            <a href="#" class="footer__nav-link">Blog</a>
+          <li class="footer__items">
+            <a href="#" class="footer__link">Blog</a>
           </li>
-          <li class="footer__nav-items">
-            <a href="#" class="footer__nav-link">Contact us</a>
+          <li class="footer__items">
+            <a href="#" class="footer__link">Contact us</a>
           </li>
-          <li class="footer__nav-items">
-            <a href="#" class="footer__nav-link">Faq</a>
+          <li class="footer__items">
+            <a href="#" class="footer__link">Faq</a>
           </li>
-          <li class="footer__nav-items">
-            <a href="#" class="footer__nav-link">Insurance</a>
+          <li class="footer__items">
+            <a href="#" class="footer__link">Insurance</a>
           </li>
-          <li class="footer__nav-items">
-            <a href="#" class="footer__nav-link">Contact us</a>
+          <li class="footer__items">
+            <a href="#" class="footer__link">Contact us</a>
           </li>
         </ul>
       </div>
       <div class="footer__services">
-        <h3 class="footer__services-title"></h3>
-        <ul class="footer__services-list">
-          <li class="footer__nav-items">
-            <a href="#" class="footer__nav-link">Work injures</a>
+        <h3 class="footer__title">Our services</h3>
+        <ul class="footer__list">
+          <li class="footer__items">
+            <a href="#" class="footer__link">Work injures</a>
           </li>
-          <li class="footer__nav-items">
-            <a href="#" class="footer__nav-link">Sport injures</a>
+          <li class="footer__items">
+            <a href="#" class="footer__link">Sport injures</a>
           </li>
-          <li class="footer__nav-items">
-            <a href="#" class="footer__nav-link">Cold laser Therapy</a>
+          <li class="footer__items">
+            <a href="#" class="footer__link">Cold laser Therapy</a>
           </li>
-          <li class="footer__nav-items">
-            <a href="#" class="footer__nav-link">Massage Therapy</a>
+          <li class="footer__items">
+            <a href="#" class="footer__link">Massage Therapy</a>
           </li>
-          <li class="footer__nav-items">
-            <a href="#" class="footer__nav-link">Physiotherapy</a>
+          <li class="footer__items">
+            <a href="#" class="footer__link">Physiotherapy</a>
           </li>
-          <li class="footer__nav-items">
-            <a href="#" class="footer__nav-link">Chiropractic Therapy</a>
+          <li class="footer__items">
+            <a href="#" class="footer__link">Chiropractic Therapy</a>
           </li>
         </ul>
       </div>
       <div class="footer__form">
-        <h3 class="footer__form-title">Enquiry form</h3>
+        <h3 class="footer__title">Enquiry form</h3>
         <form action="mail.php" role="form">
-          <input type="text" placeholder="Name">
-          <input type="tel" placeholder="Phone">
-          <textarea name="" id="" cols="30" rows="10" placeholder="Message"></textarea>
+          <input class="footer__form-input" type="text" placeholder="Name">
+          <input class="footer__form-input" type="tel" placeholder="Phone">
+          <textarea class="footer__form-input" name="" id="" cols="1" rows="4" placeholder="Message"></textarea>
           <button class="footer__form-btn btn" type="submit">
             Submit
           </button>
@@ -72,5 +114,6 @@
       </div>
     </div>
   </div>
+  <p class="footer__copyright">Copyright@</p>
   
-</footer> 
+</footer>

@@ -1,4 +1,178 @@
 .main-footer {
+  padding: rem(20px 0);
+  padding-bottom: 0;
+  background-color: $gray-darkest;
+  color: #fff;
+}
+.footer {
+  &__inner {
+    @include row();
+    @include outline();
+  }
+  &__contacts-wrapper {
+    @include col(xs, 16, 16);
+    @include col(sm, 8, 16);
+    @include col(md, 8, 16);
+    @include col(lg, 4, 16);
+    @include outline();
+  }
+  &__nav {
+    @include col(xs, 16, 16);
+    @include col(sm, 8, 16);
+    @include col(md, 8, 16);
+    @include col(lg, 4, 16);
+    @include outline();
+  }
+  &__services {
+    @include col(xs, 16, 16);
+    @include col(sm, 8, 16);
+    @include col(md, 8, 16);
+    @include col(lg, 4, 16);
+    @include outline();
+  }
+  &__form {
+    @include col(xs, 16, 16);
+    @include col(sm, 8, 16);
+    @include col(md, 8, 16);
+    @include col(lg, 4, 16);
+    @include outline();
+  }
+  &__title {
+    color: #fff;
+    margin-bottom: rem(30px);
+  }
+  &__contacts {
+    padding: rem(10px 0);
+  }
+  &__contacts-ico {
+    width: rem(40px);
+    height: rem(40px);
+    fill: white;
+    opacity: 0.5;
+    &--address {
+      width: rem(50px);
+      height: rem(50px);
+      padding-left: rem(3px);
+    }
+  }
+  &__contacts-text {
+    display: block;
+    margin: 0;
+    opacity: 0.5;
+    padding: rem(0 0);
+    line-height: 1.6;
+    padding-left: rem(20px);
+  }
+  &__contacts-link {
+    text-decoration: none;
+    color: white;
+    display: inline-block;
+    vertical-align: top;
+    opacity: 0.5;
+    padding: rem(10px 0);
+    padding-left: rem(10px);
+  }
+  &__contacts--address {
+    display: flex;
+  }
+  &__icons-container {
+    margin: auto;
+    width: rem(200px);
+    display: flex;
+    justify-content: space-between;
+    a {
+      text-decoration: none;
+      display: inline-block;
+      vertical-align: top;
+      width: rem(30px);
+      margin: auto;
+    }
+  }
+  &__icon  {
+    width: rem(25px);
+    height: rem(25px);
+    transition: $transition-time;
+    fill: #fff;
+    &--fb,
+    &--vk {
+      padding-bottom: rem(3px);
+      &:hover {
+        fill: #4267B2;
+      }
+    }
+    &--google {
+      width: rem(30px);
+      height: rem(35px);
+      &:hover {
+        fill: gray;
+      }
+    }
+    &--tube {
+      &:hover {
+        fill: #FF0000;
+      }
+    }
+    &--in {
+      padding-bottom: rem(3px);
+      &:hover {
+        fill: #0077b5;
+      }
+    }
+  }
+  &__list,
+  &__items {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  &__items {
+    padding-left: rem(20px);
+    position: relative;
+    &::before {
+      left: 0;
+      content: '';
+      @include centerer-y();
+      @include triangle(right,  $accent-color, 6px);
+    }
+  }
+  &__link {
+    text-decoration: none;
+    line-height: 1.6;
+    color: white;
+    opacity: 0.5;
+    transition: $transition-time;
+    &:hover {
+      opacity: 1;
+    }
+  }
+  &__form-input {
+    font-family: 'Open Sans', sans-serif;
+    display: block;
+    padding: rem(10px 20px);
+    color: white;
+    width: 80%;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid rgba(#fff, 0.5);
+    resize: none;
+  }
+  &__form-btn {
+    margin-top: rem(20px);
+    border: none;
+    box-shadow: none;
+    font-size: rem(14px);
+    padding: rem(8px 20px);
+  }
+  &__copyright {
+    padding: rem(20px);
+    margin: 0;
+    background-color: $gray-darken;
+    text-align: center;
+    opacity: 0.5;
+  }
+  textarea {
+    resize: none;
+  }
 
 }
 
@@ -6,10 +180,18 @@
   
 }
 @media (min-width: $screen-md) {
+  .footer__inner {
+    padding-bottom: rem(40px);
+  }
+  .footer__form-btn {
+    padding: rem(12px 30px);
+  }
 
 }
 @media (min-width: $screen-lg) {
-
+  .footer__inner {
+    padding-bottom: rem(80px);
+  }
 }
 @media (min-width: $screen-xl) {
 

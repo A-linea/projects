@@ -2,8 +2,8 @@
 .main-nav {
   @include col(xs, 16, 16);
   @include col(sm, 10, 16);
-  @include col(md, 8, 16);
-  @include col(lg, 8, 16);
+  @include col(md, 12, 16);
+  @include col(lg, 12, 16);
   @include col(xl, 8, 16);
   @include col(xxl, 8, 16);
   @include outline();

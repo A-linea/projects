@@ -1,6 +1,6 @@
 .main-header {
   &__top-line {
-    padding-top: rem(30px);
+    padding-top: rem(10px);
     @include row();
     @include outline();
     padding-bottom: rem(5px);
@@ -14,6 +14,9 @@
     }
   }
   &__logo-container {
+    @include col(xs, 16, 16, 0);
+    @include col(md, 8, 16, 0);
+    @include col(lg, 3, 16, 0);
     @include col(xl, 3, 16, 0);
     @include outline();
   }
@@ -23,16 +26,96 @@
   }
   &__contacts--worktime {
     @include col-offset(xl, 2, 16);
+    @include col(xs, 16, 16);
+    @include col(md, 8, 16);
+    @include col(lg, 5, 16);
     @include col(xl, 4, 16);
     @include outline();
   }
   &__contacts--mailus {
+    @include col(xs, 16, 16);
+    @include col(md, 8, 16);
+    @include col(lg, 5, 16);
     @include col(xl, 4, 16);
     @include outline();
   }
   &__contacts--call {
+    @include col(xs, 16, 16);
+    @include col(md, 8, 16);
+    @include col(lg, 3, 16);
     @include col(xl, 3, 16);
     @include outline();
+  }
+  &__contacts {
+    font-size: rem(15px);
+    padding-top: rem(7px);
+    padding-bottom: rem(7px);
+  }
+  &__contacts-wrapper {
+    padding-left: rem(50px);
+    padding-top: rem(3px);
+    padding-bottom: rem(3px);
+    position: relative;
+    &::before {
+      content: '';
+      left: 0;
+      @include centerer-y();
+      height: rem(40px);
+      width: rem(40px);
+      background-color: $accent-color;
+      border-radius: rem(20px);
+    }
+    &--worktime {
+      position: relative;
+      &::before {
+        background-image: url('../img/ico-time.svg');
+        background-repeat: no-repeat;
+        background-size: 25px 25px;
+        background-position: center center;
+      }
+    }
+    &--mailus {
+      position: relative;
+      &::before {
+        background-image: url('../img/ico-envelope.svg');
+        background-repeat: no-repeat;
+        background-size: 25px 25px;
+        background-position: center center;
+      }
+    }
+    &--call {
+      position: relative;
+      &::before {
+        background-image: url('../img/ico-phone.svg');
+        background-size: 25px 25px;
+        background-repeat: no-repeat;
+        background-position: center center;
+      }
+    }
+  }
+  &__contacts-text {
+    margin: 0;
+    padding: 0;
+    padding-bottom: rem(3px);
+    &--bigger {
+      text-transform: uppercase;
+      font-weight: 700;
+    }
+    span {
+      text-transform: uppercase;
+    }
+  }
+  &__contacts-link {
+    text-decoration: none;
+    color: $link-color;
+    transition: $transition-time;
+    &:hover {
+      color: $link-color--hover;
+      font-weight: bold;
+    }
+  }
+  &__icons-container {
+    display: none;
   }
 }
 .main-header__middle {
@@ -41,87 +124,25 @@
 }
 .main-header__social {
   @include col-offset(xl, 5, 16);
-  @include col(md, 3, 16);
+  @include col(xs, 4, 16);
+  @include col(lg, 4, 16);
+  @include col(xl, 3, 16);
+
   @include outline();
   display: flex;
 }
 @media (min-width: $screen-sm) {
   .main-header {
+    &__top-line {
+      padding-top: rem(30px);
+    }
   }
 }
 @media (min-width: $screen-md) {
   .main-header {
-    &__contacts {
-      font-size: rem(15px);
-      padding-top: rem(7px);
-      padding-bottom: rem(7px);
-    }
-    &__contacts-wrapper {
-      padding-left: rem(50px);
-      padding-top: rem(3px);
-      padding-bottom: rem(3px);
-      position: relative;
-      &::before {
-        content: '';
-        left: 0;
-        @include centerer-y();
-        height: rem(40px);
-        width: rem(40px);
-        background-color: $accent-color;
-        border-radius: rem(20px);
-      }
-      &--worktime {
-        position: relative;
-        &::before {
-          background-image: url('../img/ico-time.svg');
-          background-repeat: no-repeat;
-          background-size: 25px 25px;
-          background-position: center center;
-        }
-      }
-      &--mailus {
-        position: relative;
-        &::before {
-          background-image: url('../img/ico-envelope.svg');
-          background-repeat: no-repeat;
-          background-size: 25px 25px;
-          background-position: center center;
-        }
-      }
-      &--call {
-        position: relative;
-        &::before {
-          background-image: url('../img/ico-phone.svg');
-          background-size: 25px 25px;
-          background-repeat: no-repeat;
-          background-position: center center;
-        }
-      }
-    }
-    &__contacts-text {
-      margin: 0;
-      padding: 0;
-      padding-bottom: rem(3px);
-      &--bigger {
-        text-transform: uppercase;
-        font-weight: 700;
-      }
-      span {
-        text-transform: uppercase;
-      }
-    }
-    &__contacts-link {
-      text-decoration: none;
-      color: $link-color;
-      transition: $transition-time;
-      &:hover {
-        color: $link-color--hover;
-        font-weight: bold;
-      }
-    }
     &__icons-container {
       margin: auto;
-            width: 200px;
+      width: 200px;
       display: flex;
       justify-content: space-between;
       a {

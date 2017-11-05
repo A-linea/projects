@@ -2,6 +2,65 @@
 
    //= ../blocks/btn/btn__top.js
 
+   // $('.gallery__images').owlCarousel({
+   //   loop:true,
+   //   smartSpeed: 700,
+   //   margin: 0,
+   //   responsiveClass: true,
+   //   responsive:{
+   //     0:{
+   //       items:1
+   //     },
+   //     468:{
+   //       items:2
+   //     },
+   //     768:{
+   //       items:3
+   //     },
+   //     992:{
+   //       items:3,
+   //       loop:false,
+   //     }
+   //   }
+   //
+   // });
+
+   $(function() {
+     var owl = $('.gallery__images'),
+       owlOptions = {
+         loop: false,
+         smartSpeed: 500,
+         margin: 10,
+         responsive: {
+           0: {
+             items: 1,
+             loop: true
+           },
+           420: {
+             items: 2
+           }
+         }
+       };
+       if ( $(window).width() < 768 ) {
+         var owlActive = owl.owlCarousel(owlOptions);
+       } else {
+         owl.addClass('off');
+       }
+       $(window).resize(function() {
+         if ( $(window).width() < 768 ) {
+           if ( $('.owl-carousel').hasClass('off') ) {
+             var owlActive = owl.owlCarousel(owlOptions);
+             owl.removeClass('off');
+           }
+         } else {
+           if ( !$('.owl-carousel').hasClass('off') ) {
+             owl.addClass('off').trigger('destroy.owl.carousel');
+             owl.find('.owl-stage-outer').children(':eq(0)').unwrap();
+           }
+         }
+       });
+     });
+
 });
 
  var options = {
@@ -38,37 +97,5 @@
      console.log('count finish');
    }
  });
- $(function() {
-   var owl = $('.owl-carousel'),
-     owlOptions = {
-       loop: false,
-       margin: 10,
-       responsive: {
-         0: {
-           items: 1
-         },
-         420: {
-           items: 2
-         }
-       }
-     };
-   if ( $(window).width() < 768 ) {
-     var owlActive = owl.owlCarousel(owlOptions);
-   } else {
-     owl.addClass('off');
-   }
-   $(window).resize(function() {
-     if ( $(window).width() < 768 ) {
-       if ( $('.owl-carousel').hasClass('off') ) {
-         var owlActive = owl.owlCarousel(owlOptions);
-         owl.removeClass('off');
-       }
-     } else {
-       if ( !$('.owl-carousel').hasClass('off') ) {
-         owl.addClass('off').trigger('destroy.owl.carousel');
-         owl.find('.owl-stage-outer').children(':eq(0)').unwrap();
-       }
-     }
-   });
- });
+
 
