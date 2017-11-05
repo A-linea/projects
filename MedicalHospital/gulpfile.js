@@ -105,8 +105,8 @@ gulp.task('script', function() {
     //'node_modules/parallax/parallax.js', //Parallax эффект
     'node_modules/owl.carousel/dist/owl.carousel.js',
     'node_modules/page-scroll-to-id/jquery.malihu.PageScroll2id.js', //скрол страницы по id
-    'node_modules/waypoints/lib/jquery.waypoints.js',
-    'source/libs/animate/animate-css.js',
+    //'node_modules/waypoints/lib/jquery.waypoints.js',
+    //'source/libs/animate/animate-css.js',
     'source/libs/countTo/counTo.js',
 	  'source/js/script.js' //подключаем пользовательский скрипт
     ])

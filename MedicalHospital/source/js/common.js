@@ -38,3 +38,37 @@
      console.log('count finish');
    }
  });
+ $(function() {
+   var owl = $('.owl-carousel'),
+     owlOptions = {
+       loop: false,
+       margin: 10,
+       responsive: {
+         0: {
+           items: 1
+         },
+         420: {
+           items: 2
+         }
+       }
+     };
+   if ( $(window).width() < 768 ) {
+     var owlActive = owl.owlCarousel(owlOptions);
+   } else {
+     owl.addClass('off');
+   }
+   $(window).resize(function() {
+     if ( $(window).width() < 768 ) {
+       if ( $('.owl-carousel').hasClass('off') ) {
+         var owlActive = owl.owlCarousel(owlOptions);
+         owl.removeClass('off');
+       }
+     } else {
+       if ( !$('.owl-carousel').hasClass('off') ) {
+         owl.addClass('off').trigger('destroy.owl.carousel');
+         owl.find('.owl-stage-outer').children(':eq(0)').unwrap();
+       }
+     }
+   });
+ });
+
