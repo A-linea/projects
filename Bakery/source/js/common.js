@@ -11,15 +11,19 @@ $( document ).ready(function() {
          items:2,
          nav: false
        },
+       400:{
+         items:3,
+         nav: false
+       },
        600:{
          items:3
        },
        700:{
+         items:3
+       },
+       992:{
          items:3,
          nav: true
-       },
-       1000:{
-         items:3
        }
      }
 

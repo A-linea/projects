@@ -3,32 +3,67 @@
   background-image: url(../img/hero-bg.jpg);
   background-repeat: no-repeat;
   display: flex;
-  min-height: rem(320px);
+  min-height: rem(640px);
+  height: 87vh;
   background-size: cover;
+  background-position: 60% 50%;
   &__inner {
     @include row();
-    @include outline();
-    padding: rem(215px 0);
+    padding: rem(105px 0);
   }
   &__container {
-    @include col(md, 8, 16);
-    @include outline();
+    @include col(md, 10, 16);
+    @include col(lg, 8, 16);
+    padding: rem(0 20px);
     text-align: center;
   }
-
-
+  &__title {
+    color: $link-color--hover;
+    font-family: 'Montserrat', 'Open Sans', sans-serif;
+    font-size: rem(20px);
+    font-weight: 700;
+  }
+  &__text {
+    color: $gray-darker;
+    font-size: rem(15px);
+    margin-top: rem(20px);
+    line-height: 1.7;
+  }
+  .hero__btn {
+    margin-top: rem(20px);
+  }
 }
-
 
 
 @media (min-width: $screen-sm) {
+  .hero {
+    background-position: 57% 50%;
+    &__inner {
+      @include row();
+      padding: rem(115px 0);
+    }
+    &__container {
+      padding: rem(0 20px);
+      text-align: center;
+    }
+    &__title {
+      font-size: rem(24px);
+    }
+    &__text {
+      font-size: rem(16px);
+    }
+  }
 }
 
 @media (min-width: $screen-md) {
+  .hero {
+    background-position: 55% 50%;
+    &__inner {
+      padding: rem(215px 0);
+    }
+  }
   .hero__title {
-    color: $link-color--hover;
-    font-family: 'Montserrat', 'Open Sans', sans-serif;
-    font-size: rem(48px);
+    font-size: rem(44px);
     font-weight: 700;
   }
   .hero__text {
@@ -43,6 +78,9 @@
 }
 
 @media (min-width: $screen-lg) {
+  .hero {
+    background-position: 50% 50%;
+  }
   .hero__inner {
     padding: rem(215px 0);
   }

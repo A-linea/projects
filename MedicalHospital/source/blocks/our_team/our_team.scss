@@ -14,14 +14,12 @@
   }
   &__list {
     @include row();
-    @include outline();
   }
   &__item {
     @include col(xs, 16, 16);
     @include col(sm, 8, 16);
     @include col(md, 8, 16);
     @include col(lg, 4, 16);
-    @include outline();
     font-family: 'Montserrat', sans-serif;
     position: relative;
     padding-bottom: rem(60px);

@@ -1,31 +1,8 @@
  $( document ).ready(function() {
 
-   //= ../blocks/btn/btn__top.js
+   //= ../blocks/main-nav/slide-toggle.js
 
-   // $('.gallery__images').owlCarousel({
-   //   loop:true,
-   //   smartSpeed: 700,
-   //   margin: 0,
-   //   responsiveClass: true,
-   //   responsive:{
-   //     0:{
-   //       items:1
-   //     },
-   //     468:{
-   //       items:2
-   //     },
-   //     768:{
-   //       items:3
-   //     },
-   //     992:{
-   //       items:3,
-   //       loop:false,
-   //     }
-   //   }
-   //
-   // });
-
-   $(function() {
+    $(function() {
      var owl = $('.gallery__images'),
        owlOptions = {
          loop: false,

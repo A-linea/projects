@@ -1,12 +1,11 @@
 .main-header {
   &__top-line {
-    padding-top: rem(10px);
+    padding-top: rem(0);
     @include row();
-    @include outline();
     padding-bottom: rem(5px);
     &::after {
       content: '';
-      width: 95%;
+      width: 100%;
       margin: auto;
       left: 2.5%;
       right: 2.5%;
@@ -18,7 +17,6 @@
     @include col(md, 8, 16, 0);
     @include col(lg, 3, 16, 0);
     @include col(xl, 3, 16, 0);
-    @include outline();
   }
   &__logo {
     padding: rem(11px 0);
@@ -30,22 +28,26 @@
     @include col(md, 8, 16);
     @include col(lg, 5, 16);
     @include col(xl, 4, 16);
-    @include outline();
   }
   &__contacts--mailus {
     @include col(xs, 16, 16);
     @include col(md, 8, 16);
     @include col(lg, 5, 16);
     @include col(xl, 4, 16);
-    @include outline();
   }
   &__contacts--call {
     @include col(xs, 16, 16);
     @include col(md, 8, 16);
     @include col(lg, 3, 16);
     @include col(xl, 3, 16);
-    @include outline();
   }
+  &__contacts--worktime,
+  &__contacts--mailus,
+  &__contacts--call {
+    display: none;
+  }
+
+
   &__contacts {
     font-size: rem(15px);
     padding-top: rem(7px);
@@ -120,26 +122,25 @@
 }
 .main-header__middle {
   @include row();
-  @include outline();
 }
 .main-header__social {
   @include col-offset(xl, 5, 16);
   @include col(xs, 4, 16);
   @include col(lg, 4, 16);
   @include col(xl, 3, 16);
-
-  @include outline();
   display: flex;
 }
 @media (min-width: $screen-sm) {
+
+}
+@media (min-width: $screen-md) {
   .main-header {
     &__top-line {
       padding-top: rem(30px);
     }
-  }
-}
-@media (min-width: $screen-md) {
-  .main-header {
+    &__contacts--worktime {
+      display: block;
+    }
     &__icons-container {
       margin: auto;
       width: 200px;
@@ -151,7 +152,6 @@
         vertical-align: top;
         width: 30px;
         margin: auto;
-
       }
     }
     &__icon  {
@@ -188,12 +188,14 @@
 }
 @media (min-width: $screen-lg) {
   .main-header {
+    &__contacts--mailus,
+    &__contacts--call {
+      display: block;
+    }
   }
 }
 @media (min-width: $screen-xl) {
-  .main-header {
 
-  }
 }
 
 @media (min-width: $screen-xxl) {

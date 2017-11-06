@@ -1,5 +1,5 @@
 .advantages {
-  padding-top: rem(30px);
+  padding-top: 0;
   &__header {
     width: 80%;
     margin: auto;
@@ -7,7 +7,7 @@
   }
   &__content {
     @include row();
-    @include outline();
+
   }
   &__title {
     color: $gray-darker;
@@ -15,17 +15,20 @@
     position: relative;
 
   }
+  &__image {
+    display: none;
+  }
   &__side {
     @include col(md, 5, 16);
-    @include outline();
+
   }
   &__photo {
     @include col(md, 6, 16);
-    @include outline();
+
   }
   &__inner-title {
     padding: rem(20px 0);
-    padding-left: rem(60px);
+    padding-left: rem(80px);
     position: relative;
     &::before,
     &::after {
@@ -34,46 +37,54 @@
     }
     &::before {
       border-radius: rem(35px);
-      left: 0px;
+      left: 5px;
       width: rem(62px);
       height: rem(62px);
       background-color: $accent-color;
     }
     &--listen {
       &::after {
-        left: 9px;
+        left: 14px;
         @include sprite($ico-health);
         background-repeat: no-repeat;
       }
     }
+
     &--prof {
       &::after {
-        left: 14px;
+        left: 19px;
         @include sprite($ico-microscope);
         background-repeat: no-repeat;
       }
     }
     &--passionate {
       &::after {
-        left: 7px;
+        left: 12px;
         @include sprite($ico-pills);
         background-repeat: no-repeat;
       }
     }
     &--exp {
       &::after {
-        left: 7px;
+        left: 12px;
         @include sprite($ico-react);
         background-repeat: no-repeat;
 
       }
     }
   }
+  &__text,
+  &__inner-text {
+    line-height: 1.6;
+  }
+  &__inner-text {
+    padding: rem(0 20px);
+  }
 }
 
 @media (min-width: $screen-sm) {
   .advantages {
-    padding-top: rem(50px);
+    padding-top: rem(30px);
 
   }
 }
@@ -81,6 +92,9 @@
 @media (min-width: $screen-md) {
   .advantages {
     padding-top: rem(80px);
+    &__image {
+      display: block;
+    }
     &__title {
       font-size: $font-size--h3;
     }

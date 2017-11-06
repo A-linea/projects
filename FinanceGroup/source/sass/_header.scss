@@ -27,7 +27,6 @@
   }
   &__container {
     @include container();
-    @include outline();
   }
   &__wrapper {
     @include row();
@@ -40,7 +39,6 @@
     @include col(md, 2, 12);
     @include col(sm, 4, 12);
     @include col(xs, 4, 12);
-    @include outline();
     order: 1;
     img {
       width: 70px;
@@ -53,7 +51,6 @@
     @include col(md, 8, 12);
     @include col(sm, 8, 12);
     @include col(xs, 8, 12);
-    @include outline();
     font-family: 'Roboto','Helvetica Neue', 'Arial', sans-serif;
     font-size: 14px;
     padding-top: 12px;
@@ -66,12 +63,10 @@
   }
   &__content {
     @include container();
-    @include outline();
     position: relative;
   }
   &__content-wrapper {
     @include row();
-    @include outline();
   }
 
   &__title-wrapper {
@@ -79,7 +74,6 @@
     @include col(lg, 7, 12);
     @include col(md, 6, 12);
     @include col(sm, 12, 12);
-    @include outline();
     margin: auto;
     padding: 0 20px;
   }

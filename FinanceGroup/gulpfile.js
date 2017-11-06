@@ -95,7 +95,7 @@ gulp.task('libs', function() {
   return gulp.src([ // Берем все необходимые библиотеки
     'node_modules/jquery/dist/jquery.min.js', // jQuery библиотека
     'source/libs/modernizr.js',
-    //'source/libs/plugins-scroll.js',
+    'source/libs/plugins-scroll.js',
     'node_modules/magnific-popup/dist/jquery.magnific-popup.min.js', // Берем Magnific Popup
     'node_modules/waypoints/lib/jquery.waypoints.js',
     'node_modules/owl.carousel/dist/owl.carousel.js',

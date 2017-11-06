@@ -2,6 +2,7 @@
   background-color:  $color-main;
   color: $text-color--reverse;
   padding-top: 50px;
+  padding-bottom: 80px;
   &__container {
     @include container();
     @include outline();

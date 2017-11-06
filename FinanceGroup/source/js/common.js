@@ -96,15 +96,3 @@ $('.work').waypoint(function (dir) { //добавляем waypoint для ани
 
 
 });
-try {
-  $.browserSelector();
-  if($("html").hasClass("chrome")) {
-    $.smoothScroll();
-  }
-} catch(err) {
-
-};
-// $(window).scroll(function () {
-//
-// });
-

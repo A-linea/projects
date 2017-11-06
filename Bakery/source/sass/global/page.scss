@@ -38,7 +38,6 @@ img {
   height: auto;
   max-width: 100%;
 }
-
 .clearfix::before,
 .clearfix::after {
   content: " ";
@@ -70,4 +69,14 @@ h3 {
 h4 {
   font-size: $font-size--h4;
 }
+
+.blur-up {
+  filter: blur(5px);
+  transition: filter 400ms, -webkit-filter 400ms;
+}
+.blur-up.lazyloaded {
+  filter: blur(0);
+}
+
+
 

@@ -4,7 +4,6 @@
   @include col(lg, 5, 12);
   @include col(md, 6, 12);
   @include col(xs, 12, 12);
-  @include outline();
   padding-top: 20px;
   margin: auto;
 }

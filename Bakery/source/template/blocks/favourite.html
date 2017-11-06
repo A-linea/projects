@@ -5,7 +5,12 @@
         <div class="favourite__content">
           <div class="favourite__rate">
             <figure class="favourite__img">
-              <img src="img/Section-2/pancakes.png" alt="pancake" width="436" height="525">
+              <picture>
+                <source data-srcset="img/Section-2/pancakes.webp" type="image/webp">
+                <source data-srcset="img/Section-2/pancakes.png" type="image/png">
+                <img class="lazyload  blur-up" data-src="img/Section-2/pancakes.png" type="image/png"
+                     data-expand="400" alt="pancake" width="436" height="525">
+              </picture>
               <div class="favourite__icons"><svg class="favourite__icon  favourite__icon--fill">
                 <use xlink:href="img/sprite.svg#ico-star-fill"></use>
               </svg>

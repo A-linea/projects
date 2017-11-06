@@ -1,34 +1,37 @@
 .about {
-  padding: rem(95px 0);
+  padding: rem(10px 0);
 
   &__content-wrapper {
     @include row();
-    @include outline();
   }
 
   &__content--right {
     @include col(lg, 10, 16);
-    @include outline();
-
   }
   &__content--left {
+    display: none;
+    @include col(xs, 16, 16);
+    padding: rem(0 10px);
     @include col(lg, 6, 16);
-    @include outline();
   }
   &__title {
     color: $gray-darker;
+    padding: rem(0 20px);
   }
   &__text {
     line-height: 1.7;
+    padding: rem(0 20px);
   }
   &__article-wrapper {
     @include row(30);
-    @include outline();
   }
   &__article--left,
   &__article--right {
+    @include col(xs, 12, 12);
+    @include col(sm, 12, 12);
+    @include col(sm, 12, 12);
+    @include col(md, 6, 12);
     @include col(lg, 6, 12);
-    @include outline();
   }
   &__article-title {
     margin: rem(5px 0);
@@ -56,11 +59,11 @@
   &__article-name {
     padding-left: rem(5px);
   }
-
   &__image {
-  width: rem(334px);
-  margin: 0 auto;
-  margin-top: rem(30px);
+    display: none;
+    width: rem(330px);
+    margin: 0;
+    margin-top: rem(30px);
   }
   &__article-text {
     font-size: rem(15px);
@@ -74,6 +77,7 @@
   &__player-btn {
     display: block;
     border: none;
+    max-width: rem(360px);
     box-shadow: none;
     background-color: $gray-lighter;
     text-transform: inherit;
@@ -110,9 +114,10 @@
 }
 @media (min-width: $screen-sm) {
   .about {
-
-    &__title {
-
+    &__image {
+      width: rem(330px);
+      margin: 0;
+      margin-top: rem(30px);
     }
 
   }
@@ -123,20 +128,36 @@
     &__title {
 
     }
+    &__image {
+      display: block;
+      width: rem(330px);
+    }
+    &__content--left {
+      padding: 0;
+    }
   }
 }
 
 @media (min-width: $screen-lg) {
   .about {
+    padding: rem(95px 0);
     &__title {
       font-size: $font-size--h2;
-
+    }
+    &__image {
+      width: rem(260px);
+    }
+    &__content--left {
+      display: block;
     }
   }
 }
 
 @media (min-width: $screen-xl) {
   .about {
+    &__image {
+      width: rem(340px);
+    }
 
   }
 }

@@ -1,88 +1,114 @@
 
 .main-nav {
-  @include col(xs, 16, 16);
-  @include col(sm, 10, 16);
+  display: none;
+  @include col(xs, 16, 16, 0);
+  @include col(sm, 16, 16, 0);
   @include col(md, 12, 16);
   @include col(lg, 12, 16);
   @include col(xl, 8, 16);
   @include col(xxl, 8, 16);
-  @include outline();
+  background-color: $accent-color;
 
 
   &__list {
     list-style: none;
+    margin: 0;
+    padding: 0;
+    padding: rem(10px 0);
     font-size: rem(16px);
-    text-transform: none;
+
     font-family: 'Nexa', 'Open Sans', 'Ubuntu', 'Droid Sans', 'Helvetica Neue', 'Arial', sans-serif;
     font-weight: 400;
-
   }
 
   &__link {
     font-family: 'Nexa', 'Open Sans', 'Ubuntu', 'Droid Sans', 'Helvetica Neue', 'Arial', sans-serif;
+    text-transform: uppercase;
+    display: block;
+    padding: rem(10px 0);
+    border-bottom: 1px solid rgba(white, 0.3);
     text-decoration: none;
-    color: $link-color;
+    color: $white;
+    text-align: center;
     transition: $transition-time;
-    &:hover {
-
+    &:hover,
+    &:active,
+    &:focus {
+      background-color: rgba(black, 0.1);
+    }
+    &--active {
+      &:hover,
+      &:active,
+      &:focus {
+        background-color: transparent;
+      }
     }
 
   }
 }
+.main-nav__toggle {
+  display: block;
+  height: 38px;
+  right: 15px;
+  padding: rem(10px);
+  position: absolute;
+  top: 12px;
+  vertical-align: top;
+  width: 55px;
+}
+
+.main-nav__toggle {
+  span:after,
+  span:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 9px;
+  }
+  span:after {
+    top: 18px;
+  }
+  span {
+    position: relative;
+    display: block;
+  }
+  span,
+  span:after,
+  span:before {
+    width: 100%;
+    height: 2px;
+    background-color: $accent-color;
+    transition: all 0.3s;
+    backface-visibility: hidden;
+    border-radius: 2px;
+  }
+  &.on span{
+    background-color: transparent;
+    &::before {
+      transform: rotate(45deg) translate(-1px, 0px);
+    }
+    &::after {
+      transform: rotate(-45deg) translate(6px, -7px);
+    }
+  }
+}
+.main-nav__toggle + #menu {
+  opacity: 1;
+  visibility: visible;
+}
 
 @media (min-width: $screen-sm) {
 
-  .main-nav__toggle {
-    display: block;
-    height: 38px;
-    right: 15px;
-    padding: rem(10px);
-    position: absolute;
-    top: 0;
-    vertical-align: top;
-    width: 48px;
-  }
 
-  .main-nav__toggle {
-    span:after,
-    span:before {
-      content: "";
-      position: absolute;
-      left: 0;
-      top: 9px;
-    }
-    span:after {
-      top: 18px;
-    }
-    span {
-      position: relative;
-      display: block;
-    }
-    span,
-    span:after,
-    span:before {
-      width: 100%;
-      height: 2px;
-      background-color: #fff;
-      transition: all 0.3s;
-      backface-visibility: hidden;
-      border-radius: 2px;
-    }
-    &.on span{
-      background-color: transparent;
-      &::before {
-        transform: rotate(45deg) translate(-1px, 0px);
-      }
-      &::after {
-        transform: rotate(-45deg) translate(6px, -7px);
-      }
-    }
-  }
-  .main-nav__toggle + #menu {
-    opacity: 1;
-    visibility: visible;
-  }
   .main-nav__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    font-size: rem(17px);
+    text-transform: none;
+    font-family: 'Nexa', 'Open Sans', 'Ubuntu', 'Droid Sans', 'Helvetica Neue', 'Arial', sans-serif;
+    font-weight: 400;
+
   }
   .main-nav__item {
 
@@ -92,7 +118,11 @@
 
 @media (min-width: $screen-md) {
   .main-nav {
-
+    display: block !important;
+    background-color: transparent;
+    &__toggle {
+      display: none;
+    }
   }
 
   .main-nav__list {
@@ -103,9 +133,15 @@
   }
   .main-nav__link {
     font-size: rem(20px);
-    &:hover {
+    text-transform: none;
+    color: $link-color;
+    &:hover,
+    &:active,
+    &:focus {
       color: $link-color--hover;
       text-decoration: underline;
+      background-color: transparent;
+
     }
     &--active {
       &:hover {
@@ -115,7 +151,11 @@
     }
   }
 }
-
+.active {
+  color: $link-color--hover;
+  text-decoration: underline;
+  background-color: transparent;
+}
 @media (min-width: $screen-lg) {
 
 }

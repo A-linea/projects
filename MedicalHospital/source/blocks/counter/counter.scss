@@ -1,21 +1,20 @@
 .achievements {
   background-color: #0082bc;
   background-image: url(../img/section-2/Background.jpg);
-  padding: rem(170px 0);
+  padding: rem(10px 0);
   background-repeat: no-repeat;
-  background-position: right center;
+  background-position: center center;
   background-size: cover;
   &__data-wrapper {
     @include row();
-    @include outline();
     padding: 0;
   }
   &__data  {
-    @include col(md, 4, 16);
+    @include col(sm, 8, 16);
+    @include col(md, 8, 16);
     @include col(lg, 4, 16);
     @include col(xl, 4, 16);
     @include col(xxl, 4, 16);
-    @include outline();
     color: white;
     font-family: 'Montserrat', 'Open Sans', sans-serif;
     list-style: none;
@@ -84,14 +83,24 @@
 
 
 @media (min-width: $screen-sm) {
+  .achievements {
+
+    background-position: center center;
+  }
 }
 
 @media (min-width: $screen-md) {
-
+  .achievements {
+    padding: rem(20px 0);
+    background-position: right center;
+  }
 }
 
 @media (min-width: $screen-lg) {
-
+  .achievements {
+    padding: rem(170px 0);
+    background-position: right center;
+  }
 }
 
 @media (min-width: $screen-xl) {

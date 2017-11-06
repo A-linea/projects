@@ -109,7 +109,7 @@
     @include col(md, 6, 12);
     @include col(sm, 12, 12);
     @include col(xs, 12, 12);
-    figure {
+    .cakes__gallery {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
@@ -157,7 +157,7 @@
   .cakes__photo-side {
     display: flex;
   }
-  .cakes__photo-side figure {
+  .cakes__photo-side .cakes__gallery {
     margin: auto;
     &::before {
       margin-top: rem(10px);
@@ -187,7 +187,7 @@
   }
 }
 @media (max-width: $screen-xl) {
-  .cakes__photo-side figure {
+  .cakes__photo-side .cakes__gallery {
     &::before {
       margin-top: rem(10px);
       width: rem(200px);
@@ -197,7 +197,7 @@
   .cakes__image {
     max-height: rem(160px);
   }
-  .cakes__photo-side figure {
+  .cakes__photo-side .cakes__gallery {
     margin: auto;
     &::before {
       margin-top: rem(10px);
@@ -264,7 +264,7 @@
   .cakes__image {
     max-height: rem(140px);
   }
-  .cakes__photo-side figure {
+  .cakes__photo-side .cakes__gallery {
     margin: auto;
     &::before {
       margin-top: rem(5px);
@@ -285,6 +285,29 @@
   .cakes__image {
     max-height: rem(120px);
   }
+  .cakes__chef {
+    b {
+      padding: rem(10px 1px);
+    }
+    cite {
+      padding: rem(20px 20px);
+      font-size: rem(18px);
+      &::before,
+      &::after {
+        font-size: rem(40px);
+      }
+      &::before {
+        content: '\201c';
+        left: rem(10px);
+        top: 0;
+      }
+      &::after {
+        content: '\201d';
+        right: rem(10px);
+        bottom: rem(-25px);
+      }
+    }
+  }
 }
 
 @media (max-width: $screen-md) {
@@ -294,7 +317,7 @@
   .cakes__image {
     max-height: rem(175px);
   }
-  .cakes__photo-side figure {
+  .cakes__photo-side .cakes__gallery {
     &::before {
       margin-top: rem(10px);
       width: rem(160px);
@@ -345,7 +368,7 @@
       }
     }
   }
-  .cakes__photo-side figure {
+  .cakes__gallery {
     img {
      display: none;
     }

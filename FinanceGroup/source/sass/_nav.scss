@@ -135,8 +135,9 @@
 @media (min-width: $screen-lg) {
   .main-nav {
     display: inherit !important;
-    order: 2;
     justify-content: center;
+    order: 2;
+
   }
   .main-nav__list {
     flex-direction: row;

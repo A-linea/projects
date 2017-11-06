@@ -7,35 +7,30 @@
 .footer {
   &__inner {
     @include row();
-    @include outline();
   }
   &__contacts-wrapper {
     @include col(xs, 16, 16);
     @include col(sm, 8, 16);
     @include col(md, 8, 16);
     @include col(lg, 4, 16);
-    @include outline();
   }
   &__nav {
     @include col(xs, 16, 16);
     @include col(sm, 8, 16);
     @include col(md, 8, 16);
     @include col(lg, 4, 16);
-    @include outline();
   }
   &__services {
     @include col(xs, 16, 16);
     @include col(sm, 8, 16);
     @include col(md, 8, 16);
     @include col(lg, 4, 16);
-    @include outline();
   }
   &__form {
     @include col(xs, 16, 16);
     @include col(sm, 8, 16);
     @include col(md, 8, 16);
     @include col(lg, 4, 16);
-    @include outline();
   }
   &__title {
     color: #fff;
@@ -184,13 +179,21 @@
     padding-bottom: rem(40px);
   }
   .footer__form-btn {
-    padding: rem(12px 30px);
+    font-size: $font-size;
+    padding: rem(12px 40px);
   }
+  .footer__form-input {
+    width: 70%;
+  }
+
 
 }
 @media (min-width: $screen-lg) {
   .footer__inner {
-    padding-bottom: rem(80px);
+    padding-bottom: rem(60px);
+  }
+  .footer__form-input {
+    width: 100%;
   }
 }
 @media (min-width: $screen-xl) {

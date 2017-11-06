@@ -4,11 +4,9 @@
   background-color: $gray-lightest;
   &__inner {
     @include row();
-    @include outline();
   }
   &__title {
     @include col(md, 12, 16);
-    @include outline();
     padding: rem(20px 0);
     color: $gray-darker;
     text-align: center;
@@ -20,13 +18,10 @@
   }
   &__btn-centerer {
     @include col(md, 4, 16);
-    @include outline();
     display: flex;
   }
   &__btn {
     margin: auto;
-    //padding: rem(10px 30px);
-    //font-size: rem(14px);
   }
 }
 @media (min-width: $screen-sm) {

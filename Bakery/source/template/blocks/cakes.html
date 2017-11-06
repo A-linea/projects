@@ -14,7 +14,11 @@
             <h4>Chef Cook</h4>
             <b>Benito</b>
             <div class="cakes__chef-img">
-              <img src="img/Section-1/chief-cook.png" alt="chef cook">
+              <picture>
+                <source data-srcset="img/Section-1/chief-cook.webp" type="image/webp">
+                <source data-srcset="img/Section-1/chief-cook.png" type="image/png">
+                <img src="img/Section-1/chief-cook.png" alt="chef cook">
+              </picture>
             </div>
             <b>Gospare</b>
             <cite>Unique creations for unique occasions</cite>
@@ -22,15 +26,30 @@
         </div>
       </div>
       <div class="cakes__photo-side">
-        <figure>
-          <img src="img/Section-1/flour.jpg" alt="" class="cakes__image">
-          <img src="img/Section-1/egg.jpg" alt="" class="cakes__image">
-          <img src="img/Section-1/cake.jpg" alt="" class="cakes__image">
-          <img src="img/Section-1/strawberry.jpg" alt="" class="cakes__image">
+        <figure class="cakes__gallery">
+          <picture>
+            <source data-srcset="img/Section-1/flour.webp" type="image/webp">
+            <source data-srcset="img/Section-1/flour.jpg" type="image/jpeg">
+            <img data-src="img/Section-1/flour.jpg" alt="flour"
+               class="cakes__image  lazyload">
+          </picture>
+          <picture>
+            <source data-srcset="img/Section-1/egg.webp" type="image/webp">
+            <source data-srcset="img/Section-1/egg.jpg" type="image/jpeg">
+            <img data-src="img/Section-1/egg.jpg" alt="" class="cakes__image  lazyload">
+          </picture>
+          <picture>
+            <source data-srcset="img/Section-1/cake.webp" type="image/webp">
+            <source data-srcset="img/Section-1/cake.jpg" type="image/jpeg">
+            <img data-src="img/Section-1/cake.jpg" alt="" class="cakes__image  lazyload">
+          </picture>
+          <picture>
+            <source data-srcset="img/Section-1/strawberry.webp" type="image/webp">
+            <source data-srcset="img/Section-1/strawberry.jpg" type="image/jpeg">
+            <img data-src="img/Section-1/strawberry.jpg" alt="" class="cakes__image  lazyload">
+          </picture>
         </figure>
       </div>
-    
     </div>
-   
   </div>
 </section>

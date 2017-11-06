@@ -1,38 +1,61 @@
+.features {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #43b1d2;
+  &__card {
+    flex-basis: 100%;
+    min-width: 25%;
+    background-color: #43b1d2;
+    text-align: center;
+    color: white;
+    padding-bottom: rem(20px);
+    &--help {
+      background-color: #3fb6c6;
+    }
+    &--staff {
+      background-color: #3cbbbb;
+    }
+    &--doctors {
+      background-color: #37c3a8;
+    }
+  }
+  &__text {
+    margin: 0 auto;
+    max-width: rem(380px);
+    padding: rem(0 45px);
+    line-height: 1.6;
+  }
+}
 @media (min-width: $screen-sm) {
 }
 
 @media (min-width: $screen-md) {
   .features {
-    display: flex;
-    flex-wrap: wrap;
-    background-color: #43b1d2;
     &__card {
-      flex-basis: 25%;
+      flex-basis: 50%;
       min-width: 25%;
-      background-color: #43b1d2;
-      text-align: center;
-      color: white;
       padding-bottom: rem(40px);
       &--help {
-        background-color: #3fb6c6;
+
       }
       &--staff {
-        background-color: #3cbbbb;
+
       }
       &--doctors {
-        background-color: #37c3a8;
       }
     }
     &__text {
-      margin: 0 auto;
-      max-width: rem(380px);
-      padding: rem(0 45px);
       line-height: 2;
     }
   }
 }
 
 @media (min-width: $screen-lg) {
+  .features {
+    &__card {
+      flex-basis: 25%;
+    }
+  }
 
 }
 

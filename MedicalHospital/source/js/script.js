@@ -1,40 +1,17 @@
  $( document ).ready(function() {
 
-   $(window).scroll(function () {
-       if ($(this).scrollTop() > $(this).height()) {
-         $('.btn__top').addClass('btn__active');
-       } else {
-         $('.btn__top').removeClass('btn__active');
-       }
-       $('.btn__top').click(function () {
-         $('html, body').stop().animate({scrollTop:0}, 'slow', 'swing')
-       });
-     });
+   $('.main-nav__toggle').click(function () {
+     $(this).toggleClass('on');
+     $('.main-nav').slideToggle();
+     return false;
+   });
+   $("a[href*='#about']").mPageScroll2id();
+   $("a[href*='#services']").mPageScroll2id();
+   $("a[href*='#gallery']").mPageScroll2id();
+   $("a[href*='#ourTeam']").mPageScroll2id();
+   $("a[href*='#contacts']").mPageScroll2id();
 
-   // $('.gallery__images').owlCarousel({
-   //   loop:true,
-   //   smartSpeed: 700,
-   //   margin: 0,
-   //   responsiveClass: true,
-   //   responsive:{
-   //     0:{
-   //       items:1
-   //     },
-   //     468:{
-   //       items:2
-   //     },
-   //     768:{
-   //       items:3
-   //     },
-   //     992:{
-   //       items:3,
-   //       loop:false,
-   //     }
-   //   }
-   //
-   // });
-
-   $(function() {
+    $(function() {
      var owl = $('.gallery__images'),
        owlOptions = {
          loop: false,

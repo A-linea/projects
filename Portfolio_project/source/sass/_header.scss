@@ -2,6 +2,8 @@
   min-height: 640px;
   position: relative;
   color: $gray-lightest;
+  padding-top: 50px;
+  padding-bottom: 80px;
   &::before {
     position: absolute;
     content: '';

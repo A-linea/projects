@@ -2,11 +2,9 @@
 
   &__container {
     @include container();
-    @include outline();
   }
   &__content {
     @include row();
-    @include outline();
     padding-bottom: 30px;
   }
   &__content-wrapper {
@@ -15,7 +13,6 @@
     @include col(lg, 7, 12);
     @include col(xl, 8, 12);
     @include col(xxl, 8, 12);
-    @include outline();
   }
   &__title {
     font-size: $font-size--h5;
@@ -51,7 +48,6 @@
     @include col(lg, 6, 12);
     @include col(xl, 3, 12);
     @include col(xxl, 3, 12);
-    @include outline();
     padding: 0;
     padding-top: 110px;
     position: relative;
