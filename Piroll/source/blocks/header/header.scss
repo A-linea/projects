@@ -1,0 +1,45 @@
+.main-header {
+  background-color: #c1cacc;
+  position: relative;
+  padding-bottom: rem(170px);
+  &::before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: #fff;
+    opacity: 0.3;
+  }
+  &__topline {
+    @include row();
+    @include outline();
+  }
+  &__logo {
+    @include col (xs, 1, 12);
+    @include outline();
+    padding-top: rem(35px);
+  }
+  &__icon {
+    height: rem(30px);
+    width: rem(30px);
+  }
+}
+.container {
+  position: relative;
+}
+
+@media (min-width: $screen-sm) {
+
+}
+@media (min-width: $screen-md) {
+
+}
+@media (min-width: $screen-lg) {
+
+}
+@media (min-width: $screen-xl) {
+
+}
+@media (min-width: $screen-xxl) {
+
+}

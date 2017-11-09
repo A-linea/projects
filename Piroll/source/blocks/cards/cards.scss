@@ -1,0 +1,104 @@
+.features {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #43b1d2;
+  &__card {
+    flex-basis: 100%;
+    min-width: 25%;
+    background-color: #43b1d2;
+    text-align: center;
+    color: white;
+    padding-bottom: rem(20px);
+    &--help {
+      background-color: #3fb6c6;
+    }
+    &--staff {
+      background-color: #3cbbbb;
+    }
+    &--doctors {
+      background-color: #37c3a8;
+    }
+  }
+  &__text {
+    margin: 0 auto;
+    max-width: rem(380px);
+    padding: rem(0 45px);
+    line-height: 1.6;
+  }
+}
+@media (min-width: $screen-sm) {
+}
+
+@media (min-width: $screen-md) {
+  .features {
+    &__card {
+      flex-basis: 50%;
+      min-width: 25%;
+      padding-bottom: rem(40px);
+      &--help {
+
+      }
+      &--staff {
+
+      }
+      &--doctors {
+      }
+    }
+    &__text {
+      line-height: 2;
+    }
+  }
+}
+
+@media (min-width: $screen-lg) {
+  .features {
+    &__card {
+      flex-basis: 25%;
+    }
+  }
+
+}
+
+@media (min-width: $screen-xl) {
+  .features {
+
+    &__title {
+      padding-top: rem(140px);
+      position: relative;
+      &::before {
+        content: '';
+        @include centerer-xy();
+        width: rem(65px);
+        height: rem(65px);
+        background-color: #fff;
+        border-radius: rem(40px);
+      }
+      &::after {
+        content: '';
+        @include centerer-xy();
+        
+      }
+      &--help {
+        &::after {
+          
+        }
+      }
+      &--staff {
+        &::after {
+          
+        }
+      }
+      &--doctors {
+        &::after {
+          
+        }
+      }
+    }
+  }
+}
+
+
+@media (min-width: $screen-xxl) {
+
+}
+

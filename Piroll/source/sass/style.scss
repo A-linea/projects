@@ -1,0 +1,36 @@
+/*---------global styles--------*/
+@import "global/normalize.scss";
+@import "global/px-to-rem.scss";
+@import "global/variables.scss";
+@import "mixins.scss";
+@import "global/fonts.scss";
+@import "global/page.scss";
+@import "libs.scss";
+//---------Other styles--------*/
+@import "print.scss";
+/*--------------------block styles--------------------*/
+
+/*----------Header--------------*/
+@import "../blocks/header/header";
+/*----------button--------------*/
+@import "../blocks/btn/btn";
+/*----------Main navigation----------*/
+@import "../blocks/main-nav/main-nav_dropdown";
+/*----------Hero section----------*/
+@import "../blocks/hero_section/hero_section";
+/*----------About section----------*/
+@import "about.scss";
+/*----------Features section----------*/
+@import "../blocks/cards/cards";
+/*----------Advantages section----------*/
+@import "../blocks/advantages_section/advantages";
+/*----------Achievements section----------*/
+@import "../blocks/counter/counter";
+/*----------Gallery section----------*/
+@import "../blocks/gallery/gallery";
+/*----------Team section----------*/
+@import "../blocks/our_team/our_team";
+/*----------Form section----------*/
+@import "../blocks/form/form";
+/*----------Footer ------------*/
+@import "../blocks/footer/footer";

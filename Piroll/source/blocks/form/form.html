@@ -1,0 +1,28 @@
+<div class="container">
+<form class="form">
+  <div class="form__wrapper">
+  <div class="form__success"><span>Спасибо за заявку!</span>
+  </div>
+  <!--Hidden required fields-->
+  <input type="hidden" class="__input form__input--hidden" name="project__name" value="SITE NAME">
+  <input type="hidden" class="form__input form__input--hidden" name="admin__email" value="a.linea@yahoo.com">
+  <input type="hidden" class="form__input form__input--hidden" name="form__subject" value="Order from site SMITLER">
+  <!--END Hidden required fields-->
+  <input type="hidden" name="Страница" value="">
+  <b class="form__form-head">Leave message</b>
+  <p class="form__form-text">Leave your message and we call about 15 min</p>
+  <input type="text" class="form__input" name="Имя" placeholder="Your name" required>
+  <input type="text" class="form__input" name="Телефон" placeholder="Your phone" required>
+  <select type="text" class="form__select" name="service">
+    <option value disabled selected>
+Select a service</option>
+    <option value="Парикмахерский сервис">Service 1</option>
+    <option value="Маникюрный сервис">Service 2</option>
+    <option value="Косметологический сервис">Service 3</option>
+    <option value="Солярий">Service 4</option>
+    <option value="Массаж и SPA ">Service 5</option>
+  </select>
+  <button class="btn  form__form-btn">Send</button>
+  </div>
+</form>
+</div>

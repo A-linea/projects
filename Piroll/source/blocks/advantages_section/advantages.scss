@@ -1,0 +1,135 @@
+.advantages {
+  padding-top: 0;
+  &__header {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+  }
+  &__content {
+    @include row();
+
+  }
+  &__title {
+    color: $gray-darker;
+    font-size: $font-size--h4;
+    position: relative;
+
+  }
+  &__image {
+    display: none;
+  }
+  &__side {
+    @include col(md, 5, 16);
+
+  }
+  &__photo {
+    @include col(md, 6, 16);
+
+  }
+  &__inner-title {
+    padding: rem(20px 0);
+    padding-left: rem(80px);
+    position: relative;
+    &::before,
+    &::after {
+      content: '';
+      @include centerer-y();
+    }
+    &::before {
+      border-radius: rem(35px);
+      left: 5px;
+      width: rem(62px);
+      height: rem(62px);
+      background-color: $accent-color;
+    }
+    &--listen {
+      &::after {
+        left: 14px;
+        background-repeat: no-repeat;
+      }
+    }
+
+    &--prof {
+      &::after {
+        left: 19px;
+        background-repeat: no-repeat;
+      }
+    }
+    &--passionate {
+      &::after {
+        left: 12px;
+        background-repeat: no-repeat;
+      }
+    }
+    &--exp {
+      &::after {
+        left: 12px;
+        background-repeat: no-repeat;
+
+      }
+    }
+  }
+  &__text,
+  &__inner-text {
+    line-height: 1.6;
+  }
+  &__inner-text {
+    padding: rem(0 20px);
+  }
+}
+
+@media (min-width: $screen-sm) {
+  .advantages {
+    padding-top: rem(30px);
+
+  }
+}
+
+@media (min-width: $screen-md) {
+  .advantages {
+    padding-top: rem(80px);
+    &__image {
+      display: block;
+    }
+    &__title {
+      font-size: $font-size--h3;
+    }
+    &__image-wrapper {
+      width: rem(325px);
+      margin: 0 auto;
+    }
+  }
+}
+
+@media (min-width: $screen-lg) {
+  .advantages {
+    padding-top: rem(100px);
+    &__title {
+      font-size: $font-size--h1;
+      line-height: 1.1;
+    }
+    &__text {
+      line-height: 1.8;
+    }
+    &__inner {
+      margin-top: rem(100px);
+    }
+    &__inner-text {
+      line-height: 1.6;
+    }
+    &__inner-title {
+      font-size: $font-size--h3;
+      padding: rem(5px 0);
+      line-height: 1.4;
+      padding-left: rem(90px);
+    }
+  }
+}
+
+
+@media (min-width: $screen-xl) {
+
+}
+@media (min-width: $screen-xxl) {
+
+}

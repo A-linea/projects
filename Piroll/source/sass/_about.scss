@@ -1,0 +1,115 @@
+.about {
+  text-align: center;
+  padding: rem(10px 0);
+
+  &__inner {
+    width: 80%;
+  }
+  &__title {
+    font-size: $font-size--h3;
+  }
+  &__text {
+    line-height: 1.5;
+  }
+  &__skills-wrapper {
+    background:linear-gradient(90deg, rgb(255, 255, 255) 0%, rgb(245, 249, 252) 50%);
+    @include row();
+    @include outline();
+  }
+  &__skills {
+    @include col(xs, 12, 12);
+    @include col(md, 6, 12, 0);
+    @include outline();
+    &--progressbar {
+      text-align: left;
+    }
+    &__inner-title {
+      font-size: $font-size--h3;
+    }
+  }
+  &__progressbar {
+    font-family: $font-family--headings;
+    text-transform: uppercase;
+    font-weight: 500;
+    color: black;
+    letter-spacing: 1px;
+    &--ui,
+    &--web,
+    &--marketing {
+      width: 100%;
+      //background-color: #d8d8d8;
+    }
+  }
+}
+.about__progressbar-wrapper {
+  position: relative;
+  width: 100%;
+}
+.progressbar__text {
+  font-family: $font-family--headings;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  position: absolute;
+  top: 0;
+  left: rem(25%);
+  font-weight: 500;
+  font-size: rem(13px);
+}
+.progressbar__text--web {
+  font-family: $font-family--headings;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  position: absolute;
+  top: 0;
+  left: rem(35%);
+  font-weight: 500;
+  font-size: rem(13px);
+}
+.progressbar__text--mark {
+  font-family: $font-family--headings;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  position: absolute;
+  top: 0;
+  left: rem(23%);
+  font-weight: 500;
+  font-size: rem(13px);
+}
+@media (min-width: $screen-sm) {
+
+}
+@media (min-width: $screen-md) {
+
+}
+@media (min-width: $screen-lg) {
+  .about {
+    padding-top: rem(95px);
+    &__inner {
+      width: 65%;
+      margin: 0 auto;
+    }
+    &__title {
+      font-size: $font-size--h2;
+    }
+    &__text {
+      font-size: rem(16px);
+      line-height: 1.6;
+    }
+    &__inner-title {
+      font-size: $font-size--h2;
+    }
+    &__skills--progressbar {
+      padding: rem(0 20px);
+      padding-right: rem(80px);
+    }
+    &__progressbar {
+      font-size: rem(13px);
+    }
+  }
+}
+@media (min-width: $screen-xl) {
+
+}
+@media (min-width: $screen-xxl) {
+
+}
