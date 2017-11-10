@@ -16,6 +16,9 @@
     padding-top: rem(15px);
     margin-bottom: rem(40px);
   }
+  &__item {
+    letter-spacing: 1px;
+  }
 }
 .owl-item.active {
   text-decoration: none;

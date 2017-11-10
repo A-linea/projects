@@ -12,6 +12,26 @@
     @include col(lg, 3, 12, 0);
     @include outline();
   }
+  &__wrapper {
+    width: 100%;
+    border: none;
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    padding: rem(15px 0);
+    background-color: $gray-lighten;
+    transition: $transition-time;
+    &:hover::before,
+    &:focus::before,
+    &:active::before  {
+      width: 0;
+    }
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: lighten($gray-lighten, 10%);
+    }
+  }
 
 }
 @media (min-width: $screen-sm) {
@@ -26,24 +46,7 @@
       }
     }
   &__wrapper {
-    width: 100%;
-    border: none;
-    position: absolute;
-    bottom: 0;
-    text-align: center;
-    padding: rem(30px 0);
-    background-color: $gray-lighten;
-    transition: $transition-time;
-    &:hover::before,
-    &:focus::before,
-    &:active::before  {
-      width: 0;
-      }
-    &:hover,
-    &:focus,
-    &:active {
-      background-color: lighten($gray-lighten, 10%);
-      }
+      padding: rem(30px 0);
     }
     .gallery__card--hidden {
       display: none;

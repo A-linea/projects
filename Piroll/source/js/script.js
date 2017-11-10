@@ -52,13 +52,13 @@
        console.log('count finish');
      }
    });
-
      // Открытие/закрытие блока с фото
      $('.gallery__wrapper').click(function () {
      $(this).toggleClass('on');
      $('.gallery__card--hidden').slideToggle('fast','swing');
      return false;
    });
+
      // Reviews carousel
 
    $('.reviews__list').owlCarousel({

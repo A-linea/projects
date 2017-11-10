@@ -6,8 +6,9 @@
     @include outline();
   }
   &__container {
-    @include col(md, 10, 12);
-    @include col-offset(md, 6, 12);
+    @include col(sm, 7, 12);
+    @include col(md, 7, 12);
+    @include col-offset(sm, 5, 12);
     @include col(lg, 6, 12);
     @include outline();
 

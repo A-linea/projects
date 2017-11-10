@@ -1,5 +1,8 @@
 .main-header {
   background-color: #c1cacc;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
   position: relative;
   padding-bottom: rem(170px);
   &::before {
@@ -35,9 +38,14 @@
 
 }
 @media (min-width: $screen-lg) {
-
+  .main-header {
+    background-position: 25% 40%;
+  }
 }
 @media (min-width: $screen-xl) {
+  .main-header {
+    background-position: 50% 50%;
+  }
 
 }
 @media (min-width: $screen-xxl) {

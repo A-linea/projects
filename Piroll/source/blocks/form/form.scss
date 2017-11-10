@@ -51,36 +51,26 @@
     }
   }
   &__form-btn {
-
     margin: 0 auto;
-    margin-top: 35px;
-    padding: 15px 40px;
-    font-weight: 600;
-    font-size: 14px;
-    border: 1x solid #000;
-    border-bottom: 4px solid darken(#fff, 15%);
-    letter-spacing: 2px;
-    background-color: #fff;
-    color: $accent-color;
-    &:hover,
-    &:focus {
-      text-decoration: none;
-      color: #fff;
-      background-color: darken($accent-color, 15%);
-      border-color: darken($accent-color, 45%);
-      box-shadow: none;
-    }
+    margin-top: rem(35px);
+    padding: rem(20px 36px);
+    border: none;
+    color: white;
   }
 }
 @media (min-width: $screen-sm) {
 }
 
 @media (min-width: $screen-md) {
-
+  .form {
+    padding-bottom: rem(30px);
+  }
 }
 
 @media (min-width: $screen-lg) {
-
+  .form {
+    padding-bottom: rem(65px);
+  }
 }
 
 @media (min-width: $screen-xl) {

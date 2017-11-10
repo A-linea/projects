@@ -143,7 +143,7 @@ gulp.task('webp', function () {
   console.log('*********** создание webp');
   return gulp.src('build/img/webp/*.{png,jpg}')
     .pipe(webp({
-      quality: 50
+      quality: 65
     }))
     .pipe(gulp.dest("build/img/webp"));
 });

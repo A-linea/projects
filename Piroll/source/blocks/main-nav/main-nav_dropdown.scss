@@ -2,32 +2,25 @@
   display: none;
   // @include col(xs, 16, 12, 0);
   // @include col(sm, 16, 12, 0);
-  @include col(md, 12, 12);
-  @include col(lg, 12, 12);
-  @include col-offset(xl, 3, 12); ;
-  @include col(xl, 6, 12);
-  @include col(xxl, 6, 12);
+  @include col(md, 8, 12);
+  @include col-offset(md, 3, 12); ;
+  @include col-offset(lg, 4, 12); ;
+  @include col(lg, 7, 12);
   @include outline();
-  background-color: blue;
+  background-color: $accent-color;
   transition: clip-path ease-in-out 700ms;
   clip-path: circle(20px at top right);
 
-
-  &__list,
-  &__drowdown-wrapper
-   {
+  &__list {
     list-style: none;
     margin: 0;
     padding: 0;
     padding: rem(10px 0);
-    font-size: rem(16px);
-    font-family:'Open Sans', 'Ubuntu', 'Droid Sans', 'Helvetica Neue', 'Arial', sans-serif;
-    font-weight: 400;
   }
-
   &__link {
-    font-family:'Open Sans', 'Ubuntu', 'Droid Sans', 'Helvetica Neue', 'Arial', sans-serif;
+    font-family:'Montserrat', 'Ubuntu', 'Droid Sans', 'Helvetica Neue', 'Arial', sans-serif;
     text-transform: uppercase;
+    font-weight: 500;
     display: block;
     padding: rem(10px 0);
     text-decoration: none;
@@ -37,7 +30,7 @@
     &:hover,
     &:active,
     &:focus {
-      background-color: rgba(black, 0.1);
+      background-color: rgba(#fff, 0.1);
     }
     &--active {
       &:hover,
@@ -49,11 +42,11 @@
 
   }
 }
-
 .main-nav--open {
-    display: block;
-    clip-path: circle(100% at top right);
-  }
+  display: block;
+  clip-path: circle(100% at top right);
+}
+
 .main-nav__toggle {
   display: block;
   height: 38px;
@@ -85,7 +78,7 @@
   span:before {
     width: 100%;
     height: 2px;
-    background-color: #000;
+    background-color: $accent-color;
     transition: all 0.3s;
     backface-visibility: hidden;
     border-radius: 2px;
@@ -106,65 +99,53 @@
 }
 
 @media (min-width: $screen-sm) {
-
-
   .main-nav__list {
     list-style: none;
     margin: 0;
     padding: 0;
-    font-size: rem(17px);
-    text-transform: none;
-    font-family: 'Open Sans', 'Ubuntu', 'Droid Sans', 'Helvetica Neue', 'Arial', sans-serif;
-    font-weight: 400;
+    font-size: rem(12px);
+    font-family: 'Montserrat', 'Ubuntu', 'Droid Sans', 'Helvetica Neue', 'Arial', sans-serif;
+    font-weight: 500;
 
   }
-  .main-nav__item {
-
-  }
-
 }
-
 @media (min-width: $screen-md) {
   .main-nav {
     display: block;
     background-color: transparent;
+    border: none;
       clip-path: initial;
     &__toggle {
       display: none;
     }
   }
-
   .main-nav__list {
     display: flex;
     justify-content: space-around;
-    font-size: rem(13px);
     padding: rem(0 5px);
+    padding-top: rem(35px);
   }
   .main-nav__link {
-    font-size: rem(20px);
-    text-transform: none;
+    font-size: rem(12px);
+    text-transform: uppercase;
+    font-weight: 500;
     color: $link-color;
     &:hover,
     &:active,
     &:focus {
-      color: $link-color--hover;
-      text-decoration: underline;
+      color: $accent-color;
       background-color: transparent;
 
     }
     &--active {
+      color: $accent-color;
       &:hover {
-        color: $link-color;
         text-decoration: none;
       }
     }
   }
 }
-.active {
-  color: $link-color--hover;
-  text-decoration: underline;
-  background-color: transparent;
-}
+
 @media (min-width: $screen-lg) {
 
 }

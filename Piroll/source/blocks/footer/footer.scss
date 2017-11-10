@@ -1,12 +1,19 @@
 .main-footer {
-
+  background-color: $gray-darkest;
+  color: #fff;
+  padding: rem(10px 0);
+  &__copyright {
+    text-align: center;
+  }
 }
 
 @media (min-width: $screen-sm) {
   
 }
 @media (min-width: $screen-md) {
-
+  .main-footer {
+    padding: rem(15px 0);
+  }
 }
 @media (min-width: $screen-lg) {
 

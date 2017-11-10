@@ -21,6 +21,7 @@ $border-radius:               rem(3px) !default;
   vertical-align: middle;
   user-select: none;
   text-align: center;
+  letter-spacing: 1px;
   font-size: rem(12px);
   font-family: $font-family--headings;
   line-height: $line-height;
@@ -36,9 +37,9 @@ $border-radius:               rem(3px) !default;
   &::before {
     content: '';
     position: absolute;
-    left: 15%;
+    left: 17%;
     width: 0;
-    bottom: 0;
+    bottom: 7px;
     background-color: #fff;
     height: 2px;
     transition: $transition-time;
@@ -47,7 +48,7 @@ $border-radius:               rem(3px) !default;
   &:hover::before,
   &:focus::before,
   &:active::before  {
-    width: 75%;
+    width: 67%;
   }
 
   &:active,

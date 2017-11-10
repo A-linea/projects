@@ -87,6 +87,7 @@
     &__inner {
       width: 65%;
       margin: 0 auto;
+      padding-bottom: rem(75px);
     }
     &__title {
       font-size: $font-size--h2;
@@ -94,6 +95,7 @@
     &__text {
       font-size: rem(16px);
       line-height: 1.6;
+      margin-bottom: rem(50px);
     }
     &__inner-title {
       font-size: $font-size--h2;
