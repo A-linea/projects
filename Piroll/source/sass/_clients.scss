@@ -1,0 +1,21 @@
+.clients {
+  background-color: white;
+}
+
+
+@media (min-width: $screen-sm) {
+
+}
+
+@media (min-width: $screen-md) {
+  .clients {
+    padding: rem(20px 0);
+  }
+}
+
+@media (min-width: $screen-lg) {
+  .clients {
+    padding: rem(40px 0);
+  }
+}
+

@@ -1,67 +1,58 @@
-
 .form {
-  @include row();
-  @include outline();
-
-&__wrapper {
+  background-color: $gray-lightest;
+  &__inner {
+    @include row();
+    @include outline();
+  }
+  &__wrapper {
     @include col(xs, 12, 12);
     @include col(sm, 12,12);
     @include col(md, 6, 12);
+    @include col-offset(md, 3, 12);
     @include col(lg, 6, 12);
     @include col(xl, 6, 12);
     @include col(xxl, 6, 12);
     @include outline();
     position: relative;
+    text-align: center;
   }
-  &__form {
-    padding: 5% 1% 5% 1%;
-    color: $accent-color;
-    width: 100%;
-    position: relative;
+  &__title {
+    font-size: $font-size--h2;
+    margin-bottom: 0;
   }
-  &__form-head {
-    font-family: "Open Sans", "Arial", sans-serif;
-    color: $accent-color;
-    font-size: 30px;
-    line-height: 1;
-    text-transform: uppercase;
-    display: inline-block;
-    font-weight: 800;
+  form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
   }
+
   &__input, textarea {
-    display: block;
-    font-family: "Open Sans", "Arial",sans-serif;
+    font-family: "Nunito Sans", "Arial",sans-serif;
+    flex-basis: 100%;
     font-size: 16px;
     width: 100%;
     color: #000;
     margin-bottom: 20px;
-    background-color: transparent;
-    border: 1px solid rgba($accent-color, 0.9 );
-    border-bottom: 2px solid rgba(gray, 0.9);
+    background-color: #fff;
+    border: none;
+    border-bottom: 1px solid rgba(gray, 0.6);
     border-radius: 4px;
     padding: 12px 20px;
+    resize: none;
+    &--name,
+    &--text {
+      flex-basis: 48%;
+    }
+
     &::placeholder {
-      color: #fff;
+      color: $gray-darken;
       opacity: 1;
     }
   }
-  &__select {
-    font-family: "Open Sans", "Arial",sans-serif;
-    width: 100%;
-    color: #000;
-    font-size: 16px;
-    padding: 12px 20px;
-    background-color: transparent;
-    border: 1px solid rgba($accent-color, 0.9 );
-    border-bottom: 2px solid rgba($accent-color, 0.1);
-    outline: none;
-    option {
-      color: $accent-color;
-    }
-  }
-
   &__form-btn {
-    margin: 0;
+
+    margin: 0 auto;
     margin-top: 35px;
     padding: 15px 40px;
     font-weight: 600;
@@ -80,4 +71,21 @@
       box-shadow: none;
     }
   }
+}
+@media (min-width: $screen-sm) {
+}
+
+@media (min-width: $screen-md) {
+
+}
+
+@media (min-width: $screen-lg) {
+
+}
+
+@media (min-width: $screen-xl) {
+
+}
+@media (min-width: $screen-xxl) {
+
 }

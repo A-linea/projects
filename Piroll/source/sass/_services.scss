@@ -1,40 +1,40 @@
-.achievements {
-  background-color: $accent-color;
+.services {
+  background-color: $gray-lightest;
   padding: rem(10px 0);
   font-family: 'Montserrat', 'Open Sans', sans-serif;
   font-weight: 500;
   letter-spacing: 1px;
   display: flex;
-  &__data-wrapper {
+  &__inner {
     @include row(0);
     margin: auto;
     display: flex;
     @include outline();
     padding: 0;
   }
-  &__data  {
+  &__card  {
     @include col(sm, 8, 16);
     @include col(md, 8, 16);
     @include col(lg, 4, 16);
-    @include col(xl, 4, 16);
-    @include col(xxl, 4, 16);
     @include outline();
-    color: white;
+    text-align: center;
     display: flex;
+    flex-direction: column;
     list-style: none;
     margin: 0;
     padding: 0;
   }
-  &__count {
-    font-size: rem(18px);
-    font-weight: 500;
+   &__title {
+    text-transform: uppercase;
+    font-size: rem(12px);
   }
   &__text {
-    font-size: rem(12px);
+    font-size: rem(16px);
     margin: 0;
     padding: 0;
+    letter-spacing: 0;
     padding-top: rem(10px);
-    text-transform: uppercase;
+    padding-bottom: rem(60px);
     font-weight: 700;
     line-height: 1.6;
   }
@@ -44,9 +44,9 @@
   &__icon {
     width: rem(42px);
     height: rem(42px);
-  }
-  &__inner {
-    margin-left: rem(10px);
+    &--star {
+      fill: #656565;
+    }
   }
 }
 
@@ -56,16 +56,16 @@
 }
 
 @media (min-width: $screen-md) {
-  .achievements {
+  .services {
     padding: rem(20px 0);
   }
 }
 
 @media (min-width: $screen-lg) {
-  .achievements {
+  .services {
     padding: rem(95px 0);
     &__inner {
-      margin-left: rem(20px);
+
     }
   }
 }

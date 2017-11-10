@@ -109,7 +109,7 @@ gulp.task('script', function() {
     'source/libs/appear/appear.js', // библиотека позволяет запускать скрипт с определенного места на странице
     'source/libs/countTo/counTo.js', //счетчик js
     //'source/libs/animate/animate-css.js',
-	  'source/js/common.js' //подключаем пользовательский скрипт
+	  'source/js/script.js' //подключаем пользовательский скрипт
     ])
     .pipe(plumber())
     .pipe(concat('script.js'))
@@ -143,7 +143,7 @@ gulp.task('webp', function () {
   console.log('*********** создание webp');
   return gulp.src('build/img/webp/*.{png,jpg}')
     .pipe(webp({
-      quality: 90
+      quality: 50
     }))
     .pipe(gulp.dest("build/img/webp"));
 });
@@ -209,7 +209,7 @@ gulp.task('serve', function() {
   });
   gulp.watch('source/**/*.{scss,sass}', ['style']);  // Наблюдение за scss/sass файлами в папке sass
   gulp.watch('source/**/*.html', ['html']);
-  gulp.watch('source/**/*.js', ['script']);
+  gulp.watch('source/**/*.js', ['rigger','script']);
 });
 
 /* ------------ Build settings ------------- */

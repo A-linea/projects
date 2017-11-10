@@ -1,28 +1,17 @@
-<div class="container">
-<form class="form">
-  <div class="form__wrapper">
-  <div class="form__success"><span>Спасибо за заявку!</span>
+<section class="form">
+  <div class="container">
+    <div class="form__inner">
+      <div class="form__wrapper">
+        <h2 class="form__title">Need a Project?</h2>
+        <p class="form__text">Let us know what you're looking for in an agency. We'll take a look and see if this could be the start of something beautiful.</p>
+        <form>
+          <input type="text" class="form__input  form__input--name" name="name" placeholder="Your name" required>
+          <input type="text" class="form__input  form__input--text" name="email" placeholder="Your email" required>
+          <input type="text" class="form__input  form__input--title" name="title" placeholder="Title" required>
+          <textarea class="form__input  form__input--textarea" name="textarea" placeholder="Textarea" cols="30" rows="10"></textarea>
+ 
+          <button class="btn  form__form-btn">Send message</button>
+      </form>
+    </div>
   </div>
-  <!--Hidden required fields-->
-  <input type="hidden" class="__input form__input--hidden" name="project__name" value="SITE NAME">
-  <input type="hidden" class="form__input form__input--hidden" name="admin__email" value="a.linea@yahoo.com">
-  <input type="hidden" class="form__input form__input--hidden" name="form__subject" value="Order from site SMITLER">
-  <!--END Hidden required fields-->
-  <input type="hidden" name="Страница" value="">
-  <b class="form__form-head">Leave message</b>
-  <p class="form__form-text">Leave your message and we call about 15 min</p>
-  <input type="text" class="form__input" name="Имя" placeholder="Your name" required>
-  <input type="text" class="form__input" name="Телефон" placeholder="Your phone" required>
-  <select type="text" class="form__select" name="service">
-    <option value disabled selected>
-Select a service</option>
-    <option value="Парикмахерский сервис">Service 1</option>
-    <option value="Маникюрный сервис">Service 2</option>
-    <option value="Косметологический сервис">Service 3</option>
-    <option value="Солярий">Service 4</option>
-    <option value="Массаж и SPA ">Service 5</option>
-  </select>
-  <button class="btn  form__form-btn">Send</button>
-  </div>
-</form>
-</div>
+</section>

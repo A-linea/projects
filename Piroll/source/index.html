@@ -2,8 +2,11 @@
 <html lang="en">
 //= blocks/scaff/head.html
 <body>
+<!--Header start-->
 //= blocks/header/main-header.html
+<!--Header end-->
 <!--Content start-->
+<!--About start-->
 <main class="page__main-content" role="main">
 <section class="about">
   <div class="container">
@@ -17,7 +20,7 @@
         <img src="img/signature.png" alt="signature">
       </div>
     </div>
-      <div class="about__skills-wrapper">
+      <div class="about__skills-wrapper  appear">
         <div class="about__skills  about__skills--progressbar">
           <h3 class="about__inner-title">Proffesional Skills</h3>
           <div class="about__progressbar-wrapper">
@@ -46,50 +49,161 @@
       </div>
   </div>
 </section>
+<!--About end-->
+<!--Achievements start-->
 //= blocks/counter/counter.html
-<!--media start-->
+<!--Achievements end-->
+<!--Gallery start-->
 //= blocks/cards/cards.html
-<!--media start-->
+<!--Gallery end-->
+<!--Media start-->
 //= blocks/media_input/media.html
 <!--media end-->
 <!--Services start-->
-<section class="services">
-  <div class="services__inner"></div>
-    <div class="services__card  services__card--treatment">
-      <h2 class="services__title  services__title--treatment">Best treatment</h2>
-      <p class="services__text">Ullamcorper at in  vivamus molestie ipsum porttitor eu vel etiam. Ante ridiculus primis.</p>
+  <section class="services">
+    <div class="container">
+      <div class="services__inner">
+        <div class="services__card  services__card--diamond">
+          <div class="services__icon-container">
+          <svg class="services__icon  services__icon--diamond">
+            <use xlink:href="img/sprite.svg#diamond"></use>
+          </svg>
+          </div>
+          <h2 class="services__title  services__title--treatment">UI/UX design</h2>
+          <p class="services__text">Ullamcorper at in  vivamus porttitor eu vel. Ante primis.</p>
+        </div>
+        <div class="services__card  services__card--arc">
+          <div class="services__icon-container">
+            <svg class="services__icon  services__icon--arc">
+              <use xlink:href="img/sprite.svg#arc"></use>
+            </svg>
+          </div>
+          <h2 class="services__title  services__title--help">Web development</h2>
+          <p class="services__text">Lectus. Aliquam  convallis. Congue quisque est eleifend.</p>
+        </div>
+        <div class="services__card  services__card--phone">
+          <div class="services__icon-container">
+            <svg class="services__icon  services__icon--phone">
+              <use xlink:href="img/sprite.svg#phone"></use>
+            </svg>
+          </div>
+          <h2 class="services__title  services__title--staff">App/Mobile</h2>
+          <p class="services__text">Rhoncus natoque. Accumsan ligula et commodo orci</p>
+        </div>
+        <div class="services__card  services__card--joy">
+          <div class="services__icon-container">
+            <svg class="services__icon  services__icon--joy">
+              <use xlink:href="img/sprite.svg#joy"></use>
+            </svg>
+          </div>
+          <h2 class="services__title  services__title--doctors">Game Design</h2>
+          <p class="services__text">Nullam nibh, aenean lectus sem lectus maecenas nisi.</p>
+        </div>
+        <div class="services__card  services__card--plane">
+          <div class="services__icon-container">
+            <svg class="services__icon  services__icon--plane">
+              <use xlink:href="img/sprite.svg#plane"></use>
+            </svg>
+          </div>
+          <h2 class="services__title  services__title--doctors">Seo/Marketing</h2>
+          <p class="services__text">Ultricies pretium fusce, nulla hac euismod.</p>
+        </div>
+        <div class="services__card  services__card--star">
+          <div class="services__icon-container">
+            <svg class="services__icon  services__icon--star" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M19.4 12.8L16 2.4l-3.4 10.4h-11l8.9 6.4-3.4 10.4 8.9-6.4 8.9 6.4-3.4-10.4 8.9-6.4h-11zm1.1 6.7l2.4 7.3-6.9-5-6.9 5 2.6-8-.6-.5-6.2-4.5h8.5l2.6-8 2.6 8h8.5l-6.9 4.9.3.8z"/>
+            </svg>
+          </div>
+          <h2 class="services__title  services__title--doctors">Photography</h2>
+          <p class="services__text">Magnis platea id. Natoque nulla lacus. Nam nullam.</p>
+        </div>
+        <div class="services__card  services__card--wand">
+          <div class="services__icon-container">
+            <svg class="services__icon  services__icon--wand">
+              <use xlink:href="img/sprite.svg#magic-wand"></use>
+            </svg>
+          </div>
+          <h2 class="services__title  services__title--doctors">Graphic design</h2>
+          <p class="services__text">Est ad ut taciti dapibus nibh ut, id tempor phasellus.</p>
+        </div>
+        <div class="services__card  services__card--bucket">
+          <div class="services__icon-container">
+            <svg class="services__icon  services__icon--bucket">
+              <use xlink:href="img/sprite.svg#paint-bucket"></use>
+            </svg>
+          </div>
+          <h2 class="services__title  services__title--doctors">Illustrations</h2>
+          <p class="services__text">Euismod odio nullam. Cursus eleifend nulla praesent turpis.
+          </p>
+        </div>
+      </div>
     </div>
-    <div class="services__card  services__card--help">
-      <h2 class="services__title  services__title--help">Emergency help</h2>
-      <p class="services__text">Lectus. Aliquam  convallis. Congue quisque est eleifend. Luctus  tellus, faucibus aenean porttitor.</p>
-    </div>
-    <div class="services__card  services__card--staff">
-      <h2 class="services__title  services__title--staff">Medical staff</h2>
-      <p class="services__text">Gravida, nonummy  nisl tristique. Rhoncus natoque. Accumsan ligula et commodo orci</p>
-    </div>
-    <div class="services__card  services__card--doctors">
-      <h2 class="services__title  services__title--doctors">Qualified doctors</h2>
-      <p class="services__text">Massa inceptos tortor. Tellus duis. Scelerisque ut elit. Fermentum faucibus molestie.</p>
-    </div>
-    <div class="services__card  services__card--doctors">
-      <h2 class="services__title  services__title--doctors">Qualified doctors</h2>
-      <p class="services__text">Massa inceptos tortor. Tellus duis. Scelerisque ut elit. Fermentum faucibus molestie.</p>
-    </div>
-    <div class="services__card  services__card--doctors">
-      <h2 class="services__title  services__title--doctors">Qualified doctors</h2>
-      <p class="services__text">Massa inceptos tortor. Tellus duis. Scelerisque ut elit. Fermentum faucibus molestie.</p>
-    </div>
-    <div class="services__card  services__card--doctors">
-      <h2 class="services__title  services__title--doctors">Qualified doctors</h2>
-      <p class="services__text">Massa inceptos tortor. Tellus duis. Scelerisque ut elit. Fermentum faucibus molestie.</p>
-    </div>
-    <div class="services__card  services__card--doctors">
-      <h2 class="services__title  services__title--doctors">Qualified doctors</h2>
-      <p class="services__text">Massa inceptos tortor. Tellus duis. Scelerisque ut elit. Fermentum faucibus molestie.</p>
-    </div>
-  </div>
-</section>
+  </section>
 <!--Services end-->
+<!--Reviews start-->
+//= blocks/reviews/reviews.html
+<!--Reviews end-->
+  <section class="clients">
+    <div class="container">
+      <div class="clients__inner owl-carousel owl-theme">
+        <div class="clients__card">
+          <picture>
+            <source srcset="img/webp/logo-1.webp" type="image/webp">
+            <source srcset="img/webp/logo-1.png" type="image/png">
+            <img src="img/webp/logo-1.png" alt="label" class="clients__logo">
+          </picture>
+        </div>
+        <div class="clients__card">
+          <picture>
+            <source srcset="img/webp/logo-2.webp" type="image/webp">
+            <source srcset="img/webp/logo-2.png" type="image/png">
+            <img src="img/webp/logo-2.png" alt="label" class="clients__logo">
+          </picture>
+        </div>
+        <div class="clients__card">
+          <picture>
+            <source srcset="img/webp/logo-3.webp" type="image/webp">
+            <source srcset="img/webp/logo-3-dark.png" type="image/png">
+            <img src="img/webp/logo-3.png" alt="label" class="clients__logo">
+          </picture>
+        </div>
+        <div class="clients__card">
+          <picture>
+            <source srcset="img/webp/logo-4.webp" type="image/webp">
+            <source srcset="img/webp/logo-4.png" type="image/png">
+            <img src="img/webp/logo-4.png" alt="label" class="clients__logo">
+          </picture>
+        </div>
+        <div class="clients__card">
+          <picture>
+            <source srcset="img/webp/logo-5.webp" type="image/webp">
+            <source srcset="img/webp/logo-5.png" type="image/png">
+            <img src="img/webp/logo-5.png" alt="label" class="clients__logo">
+          </picture>
+        </div>
+        <div class="clients__card">
+          <picture>
+            <source srcset="img/webp/logo-6.webp" type="image/webp">
+            <source srcset="img/webp/logo-6.png" type="image/png">
+            <img src="img/webp/logo-6.png" alt="label" class="clients__logo">
+          </picture>
+        </div>
+        <div class="clients__card">
+          <picture>
+            <source srcset="img/webp/logo-7.webp" type="image/webp">
+            <source srcset="img/webp/logo-7.png" type="image/png">
+            <img src="img/webp/logo-7.png" alt="label" class="clients__logo">
+          </picture>
+        </div>
+        <div class="clients__card">
+          <picture>
+            <source srcset="img/webp/logo-8.webp" type="image/webp">
+            <source srcset="img/webp/logo-8.png" type="image/png">
+            <img src="img/webp/logo-8.png" alt="label" class="clients__logo">
+          </picture>
+        </div>
+      </div>
+    </div>
+  </section>
 <!--Form start-->
 //= blocks/form/form.html
 </main>

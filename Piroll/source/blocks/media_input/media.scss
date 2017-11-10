@@ -1,0 +1,48 @@
+.media {
+  text-align: center;
+  &__inner {
+
+  }
+  &__title {
+    font-size: $font-size--h4;
+  }
+}
+@media (min-width: $screen-sm) {
+  .media {
+
+  }
+}
+
+@media (min-width: $screen-md) {
+  .media {
+    text-align: center;
+
+  }
+
+}
+
+@media (min-width: $screen-lg) {
+  .media {
+    padding: rem(95px 0);
+    &__inner {
+      width: 50%;
+      margin: 0 auto;
+      padding-bottom:rem(40px);
+    }
+    &__title {
+      font-size: $font-size--h2;
+    }
+
+  }
+
+}
+
+@media (min-width: $screen-xl) {
+  .media {
+
+  }
+
+}
+@media (min-width: $screen-xxl) {
+
+}

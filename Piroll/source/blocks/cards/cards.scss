@@ -1,100 +1,68 @@
-.features {
-  display: flex;
-  flex-wrap: wrap;
-  background-color: #43b1d2;
-  &__card {
-    flex-basis: 100%;
-    min-width: 25%;
-    background-color: #43b1d2;
-    text-align: center;
-    color: white;
-    padding-bottom: rem(20px);
-    &--help {
-      background-color: #3fb6c6;
-    }
-    &--staff {
-      background-color: #3cbbbb;
-    }
-    &--doctors {
-      background-color: #37c3a8;
-    }
+.gallery {
+  @include row(30);
+  @include outline();
+  background-color: #fff;
+  position: relative;
+  padding-bottom: 55px;
+  &__card,
+  &__card--hidden {
+    @include col(xs, 12, 12);
+    @include col(sm, 12, 12);
+    @include col(md, 6, 12, 0);
+    @include col(lg, 3, 12, 0);
+    @include outline();
   }
-  &__text {
-    margin: 0 auto;
-    max-width: rem(380px);
-    padding: rem(0 45px);
-    line-height: 1.6;
-  }
+
 }
 @media (min-width: $screen-sm) {
+
 }
-
 @media (min-width: $screen-md) {
-  .features {
-    &__card {
-      flex-basis: 50%;
-      min-width: 25%;
-      padding-bottom: rem(40px);
-      &--help {
-
-      }
-      &--staff {
-
-      }
-      &--doctors {
+  .gallery {
+    &__card,
+    &__card--hidden {
+      img {
+        vertical-align: top;
       }
     }
-    &__text {
-      line-height: 2;
+  &__wrapper {
+    width: 100%;
+    border: none;
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    padding: rem(30px 0);
+    background-color: $gray-lighten;
+    transition: $transition-time;
+    &:hover::before,
+    &:focus::before,
+    &:active::before  {
+      width: 0;
+      }
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: lighten($gray-lighten, 10%);
+      }
+    }
+    .gallery__card--hidden {
+      display: none;
     }
   }
 }
 
 @media (min-width: $screen-lg) {
-  .features {
+  .gallery {
     &__card {
-      flex-basis: 25%;
     }
   }
 
 }
 
 @media (min-width: $screen-xl) {
-  .features {
-
-    &__title {
-      padding-top: rem(140px);
-      position: relative;
-      &::before {
-        content: '';
-        @include centerer-xy();
-        width: rem(65px);
-        height: rem(65px);
-        background-color: #fff;
-        border-radius: rem(40px);
-      }
-      &::after {
-        content: '';
-        @include centerer-xy();
-        
-      }
-      &--help {
-        &::after {
-          
-        }
-      }
-      &--staff {
-        &::after {
-          
-        }
-      }
-      &--doctors {
-        &::after {
-          
-        }
-      }
-    }
+  .gallery {
   }
+
 }
 
 
