@@ -8,8 +8,6 @@
   @include col(lg, 7, 12);
   @include outline();
   background-color: $accent-color;
-  transition: clip-path ease-in-out 700ms;
-  clip-path: circle(20px at top right);
 
   &__list {
     list-style: none;
@@ -41,10 +39,6 @@
     }
 
   }
-}
-.main-nav--open {
-  display: block;
-  clip-path: circle(100% at top right);
 }
 
 .main-nav__toggle {
