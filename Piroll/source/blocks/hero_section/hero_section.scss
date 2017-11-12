@@ -1,60 +1,68 @@
 
 .hero {
     height: 100%;
+    padding: rem(180px 0);
   &__inner {
     @include row();
     @include outline();
   }
   &__container {
-    @include col(sm, 7, 12);
-    @include col(md, 7, 12);
-    @include col-offset(sm, 5, 12);
+    @include col(sm, 10, 12);
+    @include col-offset(sm, 1, 12);
+    @include col(md, 8, 12);
+    @include col-offset(md, 4, 12);
+    @include col-offset(lg, 6, 12);
     @include col(lg, 6, 12);
     @include outline();
-
-
     padding: rem(0 20px);
     text-align: center;
   }
   &__title {
     color: $link-color;
     font-family: 'Montserrat', 'Open Sans', sans-serif;
-    font-size: rem(20px);
+    font-size: $font-size--h3;
     font-weight: 500;
   }
   &__text {
     color: $gray-darker;
     font-size: rem(15px);
-    margin-top: rem(20px);
+    margin-top: rem(10px);
     line-height: 1.5;
   }
-  .hero__btn {
+  &__btn {
     margin-top: rem(20px);
+    padding: rem(15px 25px);
   }
 }
 
 
 @media (min-width: $screen-sm) {
   .hero {
-    &__inner {
-    }
+    padding: rem(150px 0);
+
     &__container {
-      padding-top: rem(170px);
-      text-align: left;
+
     }
     &__title {
       font-size: rem(24px);
     }
     &__text {
       font-size: rem(16px);
-
+    }
+    &__btn {
+      margin-top: rem(80px);
+      padding: rem(20px 30px);
     }
   }
 }
 
 @media (min-width: $screen-md) {
   .hero {
-    padding-bottom: rem(30px);
+    padding: rem(150px 0);
+    &__container {
+      padding-top: rem(80px);
+      text-align: left;
+    }
 
     &__text {
       font-size: rem(18px);

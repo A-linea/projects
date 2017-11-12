@@ -2,9 +2,9 @@
   background-color: #c1cacc;
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center center;
+  background-position: 5% center;
   position: relative;
-  padding-bottom: rem(170px);
+  height: 100vh;
   &::before {
     content: '';
     position: absolute;
@@ -13,20 +13,8 @@
     background-color: #fff;
     opacity: 0.3;
   }
-  &__topline {
-    @include row();
-    @include outline();
-  }
-  &__logo {
-    @include col (xs, 1, 12);
-    @include outline();
-    padding-top: rem(35px);
-  }
-  &__icon {
-    height: rem(30px);
-    width: rem(30px);
-  }
 }
+
 .container {
   position: relative;
 }
@@ -35,7 +23,10 @@
 
 }
 @media (min-width: $screen-md) {
-
+  .main-header {
+    margin-top: rem(-70px);
+    position: relative;
+  }
 }
 @media (min-width: $screen-lg) {
   .main-header {

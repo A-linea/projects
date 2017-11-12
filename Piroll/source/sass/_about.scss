@@ -1,11 +1,12 @@
 .about {
   text-align: center;
-  padding: rem(10px 0);
-
+  padding: rem(30px 0);
   &__inner {
     width: 80%;
+    margin: 0 auto;
   }
   &__title {
+    margin-top: 0;
     font-size: $font-size--h3;
   }
   &__text {
@@ -23,12 +24,18 @@
     &--progressbar {
       text-align: left;
     }
+    &--photo {
+      display: none;
+    }
     &__inner-title {
       font-size: $font-size--h3;
     }
   }
   &__progressbar {
     font-family: $font-family--headings;
+    font-size: rem(13px);
+    margin-top: rem(30px);
+    margin-bottom: rem(5px);
     text-transform: uppercase;
     font-weight: 500;
     color: black;
@@ -37,8 +44,11 @@
     &--web,
     &--marketing {
       width: 100%;
-      //background-color: #d8d8d8;
+      height: 5px;
     }
+  }
+  &__sign {
+    margin-top: rem(30px);
   }
 }
 .about__progressbar-wrapper {
@@ -50,8 +60,8 @@
   text-transform: uppercase;
   letter-spacing: 1px;
   position: absolute;
+  left: rem(40%);
   top: 0;
-  left: rem(25%);
   font-weight: 500;
   font-size: rem(13px);
 }
@@ -61,7 +71,7 @@
   letter-spacing: 1px;
   position: absolute;
   top: 0;
-  left: rem(35%);
+  left: rem(55%);
   font-weight: 500;
   font-size: rem(13px);
 }
@@ -71,19 +81,44 @@
   letter-spacing: 1px;
   position: absolute;
   top: 0;
-  left: rem(23%);
+  left: rem(33%);
   font-weight: 500;
   font-size: rem(13px);
 }
 @media (min-width: $screen-sm) {
+  .progressbar__text {
+    left: rem(25%);
+  }
+  .progressbar__text--web {
+    left: rem(36%);
 
+  }
+  .progressbar__text--mark {
+    left: rem(23%);
+  }
 }
 @media (min-width: $screen-md) {
+  .progressbar__text {
+    left: rem(33%);
+}
+  .progressbar__text--web {
+    left: rem(47%);
 
+  }
+  .progressbar__text--mark {
+    left: rem(28%);
+  }
+  .about__skills--progressbar {
+    padding: rem(0 20px);
+    margin: auto;
+  }
+  .about__skills--photo {
+     display: block;
+  }
 }
 @media (min-width: $screen-lg) {
   .about {
-    padding-top: rem(95px);
+    padding-top: rem(80px);
     &__inner {
       width: 65%;
       margin: 0 auto;
@@ -101,17 +136,21 @@
       font-size: $font-size--h2;
     }
     &__skills--progressbar {
-      padding: rem(0 20px);
-      margin: auto;
       padding-right: rem(80px);
-    }
-    &__progressbar {
-      font-size: rem(13px);
     }
   }
 }
 @media (min-width: $screen-xl) {
+  .progressbar__text {
+    left: rem(25%);
+  }
+  .progressbar__text--web {
+    left: rem(35%);
 
+  }
+  .progressbar__text--mark {
+    left: rem(22%);
+  }
 }
 @media (min-width: $screen-xxl) {
 
