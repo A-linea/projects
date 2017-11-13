@@ -1,20 +1,22 @@
 .reviews {
   background-color: $accent-color;
-  padding-top: rem(165px);
-  padding-bottom: rem(60px);
+  padding-top: rem(60px);
+  padding-bottom: rem(20px);
   color: white;
   font-family: 'Montserrat', 'Roboto', sans-serif;
   &__list {
     margin: 0 auto;
     font-size: rem(16px);
     text-align: center;
+    width: rem(290px);
+
   }
   &__name {
     font-size: rem(12px);
     text-transform: uppercase;
     display: block;
     padding-top: rem(15px);
-    margin-bottom: rem(40px);
+    margin-bottom: rem(20px);
   }
   &__item {
     letter-spacing: 1px;
@@ -26,15 +28,21 @@
 }
 @media (min-width: $screen-sm) {
   .reviews {
+    &__list {
+      width: rem(440px);
+    }
 
   }
 }
 
 @media (min-width: $screen-md) {
   .reviews {
+    padding-top: rem(165px);
+    padding-bottom: rem(60px);
     &__list {
       font-size: rem(24px);
       line-height: 1.5;
+      width: rem(640px);
     }
     &__name {
       padding-top: rem(35px);

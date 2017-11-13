@@ -9,7 +9,6 @@
     @include row(0);
     margin: auto;
     display: flex;
-    @include outline();
     padding: 0;
   }
   &__data  {
@@ -18,12 +17,11 @@
     @include col(lg, 4, 16);
     @include col(xl, 4, 16);
     @include col(xxl, 4, 16);
-    @include outline();
     color: white;
     display: flex;
     list-style: none;
     margin: 0;
-    padding: 0;
+    padding: rem(15px 0);
   }
   &__count {
     font-size: rem(18px);
@@ -33,7 +31,6 @@
     font-size: rem(12px);
     margin: 0;
     padding: 0;
-    padding-top: rem(10px);
     text-transform: uppercase;
     font-weight: 700;
     line-height: 1.6;
@@ -58,6 +55,9 @@
 @media (min-width: $screen-md) {
   .achievements {
     padding: rem(20px 0);
+    &__text {
+      padding-top: rem(5px);
+    }
   }
 }
 

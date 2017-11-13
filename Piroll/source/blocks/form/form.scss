@@ -2,7 +2,6 @@
   background-color: $gray-lightest;
   &__inner {
     @include row();
-    @include outline();
   }
   &__wrapper {
     @include col(xs, 12, 12);
@@ -12,7 +11,6 @@
     @include col(lg, 6, 12);
     @include col(xl, 6, 12);
     @include col(xxl, 6, 12);
-    @include outline();
     position: relative;
     text-align: center;
   }
@@ -42,7 +40,7 @@
     resize: none;
     &--name,
     &--text {
-      flex-basis: 48%;
+      flex-basis: 100%;
     }
 
     &::placeholder {
@@ -59,6 +57,14 @@
   }
 }
 @media (min-width: $screen-sm) {
+  .form {
+  &__input, textarea {
+    &--name,
+    &--text {
+      flex-basis: 48%;
+    }
+  }
+  }
 }
 
 @media (min-width: $screen-md) {

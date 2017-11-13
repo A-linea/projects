@@ -105,6 +105,7 @@ gulp.task('script', function() {
     'node_modules/owl.carousel/dist/owl.carousel.js',
     'node_modules/page-scroll-to-id/jquery.malihu.PageScroll2id.js', //скрол страницы по id
     'node_modules/slideout/dist/slideout.min.js', //off canvas menu
+    'node_modules/vivus/dist/vivus.min.js', // анимация SVG
     'source/libs/appear/appear.js', // библиотека позволяет запускать скрипт с определенного места на странице
     'source/libs/countTo/counTo.js', //счетчик js
     //'source/libs/animate/animate-css.js',

@@ -1,48 +1,41 @@
 .main-nav {
-  @include col(xs, 16, 16, 0);
-  @include col(sm, 16, 16, 0);
-  @include col(md, 16, 16);
-  @include col(lg, 12, 16);
-  @include col(xl, 8, 16);
-  @include col(xxl, 8, 16);
+  display: none;
+  background-color: $accent-color;
   position: fixed;
   top: 0;
-  background-color: $accent-color;
   bottom: 0;
   width: 256px;
   min-height: 100vh;
-  overflow-y: scroll;
+  overflow-y: hidden;
   -webkit-overflow-scrolling: touch;
   z-index: 0;
-  display: none;
 
   &__list {
-    // background-color: $accent-color;
+    margin-top: 32%;
     list-style: none;
+    padding: 0;
     padding: rem(10px 0);
-    font-size: rem(16px);
   }
-
   &__link {
+    font-family:'Montserrat', 'Ubuntu', 'Droid Sans', 'Helvetica Neue', 'Arial', sans-serif;
     text-transform: uppercase;
+    font-weight: 500;
     display: block;
     padding: rem(10px 0);
-    border-bottom: 1px solid rgba(white, 0.3);
     text-decoration: none;
-    color: $white;
+    color: white;
     text-align: center;
     transition: $transition-time;
-
+    border-bottom: 1px solid rgba(#fff, 0.4);
+    &:hover,
     &:active,
-    &:focus,
-    &:hover {
-      background-color: rgba(black, 0.1);
+    &:focus {
+      background-color: rgba(#fff, 0.1);
     }
-
     &--active {
+      &:hover,
       &:active,
-      &:focus,
-      &:hover {
+      &:focus {
         background-color: transparent;
       }
     }
@@ -75,71 +68,120 @@
 .slideout-open .slideout-menu {
   display: block;
 }
+.main-nav__toggle {
+  display: inline-block;
+  top: rem(30px);
+  left: rem(30px);
+}
+.icon {
+  height: rem(50px);
+  width: rem(50px);
+  padding-top: 20px;
+  padding-left: rem(20px);
+}
+.logo__dark {
+  display: none;
+}
+
 @media (min-width: $screen-sm) {
   .main-nav__list {
     list-style: none;
-    font-size: rem(16px);
+    font-size: rem(12px);
+    font-family: 'Montserrat', 'Ubuntu', 'Droid Sans', 'Helvetica Neue', 'Arial', sans-serif;
+    font-weight: 500;
+
   }
 }
 @media (min-width: $screen-md) {
   .main-nav {
-    display: block;
+    display: flex;
+    flex-basis: 60%;
+    width: auto;
+    max-width: 1170px;
+    margin: 0 auto;
     background-color: transparent;
-
+    border: none;
+    position: relative;
+    overflow-y: auto;
+    min-height: 30px;
+    justify-content: space-between;
+    z-index: 1;
     &__toggle {
       display: none;
     }
   }
-
-  .slideout-menu {
-    display: block;
-    position: inherit;
-    overflow-y: auto;
-    width: auto;
-    min-height: 30px;
+  .main-nav__list {
+    display: flex;
+    flex-basis: 80%;
+    justify-content: space-around;
+    margin-top: 0;
+    padding-top: rem(40px);
   }
-
+  .main-nav__link {
+    font-size: rem(12px);
+    text-transform: uppercase;
+    font-weight: 500;
+    color: $link-color;
+    padding: 0;
+    padding-bottom: rem(5px);
+    border-bottom: none;
+    position: relative;
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      width: 0;
+      bottom: 0px;
+      background-color: $accent-color;
+      height: 1px;
+      transition: $transition-time;
+    }
+    &:hover::before,
+    &:focus::before,
+    &:active::before  {
+      color: #fff;
+      width: 100%;
+      height: 2px;
+    }
+  }
   .slideout-panel {
     position: static;
     margin-left: 0;
     height: auto;
   }
+  .logo__dark {
+    display: block;
+  }
+  .logo__light {
+    display: none;
+  }
+  .icon {
+    height: rem(50px);
+    width: rem(50px);
+    margin-top: rem(4px);
+    padding: 0;
+    padding-top: rem(20px);
+  }
+}
 
+@media (min-width: $screen-lg) {
+  .main-nav {
+    max-width: rem(962px);
+  }
   .main-nav__list {
-    display: flex;
-    background-color: inherit;
-    justify-content: space-around;
-    font-size: rem(13px);
-    padding: rem(0 5px);
-  }
-
-  .main-nav__link {
-    font-size: rem(20px);
-    text-transform: none;
-    color: $link-color;
-
-    &:active,
-    &:focus,
-    &:hover {
-      color: $link-color--hover;
-      text-decoration: underline;
-      background-color: transparent;
-    }
-
-    &--active {
-      &:hover {
-        color: $link-color;
-        text-decoration: none;
-      }
-    }
+    flex-basis: 70%;
   }
 }
 
-.active {
-  color: $link-color--hover;
-  text-decoration: underline;
-  background-color: transparent;
+@media (min-width: $screen-xl) {
+  .main-nav {
+    max-width: rem(1170px);
+  }
+  .main-nav__list {
+    flex-basis: 65%;
+  }
 }
-@media (min-width: $screen-lg) {}
-@media (min-width: $screen-xl) {}
-@media (min-width: $screen-xxl) {}
+
+@media (min-width: $screen-xxl) {
+
+}

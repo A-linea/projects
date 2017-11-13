@@ -6,23 +6,20 @@
   letter-spacing: 1px;
   display: flex;
   &__inner {
-    @include row(0);
+    @include row();
     margin: auto;
     display: flex;
-    @include outline();
     padding: 0;
   }
   &__card  {
-    @include col(sm, 8, 16);
-    @include col(md, 8, 16);
-    @include col(lg, 4, 16);
-    @include outline();
+    @include col(sm, 16, 16);
+    @include col(md, 4, 16);
     text-align: center;
     display: flex;
     flex-direction: column;
     list-style: none;
     margin: 0;
-    padding: 0;
+    padding: rem(0 20px) ;
   }
    &__title {
     text-transform: uppercase;
@@ -58,6 +55,9 @@
 @media (min-width: $screen-md) {
   .services {
     padding: rem(20px 0);
+    &__card {
+      padding: 0;
+    }
   }
 }
 

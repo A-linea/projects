@@ -1,62 +1,120 @@
 .gallery {
-  @include row(30);
-  @include outline();
-  background-color: #fff;
   position: relative;
-  padding-bottom: 55px;
+  padding-bottom: rem(15px);
+  &__carousel {
+    @include row(30);
+    background-color: #fff;
+  }
   &__card,
-  &__card--hidden {
-    @include col(xs, 12, 12);
-    @include col(sm, 12, 12);
-    @include col(md, 6, 12, 0);
+  &__card--show {
+    font-size: 0;
+    @include col(xs, 12, 12, 0);
+    @include col(sm, 12, 12, 0);
+    @include col(md, 3, 12, 0);
+    @include col-offset(lg, 0, 12);
     @include col(lg, 3, 12, 0);
-    @include outline();
+    img {
+      vertical-align: top;
+    }
+  }
+  &__card--hidden {
+    font-size: 0;
   }
   &__wrapper {
-    width: 100%;
-    border: none;
-    position: absolute;
-    bottom: 0;
-    text-align: center;
-    padding: rem(15px 0);
-    background-color: $gray-lighten;
-    transition: $transition-time;
-    &:hover::before,
-    &:focus::before,
-    &:active::before  {
-      width: 0;
-    }
-    &:hover,
-    &:focus,
-    &:active {
-      background-color: lighten($gray-lighten, 10%);
-    }
+    display: none;
   }
-
 }
 @media (min-width: $screen-sm) {
 
 }
+
 @media (min-width: $screen-md) {
   .gallery {
+    padding-bottom: rem(45px);
+     &__hidden {
+       height: 0;
+       transition: height ease 0.5s;
+     }
+    &__show {
+      background-color: $gray-lightest;
+      height: inherit;
+    }
     &__card,
-    &__card--hidden {
-      img {
-        vertical-align: top;
+    &__card--show {
+      position: relative;
+      &::before {
+        content: '';
+        color: white;
+        width: 100%;
+        height: 0%;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        background-color: rgba($gray-darkest, 0.6);
+        background-image: url(../img/icons_svg/look.svg);
+        background-repeat: no-repeat;
+        background-size: 50px 50px;
+        background-position: 50% 50%;
+        opacity: 0.4;
+        transition: all 0.4s ease-in;
+      }
+      &:hover::before {
+        height: 100%;
+        bottom: 0;
+        opacity: 1;
+      }
+      &::after {
+        content: 'business card';
+        color: #fff;
+        text-transform: uppercase;
+        font-size: rem(16px);
+        text-align: center;
+        width: 100%;
+        height: 10%;
+        position: absolute;
+        bottom: 10%;
+        right: 0;
+        transition: all 0.6s ease-in;
+        z-index: 2;
+        clip-path: circle(0 at 50% 50%);
+      }
+      &:hover::after {
+        bottom: 20%;
+        clip-path: circle(45% at 50% 50%);
       }
     }
-  &__wrapper {
-      padding: rem(30px 0);
-    }
-    .gallery__card--hidden {
-      display: none;
+    &__wrapper {
+      width: 100%;
+      border: none;
+      display: block;
+      position: absolute;
+      bottom: 0;
+      text-align: center;
+      padding: rem(15px 0);
+      background-color: $gray-lighten;
+      transition: $transition-time;
+      &:hover::before,
+      &:focus::before,
+      &:active::before  {
+        width: 0;
+      }
+      &:hover,
+      &:focus,
+      &:active {
+        background-color: lighten($gray-lighten, 10%);
+      }
     }
   }
 }
 
+
+
 @media (min-width: $screen-lg) {
   .gallery {
-    &__card {
+    padding-bottom: rem(75px);
+
+    &__wrapper {
+      padding: rem(30px 0);
     }
   }
 
@@ -64,6 +122,7 @@
 
 @media (min-width: $screen-xl) {
   .gallery {
+
   }
 
 }

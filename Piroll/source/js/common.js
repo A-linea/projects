@@ -18,6 +18,13 @@ $( document ).ready(function() {
     'tolerance': 70
   });
 
+  //SVG animation
+  var iconPorfolio = new Vivus('icon--portfolio', {duration: 200});
+  var iconAlarm = new Vivus('icon--alarm', {duration: 200});
+  var iconStar = new Vivus('icon--star', {duration: 200});
+  var iconLike = new Vivus('icon--like', {duration: 200});
+  var logoDark = new Vivus('logo-dark', {duration: 200});
+
 //   Toggle button
   var toggle = document.querySelector('.main-nav__toggle');
   toggle.addEventListener('click', function() {
@@ -47,11 +54,97 @@ $( document ).ready(function() {
       console.log('count finish');
     }
   });
-  // Открытие/закрытие блока с фото
+
+  //Show gallery button
   $('.gallery__wrapper').click(function () {
-    $(this).toggleClass('on');
-    $('.gallery__card--hidden').slideToggle('fast','swing');
-    return false;
+      $('.gallery__hidden').toggleClass('gallery__show', 'slow', 'swing');
+    $('.gallery__card--hidden').toggleClass('gallery__card--show', 'slow', 'swing');
+      return false;
+    });
+
+  //Gallery Carousel
+  $(function() {
+    var owl = $('.gallery__carousel'),
+      owlOptions = {
+        loop: true,
+        smartSpeed: 500,
+        autoplay:true,
+        autoplayTimeout: 3000,
+        center: true,
+        mouseDrag: false,
+        touchDrag: false,
+        animateOut: 'fadeOut',
+        lazyLoad: true,
+        responsive: {
+          0: {
+            items: 1
+          },
+          480: {
+            items: 2,
+            autoplayTimeout: 4000
+          }
+        }
+      };
+  if ( $(window).width() < 768 ) {
+    var owlActive = owl.owlCarousel(owlOptions);
+  } else {
+    owl.addClass('off');
+  }
+  $(window).resize(function() {
+    if ( $(window).width() < 768 ) {
+      if ( $('.owl-carousel').hasClass('off') ) {
+        var owlActive = owl.owlCarousel(owlOptions);
+        owl.removeClass('off');
+      }
+    } else {
+      if ( !$('.owl-carousel').hasClass('off') ) {
+        owl.addClass('off').trigger('destroy.owl.carousel');
+        owl.find('.owl-stage-outer').children(':eq(0)').unwrap();
+        }
+      }
+    });
+  });
+  //Services carousel
+  $(function() {
+    var owlServices = $('.services__inner'),
+      owlOptions = {
+        loop: true,
+        nav:false,
+        dots: true,
+        smartSpeed: 500,
+        autoplay:true,
+        autoplayTimeout: 4000,
+        responsive: {
+          0: {
+            items: 1
+          },
+          480: {
+            items: 1,
+            autoplayTimeout: 3000
+          },
+          580: {
+            items: 2
+          }
+        }
+      };
+    if ( $(window).width() < 768 ) {
+      var owlActive = owlServices.owlCarousel(owlOptions);
+    } else {
+      owlServices.addClass('off');
+    }
+    $(window).resize(function() {
+      if ( $(window).width() < 768 ) {
+        if ( $('.services__inner').hasClass('off') ) {
+          var owlActive = owlServices.owlCarousel(owlOptions);
+          owlServices.removeClass('off');
+        }
+      } else {
+        if ( !$('.services__inner').hasClass('off') ) {
+          owlServices.addClass('off').trigger('destroy.owl.carousel');
+          owlServices.find('.owl-stage-outer').children(':eq(0)').unwrap();
+        }
+      }
+    });
   });
 
   // Reviews carousel
@@ -68,6 +161,7 @@ $( document ).ready(function() {
       }
     }
   });
+
   $('.clients__inner').owlCarousel({
     loop:true,
     autoplay: true,
@@ -92,43 +186,6 @@ $( document ).ready(function() {
       }
     }
   });
-
-
-  // $(function() {
-  //   var owl = $('.__list'),
-  //     owlOptions = {
-  //       loop: false,
-  //       smartSpeed: 500,
-  //       margin: 10,
-  //       responsive: {
-  //         0: {
-  //           items: 1,
-  //           loop: true
-  //         },
-  //         420: {
-  //           items: 2
-  //         }
-  //       }
-  //     };
-  // if ( $(window).width() < 768 ) {
-  //   var owlActive = owl.owlCarousel(owlOptions);
-  // } else {
-  //   owl.addClass('off');
-  // }
-  // $(window).resize(function() {
-  //   if ( $(window).width() < 768 ) {
-  //     if ( $('.owl-carousel').hasClass('off') ) {
-  //       var owlActive = owl.owlCarousel(owlOptions);
-  //       owl.removeClass('off');
-  //     }
-  //   } else {
-  //     if ( !$('.owl-carousel').hasClass('off') ) {
-  //       owl.addClass('off').trigger('destroy.owl.carousel');
-  //       owl.find('.owl-stage-outer').children(':eq(0)').unwrap();
-  //     }
-  //   }
-  // });
-  // });
 
 });
 //this.closest('.blocks-library__code-wrapper')

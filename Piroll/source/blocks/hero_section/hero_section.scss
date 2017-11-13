@@ -4,7 +4,6 @@
     padding: rem(180px 0);
   &__inner {
     @include row();
-    @include outline();
   }
   &__container {
     @include col(sm, 10, 12);
@@ -13,7 +12,6 @@
     @include col-offset(md, 4, 12);
     @include col-offset(lg, 6, 12);
     @include col(lg, 6, 12);
-    @include outline();
     padding: rem(0 20px);
     text-align: center;
   }
