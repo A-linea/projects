@@ -92,53 +92,53 @@ $border-radius:               rem(3px) !default;
   //   }
   // }
   
-  //&__top {
-  //  position: fixed;
-  //  bottom: 30px;
-  //  right: -5000px;
-  //  width: 50px;
-  //  height: 50px;
-  //  background-color: #fff;
-  //  border-radius: 25px;
-  //  border: 2px solid gray;
-  //  cursor: pointer;
-  //  font-size: 0;
-  //  transition: all 0.1s;
-  //  opacity: 0.6;
-  //  &:hover {
-  //    background-color: rgba(black, 0.7);
-  //    color: white;
-  //    opacity: 1;
-  //  }
-  //  &::before {
-  //    content: '';
-  //    top: 20px;
-  //    right: 11.6px;
-  //    border-radius: 3px;
-  //    transform: rotate(55deg);
-  //    position: absolute;
-  //    width: 15px;
-  //    height: 2px;
-  //    background-color: gray;
-  //  }
-  //  &::after {
-  //    content: '';
-  //    top: 20px;
-  //    left: 11.8px;
-  //    transform: rotate(-55deg);
-  //    border-radius: 3px;
-  //    position: absolute;
-  //    width: 15px;
-  //    height: 2px;
-  //    background-color: gray;
-  //  }
-  //  &:hover::before,
-  //  &:hover::after {
-  //    background-color: #fff;
-  //  }
-  //}
-  //&__active {
-  //  right: 25px;
-  //  transition: 0.5s;
-  //}
+  &__top {
+    position: fixed;
+    bottom: 30px;
+    right: -5000px;
+    width: 50px;
+    height: 50px;
+    background-color: #fff;
+    border-radius: 25px;
+    border: none;
+    cursor: pointer;
+    font-size: 0;
+    transition: all 0.2s;
+    opacity: 0.8;
+    &:hover {
+      background-color: rgba($accent-color, 0.7);
+      color: white;
+      opacity: 1;
+    }
+    &::before {
+      content: '';
+      top: 22px;
+      right: 12.6px;
+      border-radius: 3px;
+      transform: rotate(55deg);
+      position: absolute;
+      width: 15px;
+      height: 2px;
+      background-color: $accent-color;
+    }
+    &::after {
+      content: '';
+      top: 22px;
+      left: 13.8px;
+      transform: rotate(-55deg);
+      border-radius: 3px;
+      position: absolute;
+      width: 15px;
+      height: 2px;
+      background-color: $accent-color;
+    }
+    &:hover::before,
+    &:hover::after {
+      background-color: #fff;
+    }
+  }
+  &__active {
+    right: 25px;
+    transition: 0.5s;
+  }
 }

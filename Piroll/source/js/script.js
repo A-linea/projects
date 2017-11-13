@@ -1,5 +1,4 @@
 $( document ).ready(function() {
-
   $(window).scroll(function () {
       if ($(this).scrollTop() > $(this).height()) {
         $('.btn__top').addClass('btn__active');
@@ -208,4 +207,3 @@ $( document ).ready(function() {
   });
 
 });
-//this.closest('.blocks-library__code-wrapper')

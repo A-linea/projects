@@ -1,5 +1,4 @@
 $( document ).ready(function() {
-
   //= ../blocks/btn/btn__top.js
   //= ../blocks/counter/common.js
   $("a[href*='#home']").mPageScroll2id();
@@ -188,4 +187,3 @@ $( document ).ready(function() {
   });
 
 });
-//this.closest('.blocks-library__code-wrapper')
