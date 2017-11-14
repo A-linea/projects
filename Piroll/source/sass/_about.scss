@@ -102,7 +102,6 @@
   .about {
     padding-top: rem(50px);
     padding-bottom: 0;
-
   }
   .progressbar__text {
     left: rem(33%);
@@ -147,6 +146,17 @@
   }
 }
 @media (min-width: $screen-xl) {
+  .about {
+    &__title {
+      font-size: rem(34px);
+    }
+    &__text {
+      font-size: rem(18px);
+    }
+    &__inner {
+      width: 75%;
+    }
+  }
   .progressbar__text {
     left: rem(25%);
   }

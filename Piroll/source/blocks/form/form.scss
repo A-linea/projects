@@ -3,6 +3,9 @@
   &__inner {
     @include row();
   }
+  &__text {
+    line-height: 1.5;
+  }
   &__wrapper {
     @include col(xs, 12, 12);
     @include col(sm, 12,12);
@@ -75,12 +78,20 @@
 
 @media (min-width: $screen-lg) {
   .form {
+    padding-top: rem(90px);
     padding-bottom: rem(65px);
   }
 }
 
 @media (min-width: $screen-xl) {
-
+  .form {
+    &__title {
+      font-size: rem(34px);
+    }
+    &__text {
+      font-size: rem(18px);
+    }
+  }
 }
 @media (min-width: $screen-xxl) {
 

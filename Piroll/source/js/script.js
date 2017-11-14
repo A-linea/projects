@@ -185,6 +185,7 @@ $( document ).ready(function() {
     loop:true,
     autoplay: true,
     autoplayTimeout:4000,
+    lazyLoad: true,
     margin:10,
     smartSpeed: 500,
     dots: false,

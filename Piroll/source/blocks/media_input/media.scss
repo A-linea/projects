@@ -1,10 +1,10 @@
 .media {
   text-align: center;
-  &__inner {
-
-  }
   &__title {
     font-size: $font-size--h4;
+  }
+  &__text {
+    line-height: 1.5;
   }
   &__video-wrapper {
     position: relative;
@@ -52,6 +52,12 @@
 
 @media (min-width: $screen-xl) {
   .media {
+    &__title {
+      font-size: rem(34px);
+    }
+    &__text {
+      font-size: rem(18px);
+    }
 
   }
 
