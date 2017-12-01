@@ -1,0 +1,71 @@
+.hero {
+  //background-image: url(../img/hero-bg.jpg);
+  background-repeat: no-repeat;
+  min-height: rem(480px);
+  background-size: cover;
+  background-position: 50% 50%;
+
+  &__inner {
+    @include row();
+    @include outline();
+    padding: rem(55px 0);
+  }
+
+  &__title-container {
+    @include col (xs, 6, 12);
+    margin: 0 auto;
+    padding: rem(0 20px);
+    text-align: center;
+  }
+
+  &__title {
+    color: $gray-darker;
+    font-size: rem(20px);
+    font-weight: 700;
+  }
+
+  &__text {
+    color: $gray-darker;
+    font-size: rem(15px);
+    margin-top: rem(20px);
+    line-height: 1.7;
+  }
+
+  .hero__btn {
+    margin-top: rem(20px);
+  }
+}
+@media (min-width: $screen-sm) {
+  .hero {
+    &__title {
+      font-size: rem(24px);
+    }
+
+    &__text {
+      font-size: rem(16px);
+    }
+  }
+}
+@media (min-width: $screen-md) {
+  .hero__title {
+    font-size: rem(44px);
+    font-weight: 700;
+  }
+
+  .hero__text {
+    color: $gray-darker;
+    font-size: rem(17px);
+    margin-top: rem(50px);
+  }
+
+  .hero__btn {
+    margin-top: rem(40px);
+  }
+}
+@media (min-width: $screen-lg) {
+  .hero__inner {
+    padding: rem(110px 0) rem(50px);
+  }
+}
+@media (min-width: $screen-xl) {}
+@media (min-width: $screen-xxl) {}

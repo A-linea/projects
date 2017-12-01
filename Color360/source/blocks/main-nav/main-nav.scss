@@ -1,0 +1,107 @@
+
+.main-nav {
+  display: none;
+  @include col(xs, 16, 16, 0);
+  @include col(sm, 16, 16, 0);
+  @include col(md, 12, 16);
+  @include col(lg, 12, 16);
+  @include col(xl, 8, 16);
+  @include col(xxl, 8, 16);
+
+
+  &__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    padding: rem(10px 0);
+    font-size: rem(16px);
+    background-color: $accent-color;
+  }
+
+  &__link {
+    text-transform: uppercase;
+    display: block;
+    padding: rem(10px 0);
+    border-bottom: 1px solid rgba(white, 0.3);
+    text-decoration: none;
+    color: $white;
+    text-align: center;
+    transition: $transition-time;
+    &:hover,
+    &:active,
+    &:focus {
+      background-color: rgba(black, 0.1);
+    }
+    &--active {
+      &:hover,
+      &:active,
+      &:focus {
+        background-color: transparent;
+      }
+    }
+
+  }
+}
+
+@media (min-width: $screen-sm) {
+
+
+  .main-nav__list {
+    margin: 0;
+    padding: 0;
+    font-size: rem(17px);
+    text-transform: none;
+  }
+}
+
+@media (min-width: $screen-md) {
+  .main-nav {
+    display: block;
+    background-color: transparent;
+    &__toggle {
+      display: none;
+    }
+  }
+
+  .main-nav__list {
+    display: flex;
+    justify-content: space-around;
+    font-size: rem(13px);
+    padding: rem(0 5px);
+  }
+  .main-nav__link {
+    font-size: rem(20px);
+    text-transform: none;
+    color: $link-color;
+    &:hover,
+    &:active,
+    &:focus {
+      color: $link-color--hover;
+      text-decoration: underline;
+      background-color: transparent;
+
+    }
+    &--active {
+      &:hover {
+        color: $link-color;
+        text-decoration: none;
+      }
+    }
+  }
+}
+.active {
+  color: $link-color--hover;
+  text-decoration: underline;
+  background-color: transparent;
+}
+@media (min-width: $screen-lg) {
+
+}
+
+@media (min-width: $screen-xl) {
+
+}
+
+@media (min-width: $screen-xxl) {
+
+}
