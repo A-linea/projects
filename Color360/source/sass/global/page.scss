@@ -61,6 +61,16 @@ h2 {
   font-weight: 700;
   margin: 0;
   padding: 0;
+  text-align: center;
+  position: relative;
+  &::after {
+    content: '';
+    @include centerer-x;
+    background-color: $accent-color-d;
+    width: 45%;
+    height: 2px;
+    bottom: 0;
+  }
 }
 .visuallyhidden {
   border: 0;
