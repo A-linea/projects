@@ -1,71 +1,153 @@
 .hero {
-  //background-image: url(../img/hero-bg.jpg);
-  background-repeat: no-repeat;
-  min-height: rem(480px);
-  background-size: cover;
-  background-position: 50% 50%;
+  position: relative;
+  color: white;
 
   &__inner {
     @include row();
     @include outline();
-    padding: rem(55px 0);
+  }
+  &__logo-360 {
+    height: 55px;
+    vertical-align: top;
   }
 
   &__title-container {
-    @include col (xs, 6, 12);
-    margin: 0 auto;
-    padding: rem(0 20px);
-    text-align: center;
+
   }
 
   &__title {
-    color: $gray-darker;
-    font-size: rem(20px);
-    font-weight: 700;
+
   }
 
   &__text {
-    color: $gray-darker;
-    font-size: rem(15px);
-    margin-top: rem(20px);
-    line-height: 1.7;
+
   }
 
   .hero__btn {
-    margin-top: rem(20px);
+
   }
 }
 @media (min-width: $screen-sm) {
   .hero {
     &__title {
-      font-size: rem(24px);
+
     }
 
     &__text {
-      font-size: rem(16px);
+
     }
   }
 }
 @media (min-width: $screen-md) {
-  .hero__title {
-    font-size: rem(44px);
-    font-weight: 700;
-  }
 
-  .hero__text {
-    color: $gray-darker;
-    font-size: rem(17px);
-    margin-top: rem(50px);
-  }
-
-  .hero__btn {
-    margin-top: rem(40px);
-  }
 }
 @media (min-width: $screen-lg) {
+
   .hero__inner {
-    padding: rem(110px 0) rem(50px);
+    justify-content: space-between;
+    margin-bottom: 107px;
+  }
+  .hero__logo {
+    max-width: 300px;
+  }
+  .hero__time-wrapper {
+    max-width: 165px;
+  }
+  .hero__time-inner {
+    max-width: 195px;
+    display: flex;
+  }
+  .hero__time-link {
+    display: block;
+    margin-left: 15px;
+    font-size: 14px;
+    margin-bottom: 10px;
+    margin-top: 4px;
+  }
+  .hero__time-text {
+    margin-left: 16px;
+    display: block;
+    font-size: 14px;
+    position: relative;
+    &::before {
+      content: '';
+      width: 11px;
+    }
+  }
+  .hero__time-ico--clock {
+    margin-top: 3px;
+    margin-left: 3px;
+    fill: white;
+    width: 11px;
+    height: 11px;
+  }
+  .hero__time-ico--envelope {
+    margin-top: 9px;
+    width: 16px;
+    height: 9px;
+    fill: white;
+  }
+  .hero__logo--google {
+    p {
+      @include visuallyhidden;
+    }
+    max-width: 207px;
+    position: relative;
+    &::before {
+      content: '';
+      @include centerer-y();
+      @include sprite($google);
+    }
+  }
+  .hero__phone-wrapper {
+    max-width: 210px;
+  }
+  .hero__phone {
+    display: block;
+    line-height: 1;
+    margin-bottom: 7px;
+    font-weight: 700;
+    font-size: 21px;
+  }
+  .hero__phone-link {
+    font-size: 16px;
+    display: inline-block;
+    color: white;
+  }
+  .hero__title-wrapper {
+    background: linear-gradient(to right, rgba(0,0,0,0.05) 0%,rgba(0,0,0,0.15) 12%,rgba(0,0,0,0.15) 20%,rgba(0,0,0,0.35) 50%,rgba(0,0,0,0.35) 80%,rgba(0,0,0,0.15) 92%,rgba(0,0,0,0.05) 100%);
+    text-align: center;
+  }
+  .hero__title {
+    margin: 0;
+    font-family: $font-family--headings;
+    padding-top: 30px;
+    margin-bottom: 15px;
+    font-size: $font-size--h1;
+  }
+  .hero__content-text {
+    margin: 0;
+    font-size: 24px;
+    padding-bottom: 22px;
+  }
+  .hero__list-wrapper {
+    margin-top: 30px;
+    margin-bottom: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .hero__list {
+    margin: 0;
+    width: 41%;
+    list-style: none;
+    list-style-image: url("../img/icons_svg/checked.svg");
+  }
+  .hero__item {
+    margin-bottom: 15px;
+  }
+  .hero__btn-container {
+    text-align: center;
+    padding-bottom: 45px;
   }
 }
-@media (min-width: $screen-xl) {}
-@media (min-width: $screen-xxl) {}

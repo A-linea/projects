@@ -33,6 +33,13 @@ legend {
 blockquote {
   margin: 0;
 }
+a {
+  color: white;
+  transition: $transition-time;
+  &:hover {
+    text-decoration: none;
+  }
+}
 
 img {
   height: auto;

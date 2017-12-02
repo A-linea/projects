@@ -39,6 +39,7 @@ gulp.task('copy', function() {
     'source/fonts/**/*.{woff,woff2}',
     'source/img/**',
     'source/js/picturefill.min.js',
+    'source/js/svg4everybody.js',
     'source/js/lazysizes.min.js'
     ], {
     base: 'source'

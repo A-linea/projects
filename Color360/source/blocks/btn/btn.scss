@@ -15,29 +15,26 @@ $border-radius:               rem(3px) !default;
 .btn {
   box-sizing: border-box;
   display: inline-block;
+  border: none;
   margin: 0;
-  padding: $field-padding-vertical  $field-padding-horizontal;
+  padding: 14px 20px 14px 21px;
   white-space: nowrap;
   vertical-align: middle;
   user-select: none;
   text-align: center;
-  font-size: rem(16px);
+  font-size: 18px;
   font-family: inherit;
+  font-weight: 600;
   line-height: $line-height;
   text-decoration: none;
   text-transform: none;
-  color: $text-color;
-  border-radius: $border-radius;
-  background-color: $gray-lightest;
-  background-image: none;
+  color: white;
+  background: linear-gradient(180deg, #FF9711 50%, #FF8202 0%);
   cursor: pointer;
 
   &:hover,
   &:focus {
-    text-decoration: none;
-    color: $text-color;
-    background-color: darken($gray-lightest, 10%);
-    border-color: darken($gray-lighter, 12%);
+    opacity: 0.8;
   }
 
   &:active,
