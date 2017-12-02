@@ -54,6 +54,14 @@ img {
 .sprite {
   display: none;
 }
+h2 {
+  font-family: $font-family--headings;
+  font-size: $font-size--h2;
+  line-height: 1.2;
+  font-weight: 700;
+  margin: 0;
+  padding: 0;
+}
 .visuallyhidden {
   border: 0;
   clip: rect(0 0 0 0);
@@ -69,6 +77,10 @@ img {
 .container {
   @include container();
   @include outline();
+}
+.btn__wrapper {
+  display: block;
+  text-align: center;
 }
 .blur-up {
   filter: blur(5px);

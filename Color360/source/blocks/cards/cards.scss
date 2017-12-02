@@ -1,4 +1,39 @@
 .reasons {
+  &__cards {
+    @include row();
+    @include outline();
+  }
+  &__list {
+    @include row();
+    margin: 0;
+    padding: 0;
+    @include outline();
+    list-style: none;
+  }
+  &__item {
+    @include col(xs, 12, 12);
+    @include col(lg, 4, 12, 0);
+    margin: 0;
+    @include outline();
+  }
+  &__title {
+    text-align: center;
+    position: relative;
+    &::after {
+      content: '';
+      @include centerer-x;
+      background-color: $accent-color-d;
+      width: 45%;
+      height: 2px;
+      bottom: 0;
+    }
+  }
+  &__ico {
+    fill: $accent-color;
+  }
+  &__text {
+    text-align: center;
+  }
 }
 @media (min-width: $screen-sm) {
 
@@ -6,8 +41,51 @@
 @media (min-width: $screen-md) {
 }
 @media (min-width: $screen-lg) {
-}
-@media (min-width: $screen-xl) {
-
+  .reasons__title {
+    padding-bottom: 18px;
+    margin-bottom: 40px;
+  }
+  .reasons__wrapper {
+    margin-bottom: 352px;
+  }
+  .reasons__cards {
+    margin-bottom: 51px;
+  }
+  .reasons__item {
+    &:nth-child(n+4) {
+      margin-top: 46px;
+    }
+  }
+  .reasons__ico-wrapper {
+    max-width: 69px;
+    max-height: 79px;
+    margin: auto;
+    position: relative;
+    padding-bottom: 18px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    &::after {
+      content: '';
+      @include centerer-x();
+      width: 90%;
+      height: 1px;
+      bottom: 0;
+      background-color: $accent-color;
+    }
+  }
+  .reasons__ico {
+    width: 62px;
+    height: 62px;
+    &--people {
+      width: 69px;
+    }
+    &--heart {
+      width: 52px;
+    }
+    &--ribbon {
+      width: 56px;
+    }
+  }
 }
 
