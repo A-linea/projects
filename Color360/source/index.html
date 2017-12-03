@@ -68,63 +68,71 @@
 <!--Gallery section end-->
 <!--Works section begin-->
   <section class="works">
-    <h2 class="works__title">Наши работы в <a href="#">Instagram</a></h2>
+    <h2 class="works__title">Наши работы в <a href="#" class="works__link">Instagram</a></h2>
   </section>
 <!--Works section end-->
 <!--Certified section begin-->
   <section class="certified">
-    <h2>Сертифицированный партнер Google</h2>
-    <ul class="certified__list">
-      <li class="certified__item">Качество панорам соответствует к предъявляемым требованиям от Google</li>
-      <li class="certified__item">Было опубликовано более 50 панорам на картах Google</li>
-    </ul>
-    <button class="btn certified__btn">Получить расчет или консультацию</button>
+    <div class="container">
+      <h2 class="certified__title">Сертифицированный партнер Google</h2>
+      <ul class="certified__list">
+        <li class="certified__item">Качество панорам соответствует к предъявляемым требованиям от Google</li>
+        <li class="certified__item">Было опубликовано более 50 панорам на картах Google</li>
+      </ul>
+      <div class="btn__wrapper">
+        <button class="btn certified__btn">Получить расчет или консультацию</button>
+      </div>
+    </div>
   </section>
 <!--Certified section end-->
 <!--Price section begin-->
   <section class="price">
-    <h2 class="price__title">Стоимость</h2>
-    <div class="price__card">
-      <h4 class="price__card-title">Сайт +</h4>
-      <div class="price__set">
-        <div class="price__name-wrapper">
-          <span class="price__name">Пакет</span>
-          <span class="price__name  price__name--bold">Мини</span>
+    <div class="container">
+      <h2 class="price__title">Стоимость</h2>
+      <div class="price__card">
+        <h4 class="price__card-title">Сайт +</h4>
+        <div class="price__set">
+          <div class="price__name-wrapper">
+            <span class="price__name">Пакет</span>
+            <span class="price__name  price__name--bold">Мини</span>
+          </div>
+          <div class="price__description">
+            <span class="price__value">7500&nbsp;руб</span>
+            <p class="price__description-text">До 100м2 или 5 панорам</p>
+          </div>
         </div>
-        <div class="price__description">
-          <span class="price__value">7500&nbsp;руб</span>
-          <p class="price__description-text">До 100м2 или 5 панорам</p>
+        <div class="price__set">
+          <div class="price__name-wrapper">
+            <span class="price__name">Пакет</span>
+            <span class="price__name  price__name--bold">Стандарт</span>
+          </div>
+          <div class="price__description">
+            <span class="price__value">13&nbsp;000&nbsp;руб</span>
+            <p class="price__description-text">До 150м2 или 10 панорам</p>
+          </div>
+        </div>
+        <div class="price__set">
+          <div class="price__name-wrapper">
+            <span class="price__name">Пакет</span>
+            <span class="price__name  price__name--bold">Большой</span>
+          </div>
+          <div class="price__description">
+            <span class="price__value">30&nbsp;000&nbsp;руб</span>
+            <p class="price__description-text">До 500м2 или 30 панорам</p>
+          </div>
         </div>
       </div>
-      <div class="price__set">
-        <div class="price__name-wrapper">
-          <span class="price__name">Пакет</span>
-          <span class="price__name  price__name--bold">Стандарт</span>
-        </div>
-        <div class="price__description">
-          <span class="price__value">13&nbsp;000&nbsp;руб</span>
-          <p class="price__description-text">До 150м2 или 10 панорам</p>
-        </div>
+      <p class="price__text">Аэосъемка (фото, видео, панорама)
+        <span class="price__value">от 10&nbsp;000&nbsp;руб</span>
+      </p>
+      <div class="price__rates">
+        <img src="" alt="Логотип Яндекс карты">
+        <p>Стоимость размещения на Яндекс.картах <a href="#">согласно тарифам</a></p>
       </div>
-      <div class="price__set">
-        <div class="price__name-wrapper">
-          <span class="price__name">Пакет</span>
-          <span class="price__name  price__name--bold">Большой</span>
-        </div>
-        <div class="price__description">
-          <span class="price__value">30&nbsp;000&nbsp;руб</span>
-          <p class="price__description-text">До 500м2 или 30 панорам</p>
-        </div>
+      <div class="btn__wrapper">
+        <button class="btn certified__btn">Получить расчет или консультацию</button>
       </div>
     </div>
-    <p class="price__text">Аэосъемка (фото, видео, панорама)
-      <span class="price__value">от 10&nbsp;000&nbsp;руб</span>
-    </p>
-    <div class="price__rates">
-      <img src="" alt="Логотип Яндекс карты">
-      <p>Стоимость размещения на Яндекс.картах <a href="#">согласно тарифам</a></p>
-    </div>
-    <button class="btn certified__btn">Получить расчет или консультацию</button>
   </section>
 <!--Price section end-->
 <!--Clients section begin-->
@@ -132,30 +140,37 @@
 <!--Clients section end-->
 <!--Data section begin-->
   <section class="data">
-    <h2 class="data__title">
-      Статистика по просмотру Google панорам
-    </h2>
-    <p class="data__text">Выборочная информация з ноябрь 2017</p>
-    <p class="data__text  data__text--italic">Обновление текущего блока с данными один раз в
-                                              месяц</p>
-    <div class="data__gallery">
-      <button class="btn data__btn">Получить расчет или консультацию</button>
+    <div class="container">
+      <h2 class="data__title">
+        Статистика по просмотру Google панорам
+      </h2>
+      <p class="data__text">Выборочная информация з ноябрь 2017</p>
+      <p class="data__text  data__text--italic">Обновление текущего блока с данными один раз в
+                                                месяц</p>
+      <div class="data__gallery">
+      </div>
+      <div class="btn__wrapper">
+        <button class="btn data__btn">Получить расчет или консультацию</button>
+      </div>
     </div>
   </section>
 <!--Data section end-->
 <!--Questions section begin-->
   <section class="faq">
-    <h2 class="faq__title">Частые вопросы</h2>
-    <a href="#" class="faq__question">Сколько по времени занимает съемка панорам и создание
-                                      виртуального тура</a>
-    <a href="#" class="faq__question">Работает ли виртуальный тур на смартфоне и планшете</a>
-    <a href="#" class="faq__question">Входит ли в стоимость навигация (стрелочки),
-                                      цветокоррекция и тп.</a>
-    <a href="#" class="faq__question">Легко ли вставить панорамы на сайт?</a>
+    <div class="container">
+      <h2 class="faq__title">Частые вопросы</h2>
+      <a href="#" class="faq__question">Сколько по времени занимает съемка панорам и создание
+                                        виртуального тура</a>
+      <a href="#" class="faq__question">Работает ли виртуальный тур на смартфоне и планшете</a>
+      <a href="#" class="faq__question">Входит ли в стоимость навигация (стрелочки),
+                                        цветокоррекция и тп.</a>
+      <a href="#" class="faq__question">Легко ли вставить панорамы на сайт?</a>
+    </div>
   </section>
 <!--Questions section end-->
 <!--Stages section begin-->
   <section class="stages">
+    <div class="container">
     <h2 class="stages__title">Этапы работ</h2>
     <ul class="stages__list">
       <li class="stages__item"><span>1.</span> <p class="stages__text">Оставляете заявку</p></li>
@@ -166,7 +181,10 @@
       <li class="stages__item"><span>4.</span>
         <p class="stages__text">Спустя пару дней тур готов!</p></li>
     </ul>
-    <button class="btn stages__btn">Получить расчет или консультацию</button>
+      <div class="btn__wrapper">
+        <button class="btn stages__btn">Получить расчет или консультацию</button>
+      </div>
+    </div>
   </section>
 <!--Stages section end-->
 </main>
