@@ -1,0 +1,44 @@
+.features {
+  display: none;
+  background-color: #f8f8f8;
+  color: #333333;
+
+  &__content {
+    @include row();
+  }
+  &__inner {
+    @include col(md, 6, 12, 0);
+    @include outline();
+  }
+}
+@media (min-width: $screen-sm) {
+}
+
+@media (min-width: $screen-md) {
+  .features {
+    display: block;
+    margin-bottom: 57px;
+    &__title {
+      margin-bottom: 51px;
+      padding-bottom: 10px;
+    }
+    &__inner-title {
+      font-weight: 700;
+      font-size: 18px;
+      margin: 0;
+      margin-bottom: 10px;
+    }
+    &__text {
+      margin: 0;
+      margin-right: 26px;
+      margin-bottom: 15px;
+      font-size: 14px;
+    }
+  }
+
+}
+
+@media (min-width: $screen-lg) {
+  .features {
+  }
+}

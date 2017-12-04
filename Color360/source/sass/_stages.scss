@@ -1,0 +1,50 @@
+.stages {
+  &__title {
+    padding-bottom: 10px;
+  }
+  &__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+  }
+  &__item {
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+  &__number {
+    display: block;
+    color: $accent-color-d;
+    font-family: $font-family--headings;
+    font-weight: 700;
+    line-height: 1;
+  }
+  &__text {
+    margin: 0;
+  }
+}
+
+@media (min-width: $screen-sm) {
+}
+
+@media (min-width: $screen-md) {
+
+}
+
+@media (min-width: $screen-lg) {
+  .stages {
+    margin-bottom: 102px;
+    &__title {
+      margin-bottom: 67px;
+    }
+    &__number {
+      font-size: 48px;
+    }
+    &__list {
+      margin-bottom: 54px;
+    }
+
+  }
+
+}
