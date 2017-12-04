@@ -31,6 +31,9 @@
   &__value-wrapper {
     width: 168px;
   }
+  &__title {
+    padding-bottom: 10px;
+  }
   &__name {
     font-family: $font-family--headings;
     font-weight: 700;
@@ -79,10 +82,17 @@
     font-family: $font-family--headings;
     font-weight: 300;
     &--rates {
-      padding-left: 22%;
+      margin: 0;
+      margin-left: 40px;
+      margin-bottom: 23px;
+      padding-top: 46px;
+      padding-bottom: 38px;
+      padding-left: 23%;
+
       position: relative;
       &::before {
         content: '';
+        left: 0;
         @include centerer-y();
         @include sprite($yandexmapslogo);
       }
@@ -101,8 +111,9 @@
 
 @media (min-width: $screen-lg) {
   .price {
-    &__set {
-
+    margin-bottom: 83px;
+    &__title {
+      margin-bottom: 54px;
     }
     &__set-inner {
       padding-left: 30px;
