@@ -1,0 +1,39 @@
+.faq {
+  &__title {
+    padding-bottom: 10px;
+  }
+  &__content-wrapper {
+    @include row();
+  }
+  &__content {
+    @include col(xs, 12, 12);
+    @include col-offset(lg, 1, 12);
+    @include col(lg, 10, 12, 0);
+    @include outline();
+  }
+  &__question {
+    font-weight: 600;
+    text-decoration: underline;
+    position: relative;
+  }
+}
+
+@media (min-width: $screen-sm) {
+}
+
+@media (min-width: $screen-md) {
+
+}
+
+@media (min-width: $screen-lg) {
+  .faq {
+
+    &__question,
+    &__answer {
+      padding-left: 50px;
+    }
+    &__question {
+      font-size: 21px;
+    }
+  }
+}
