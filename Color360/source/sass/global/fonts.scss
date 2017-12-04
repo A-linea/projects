@@ -48,15 +48,16 @@
    src: url("../fonts/roboto/robotoLightItalic.woff") format("woff"),
    url("../fonts/roboto/robotoLightItalic.woff2") format("woff2");
    font-weight: 300;
-   font-style: normal;
+   font-style: italic;
  }
- /*Roboto Regular
+ /*Roboto Regular*/
  @font-face {
  font-family: "Roboto";
- src: url("../fonts/roboto/robotoRegular.woff") format("woff");
+ src: url("../fonts/roboto/robotoRegular.woff") format("woff"),
+ url("../fonts/roboto/robotoRegular.woff2") format("woff2");
  font-weight: 400;
  font-style: normal;
- }*/
+ }
 
  /*Roboto Bold*/
  @font-face {

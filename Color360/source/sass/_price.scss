@@ -1,0 +1,156 @@
+.price {
+
+  &__card {
+    @include row();
+    border: 2px solid #f0f0f0;
+    margin: 0 -17px;
+  }
+  &__set {
+    @include row();
+    @include outline();
+    border-bottom: 1px solid #f0f0f0;
+    margin: 0 29px 0 0;
+    &--aero,
+    &--rates {
+      border-bottom: none;
+      margin: 0 -15px;
+      padding: 0;
+    }
+  }
+  &__name-wrapper {
+    @include col(lg, 3, 12, 0);
+    @include outline();
+  }
+  &__set-inner {
+    @include col(lg, 9, 12, 0);
+    @include outline();
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 22px;
+  }
+  &__value-wrapper {
+    width: 168px;
+  }
+  &__name {
+    font-family: $font-family--headings;
+    font-weight: 700;
+    color: #333333;
+    display: block;
+    line-height: 1.1;
+    margin-bottom: 7px;
+    padding-left: 20px;
+    &--thin {
+      font-weight: 300;
+      margin-bottom:0;
+    }
+  }
+  &__value {
+    color: $accent-color;
+    font-family: $font-family--headings;
+    font-weight: 400;
+    display: block;
+    &--aero {
+      display: inline-block;
+      position: relative;
+      margin-left: 20px;
+      padding-left: 32%;
+      &::before {
+        content: '';
+        @include centerer-y();
+        left: 0;
+        width: 55%;
+        height: 1px;
+        background-color: #f0f0f0;
+
+      }
+    }
+  }
+  &__description-wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__description-text {
+    display: block;
+    margin: 0;
+  }
+  &__text {
+    margin: 0;
+    margin-top: 25px;
+    font-family: $font-family--headings;
+    font-weight: 300;
+    &--rates {
+      padding-left: 22%;
+      position: relative;
+      &::before {
+        content: '';
+        @include centerer-y();
+        @include sprite($yandexmapslogo);
+      }
+    }
+  }
+  &__link {
+    color: $accent-color;
+  }
+}
+@media (min-width: $screen-sm) {
+}
+
+@media (min-width: $screen-md) {
+
+}
+
+@media (min-width: $screen-lg) {
+  .price {
+    &__set {
+
+    }
+    &__set-inner {
+      padding-left: 30px;
+      flex-direction: row;
+    }
+    &__name-wrapper {
+      padding-top: 10px;
+    }
+    &__description-wrapper {
+      margin-left: 30px;
+    }
+
+    &__name {
+      font-size: 32px;
+      &--thin {
+        font-size: 16px;
+      }
+    }
+    &__value {
+      font-size: 32px;
+    }
+    &__description-text {
+      font-family: $font-family--headings;
+      padding-top: 10px;
+      font-weight: 300;
+      color: #c2c2c2;
+      text-align: right;
+      margin-left: 86px;
+      &--site {
+        font-size: 15px;
+        margin-left: 0;
+        padding-top: 13px;
+        padding-right: 110px;
+        color: #919191;
+        font-weight: 600;
+        text-align: left;
+        position: relative;
+        &::after {
+          content: '';
+          position: absolute;
+          top: 6px;
+          @include sprite($google-maps-logo);
+          background-repeat: no-repeat;
+        }
+      }
+    }
+    &__text {
+      font-size: 24px;
+    }
+  }
+}
