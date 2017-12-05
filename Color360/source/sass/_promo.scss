@@ -1,8 +1,64 @@
 .promo {
+  position: relative;
   &:nth-child(2n) {
     background-color: #5086f1;
     color: white;
     h2 {
+      color: white;
+    }
+  }
+  &__content-wrapper {
+    @include row();
+    @include outline();
+  }
+  &__content {
+    @include col(lg, 6, 12, 0);
+    @include col-offset(lg, 6, 12);
+    @include outline();
+    &--left {
+      @include col(lg, 6, 12, 0);
+      @include col-offset(lg, 0, 12);
+    }
+  }
+  &__circle {
+    position: absolute;
+    background-color: #fff;
+    width: 79px;
+    height: 79px;
+    border: 3px solid white;
+    border-radius: 50%;
+    box-shadow: inset 1px 0px 16px 1px #ABABAB;
+    &--google {
+      top: 10%;
+      left: 48%;
+    }
+    &--yandex {
+      background-color: #20a3fc;
+      border: 3px solid #20a3fc;
+      box-shadow: inset 1px 0px 16px 1px rgba(0, 0, 0, 0.28);
+      top: 10%;
+      left: 48%;
+    }
+  }
+  &__circle-data,
+  &__circle-name {
+    display: block;
+    text-align: center;
+    font-family: $font-family--headings;
+
+  }
+  &__circle-data {
+    color: #5086f1;
+    font-weight: 600;
+
+    &--yandex {
+      color: white;
+    }
+  }
+  &__circle-name {
+    color: #8a8a8a;
+    font-weight: 400;
+    &--yandex {
       color: white;
     }
   }
@@ -23,23 +79,13 @@
     &--yandex {
       background-position: 95% 50%;
       background-size: 50%;
+      padding-bottom: 100px;
     }
     &--aero {
       background-size: 50%;
+      padding-bottom: 100px;
     }
-    &__content-wrapper {
-      @include row();
-      @include outline();
-    }
-    &__content {
-      @include col(lg, 6, 12, 0);
-      @include col-offset(lg, 6, 12);
-      @include outline();
-     &--left {
-        @include col(lg, 6, 12, 0);
-        @include col-offset(lg, 0, 12);
-      }
-    }
+
     &__title {
       text-align: left;
       padding-top: 100px;
@@ -76,10 +122,31 @@
       font-size: 14px;
       font-style: italic;
     }
-    &__btn {
-      &:nth-child(2n+2) {
-        margin-bottom: 100px;
+    &__circle {
+      width: 142px;
+      height: 142px;
+      &--google {
+        top: 30%;
+        left: 41%;
       }
+      &--yandex {
+        top: 10%;
+        left: 48%;
+      }
+    }
+    &__circle-data,
+    &__circle-name {
+
+    }
+    &__circle-data {
+      font-size: 29px;
+      padding: 40px 10px 0px 10px;
+      &--yandex {
+        padding-top: 35px;
+      }
+    }
+    &__circle-name {
+      font-size: 16px;
     }
   }
   .webp .promo--google {

@@ -17,5 +17,32 @@
        }
      }
    });
+
+   function accord() {
+     var acc = document.getElementsByClassName("faq__question");
+     var i;
+     for (i = 0; i < acc.length; i++) {
+       acc[i].onclick = function() {
+         this.classList.toggle("faq__question--is-active");
+         var panel = this.nextElementSibling;
+         if (panel.style.maxHeight){
+           panel.style.maxHeight = null;
+         } else {
+           panel.style.maxHeight = panel.scrollHeight + "px";
+         }
+       }
+     }
+   }
+   accord();
+
+   var navBar = $(".nav-bar");
+
+   $(window).scroll(function() {
+     if ($(window).scrollTop() > 480) {
+       navBar.addClass("nav-bar--is-active");
+     } else {
+       navBar.removeClass("nav-bar--is-active");
+     }
+   });
 });
 

@@ -47,24 +47,24 @@
 }
 .data__carousel-nav--left,
 .data__carousel-nav--right {
-  @include centerer-y();
+  position: absolute;
+  top: 30%;
   background-repeat: no-repeat;
-  background-color: transparent;
+  background-color: $accent-color;
   cursor: pointer;
   border: none;
   width: 42px;
   height: 81px;
 }
 .data__carousel-nav--left{
-  background-image: url(../img/icons_svg/arrow-right-gray.svg);
+  background-image: url(../img/icons_svg/arrow-right-white.svg);
   transform: rotate(180deg);
-  margin-top: -41px;
   left: 0;
   transition: $transition-time;
 
 }
 .data__carousel-nav--right {
-  background-image: url(../img/icons_svg/arrow-right-gray.svg);
+  background-image: url(../img/icons_svg/arrow-right-white.svg);
   right: 0px;
   transition: $transition-time;
 }
@@ -95,13 +95,27 @@
     &__gallery {
       margin: auto;
       margin-top: 45px;
-      padding: 0 150px;
+      padding: 0 87px;
+
     }
+  }
+  .data__carousel-nav--left,
+  .data__carousel-nav--right {
+    background-color: transparent;
+  }
+  .data__carousel-nav--left {
+    background-image: url(../img/icons_svg/arrow-right-gray.svg);
+  }
+  .data__carousel-nav--right {
+    background-image: url(../img/icons_svg/arrow-right-gray.svg);
   }
 }
 
 @media (min-width: $screen-md) {
   .data {
+    &__gallery {
+      padding: 0 150px;
+    }
 
   }
 }

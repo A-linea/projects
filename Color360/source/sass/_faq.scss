@@ -13,11 +13,35 @@
   }
   &__question {
     font-weight: 600;
+    padding-left: 50px;
     text-decoration: underline;
     position: relative;
+    &::before {
+      content: '';
+      position: absolute;
+      top: 5px;
+      left: 25px;
+      width: 12px;
+      background-repeat: no-repeat;
+      height: 19px;
+      background-image: url(../img/icons_svg/arrow-right-tangerine.svg);
+      transition: $transition-time;
+    }
+    &--is-active {
+      &::before {
+        transform: rotate(90deg);
+      }
+    }
+  }
+  &__answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
   }
 }
-
+.no-js .faq__answer {
+  max-height: 100px;
+}
 @media (min-width: $screen-sm) {
 }
 

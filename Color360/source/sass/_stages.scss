@@ -23,6 +23,7 @@
   }
   &__text {
     margin: 0;
+    font-size: 16px;
   }
 }
 
@@ -44,8 +45,31 @@
     }
     &__list {
       margin-bottom: 54px;
-    }
 
+    }
+    &__item {
+      max-width: 140px;
+      margin-left: 28px;
+      &:first-child {
+        margin-left: -15px;
+      }
+      &:nth-child(n+2) {
+        max-width: 215px;
+        padding-left: 54px;
+        position: relative;
+        &:before {
+          content: '';
+          left: 0;
+          @include centerer-y();
+          height: 1px;
+          width: 33px;
+          background-color: $accent-color-d;
+        }
+      }
+      &:nth-child(3) {
+        max-width: 280px;
+      }
+    }
   }
 
 }
