@@ -109,7 +109,7 @@ gulp.task('script', function() {
     .pipe(size({
       title: 'Размер',
       showFiles: true,
-      showTotal: false,
+      showTotal: false
     }))
     .pipe(gulp.dest('build/js')) // Выгружаем в папку app/js
 	.pipe(server.stream());
@@ -131,9 +131,9 @@ gulp.task('images', function() {  // Создаем task для изображе
 
 gulp.task('webp', function () {
   console.log('*********** создание webp');
-  return gulp.src('build/img/webp/*.{png,jpg}')
+  return gulp.src('build/img/webp/**/*.{png,jpg}')
     .pipe(webp({
-      quality: 90
+      quality: 50
     }))
     .pipe(gulp.dest("build/img/webp"));
 });

@@ -40,18 +40,17 @@
 }
 @media (min-width: $screen-lg) {
   .gallery {
-    margin-top: 146px;
+    margin-top: 96px;
     margin-bottom: 107px;
     padding-top: 50px;
     &__images {
       padding: 0;
-      margin-bottom: 30px;
+      margin-bottom: 47px;
     }
     &__inner {
       padding: 0;
 
     }
-
     &__title {
       font-size: $font-size--h2;
       margin-bottom: 52px;
@@ -67,29 +66,56 @@
       transition: $transition-time;
       &::after {
         cursor: pointer;
-        padding-top: 0px;
+        padding-top: 10px;
+        text-align: left;
+        padding-left: 15px;
         color: white;
-        font-size: 10px;
+        font-size: 18px;
         font-family: $font-family--headings;
         font-weight: 700;
-        content: '1234124';
+        content: '';
         position: absolute;
-        width: 100%;
+        width: 50%;
         left: 0;
-        bottom: 0;
-        height: 0;
-        transition: $transition-time;
-        background-color: rgba(#000, 0.4);
+        bottom: 10%;
+        height: 40px;
+        background-color: rgba(#000, 0.68);
       }
-      &:hover {
+      &--property {
         &::after {
-          font-size: 18px;
-          padding-top: 18px;
-          height: 50px;
+          content: 'Недвижимость';
         }
       }
+      &--furniture {
+        &::after {
+          content: 'Офисная мебель';
+          width: 55%;
+        }
+      }
+      &--fitness {
+        &::after {
+          content: 'Фитнес-центр';
 
+        }
+      }
+      &--shop {
+        &::after {
+          content: 'Магазин';
+          width: 35%;
+        }
+      }
+      &--shopping-center {
+        &::after {
+          content: 'Торговый центр';
+          width: 55%;
+        }
+      }
+      &--materials {
+        &::after {
+          content: 'Стройматериалы';
+          width: 55%;
+        }
+      }
     }
-
   }
 }

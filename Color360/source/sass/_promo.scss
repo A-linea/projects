@@ -17,62 +17,96 @@
 
 @media (min-width: $screen-lg) {
   .promo {
-    display: flex;
-    &:nth-child(2n-1) {
-      justify-content: flex-end;
+    background-repeat: no-repeat;
+    background-position: 0% 50%;
+    background-size: 46%;
+    &--yandex {
+      background-position: 95% 50%;
+      background-size: 50%;
     }
-  }
-  .promo__content {
-    @include outline();
-    max-width: 480px;
-
-  }
-  .promo__bgimage {
-    margin-top: 32px;
-    width: 50%;
-    padding-right: 5%;
-    @include outline();
-    &:nth-child(3n-1) {
-      padding-left: 5%;
-      padding-right: 0;
+    &--aero {
+      background-size: 50%;
     }
-  }
-  .promo__title {
-    text-align: left;
-    margin-top: 120px;
-    padding-bottom: 16px;
-    margin-bottom: 38px;
-    &::after {
-      width: 100%;
+    &__content-wrapper {
+      @include row();
+      @include outline();
     }
-    &--white {
+    &__content {
+      @include col(lg, 6, 12, 0);
+      @include col-offset(lg, 6, 12);
+      @include outline();
+     &--left {
+        @include col(lg, 6, 12, 0);
+        @include col-offset(lg, 0, 12);
+      }
+    }
+    &__title {
+      text-align: left;
+      padding-top: 100px;
+      padding-bottom: 16px;
+      margin-bottom: 38px;
       &::after {
-        background-color: #fff;
+        width: 100%;
+      }
+      &--white {
+        &::after {
+          background-color: #fff;
+        }
+      }
+    }
+    &__list {
+      margin-left: 36px;
+      margin-bottom: 34px;
+      list-style: none;
+      list-style-image: url("../img/icons_svg/checked.svg");
+      &--blue {
+        list-style-image: url("../img/icons_svg/checked-blue.svg");
+      }
+    }
+    &__item {
+      margin-bottom: 15px;
+    }
+    &__text-container {
+      margin-top: 80px;
+      margin-bottom: 15px;
+      display: flex;
+    }
+    &__text--italic {
+      margin-left: auto;
+      font-size: 14px;
+      font-style: italic;
+    }
+    &__btn {
+      &:nth-child(2n+2) {
+        margin-bottom: 100px;
       }
     }
   }
-  .promo__list {
-    margin-left: 36px;
-    margin-bottom: 34px;
-    list-style: none;
-    list-style-image: url("../img/icons_svg/checked.svg");
-    &--blue {
-      list-style-image: url("../img/icons_svg/checked-blue.svg");
-    }
+  .webp .promo--google {
+    background-image: url(../img/webp/100kviews768+.webp);
   }
-  .promo__item {
-    margin-bottom: 15px;
+  .no-webp .promo--google {
+    background-image: url(../img/section2/100kviews768+.png);
   }
-  .promo__text-container {
-    margin-top: 100px;
-    margin-bottom: 15px;
-    display: flex;
+  .no-js .promo--google {
+    background-image: url(../img/section2/100kviews768+.png);
   }
-  .promo__text--italic {
-    margin-left: auto;
-    font-size: 14px;
-    font-style: italic;
-
+  .webp .promo--yandex {
+    background-image: url(../img/webp/20mclients768+.webp);
   }
-
+  .no-webp .promo--yandex {
+    background-image: url(../img/section3/20mclients768+.png);
+  }
+  .no-js .promo--yandex {
+    background-image: url(../img/section3/20mclients768+.png);
+  }
+  .webp .promo--aero {
+    background-image: url(../img/webp/aero768+.webp);
+  }
+  .no-webp .promo--aero {
+    background-image: url(../img/section4/aero768+.png);
+  }
+  .no-js .promo--aero {
+    background-image: url(../img/section4/aero768+.png);
+  }
 }

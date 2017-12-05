@@ -4,12 +4,13 @@
     @include row();
     border: 2px solid #f0f0f0;
     margin: 0 -17px;
+    padding-top: 10px;
   }
   &__set {
     @include row();
     @include outline();
     border-bottom: 1px solid #f0f0f0;
-    margin: 0 29px 0 0;
+    margin: 0 29px 0 29px;
     &--aero,
     &--rates {
       border-bottom: none;
@@ -79,6 +80,7 @@
   &__text {
     margin: 0;
     margin-top: 25px;
+    margin-bottom: 10px;
     font-family: $font-family--headings;
     font-weight: 300;
     &--rates {

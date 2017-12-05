@@ -17,12 +17,13 @@ $border-radius:               rem(3px) !default;
   display: inline-block;
   border: none;
   margin: 0;
-  padding: 14px 20px 14px 21px;
-  white-space: nowrap;
+  margin-left: -15px;
+  width: 320px;
+  padding: 0 40px;
   vertical-align: middle;
   user-select: none;
   text-align: center;
-  font-size: 18px;
+  font-size: 21px;
   font-family: inherit;
   font-weight: 600;
   line-height: $line-height;
@@ -126,4 +127,22 @@ $border-radius:               rem(3px) !default;
   //  right: 25px;
   //  transition: 0.5s;
   //}
+}
+@media (min-width: $screen-md) {
+  .btn {
+    box-sizing: border-box;
+    display: inline-block;
+    border: none;
+    white-space: nowrap;
+    padding: 14px 20px 14px 21px;
+    margin: 0;
+    width: auto;
+    padding: 14px 20px 14px 21px;
+    white-space: nowrap;
+    vertical-align: middle;
+    user-select: none;
+    text-align: center;
+    font-size: 18px;
+    font-family: inherit;
+  }
 }

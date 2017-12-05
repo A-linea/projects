@@ -8,17 +8,40 @@
     @include col(md, 3, 12);
     @include col(lg, 2, 12);
     display: flex;
+    height: 92px;
+    border-top: 1px solid #e8e8e8;
+    border-left: 1px solid #e8e8e8;
+    &:nth-child(-n+4) {
+      border-top:none;
+    }
+    &:nth-child(2) {
+      border-left:none;
+    }
+    &:nth-child(5) {
+      border-left:none;
+    }
+    &:nth-child(8) {
+       border-left:none;
+    }
+    &:nth-child(11) {
+      border-left:none;
+    }
   }
   &__logo-wrapper {
     margin: auto;
   }
   &__title {
+    font-size: 24px;
     padding-bottom: 10px;
+    margin-bottom: 25px;
   }
 
 }
 
 @media (min-width: $screen-sm) {
+  &__card {
+    height: 118px;
+  }
 }
 
 @media (min-width: $screen-md) {
@@ -26,20 +49,11 @@
     margin-bottom: 83px;
 
     &__card {
-      border-top: 1px solid #e8e8e8;
-      border-left: 1px solid #e8e8e8;
       height: 134px;
-      &:nth-child(2) {
-        border-left: none;
-      }
-      &:nth-child(6) {
-        border-left: none;
-      }
-      &:nth-child(10) {
-        border-left: none;
-      }
-      &:nth-child(-n+5) {
-        border-top:none;
+      &:nth-child(5),
+      &:nth-child(8),
+      &:nth-child(11) {
+        border-left: 1px solid #e8e8e8;
       }
       &:nth-child(-n+5) {
         border-top:none;
@@ -51,19 +65,24 @@
 @media (min-width: $screen-lg) {
   .clients {
     margin-bottom: 83px;
+    &__inner {
+      padding-bottom: 64px;
+    }
     &__card {
-      border-top: 1px solid #e8e8e8;
-      border-left: 1px solid #e8e8e8;
-
       &:nth-child(8) {
         border-left: none;
       }
       &:nth-child(-n+7) {
         border-top:none;
       }
+      &:nth-child(6),
+      &:nth-child(10) {
+        border-left: 1px solid #e8e8e8;
+      }
     }
     &__title {
       margin-bottom: 35px;
+      font-size: 32px;
     }
   }
 }

@@ -11,24 +11,26 @@
   }
   &__gallery-wrapper {
     @include col(xs 12, 12);
-    @include col-offset(lg, 3, 12);
-    @include col(lg, 6, 12, 0);
+    @include col-offset(lg, 2, 12);
+    @include col(lg, 8, 12, 0);
     @include outline();
-  }
+      }
   &__gallery {
-    height: 920px;
-    width: 90%;
+    //height: 920px;
+    box-sizing: content-box;
+    max-width: 304px;
     margin: auto;
+  }
+  &__text-wrapper {
     position: relative;
     &::before {
       content: '';
       @include centerer-x();
-      top: 40px;
+      bottom: 0;
       height: 30px;
       width: 40px;
       background-image: url(../img/icons_svg/eye.svg);
       background-repeat: no-repeat;
-
     }
   }
   &__text {
@@ -43,28 +45,39 @@
     }
   }
 }
+.data__carousel-nav--left,
+.data__carousel-nav--right {
+  @include centerer-y();
+  background-repeat: no-repeat;
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  width: 42px;
+  height: 81px;
+}
+.data__carousel-nav--left{
+  background-image: url(../img/icons_svg/arrow-right-gray.svg);
+  transform: rotate(180deg);
+  margin-top: -41px;
+  left: 0;
+  transition: $transition-time;
+
+}
+.data__carousel-nav--right {
+  background-image: url(../img/icons_svg/arrow-right-gray.svg);
+  right: 0px;
+  transition: $transition-time;
+}
 
 @media (min-width: $screen-sm) {
-}
-
-@media (min-width: $screen-md) {
-  .data {
-    &__gallery {
-      background-image: url(../img/section10/2nd_realisation/slider-bg.png);
-      background-repeat: no-repeat;
-      background-position: center center;
-      height: 920px;
-      width: 90%;
-      margin: auto;
-    }
-  }
-}
-
-@media (min-width: $screen-lg) {
   .data {
     margin-bottom: 110px;
     &__title {
       margin-bottom: 24px;
+    }
+    &__text-wrapper {
+      margin-bottom: 105px;
+      padding-bottom: 50px;
     }
     &__text {
       font-size: 24px;
@@ -74,9 +87,27 @@
         margin: 0;
       }
     }
-    &__gallery {
-      padding-top: 30px;
-      padding-bottom: 95px;
+    &__gallery-wrapper {
+      background-image: url(../img/section10/slider-bg.png);
+      background-repeat: no-repeat;
+      background-position: 51.5% 57%;
     }
+    &__gallery {
+      margin: auto;
+      margin-top: 45px;
+      padding: 0 150px;
+    }
+  }
+}
+
+@media (min-width: $screen-md) {
+  .data {
+
+  }
+}
+
+@media (min-width: $screen-lg) {
+  .data {
+
   }
 }
