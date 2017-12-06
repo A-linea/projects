@@ -57,7 +57,7 @@ img {
 }
 h2 {
   font-family: $font-family--headings;
-  font-size: $font-size--h2;
+  font-size: $font-size--h3;
   line-height: 1.2;
   font-weight: 700;
   color: #333333;
@@ -100,4 +100,9 @@ h2 {
 }
 .blur-up.lazyloaded {
   filter: blur(0);
+}
+@media (min-width: $screen-md) {
+  h2 {
+    font-size: $font-size--h2;
+  }
 }

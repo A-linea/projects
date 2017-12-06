@@ -1,12 +1,28 @@
 .clients {
+
+  @media all and (-ms-high-contrast:none)
+  {/* IE10 */
+    &__logo {
+      max-width: 140px;
+      padding: 40px 0;
+    } /* IE11 */
+    *::-ms-backdrop,
+    &__logo {
+      max-width: 140px;
+      padding: 40px 0;
+    }
+  }
+  @supports (-ms-ime-align: auto) {
+    &__logo {
+      max-width: 140px;
+      padding: 40px 0;
+    }
+  }
+  margin-bottom: 40px;
   background-color: #f8f8f8;
   &__inner {
     @include row();
-  }
-  //for IE
-  &__logo {
-    max-width: 140px;
-    padding: 40px 0;
+    padding-bottom: 10px;
   }
   &__card {
     @include col(xs, 4, 12);
@@ -42,11 +58,7 @@
   }
 
 }
-@supports (-ms-ime-align: auto) {
-  .clients__logo {
-    max-width: 134px;
-  }
-}
+
 @media (min-width: $screen-sm) {
   &__card {
     height: 118px;

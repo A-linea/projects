@@ -292,6 +292,10 @@
     .hero__inner {
       margin-bottom: 0;
     }
+    .hero__logo--google {
+      margin-left: 0;
+      order: 0;
+    }
   }
   .footer {
     &__social {
@@ -306,6 +310,10 @@
     &__social-icons {
       position: static;
       width: auto;
+      order: 0;
+    }
+    &__agreement-link {
+      text-align: right;
     }
   }
 }
