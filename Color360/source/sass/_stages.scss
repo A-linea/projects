@@ -1,29 +1,68 @@
 .stages {
+  margin-bottom: 60px;
+  .container {
+    max-width: 320px;
+    padding: 0;
+  }
   &__title {
     padding-bottom: 10px;
+    font-size: 24px;
+    margin-bottom: 45px;
+    &::after {
+      width: 100%;
+    }
   }
   &__list {
     list-style: none;
     padding: 0;
     margin: 0;
+    margin-bottom: 30px;
     display: flex;
     flex-wrap: wrap;
+    position: relative;
+    &::before {
+      content: '';
+      position: absolute;
+      left: 45%;
+      top: 25%;
+      background-color: #fff;
+      background-image: url(../img/icons_svg/arrow-right-tangerine.svg);
+      background-repeat: no-repeat;
+      background-position: center center;
+      transform: rotate(90deg);
+      width: 28px;
+      height: 90px;
+    }
   }
   &__item {
     margin: 0;
     padding: 0;
     display: flex;
+    max-width: 160px;
+    &:nth-child(-n+2) {
+      padding-bottom: 40px;
+      border-bottom: 1px solid #e6e6e6;
+    }
+    &:nth-child(n+3) {
+      padding-top: 40px;
+    }
   }
   &__number {
     display: block;
     color: $accent-color-d;
+    font-size: 48px;
     font-family: $font-family--headings;
     font-weight: 700;
     line-height: 1;
   }
   &__text {
     margin: 0;
-    font-size: 16px;
+    padding-top: 7px;
+    padding-left: 5px;
+    font-size: 14px;
+  }
+  &__btn {
+    margin-left: 0;
   }
 }
 
@@ -31,30 +70,79 @@
 }
 
 @media (min-width: $screen-md) {
+  .stages {
+    .container {
+      max-width: 540px;
+    }
+    &__title {
+      font-size: 32px;
+      margin-bottom: 67px;
+      &::after {
+        width: 50%;
+      }
+    }
+    &__list {
+      justify-content: space-between;
+      margin-bottom: 45px;
+      &::before {
+        left: 47%;
+        top: 21%;
+        width: 28px;
+        height: 100px;
+
+      }
+    }
+    &__item  {
+      max-width: 260px;
+      padding-left: 50px;
+      margin: 0;
+      &:nth-child(3) {
+        max-width: 280px;
+      }
+    }
+    &__text {
+      font-size: 16px;
+    }
+  }
 
 }
 
 @media (min-width: $screen-lg) {
   .stages {
     margin-bottom: 102px;
-    &__title {
-      margin-bottom: 67px;
-    }
-    &__number {
-      font-size: 48px;
+    .container {
+      max-width: none;
+      padding: 0 15px;
     }
     &__list {
       margin-bottom: 54px;
-
+      &::before {
+        background-image: none;
+      }
+    }
+    &__text {
+      padding-top: 3px;
+      padding-left: 5px;
+      font-size: 16px;
     }
     &__item {
+      padding-left: 0;
+      padding-top: 0;
       max-width: 140px;
       margin-left: 28px;
+
+      &:nth-child(n+3) {
+        padding-top: 0;
+      }
       &:first-child {
         margin-left: -15px;
       }
+      &:nth-child(-n+2) {
+        padding-bottom: 0;
+        border-bottom: none;
+      }
       &:nth-child(n+2) {
-        max-width: 215px;
+        max-width: 220px;
         padding-left: 54px;
         position: relative;
         &:before {
@@ -64,6 +152,7 @@
           height: 1px;
           width: 33px;
           background-color: $accent-color-d;
+
         }
       }
       &:nth-child(3) {
@@ -71,5 +160,4 @@
       }
     }
   }
-
 }

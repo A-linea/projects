@@ -1,4 +1,5 @@
 .faq {
+  margin-bottom: 60px;
   &__title {
     padding-bottom: 10px;
   }
@@ -13,14 +14,15 @@
   }
   &__question {
     font-weight: 600;
-    padding-left: 50px;
+    padding-left: 30px;
     text-decoration: underline;
     position: relative;
+    font-size: 16px;
     &::before {
       content: '';
       position: absolute;
       top: 5px;
-      left: 25px;
+      left: 5px;
       width: 12px;
       background-repeat: no-repeat;
       height: 19px;
@@ -35,6 +37,8 @@
   }
   &__answer {
     max-height: 0;
+    padding-left: 30px;
+    font-size: 14px;
     overflow: hidden;
     transition: max-height 0.2s ease-out;
   }
@@ -46,6 +50,21 @@
 }
 
 @media (min-width: $screen-md) {
+  .faq {
+    &__question,
+    &__answer {
+      padding-left: 50px;
+    }
+    &__question {
+      font-size: 21px;
+      &::before {
+        left: 25px;
+      }
+    }
+    &__answer {
+      font-size: 16px;
+    }
+  }
 
 }
 
@@ -53,12 +72,5 @@
   .faq {
     margin-bottom: 110px;
 
-    &__question,
-    &__answer {
-      padding-left: 50px;
-    }
-    &__question {
-      font-size: 21px;
-    }
   }
 }

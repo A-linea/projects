@@ -1,33 +1,172 @@
 .main-footer {
+  .container {
+    padding: 0;
+    max-width: 320px;
+  }
   background-color: #2e2e2e;
-  color: white;}
+  color: white;
+  position: relative;
+  .hero__inner {
+    padding-top: 15px;
+    @include row();
+    margin: 0;
+    @include outline();
+  }
+  .hero__logo {
+    max-width: 300px;
+    margin: auto;
+  }
+  .hero__logo-360 {
+    height: 55px;
+    vertical-align: top;
+  }
+  .hero__time-wrapper {
+    max-width: 180px;
+    margin-left: 30px;
+    order: 1;
+  }
+  .hero__time-inner {
+    width: 235px;
+    display: flex;
+  }
+  .hero__time-link {
+    display: block;
+    margin-left: 15px;
+    font-size: 21px;
+    margin-bottom: 25px;
+    margin-top: 4px;
+  }
+  .hero__time-text {
+    margin-left: 16px;
+    margin-bottom: 28px;
+    display: block;
+    font-size: 21px;
+    position: relative;
+    &::before {
+      content: '';
+      width: 11px;
+    }
+  }
+  .hero__time-ico--phone {
+    margin-top: 3px;
+    margin-left: 3px;
+    fill: white;
+    width: 21px;
+    height: 20px;
+  }
+  .hero__time-ico--clock {
+    margin-top: 3px;
+    margin-left: 3px;
+    fill: white;
+    width: 21px;
+    height: 20px;
+  }
+  .hero__time-ico--envelope {
+    margin-top: 9px;
+    width: 25px;
+    height: 17px;
+    fill: white;
+  }
+  .hero__logo--google {
+    p {
+      @include visuallyhidden;
+    }
+    padding: 20px 0;
+    margin-top: 10px;
+    margin-left: 80px;
+    max-width: 207px;
+    position: relative;
+    &::before {
+      content: '';
+      @include centerer-y();
+      @include sprite($google);
+    }
+  }
+  .hero__phone-wrapper {
+    max-width: 230px;
+    margin-top: 10px;
+    margin-left: 30px;
+    display: flex;
+  }
+  .hero__phone {
+    display: block;
+    line-height: 1;
+    margin-left: 13px;
+    margin-bottom: 23px;
+    font-weight: 400;
+    font-size: 21px;
+  }
+  .hero__phone-link {
+    display: none;
+    text-align: right;
+    font-size: 16px;
+    color: white;
+  }
+}
 .footer {
   &__social {
       background-color: #232323;
+    font-size: 14px;
+    padding: 10px 0;
+    p,
+    a {
+      margin: 0;
+      display: block;
+    }
+  }
+  &__btn-wrapper {
+    width: 320px;
+    margin: auto;
+    margin-bottom: 34px;
+  }
+  &__btn {
+    display: block;
+    margin: 0;
+
+    width: 100%;
+
   }
   &__social-content {
     @include row();
+    margin: 0;
   }
   &__copyright {
+    @include col(xs, 10, 12, 0);
+    @include col-offset(xs, 1, 12);
+    @include col(md, 8, 12, 0);
+    @include col-offset(md, 0, 12);
     @include col(lg, 5, 12, 0);
     @include outline();
+    padding-top: 10px;
   }
   &__social-icons {
+    @include col(xs, 8, 12, 0);
+    @include col-offset(xs, 2, 12);
+    @include col-offset(md, 0, 12);
+    @include col(md, 2, 12, 0);
     @include col(lg, 2, 12, 0);
     @include outline();
     display: flex;
+    order: -1;
+    padding-top: 18px;
     justify-content: space-between;
   }
   &__agreement {
+    @include col(xs, 10, 12, 0);
+    @include col-offset(xs, 1, 12);
+    @include col-offset(md, 0, 12);
+    @include col(md, 4, 12, 0);
     @include col(lg, 5, 12, 0);
     @include outline();
+    padding-top: 10px;
   }
   &__copyright-text {
     padding: 5px 0;
+    text-align: center;
   }
   &__agreement-link {
     padding: 5px 0;
-    text-align: right;
+    text-align: center;
   }
   &__ico-wrapper {
     margin: auto;
@@ -56,7 +195,96 @@
   
 }
 @media (min-width: $screen-md) {
-
+  .main-footer {
+    .container {
+      padding: 0 15px;
+      max-width: none;
+    }
+    .hero__logo {
+      margin: 0;
+    }
+    .hero__logo--google {
+      margin-top: 10px;
+      margin-left: 70px;
+      padding: 20px 0;
+      order: 1;
+    }
+    .hero__time-wrapper {
+      max-width: 165px;
+      margin-left: 0;
+      order: 0;
+    }
+    .hero__time-inner {
+      max-width: 195px;
+    }
+    .hero__time-link {
+      font-size: 14px;
+      margin-bottom: 10px;
+    }
+    .hero__time-text {
+      font-size: 14px;
+      margin-bottom: 0;
+    }
+    .hero__phone-wrapper {
+      margin-left: 0;
+      display: block;
+    }
+    .hero__phone {
+      text-align: right;
+      font-weight: 700;
+      margin-bottom: 7px;
+    }
+    .hero__inner {
+      padding-top: 10px;
+      margin: 0 -15px;
+      justify-content: space-between;
+    }
+    .hero__phone-link {
+      display: block;
+      text-align: right;
+    }
+    .hero__time-ico--clock {
+      width: 11px;
+      height: 11px;
+    }
+    .hero__time-ico--phone {
+      display: none;
+    }
+    .hero__time-ico--envelope {
+      width: 16px;
+      height: 9px;
+    }
+  }
+  .footer {
+    &__copyright,
+    &__agreement {
+      padding-top: 0;
+    }
+    &__social-content {
+      margin: 0 -15px;
+    }
+    &__copyright-text {
+      text-align: left;
+      br {
+        display: none;
+      }
+    }
+    &__agreement-link {
+      text-align: left;
+    }
+    &__social-icons {
+      position: absolute;
+      top: 47%;
+      right: 0;
+      width: 160px;
+      display: flex;
+      padding-top: 0px;
+      justify-content: space-between;
+    }
+    &__btn-wrapper {
+      display: none;
+    }
+  }
 }
 @media (min-width: $screen-lg) {
   .main-footer {
@@ -74,6 +302,10 @@
         margin: 0;
         display: block;
       }
+    }
+    &__social-icons {
+      position: static;
+      width: auto;
     }
   }
 }

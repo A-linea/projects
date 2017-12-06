@@ -19,7 +19,7 @@
 
 .owl-theme .owl-dots {
   text-align: center;
-  margin-top: 130px;
+  margin-top: 45px;
   margin-bottom: 40px;
   -webkit-tap-highlight-color: transparent; }
   .owl-theme .owl-dots .owl-dot {
@@ -41,3 +41,9 @@
       border: 2px solid #ff9711;
       transition: 0.3s;
     }
+
+ @media (min-width : 768px) {
+  .owl-theme .owl-dots {
+    margin-top: 130px;
+  }
+}
