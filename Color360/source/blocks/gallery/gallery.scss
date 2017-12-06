@@ -1,4 +1,5 @@
 .gallery {
+  margin-bottom: 56px;
   .container {
     padding: 0;
   }
@@ -7,79 +8,196 @@
 
   &__inner {
     text-align: center;
-    @include row(30);
+    @include row();
+    justify-content: center;
+    margin-bottom: 25px;
   }
 
   &__images {
     text-align: center;
-    @include col(xs, 16, 16);
+    @include col(xs, 12, 12);
     display: flex;
     flex-wrap: wrap;
   }
-
   &__title {
+    padding-bottom: 10px;
     margin-bottom: 20px;
     &::after {
-      width: 40%;
+      width: 320px;
     }
+  }
+  &__link {
+    font-size: 0;
+  }
+  &__wrapper{
+    max-width: 320px;
+    margin: auto;
+    position: relative;
+    &::after {
+      padding-top: 7px;
+      text-align: center;
+      color: white;
+      font-size: 22px;
+      font-family: $font-family--headings;
+      font-weight: 700;
+      content: '';
+      @include centerer-x();
+      width: 60%;
+      bottom: 10%;
+      height: 45px;
+      background-color: rgba(#000, 0.68);
+    }
+    &--property {
+      &::after {
+        content: 'Недвижимость';
+      }
+    }
+    &--furniture {
+      &::after {
+        content: 'Офисная мебель';
+        width: 65%;
+      }
+    }
+    &--fitness {
+      &::after {
+        content: 'Фитнес-центр';
+      }
+    }
+    &--shop {
+      &::after {
+        content: 'Магазин';
+        width: 40%;
+      }
+    }
+    &--shopping-center {
+      &::after {
+        content: 'Торговый центр';
+        width: 65%;
+      }
+    }
+    &--materials {
+      &::after {
+        content: 'Стройматериалы';
+        width: 65%;
+      }
+    }
+  }
+  &__btn {
+    margin: 0;
   }
 }
 
 @media (min-width: $screen-sm) {
-
+  .gallery__img {
+    width: 320px;
+  }
+}
+@media (min-width: 640px) {
+  .gallery {
+    .container {
+      max-width: 640px;
+    }
+  }
+  .gallery__wrapper {
+    margin: 0;
+  }
 }
 @media (min-width: $screen-md) {
-  .gallery__titile {
-    font-size: $font-size--h2;
+  .gallery {
+    margin-bottom: 97px;
   }
-
+  .gallery__title {
+    font-size: $font-size--h2;
+    &::after {
+      width: 418px;
+    }
+  }
+  .gallery__inner {
+    margin-bottom: 35px;
+  }
   .gallery__text {
     margin: 0 40px;
     line-height: 1.8;
   }
+  .gallery__wrapper {
+    &::after {
+      padding-top: 3px;
+      font-size: 28px;
+      width: 75%;
+      height: 45px;
+    }
+    &--property {
+      &::after {
+        content: 'Недвижимость';
+      }
+    }
+    &--furniture {
+      &::after {
+        content: 'Офисная мебель';
+        width: 80%;
+      }
+    }
+    &--fitness {
+      &::after {
+        content: 'Фитнес-центр';
+        width: 68%;
+      }
+    }
+    &--shop {
+      &::after {
+        content: 'Магазин';
+        width: 45%;
+      }
+    }
+    &--shopping-center {
+      &::after {
+        content: 'Торговый центр';
+        width: 78%;
+      }
+    }
+    &--materials {
+      &::after {
+        content: 'Стройматериалы';
+        width: 80%;
+      }
+    }
+  }
 }
+
 @media (min-width: $screen-lg) {
   .gallery {
     margin-top: 96px;
     margin-bottom: 107px;
     padding-top: 50px;
+    .container {
+      max-width: none;
+    }
+
     &__images {
       padding: 0;
       margin-bottom: 47px;
     }
     &__inner {
-      padding: 0;
+      margin: 0;
 
     }
     &__title {
-      font-size: $font-size--h2;
       margin-bottom: 52px;
       padding-bottom: 10px;
 
     }
-    &__link {
-      font-size: 0;
-    }
     &__wrapper{
-      max-width: 320px;
-      position: relative;
-      transition: $transition-time;
       &::after {
-        cursor: pointer;
-        padding-top: 10px;
+        transform: none;
         text-align: left;
-        padding-left: 15px;
-        color: white;
+        padding-top: 7px;
+        padding-left: 14px;
         font-size: 18px;
-        font-family: $font-family--headings;
         font-weight: 700;
         content: '';
-        position: absolute;
         width: 50%;
         left: 0;
-        bottom: 10%;
         height: 40px;
-        background-color: rgba(#000, 0.68);
       }
       &--property {
         &::after {
@@ -101,13 +219,13 @@
       &--shop {
         &::after {
           content: 'Магазин';
-          width: 35%;
+          width: 32%;
         }
       }
       &--shopping-center {
         &::after {
           content: 'Торговый центр';
-          width: 55%;
+          width: 53%;
         }
       }
       &--materials {
