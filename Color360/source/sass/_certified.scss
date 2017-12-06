@@ -2,7 +2,7 @@
 
   margin-bottom: 68px;
   .container {
-    max-width: 320px;
+    max-width: 405px;
   }
   &__content {
     @include row();
@@ -18,7 +18,6 @@
       content: '';
       top: 50px;
       @include centerer-x();
-      //background-color: #fff;
       @include sprite($logo-trusted320);
       background-repeat: no-repeat;
       z-index: 2;
@@ -31,20 +30,18 @@
       height: 200px;
       background-color: #fff;
       z-index: 1;
-      
     }
   }
   &__title {
     margin-top: 40px;
     padding-bottom: 10px;
-    margin-bottom: 48px;
+    margin-bottom: 35px;
     text-align: center;
     &::after {
       width: 100%;
     }
   }
   &__list {
-    margin-left: 36px;
     margin-top: 0;
     margin-bottom: 34px;
     list-style: none;
@@ -52,6 +49,7 @@
   }
   &__item {
     margin-bottom: 15px;
+    font-size: 16px;
   }
   &__btn {
     margin-left: 0;
@@ -66,7 +64,41 @@
 }
 
 @media (min-width: $screen-md) {
-
+  .certified {
+    .container {
+      max-width: none;
+    }
+    &__title {
+      font-size: 28px;
+    }
+    &__inner {
+      margin-top: 0px;
+      padding-left: 240px;
+      position: relative;
+      padding-top: 0px;
+      &::before {
+        content: '';
+        left: 0;
+        @include centerer-y();
+        @include sprite($logo-trusted720);
+        background-repeat: no-repeat;
+        z-index: 2;
+      }
+      &::after {
+        content: '';
+        display: none;
+        position: absolute;
+        width: 100%;
+        top: 0;
+        height: 200px;
+        background-color: #fff;
+        z-index: 1;
+      }
+    }
+    .btn__wrapper {
+      text-align: left;
+    }
+  }
 }
 
 @media (min-width: $screen-lg) {
@@ -103,6 +135,7 @@
     }
     &__item {
       margin-bottom: 15px;
+      font-size: 18px;
     }
     .btn__wrapper {
       text-align: left;

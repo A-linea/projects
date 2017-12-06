@@ -2,13 +2,32 @@
   background:  linear-gradient( #400080, transparent), linear-gradient(
       200deg, #d047d1, #ff0000,    #FFCA11);
   min-height: 640px;
-
+  &__title {
+    color: white;
+    padding-top: 48px;
+    padding-bottom: 17px;
+    &::after {
+      width: 320px;
+      background-color: #fff;
+    }
+  }
+  &__link {
+    color: $accent-color;
+  }
 }
 
 @media (min-width: $screen-sm) {
 }
 
 @media (min-width: $screen-md) {
+  .works {
+    margin-bottom: 110px;
+    &__title {
+      &::after {
+        width: 480px;
+      }
+    }
+  }
 
 }
 
@@ -16,17 +35,6 @@
   .works {
     margin-bottom: 110px;
     &__title {
-      color: white;
-      padding-top: 65px;
-      padding-bottom: 10px;
-      &::after {
-        width: 24%;
-        background-color: #fff;
-      }
-
-    }
-    &__link {
-      color: $accent-color;
 
     }
   }
