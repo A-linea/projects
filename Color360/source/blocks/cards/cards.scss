@@ -1,4 +1,14 @@
 .reasons {
+  position: relative;
+  padding-bottom: 96px;
+  &::after {
+    content: '';
+    @include centerer-x();
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 100%;
+    height: 96px;
+  }
   &__cards {
     @include row();
     margin: 0;
@@ -7,19 +17,25 @@
   &__list {
     @include row();
     margin: 0;
+    margin-bottom: 40px;
     padding: 0;
     @include outline();
     list-style: none;
   }
   &__item {
-    @include col(xs, 12, 12);
-    @include col(lg, 4, 12, 0);
+    @include col(xs, 6, 12, 0);
+    @include col(md, 4, 12, 0);
     margin: 0;
     @include outline();
+    &:nth-child(n+3) {
+      margin-top: 42px;
+    }
   }
   &__title {
     text-align: center;
     position: relative;
+    padding-bottom: 10px;
+    margin-bottom: 40px;
     &::after {
       content: '';
       @include centerer-x;
@@ -29,50 +45,132 @@
       bottom: 0;
     }
   }
+  &__ico-wrapper {
+    max-width: 69px;
+    max-height: 79px;
+    margin: auto;
+    position: relative;
+    padding-bottom: 18px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    &::after {
+      content: '';
+      @include centerer-x();
+      width: 90%;
+      height: 1px;
+      bottom: 0;
+      background-color: $accent-color;
+    }
+  }
   &__ico {
     fill: $accent-color;
+    width: 62px;
+    height: 62px;
+    &--people {
+      width: 69px;
+    }
+    &--heart {
+      width: 52px;
+    }
+    &--ribbon {
+      width: 56px;
+    }
   }
   &__text {
+    font-size: 14px;
     text-align: center;
+  }
+  &__btn {
+    margin-bottom: 31px;
+  }
+}
+.webp .reasons {
+  &::after {
+    background-image: url(../img/webp/section1/threeinone320.webp);
+  }
+}
+.no-webp .reasons {
+  &::after {
+    background-image: url(../img/webp/section1/threeinone320.png);
+  }
+}
+.no-js .reasons {
+  &::after {
+    background-image: url(../img/webp/section1/threeinone320.png);
   }
 }
 @media (min-width: $screen-sm) {
 
 }
 @media (min-width: $screen-md) {
-}
-@media (min-width: $screen-lg) {
-  .reasons  {
-    position: relative;
-    padding-bottom: 325px;
+  .reasons {
+    padding-bottom: 219px;
     &::after {
       content: '';
       @include centerer-x();
       background-repeat: no-repeat;
       background-position: center center;
       width: 100%;
+      height: 219px;
+    }
+    &__item {
+      &:nth-child(n+3) {
+        margin-top: 0;
+      }
+      &:nth-child(n+4) {
+        margin-top: 46px;
+      }
+    }
+    &__text {
+      font-size: 16px;
+    }
+  }
+  .webp .reasons {
+    &::after {
+      background-image: url(../img/webp/section1/threeinone320-768.webp);
+    }
+  }
+  .no-webp .reasons {
+    &::after {
+      background-image: url(../img/webp/section1/threeinone320-768.png);
+    }
+  }
+  .no-js .reasons {
+    &::after {
+      background-image: url(../img/webp/section1/threeinone320-768.png);
+    }
+  }
+}
+@media (min-width: $screen-lg) {
+  .reasons  {
+    padding-bottom: 325px;
+    &::after {
       height: 325px;
     }
     .btn__wrapper {
       margin-bottom: 27px;
     }
+    &__text {
+      font-size: 18px;
+    }
   }
   //Если у пользователя браузер поддерживающий webp он получит оптимизированное webp изображение
   .webp .reasons {
     &::after {
-      background-image: url(../img/webp/threeinone768+.webp);
+      background-image: url(../img/webp/section1/threeinone768+.webp);
     }
   }
   //Если у пользователя браузер не поддерживающий webp он получит стандартное изображение
    .no-webp .reasons {
     &::after {
-      background-image: url(../img/section1/threeinone768+.png);
+      background-image: url(../img/webp/section1/threeinone768+.png);
     }
   }
   //Если у пользователя отключен JS он получит стандартное изображение
   .no-js .reasons {
     &::after {
-      background-image: url(../img/section1/threeinone768+.png);
+      background-image: url(../img/webp/section1/threeinone768+.png);
     }
   }
   .reasons__title {
@@ -103,19 +201,6 @@
       height: 1px;
       bottom: 0;
       background-color: $accent-color;
-    }
-  }
-  .reasons__ico {
-    width: 62px;
-    height: 62px;
-    &--people {
-      width: 69px;
-    }
-    &--heart {
-      width: 52px;
-    }
-    &--ribbon {
-      width: 56px;
     }
   }
 }

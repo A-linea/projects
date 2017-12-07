@@ -37,10 +37,19 @@
   .main-header__topline {
     margin-bottom: 30px;
   }
-}
-@media (min-width: $screen-xl) {
-
-}
-@media (min-width: $screen-xxl) {
-
+  .webp .main-header {
+    &::after {
+      background-image: url(../img/webp/hero/hero-bg768.webp);
+    }
+  }
+  .no-webp .main-header {
+    &::after {
+      background-image: url(../img/webp/hero/hero-bg768.jpg);
+    }
+  }
+  .no-js .main-header {
+    &::after {
+      background-image: url(../img/webp/hero/hero-bg768.jpg);
+    }
+  }
 }
