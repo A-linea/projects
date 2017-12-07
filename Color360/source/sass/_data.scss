@@ -9,6 +9,7 @@
   &__inner {
     @include row();
     @include outline();
+    margin: 0;
   }
   &__gallery-wrapper {
     @include col(xs 12, 12);
@@ -103,7 +104,7 @@
     &__gallery {
       margin: auto;
       margin-top: 45px;
-      padding: 0 87px;
+      padding: 0 79px;
 
     }
   }

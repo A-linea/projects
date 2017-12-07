@@ -6,6 +6,7 @@
   }
   &__content {
     @include row();
+    margin: 0;
     @include outline();
   }
   &__inner {
@@ -70,6 +71,9 @@
     }
     &__title {
       font-size: 28px;
+      &::after {
+        width: 510px;
+      }
     }
     &__inner {
       margin-top: 0px;
@@ -110,7 +114,7 @@
       margin-bottom: 48px;
       text-align: left;
       &::after {
-        width: 100%;
+        width: 600px;
       }
     }
     &__inner {

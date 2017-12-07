@@ -197,7 +197,6 @@
 @media (min-width: $screen-md) {
   .main-footer {
     .container {
-      padding: 0 15px;
       max-width: none;
     }
     .hero__logo {
@@ -236,7 +235,7 @@
     }
     .hero__inner {
       padding-top: 10px;
-      margin: 0 -15px;
+      margin: 0;
       justify-content: space-between;
     }
     .hero__phone-link {
@@ -261,7 +260,7 @@
       padding-top: 0;
     }
     &__social-content {
-      margin: 0 -15px;
+      margin: 0;
     }
     &__copyright-text {
       text-align: left;

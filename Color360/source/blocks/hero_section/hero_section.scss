@@ -5,6 +5,7 @@
   &__inner {
     @include row();
     @include outline();
+    margin: 0;
   }
   &__logo-360 {
     height: 55px;

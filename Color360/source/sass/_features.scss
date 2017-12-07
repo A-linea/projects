@@ -5,6 +5,7 @@
 
   &__content {
     @include row();
+    margin: 0;
   }
   &__inner {
     @include col(md, 6, 12, 0);

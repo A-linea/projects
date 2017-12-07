@@ -1,6 +1,7 @@
 .reasons {
   &__cards {
     @include row();
+    margin: 0;
     @include outline();
   }
   &__list {

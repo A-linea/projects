@@ -6,7 +6,7 @@
   &__card {
     @include row();
     border: 2px solid #f0f0f0;
-    margin: 0 -17px;
+    margin: 0;
     padding-top: 45px;
     position: relative;
     &::before {
@@ -152,7 +152,7 @@
       &--aero,
       &--rates {
         flex-wrap: nowrap;
-        margin: 0 -15px;
+        margin: 0;
         padding: 0;
       }
     }
@@ -255,10 +255,10 @@
       padding-left: 30px;
     }
     &__value {
-      padding-top: 0px;
-      margin-left: 20px;
       padding-top: 0;
-      padding-left: 32%;
+      &--aero {
+        padding-left: 32%;
+      }
       &::before {
         content: '';
         @include centerer-y();
@@ -282,6 +282,11 @@
     }
     &__text {
       margin-top: 25px;
+      &--rates {
+        margin-left: 30px;
+        padding-left: 20%;
+      }
+
     }
   }
 }

@@ -9,6 +9,7 @@
   &__inner {
     text-align: center;
     @include row();
+    margin: 0;
     justify-content: center;
     margin-bottom: 25px;
   }
@@ -92,10 +93,10 @@
     width: 320px;
   }
 }
-@media (min-width: 640px) {
+@media (min-width: 675px) {
   .gallery {
     .container {
-      max-width: 640px;
+      max-width: 670px;
     }
   }
   .gallery__wrapper {
