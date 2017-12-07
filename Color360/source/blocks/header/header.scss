@@ -1,12 +1,15 @@
 .main-header {
   position: relative;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-bottom: 60px;
   &::before {
     content: '';
     position: absolute;
     height: 100%;
     width: 100%;
     background-color: #000;
-    opacity: 0.5;
+    opacity: 0.3;
   }
 
   &__topline {
@@ -14,42 +17,61 @@
     &::before {
       content: '';
       position: absolute;
-
       height: 100%;
       width: 100%;
       background-color: #000;
       opacity: 0.58;
     }
   }
+  &__topline-logo {
+    padding: 10px 0;
+  }
+  &__topline-logo-360 {
+    position: relative;
+    width: 220px;
+    height: 60px;
+  }
+}
+.webp .main-header {
+  background-image: url(../img/webp/header/hero-bg320-768.webp);
+}
+.no-webp .main-header {
+  background-image: url(../img/webp/header/hero-bg320-768.jpg);
+}
+.no-js .main-header {
+  background-image: url(../img/webp/header/hero-bg320-768.jpg);
 }
 @media (min-width: $screen-sm) {
   
 }
 @media (min-width: $screen-md) {
 
+  .webp .main-header {
+    background-image: url(../img/webp/header/hero-bg768.webp);
+
+  }
+  .no-webp .main-header {
+    background-image: url(../img/webp/header/hero-bg768.jpg);
+  }
+  .no-js .main-header {
+    background-image: url(../img/webp/header/hero-bg768.jpg);
+  }
+  .main-header__topline-logo {
+    @include visuallyhidden();
+  }
 }
 @media (min-width: $screen-lg) {
   .main-header {
-    background-image: url('../img/hero-bg768.jpg');
-    background-repeat: no-repeat;
+    background-size: auto;
     margin-bottom: 125px;
+    &::before {
+      opacity: 0.5;
+    }
+    &__topline-logo {
+      display: none;
+    }
   }
   .main-header__topline {
     margin-bottom: 30px;
-  }
-  .webp .main-header {
-    &::after {
-      background-image: url(../img/webp/hero/hero-bg768.webp);
-    }
-  }
-  .no-webp .main-header {
-    &::after {
-      background-image: url(../img/webp/hero/hero-bg768.jpg);
-    }
-  }
-  .no-js .main-header {
-    &::after {
-      background-image: url(../img/webp/hero/hero-bg768.jpg);
-    }
   }
 }

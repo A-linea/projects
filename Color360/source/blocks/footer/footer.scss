@@ -13,6 +13,7 @@
     @include outline();
   }
   .hero__logo {
+    display: block;
     max-width: 300px;
     margin: auto;
   }
@@ -21,6 +22,7 @@
     vertical-align: top;
   }
   .hero__time-wrapper {
+    display: block;
     max-width: 180px;
     margin-left: 30px;
     order: 1;
@@ -234,6 +236,8 @@
       margin-bottom: 7px;
     }
     .hero__inner {
+      position: static;
+      width: auto;
       padding-top: 10px;
       margin: 0;
       justify-content: space-between;
@@ -269,7 +273,7 @@
       }
     }
     &__agreement-link {
-      text-align: left;
+      text-align: right;
     }
     &__social-icons {
       position: absolute;
@@ -285,6 +289,16 @@
     }
   }
 }
+
+@media (min-width: 960px) {
+  .main-footer {
+    .hero__phone-wrapper {
+      width: 280px;
+      max-width: 320px;
+    }
+  }
+}
+
 @media (min-width: $screen-lg) {
   .main-footer {
     padding-top: 32px;
@@ -294,6 +308,9 @@
     .hero__logo--google {
       margin-left: 0;
       order: 0;
+    }
+    .hero__phone-wrapper {
+      max-width: 230px;
     }
   }
   .footer {
@@ -310,9 +327,6 @@
       position: static;
       width: auto;
       order: 0;
-    }
-    &__agreement-link {
-      text-align: right;
     }
   }
 }

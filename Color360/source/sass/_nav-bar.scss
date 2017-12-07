@@ -1,12 +1,12 @@
 .nav-bar {
-  //display: none;
+  display: none;
 }
 @media (min-width: $screen-lg) {
   .nav-bar {
     background-color: #fff;
     width: 100%;
     position: fixed;
-    top: 0;
+    top: -1000px;
     z-index: 10;
     opacity: 0;
     height: 0;
