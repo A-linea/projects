@@ -60,7 +60,8 @@
       padding-top: 10px;
       font-size: 16px;
       &:hover,
-      &:active {
+      &:active,
+      &:focus {
         text-decoration: none;
         color: $accent-color;
         background-color: transparent;

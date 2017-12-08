@@ -1,70 +1,25 @@
-.form {
-  background-color: $gray-lightest;
-
-  &__inner {
-    @include row();
-    @include outline();
-  }
-
-  &__wrapper {
-    @include col(xs, 12, 12);
-    @include col(sm, 12,12);
-    @include col(md, 6, 12);
-    @include col-offset(md, 3, 12);
-    @include col(lg, 6, 12);
-    @include col(xl, 6, 12);
-    @include col(xxl, 6, 12);
-    @include outline();
-    position: relative;
-    text-align: center;
-  }
-
-  &__title {
-    font-size: $font-size--h2;
-    margin-bottom: 0;
-  }
-
-  form {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
-
-  &__input,
-  textarea {
+.modal {
+  &__window {
+    width: 320px;
+    height: 214px;
     background-color: #fff;
-    border: 0;
-    border-bottom: 1px solid rgba(gray, 0.6);
-    border-radius: 4px;
-    color: #000;
-    flex-basis: 100%;
-    font-size: 16px;
-    margin-bottom: 20px;
-    padding: 12px 20px;
-    resize: none;
-    width: 100%;
-
-    &--name,
-    &--text {
-      flex-basis: 48%;
-    }
-
-    &::placeholder {
-      color: $gray-darken;
-      opacity: 1;
+  }
+  &__inner {
+    margin: 32px 18px;
+  }
+  &__title {
+    font-size: 20px;
+    margin-bottom: 24px;
+    &:after {
+      display: none;
     }
   }
+  &__input {
+    display: block;
+    width: 100%;
+    padding-top: 13px;
+    padding-bottom: 8px;
+    padding-left: 35px;
 
-  &__form-btn {
-    margin: rem(35px) auto 0;
-    padding: rem(20px 36px);
-    background-color: $gray;
-    border: none;
-    color: $gray-darker;
   }
 }
-@media (min-width: $screen-sm) {}
-@media (min-width: $screen-md) {}
-@media (min-width: $screen-lg) {}
-@media (min-width: $screen-xl) {}
-@media (min-width: $screen-xxl) {}

@@ -97,7 +97,7 @@ gulp.task('script', function() {
     //'node_modules/magnific-popup/dist/jquery.magnific-popup.min.js', // Берем Magnific Popup
     'node_modules/owl.carousel/dist/owl.carousel.js',
     'node_modules/page-scroll-to-id/jquery.malihu.PageScroll2id.js', //скрол страницы по id
-    //'source/libs/animate/animate-css.js',
+    'source/libs/animate/animate-css.js',
     //'node_modules/slideout/dist/slideout.min.js', //off-canvas menu
 	  'source/js/common.js' //подключаем пользовательский скрипт
     ])
