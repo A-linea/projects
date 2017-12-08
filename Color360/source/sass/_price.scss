@@ -30,7 +30,6 @@
   }
   &__set {
     @include row();
-    @include outline();
     border-bottom: 1px solid #f0f0f0;
     margin: 0 18px 0 18px;
     &--aero,
@@ -42,14 +41,12 @@
   &__name-wrapper {
     @include col(xs, 4, 12, 0);
     @include col(lg, 3, 12, 0);
-    @include outline();
     padding-bottom: 8px;
     padding-top: 8px;
   }
   &__set-inner {
     @include col(xs, 8, 12, 0);
     @include col(lg, 9, 12, 0);
-    @include outline();
     display: flex;
     flex-wrap: wrap;
     padding-bottom: 8px;

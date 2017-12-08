@@ -8,15 +8,14 @@
   }
   &__inner {
     @include row();
-    @include outline();
+
     margin: 0;
   }
   &__gallery-wrapper {
     @include col(xs 12, 12);
     @include col-offset(lg, 2, 12);
     @include col(lg, 8, 12, 0);
-    @include outline();
-      }
+  }
   &__gallery {
     box-sizing: content-box;
     max-width: 304px;

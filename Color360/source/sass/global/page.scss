@@ -89,7 +89,6 @@ h2 {
 .container {
   @include container();
   padding: 0;
-  @include outline();
 }
 .btn__wrapper {
   display: block;

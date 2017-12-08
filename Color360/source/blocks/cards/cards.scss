@@ -12,21 +12,18 @@
   &__cards {
     @include row();
     margin: 0;
-    @include outline();
   }
   &__list {
     @include row();
     margin: 0;
     margin-bottom: 40px;
     padding: 0;
-    @include outline();
     list-style: none;
   }
   &__item {
     @include col(xs, 6, 12, 0);
     @include col(md, 4, 12, 0);
     margin: 0;
-    @include outline();
     &:nth-child(n+3) {
       margin-top: 42px;
     }

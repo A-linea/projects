@@ -10,7 +10,6 @@
     padding-top: 15px;
     @include row();
     margin: 0;
-    @include outline();
   }
   .hero__logo {
     display: block;
@@ -138,7 +137,6 @@
     @include col(md, 8, 12, 0);
     @include col-offset(md, 0, 12);
     @include col(lg, 5, 12, 0);
-    @include outline();
     padding-top: 10px;
   }
   &__social-icons {
@@ -147,7 +145,6 @@
     @include col-offset(md, 0, 12);
     @include col(md, 2, 12, 0);
     @include col(lg, 2, 12, 0);
-    @include outline();
     display: flex;
     order: -1;
     padding-top: 18px;
@@ -159,7 +156,6 @@
     @include col-offset(md, 0, 12);
     @include col(md, 4, 12, 0);
     @include col(lg, 5, 12, 0);
-    @include outline();
     padding-top: 10px;
   }
   &__copyright-text {

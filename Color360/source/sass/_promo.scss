@@ -28,14 +28,12 @@
   }
   &__content-wrapper {
     @include row();
-    @include outline();
     margin: 0;
   }
   &__content {
     @include col(md, 6, 12, 0);
     @include col(lg, 6, 12, 0);
     @include col-offset(md, 6, 12);
-    @include outline();
     &--left {
       @include col(md, 6, 12, 0);
       @include col-offset(md, 0, 12);

@@ -7,7 +7,6 @@
   &__content {
     @include row();
     margin: 0;
-    @include outline();
   }
   &__inner {
     max-width: 100%;
