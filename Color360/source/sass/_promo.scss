@@ -3,8 +3,11 @@
   background-repeat: no-repeat;
   padding-bottom: 36px;
   margin-bottom: 70px;
-  max-width: 340px;
   margin: auto;
+  .container {
+    max-width: 320px;
+    margin: auto;
+  }
 
   &:nth-child(2n) {
     background-color: #5086f1;
@@ -15,8 +18,8 @@
   }
   &--google {
     padding-top: 400px;
-    background-size: 100%;
-    background-position: -30px 0%;
+    background-size: 436px 376px;
+    background-position: 115% 30px;
   }
   &--yandex {
     padding-top: 340px;
@@ -73,7 +76,7 @@
     border-radius: 50%;
     box-shadow: inset 1px 0px 10px 1px rgba(171, 171, 171, 0.26);
     &--google {
-      top: 13%;
+      top: 15%;
       left: 75%;
     }
     &--yandex {
@@ -121,13 +124,13 @@
   }
 }
 .webp .promo--google {
-  background-image: url(../img/webp/section2/100kviews320.webp);
+  background-image: url(../img/webp/section2/100kviews768+.webp);
 }
 .no-webp .promo--google {
-  background-image: url(../img/webp/section2/100kviews320.png);
+  background-image: url(../img/webp/section2/100kviews768+.png);
 }
 .no-js .promo--google {
-  background-image: url(../img/webp/section2/100kviews320.png);
+  background-image: url(../img/webp/section2/100kviews768+.png);
 }
 .webp .promo--yandex {
   background-image: url(../img/webp/section3/20mclients320.webp);

@@ -69,7 +69,7 @@ h2 {
     content: '';
     @include centerer-x;
     background-color: $accent-color-d;
-    width: 45%;
+    width: 100%;
     height: 2px;
     bottom: 0;
   }
@@ -91,6 +91,8 @@ h2 {
   padding: 0;
 }
 .btn__wrapper {
+  max-width: 280px;
+  margin: auto;
   display: block;
   text-align: center;
 }
@@ -101,8 +103,23 @@ h2 {
 .blur-up.lazyloaded {
   filter: blur(0);
 }
+@media (min-width: $screen-sm) {
+  h2 {
+    &::after {
+      width: 402px;
+    }
+  }
+}
 @media (min-width: $screen-md) {
   h2 {
     font-size: $font-size--h2;
+    &::after {
+      width: 402px;
+    }
+  }
+  .btn__wrapper {
+    width: auto;
+    display: block;
+    text-align: center;
   }
 }

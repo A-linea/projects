@@ -1,8 +1,10 @@
 .main-header {
   position: relative;
-  background-repeat: no-repeat;
+  background-repeat: repeat-x;
+  background-position: center center;
   background-size: cover;
   margin-bottom: 60px;
+  padding-bottom: 53px;
   &::before {
     content: '';
     position: absolute;
@@ -48,7 +50,6 @@
 
   .webp .main-header {
     background-image: url(../img/webp/header/hero-bg768.webp);
-
   }
   .no-webp .main-header {
     background-image: url(../img/webp/header/hero-bg768.jpg);

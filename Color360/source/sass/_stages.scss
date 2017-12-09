@@ -2,15 +2,12 @@
   margin-bottom: 60px;
   .container {
     max-width: 320px;
-    padding: 0;
+    padding: 0 15px;
   }
   &__title {
     padding-bottom: 10px;
     font-size: 24px;
     margin-bottom: 45px;
-    &::after {
-      width: 100%;
-    }
   }
   &__list {
     list-style: none;
@@ -38,7 +35,7 @@
     margin: 0;
     padding: 0;
     display: flex;
-    max-width: 160px;
+    max-width: 145px;
     &:nth-child(-n+2) {
       padding-bottom: 40px;
       border-bottom: 1px solid #e6e6e6;
@@ -61,25 +58,21 @@
     padding-left: 5px;
     font-size: 14px;
   }
-  &__btn {
-    margin-left: 0;
-  }
 }
 
 @media (min-width: $screen-sm) {
+
 }
 
 @media (min-width: $screen-md) {
   .stages {
     .container {
+      padding: 0;
       max-width: 540px;
     }
     &__title {
       font-size: 32px;
       margin-bottom: 67px;
-      &::after {
-        width: 50%;
-      }
     }
     &__list {
       justify-content: space-between;

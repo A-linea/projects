@@ -23,10 +23,11 @@
   &__inner {
     @include row();
     margin: 0;
+    padding-top: 45px;
     padding-bottom: 10px;
   }
   &__card {
-    @include col(xs, 4, 12);
+    @include col(xs, 4, 12, 0);
     @include col(md, 3, 12);
     @include col(lg, 2, 12);
     display: flex;
@@ -51,6 +52,7 @@
   }
   &__logo-wrapper {
     margin: auto;
+    padding: 0 10px;
   }
   &__title {
     font-size: 24px;
@@ -68,6 +70,7 @@
 
 @media (min-width: $screen-md) {
   .clients {
+    padding-top: 57px;
     margin-bottom: 83px;
 
     &__card {

@@ -10,6 +10,7 @@
     padding-top: 15px;
     @include row();
     margin: 0;
+    background: none;
   }
   .hero__logo {
     display: block;
@@ -116,15 +117,14 @@
     }
   }
   &__btn-wrapper {
-    width: 320px;
+    width: 280px;
     margin: auto;
     margin-bottom: 34px;
   }
   &__btn {
     display: block;
     margin: 0;
-
-    width: 100%;
+    width: auto;
 
   }
   &__social-content {
