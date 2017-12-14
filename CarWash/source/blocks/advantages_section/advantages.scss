@@ -1,0 +1,47 @@
+.advantages {
+  padding-top: rem(10px);
+  &__header {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+  }
+  &__content {
+    @include row();
+
+  }
+  &__title {
+    font-size: $font-size--h4;
+  }
+}
+
+@media (min-width: $screen-sm) {
+  .advantages {
+    padding-top: rem(10px);
+  }
+}
+
+@media (min-width: $screen-md) {
+  .advantages {
+    padding-top: rem(30px);
+    &__title {
+      font-size: $font-size--h3;
+    }
+  }
+}
+
+@media (min-width: $screen-lg) {
+  .advantages {
+    padding-top: rem(50px);
+    &__title {
+      font-size: $font-size--h1;
+    }
+  }
+}
+
+
+@media (min-width: $screen-xl) {
+
+}
+@media (min-width: $screen-xxl) {
+
+}
