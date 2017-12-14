@@ -1,92 +1,185 @@
 //@import "../mixins/font-mixins.scss";
- /*Open Sans Regular*/
+
+/*Days*/
 @font-face {
-  font-family: "Open Sans";
-  src: url("../fonts/openSans/opensans.woff2") format("woff2"),
-        url("../fonts/openSans/opensans.woff") format("woff");
+  font-family: "Days";
+  src: url("../fonts/days/Days.woff2") format("woff2"),
+        url("../fonts/days/Days.woff") format("woff");
   font-weight: 400;
   font-style: normal;
+  font-display: swap;
 }
 
-/*Open Sans Light
-@include font-face(Open Sans, ../openSans/opensanslight, 300, normal, woff2 woff);
+/*Elektra light Pro Bold*/
 @font-face {
-  font-family: "Open Sans";
-  src: url("../fonts/openSans/opensanslight.woff2") format("woff2"),
-        url("../fonts/openSans/opensanslight.woff") format("woff");
-  font-weight: 300;
-  font-style: normal;
-}*/
-
-/*Open Sans Semi-Bold
-@font-face {
-  font-family: "Open Sans";
-  src: url("../fonts/openSans/opensans-semibold.woff2") format("woff2"),
-        url("../fonts/openSans/opensans-semibold.woff") format("woff");
-  font-weight: 600;
-  font-style: normal;
-}*/
-
-/*Open Sans Bold
-@font-face {
-  font-family: "Open Sans";
-  src: url("../fonts/openSans/opensansbold.woff2") format("woff2"),
-        url("../fonts/openSans/opensansbold.woff") format("woff");
+  font-family: "Elektra light Pro";
+  src: url("../fonts/elektra/ElektraLightPro-Bold.woff2") format("woff2"),
+        url("../fonts/elektra/ElektraLightPro-Bold.woff") format("woff");
   font-weight: 700;
   font-style: normal;
-}*/
+  font-display: swap;
+}
 
- /*Helvetica Neue
+/*Elektra light Pro Bold Italic*/
 @font-face {
-  font-family: "Helvetica Neue";
-  src: url("../fonts/helveticaNeue/-neue-regular.woff2") format("woff2"),
-  url("../fonts/helveticaNeue/helvetica-neue-regular.woff") format("woff");
+  font-family: "Elektra light Pro";
+  src: url("../fonts/elektra/ElektraLightPro-BoldItalic.woff2") format("woff2"),
+  url("../fonts/elektra/ElektraLightPro-BoldItalic.woff") format("woff");
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+/*Etelka light Narrow Pro*/
+@font-face {
+  font-family: "Etelka light Narrow";
+  src: url("../fonts/elektra/ElektraLightPro-BoldItalic.woff2") format("woff2"),
+  url("../fonts/elektra/ElektraLightPro-BoldItalic.woff") format("woff");
   font-weight: 400;
   font-style: normal;
-}*/
+  font-display: swap;
+}
 
-/*Helvetica Neue Light
+/*Etelka light Pro*/
 @font-face {
-  font-family: "Helvetica Neue";
-  src: url("../fonts/helveticaNeue/helvetica-neue-light.woff2") format("woff2"),
-  url("../fonts/helveticaNeue/helvetica-neue-light.woff") format("woff");
+  font-family: "Etelka light Pro";
+  src: url("../fonts/etelka/EtelkaLightPro.woff2") format("woff2"),
+        url("../fonts/etelka/EtelkaLightPro.woff") format("woff");
   font-weight: 300;
   font-style: normal;
-}*/
-
-/*Helvetica Neue Bold
+  font-display: swap;
+}
+/*Etelka light Pro Italic*/
 @font-face {
-  font-family: "Helvetica Neue";
-  src: url("../fonts/helveticaNeue/helvetica-neue-bold.woff2") format("woff2"),
-  url("../fonts/helveticaNeue/helvetica-neue-bold.woff") format("woff");
+  font-family: "Etelka light Pro";
+  src: url("../fonts/etelka/EtelkaLightPro.woff2") format("woff2"),
+  url("../fonts/etelka/EtelkaLightPro.woff") format("woff");
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+/*Etelka Medium Pro*/
+@font-face {
+  font-family: "Etelka medium Pro";
+  src: url("../fonts/etelka/EtelkaMediumPro.woff2") format("woff2"),
+  url("../fonts/etelka/EtelkaMediumPro.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+/*Etelka Medium Pro Italic*/
+@font-face {
+  font-family: "Etelka medium Pro";
+  src: url("../fonts/etelka/EtelkaMediumPro-Italic.woff2") format("woff2"),
+  url("../fonts/etelka/EtelkaMediumPro-Italic.woff") format("woff");
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+/*Etelka Medium Pro Bold*/
+@font-face {
+  font-family: "Etelka medium Pro";
+  src: url("../fonts/etelka/EtelkaMediumPro-Bold.woff2") format("woff2"),
+  url("../fonts/etelka/EtelkaMediumPro-Bold.woff") format("woff");
   font-weight: 700;
   font-style: normal;
-}*/
+  font-display: swap;
+}
 
+/*Etelka Medium Pro Bold Italic*/
+@font-face {
+  font-family: "Etelka medium Pro";
+  src: url("../fonts/etelka/EtelkaMediumPro-BoldItalic.woff2") format("woff2"),
+  url("../fonts/etelka/EtelkaMediumPro-BoldItalic.woff") format("woff");
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
 
-/*Roboto Light
- @font-face {
-   font-family: "Roboto";
-   src: url("../fonts/roboto/robotoLight.woff") format("woff");
-   font-weight: 300;
-   font-style: normal;
- }*/
+/*Etelka Monospace Pro*/
+@font-face {
+  font-family: "Etelka monospace Pro";
+  src: url("../fonts/etelka/EtelkaMonospacePro.woff2") format("woff2"),
+  url("../fonts/etelka/EtelkaMonospacePro.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+/*Etelka Monospace Pro Italic*/
+@font-face {
+  font-family: "Etelka monospace Pro";
+  src: url("../fonts/etelka/EtelkaMonospacePro-Italic.woff2") format("woff2"),
+  url("../fonts/etelka/EtelkaMonospacePro-Italic.woff") format("woff");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+/*Etelka Monospace Pro Bold*/
+@font-face {
+  font-family: "Etelka monospace Pro";
+  src: url("../fonts/etelka/EtelkaMonospacePro-Bold.woff2") format("woff2"),
+  url("../fonts/etelka/EtelkaMonospacePro-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+/*Etelka Monospace Pro Bold Italic*/
+@font-face {
+  font-family: "Etelka monospace Pro";
+  src: url("../fonts/etelka/EtelkaMonospacePro-BoldItalic.woff2") format("woff2"),
+  url("../fonts/etelka/EtelkaMonospacePro-BoldItalic.woff") format("woff");
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+/*Etelka Text Pro*/
+@font-face {
+  font-family: "Etelka monospace Pro";
+  src: url("../fonts/etelka/EtelkaTextPro.woff2") format("woff2"),
+  url("../fonts/etelka/EtelkaTextPro.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+/*Etelka Text Pro Italic*/
+@font-face {
+  font-family: "Etelka monospace Pro";
+  src: url("../fonts/etelka/EtelkaTextPro-Italic.woff2") format("woff2"),
+  url("../fonts/etelka/EtelkaTextPro-Italic.woff") format("woff");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
 
- /*Roboto Regular
- @font-face {
-   font-family: "Roboto";
-   src: url("../fonts/roboto/robotoRegular.woff") format("woff");
-   font-weight: 400;
-   font-style: normal;
- }*/
+/*Etelka Text Pro Bold*/
+@font-face {
+  font-family: "Etelka monospace Pro";
+  src: url("../fonts/etelka/EtelkaTextPro-Bold.woff2") format("woff2"),
+  url("../fonts/etelka/EtelkaTextPro-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+/*Etelka Text Pro Bold Italic*/
+@font-face {
+  font-family: "Etelka monospace Pro";
+  src: url("../fonts/etelka/EtelkaTextPro-BoldItalic.woff2") format("woff2"),
+  url("../fonts/etelka/EtelkaTextPro-BoldItalic.woff") format("woff");
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
 
- /*Roboto Bold
- @font-face {
-   font-family: "Roboto";
-   src: url("../fonts/roboto/robotoBold.woff") format("woff");
-   font-weight: 700;
-   font-style: normal;
- }*/
-   
+/*Geometria*/
+@font-face {
+  font-family: "Geometria";
+  src: url("../fonts/Geometria/Geometria.woff2") format("woff2"),
+  url("../fonts/Geometria/Geometria.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
 
 
