@@ -1,35 +1,48 @@
 <header class="main-header">
-  <div class="container">
-    <div class="main-header__wrapper">
-      <div class="main-header__logo-wrapper">
-        <div class="main-header__logo">
-        
-        </div>
-      </div>
-      <div class="main-header__contacts-wrapper">
-        <div class="main-header__ico-wrapper">
-          <div class="main-header__ico main-header__ico--phone">
-          
+  <div class="main-header__decorate">
+    <div class="container">
+      <div class="main-header__wrapper">
+        <div class="main-header__logo-wrapper">
+          <div class="main-header__logo">
+            <picture>
+              <source data-srcset="img/webp/logo.webp" type="image/webp">
+              <source data-srcset="img/webp/logo.png"  type="image/png">
+              <img data-src="img/webp/logo.png" src="img/webp/logo.png" alt="Логотип" class="gallery__img  lazyload" role="img">
+            </picture>
           </div>
         </div>
-        <div class="main-header__ico-wrapper">
-          <div class="main-header__ico main-header__ico--envelope">
-          
+        //= ../main-nav/main-nav.html
+        <div class="main-header__contacts-wrapper">
+          <div class="main-header__ico-wrapper">
+            <a href="#" class="main-header__contacts-link">
+              <svg class="main-header__ico main-header__ico--envelope" role="img">
+                <use xlink:href="img/sprite.svg#envelope"/>
+              </svg>
+            </a>
+          </div>
+          <div class="main-header__ico-wrapper">
+            <a href="#" class="main-header__contacts-link">
+              <svg class="main-header__ico main-header__ico--phone" role="img">
+                <use xlink:href="img/sprite.svg#call-answer"/>
+              </svg>
+            </a>
+          </div>
+          <div class="main-header__toggle-wrapper">
+            <button class="main-nav__toggle  hamburger hamburger--collapse">
+              <span class="hamburger-box">
+                <span class="hamburger-inner"></span>
+              </span>
+            </button>
           </div>
         </div>
-        <div class="main-header__ico-wrapper">
-          <button class="main-nav__toggle  hamburger hamburger--collapse">
-          <span class="hamburger-box">
-            <span class="hamburger-inner"></span>
-          </span>
-          </button>
+        <div class="main-header__phone-wrapper">
+          <p class="main-header__phone-text">бесплатный звонок по России</p>
+          <a class="main-header__phone-link" href="#">8&nbsp;800&nbsp;100&nbsp;46&nbsp;11</a>
         </div>
-      
       </div>
-      //= ../main-nav/main-nav.html
+    //= ../hero_section/hero_section.html
     </div>
+    <!--Hero section start-->
+    <!--Hero section end-->
   </div>
-  <!--Hero section start-->
-  //= ../hero_section/hero_section.html
-  <!--Hero section end-->
 </header>

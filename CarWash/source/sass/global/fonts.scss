@@ -49,11 +49,11 @@
   font-style: normal;
   font-display: swap;
 }
-/*Etelka light Pro Italic*/
+/*Etelka light Pro Italic */
 @font-face {
   font-family: "Etelka light Pro";
-  src: url("../fonts/etelka/EtelkaLightPro.woff2") format("woff2"),
-  url("../fonts/etelka/EtelkaLightPro.woff") format("woff");
+  src: url("../fonts/etelka/EtelkaLightPro-Italic.woff2") format("woff2"),
+  url("../fonts/etelka/EtelkaLightPro-Italic.woff") format("woff");
   font-weight: 300;
   font-style: italic;
   font-display: swap;
@@ -135,7 +135,7 @@
 }
 /*Etelka Text Pro*/
 @font-face {
-  font-family: "Etelka monospace Pro";
+  font-family: "Etelka text Pro";
   src: url("../fonts/etelka/EtelkaTextPro.woff2") format("woff2"),
   url("../fonts/etelka/EtelkaTextPro.woff") format("woff");
   font-weight: 400;
@@ -144,7 +144,7 @@
 }
 /*Etelka Text Pro Italic*/
 @font-face {
-  font-family: "Etelka monospace Pro";
+  font-family: "Etelka text Pro";
   src: url("../fonts/etelka/EtelkaTextPro-Italic.woff2") format("woff2"),
   url("../fonts/etelka/EtelkaTextPro-Italic.woff") format("woff");
   font-weight: 400;
@@ -154,7 +154,7 @@
 
 /*Etelka Text Pro Bold*/
 @font-face {
-  font-family: "Etelka monospace Pro";
+  font-family: "Etelka text Pro";
   src: url("../fonts/etelka/EtelkaTextPro-Bold.woff2") format("woff2"),
   url("../fonts/etelka/EtelkaTextPro-Bold.woff") format("woff");
   font-weight: 700;
@@ -163,7 +163,7 @@
 }
 /*Etelka Text Pro Bold Italic*/
 @font-face {
-  font-family: "Etelka monospace Pro";
+  font-family: "Etelka text Pro";
   src: url("../fonts/etelka/EtelkaTextPro-BoldItalic.woff2") format("woff2"),
   url("../fonts/etelka/EtelkaTextPro-BoldItalic.woff") format("woff");
   font-weight: 700;

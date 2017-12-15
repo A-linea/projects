@@ -60,11 +60,5 @@ img {
 }
 .container {
   @include container();
-}
-.blur-up {
-  filter: blur(5px);
-  transition: filter 400ms, -webkit-filter 400ms;
-}
-.blur-up.lazyloaded {
-  filter: blur(0);
+  @include outline();
 }

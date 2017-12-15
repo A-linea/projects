@@ -1,70 +1,101 @@
 .hero {
-  //background-image: url(../img/hero-bg.jpg);
-  background-repeat: no-repeat;
-  min-height: rem(480px);
-  background-size: cover;
-  background-position: 50% 50%;
-
-  &__inner {
+  &__wrapper {
     @include row();
-    padding: rem(55px 0);
+    @include outline();
   }
-
-  &__title-container {
-    @include col (xs, 6, 12);
-    margin: 0 auto;
-    padding: rem(0 20px);
-    text-align: center;
+  &__content {
+    @include col(xs, 10, 10, 0);
+    @include col(lg, 5, 10, 0);
+    @include outline();
   }
-
   &__title {
-    color: $gray-darker;
-    font-size: rem(20px);
+    font-family: "Etelka text Pro";
     font-weight: 700;
+    color: white;
+    margin: 0;
   }
-
   &__text {
-    color: $gray-darker;
-    font-size: rem(15px);
-    margin-top: rem(20px);
-    line-height: 1.7;
+    margin: 0;
+    font-family: "Etelka light Pro";
+    color: white;
+    opacity: 0.5;
   }
+  &__btn {
+    font-family: "Etelka medium Pro";
+    font-weight: 500;
+    font-size: 12px;
+    color: $accent-color;
+    text-transform: uppercase;
+    border: 2px solid $accent-color;
+    background-color: transparent;
+    padding: 13px 25px;
+  }
+  &__pagination-wrapper {
 
-  .hero__btn {
-    margin-top: rem(20px);
+  }
+  &__pagination {
+    color: white;
+    font-family: "Etelka medium Pro";
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 500;
+    text-decoration: none;
+    transition: $transition-time;
+    margin-right: rem(25px);
+    &:hover {
+      color: $accent-color;
+    }
+    &--is-active {
+      color: $accent-color;
+    }
   }
 }
 @media (min-width: $screen-sm) {
-  .hero {
-    &__title {
-      font-size: rem(24px);
-    }
 
-    &__text {
-      font-size: rem(16px);
-    }
-  }
 }
 @media (min-width: $screen-md) {
-  .hero__title {
-    font-size: rem(44px);
-    font-weight: 700;
-  }
 
-  .hero__text {
-    color: $gray-darker;
-    font-size: rem(17px);
-    margin-top: rem(50px);
-  }
-
-  .hero__btn {
-    margin-top: rem(40px);
-  }
 }
 @media (min-width: $screen-lg) {
-  .hero__inner {
-    padding: rem(110px 0) rem(50px);
+
+}
+@media (min-width: $screen-xl) {
+  .hero {
+    padding-top: rem(43px);
+    padding-bottom: rem(91px);
+    &__promo-wrapper {
+      padding-left: rem(36px);
+      margin-bottom: rem(101px);
+    }
+    &__promo-text {
+      margin: 0;
+      font-size: rem(12px);
+      max-width: rem(164px);
+      font-family: "Etelka light Pro";
+      color: white;
+      font-style: italic;
+      line-height: 1.6;
+      font-weight: 300;
+      opacity: 0.5;
+    }
+    &__title-container {
+      margin-bottom: rem(15px);
+    }
+    &__title {
+      font-size: $font-size--h1;
+    }
+    &__text-container {
+      margin-bottom: rem(92px);
+    }
+    &__text {
+      font-size: rem(13px);
+      line-height: 1.54;
+    }
+    &__btn {
+      margin-bottom: rem(104px);
+    }
   }
 }
-@media (min-width: $screen-xl) {}
-@media (min-width: $screen-xxl) {}
+@media (min-width: $screen-xxl) {
+
+}
