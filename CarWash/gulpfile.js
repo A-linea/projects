@@ -130,7 +130,7 @@ gulp.task('images', function() {  // Создаем task для изображе
 
 gulp.task('webp', function () {
   console.log('*********** создание webp');
-  return gulp.src('build/img/webp/*.{png,jpg}')
+  return gulp.src('build/img/webp/**/*.{png,jpg}')
     .pipe(webp({
       quality: 90
     }))

@@ -11,7 +11,6 @@
 /*--------------------block styles--------------------*/
 /*----------button--------------*/
 @import "../blocks/btn/btn";
-
 /*----------Header--------------*/
 @import "../blocks/header/header";
 /*----------Main navigation----------*/
@@ -19,6 +18,7 @@
 /*----------Hero section----------*/
 @import "../blocks/hero_section/hero_section";
 /*----------Specifications section----------*/
+@import "specifications";
 @import "../blocks/tabs/tabs";
 /*----------Form section----------*/
 @import "../blocks/form/form";

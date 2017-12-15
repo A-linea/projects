@@ -1,0 +1,96 @@
+.specifications {
+  background-repeat: no-repeat;
+  position: relative;
+  &__wrapper {
+    @include row();
+    @include outline();
+  }
+  &__choose {
+    display: flex;
+  }
+  &__choose-text {
+    margin: 0;
+    font-weight: 300;
+  }
+}
+
+@media (min-width: $screen-sm) {
+}
+
+@media (min-width: $screen-md) {
+  .specifications {
+    &__content-wrapper {
+      background-repeat: no-repeat;
+      background-position: center top;
+    }
+    &__content {
+
+    }
+  }
+
+  .webp .specifications {
+    background-image: url(../img/webp/section1/section-bg1.webp);
+  }
+
+  .no-webp .specifications {
+    background-image: url(../img/webp/section1/section-bg1.png);
+  }
+
+  .no-js .specifications {
+    background-image: url(../img/webp/section1/section-bg1.png);
+  }
+  .webp .specifications__content-wrapper {
+    background-image: url(../img/webp/section1/carwash.webp);
+  }
+
+  .no-webp .specifications__content-wrapper {
+    background-image: url(../img/webp/section1/carwash.png);
+  }
+
+  .no-js .specifications__content-wrapper {
+    background-image: url(../img/webp/section1/carwash.png);
+  }
+}
+
+@media (min-width: $screen-lg) {
+  .specifications {
+    background-position: 50% top;
+    background-size: cover;
+    &__wrapper {
+      padding-top: rem(150px);
+    }
+    &__content-wrapper {
+      padding-top: rem(180px);
+      position: relative;
+    }
+    &__content {
+      margin-top: rem(71px);
+      padding: rem(0 48px);
+    }
+    &__choose-text {
+      margin-left: rem(95px);
+      padding-right: rem(95px);
+      padding-top: rem(10px);
+      padding-bottom: rem(10px);
+      font-size: rem(15px);
+      position: relative;
+      &::after {
+        content: '';
+        @include centerer-y;
+        right: 0;
+        height: 1px;
+        width: 84px;
+        background-color: $color-main;
+        opacity: 0.2;
+      }
+    }
+
+  }
+}
+
+@media (min-width: $screen-xl) {
+
+}
+@media (min-width: $screen-xxl) {
+
+}
