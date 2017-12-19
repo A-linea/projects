@@ -1,0 +1,64 @@
+.equipment {
+  &__wrapper {
+    @include row();
+    @include outline();
+  }
+  &__title-wrapper {
+    @include col(xs, 6, 10, 0);
+    @include outline();
+  }
+  &__content-wrapper {
+    margin-top: rem(45px);
+    @include col(xs, 10, 10, 0);
+    padding-left: 50%;
+    @include outline();
+  }
+  &__title {
+    margin: 0;
+    font-family: "Etelka light Pro", $font-family;
+    color: $color-main;
+    font-weight: 300;
+  }
+  &__content-title {
+    font-family: "Etelka light Pro", $font-family;
+    margin: 0;
+    color: $color-main;
+  }
+  &__text {
+    color: rgba($color-main, 0.7);
+    line-height: 1.54;
+    font-weight: 300;
+  }
+}
+
+@media (min-width: $screen-sm) {
+}
+
+@media (min-width: $screen-md) {
+
+}
+
+@media (min-width: $screen-lg) {
+
+}
+
+@media (min-width: $screen-xl) {
+  .equipment {
+    padding-top: rem(107px);
+
+    &__title {
+      font-size: rem(35px);
+    }
+    &__content-title {
+      max-width: rem(295px);
+      font-size: rem(25px);
+      margin-bottom: rem(31px);
+    }
+    &__text {
+      margin-bottom: rem(55px);
+    }
+  }
+}
+@media (min-width: $screen-xxl) {
+
+}

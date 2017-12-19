@@ -1,6 +1,6 @@
 .form {
-  background-color: $gray-lightest;
-
+  background-color: $accent-color;
+    
   &__inner {
     @include row();
     @include outline();
