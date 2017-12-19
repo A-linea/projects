@@ -1,0 +1,92 @@
+@import "../mixins/font-mixins.scss";
+ /*Open Sans Regular*/
+@font-face {
+  font-family: "Open Sans";
+  src: url("../fonts/openSans/opensans.woff2") format("woff2"),
+        url("../fonts/openSans/opensans.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+/*Open Sans Light
+@include font-face(Open Sans, ../openSans/opensanslight, 300, normal, woff2 woff);
+@font-face {
+  font-family: "Open Sans";
+  src: url("../fonts/openSans/opensanslight.woff2") format("woff2"),
+        url("../fonts/openSans/opensanslight.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+}*/
+
+/*Open Sans Semi-Bold
+@font-face {
+  font-family: "Open Sans";
+  src: url("../fonts/openSans/opensans-semibold.woff2") format("woff2"),
+        url("../fonts/openSans/opensans-semibold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+}*/
+
+/*Open Sans Bold
+@font-face {
+  font-family: "Open Sans";
+  src: url("../fonts/openSans/opensansbold.woff2") format("woff2"),
+        url("../fonts/openSans/opensansbold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}*/
+
+ /*Helvetica Neue
+@font-face {
+  font-family: "Helvetica Neue";
+  src: url("../fonts/helveticaNeue/-neue-regular.woff2") format("woff2"),
+  url("../fonts/helveticaNeue/helvetica-neue-regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}*/
+
+/*Helvetica Neue Light
+@font-face {
+  font-family: "Helvetica Neue";
+  src: url("../fonts/helveticaNeue/helvetica-neue-light.woff2") format("woff2"),
+  url("../fonts/helveticaNeue/helvetica-neue-light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+}*/
+
+/*Helvetica Neue Bold
+@font-face {
+  font-family: "Helvetica Neue";
+  src: url("../fonts/helveticaNeue/helvetica-neue-bold.woff2") format("woff2"),
+  url("../fonts/helveticaNeue/helvetica-neue-bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}*/
+
+
+/*Roboto Light
+ @font-face {
+   font-family: "Roboto";
+   src: url("../fonts/roboto/robotoLight.woff") format("woff");
+   font-weight: 300;
+   font-style: normal;
+ }*/
+
+ /*Roboto Regular
+ @font-face {
+   font-family: "Roboto";
+   src: url("../fonts/roboto/robotoRegular.woff") format("woff");
+   font-weight: 400;
+   font-style: normal;
+ }*/
+
+ /*Roboto Bold
+ @font-face {
+   font-family: "Roboto";
+   src: url("../fonts/roboto/robotoBold.woff") format("woff");
+   font-weight: 700;
+   font-style: normal;
+ }*/
+   
+
+

@@ -1,0 +1,46 @@
+.cards {
+  background-color: $gray-darker;
+
+  &__wrapper {
+    @include row(30);
+  }
+
+  &__card {
+    @include col(xs, 12, 12);
+    @include col(md, 6, 12);
+    @include col(lg, 3, 12);
+    background-color: $gray-dark;
+    text-align: center;
+    color: white;
+    padding-bottom: rem(20px);
+
+    &:nth-child(even) {
+      background-color: $gray-lighter;
+    }
+  }
+
+  &__text {
+    margin: 0 auto;
+    max-width: rem(380px);
+    padding: rem(0 45px);
+    line-height: 1.6;
+  }
+}
+@media (min-width: $screen-sm) {}
+@media (min-width: $screen-md) {
+  .cards {
+    &__card {
+      padding-bottom: rem(60px);
+    }
+  }
+}
+@media (min-width: $screen-lg) {
+  .cards {}
+}
+@media (min-width: $screen-xl) {
+  .cards {
+    &__title {
+      padding-top: rem(40px);
+    }
+  }
+}
