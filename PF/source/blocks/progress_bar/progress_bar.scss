@@ -1,0 +1,31 @@
+.progressbar {
+  &__skills-wrapper {
+
+  }
+  &__inner-title {
+    font-size: $font-size--h2;
+  }
+  &__descr {
+    font-size: $font-size;
+    font-weight: 700;
+  }
+   &__bar {
+      width: 100%;
+      background-color: #d8d8d8;
+    }
+    &__progress {
+      width: 0%;
+      height: rem(6px);
+      background-color: $accent-color;
+    }
+    &__text {
+      font-weight: bold;
+      position: absolute;
+      font-size: 36px;
+      font-family: 'Consolas';
+      right: 0;
+      top: 30px;
+      padding: 0;
+      margin: 0;    
+    }
+}

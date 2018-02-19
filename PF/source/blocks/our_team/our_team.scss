@@ -1,0 +1,125 @@
+.team {
+  text-align: center;
+  padding-top: rem(10px);
+  padding-bottom: rem(10px);
+  &__title {
+    font-size: $font-size--h3;
+    color: $gray-darker;
+    margin-bottom: rem(10px);
+  }
+  &__text {
+    margin-top: rem(5px);
+    margin-bottom: rem(35px);
+    line-height: 1.6;
+  }
+  &__list {
+    @include row();
+  }
+  &__item {
+    @include col(xs, 16, 16);
+    @include col(sm, 8, 16);
+    @include col(md, 8, 16);
+    @include col(lg, 4, 16);
+    font-family: 'Montserrat', sans-serif;
+    position: relative;
+    padding-bottom: rem(60px);
+  }
+  &__img {
+    width: rem(160px);
+    height: auto;
+  }
+  &__name {
+    font-weight: 700;
+    font-size: $font-size--h4;
+    margin-bottom: rem(5px);
+  }
+  &__specialty {
+    margin-top: rem(0px);
+  }
+  &__social {
+    position: absolute;
+    width: 90%;
+    margin: auto;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    a {
+      display: inline-block;
+      vertical-align: top;
+      text-decoration: none;
+      padding: rem(20px 0);
+      margin-right: rem(10px);
+    }
+  }
+  &__social-icon {
+    bottom: 0;
+    fill: $accent-color;
+    height: rem(35px);
+    width: rem(35px);
+    &--fb {
+      height: rem(20px);
+      width: rem(20px);
+      margin-top: 3px;
+      &:hover {
+        fill: #4267B2;
+      }
+    }
+    &--google {
+      height: rem(30px);
+      width: rem(30px);
+      &:hover {
+        fill: #000;
+      }
+    }
+    &--vk {
+      margin-top: 2px;
+      height: rem(26px);
+      width: rem(26px);
+      &:hover {
+        fill: #4267B2;
+      }
+    }
+  }
+}
+
+@media (min-width: $screen-sm) {
+
+}
+
+@media (min-width: $screen-md) {
+  .team {
+    padding-top: rem(40px);
+    padding-bottom: rem(60px);
+  }
+  .team__title {
+    font-size: $font-size--h2;
+  }
+  .team__text {
+    line-height: 1.8;
+  }
+  .team__name {
+    font-weight: 700;
+    font-size: rem(25px);
+    margin-bottom: rem(5px);
+  }
+  .team__specialty {
+    margin-top: rem(0px);
+    font-size: rem(18px);
+  }
+}
+
+@media (min-width: $screen-lg) {
+  .team__title {
+    font-size: $font-size--h1;
+  }
+
+}
+
+@media (min-width: $screen-xl) {
+  .team__img {
+    width: 200px;
+  }
+}
+@media (min-width: $screen-xxl) {
+
+}
