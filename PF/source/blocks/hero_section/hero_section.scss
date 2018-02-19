@@ -7,7 +7,7 @@
 .hero {
   background-repeat: no-repeat;
   height: 100vh;
-  width: 100vw;
+  width: 100%;
   background-size: cover;
   background-position: center;
   position: relative;
@@ -22,8 +22,6 @@
     background-color: #000;
     opacity: 0.85;
   }
-
-
   &__inner {
     height: 100vh;
     width: 100%;
@@ -37,8 +35,16 @@
   }
   &__title {
     text-transform: uppercase;
+    text-align: center;
     font-size: rem(34px);
+    margin: 0;
+    padding: 0;
   }
+  &__letters-wrapper {
+    position: relative;
+    display: inline-block;
+  }
+
   &__options,
   &__features {
     display: flex;
@@ -49,7 +55,7 @@
   }
   &__text {
     font-family: $font-family--serif;
-    font-size: $font-size--h2;
+    font-size: rem(24px);
     padding-right: rem(45px);
     padding-top: rem(10px);
     padding-bottom: rem(10px);
@@ -77,21 +83,21 @@
     font-size: rem(34px);
     position: relative;
     padding: rem(15px 0);
-    &::before,
-    &::after {
-      @include centerer-y();
-      content: '';
-      width: 30%;
-      height: 1px;
-      background-color: #fff;
-      opacity: 0.7;
-    }
-    &::before {
-      left: 10%;
-    }
-    &::after {
-      right: 10%;
-    }
+  }
+  &__feautures-line1,
+  &__feautures-line2 {
+    @include centerer-y();
+    content: '';
+    width: 30%;
+    height: 1px;
+    background-color: #fff;
+    opacity: 0.7;
+  }
+  &__feautures-line1 {
+    left: 10%;
+  }
+  &__feautures-line2 {
+    right: 10%;
   }
   &__btn {
     display: block;
@@ -136,6 +142,24 @@
   display: block;
   width: 100%;
 }
+.line1 {
+  top: 0;
+  left: 0;
+}
+.line {
+  opacity: 0;
+  position: absolute;
+  left: 0;
+  height: 100%;
+  width: 3px;
+  background-color: #fff;
+  transform-origin: 0 50%;
+}
+.letter {
+  display: inline-block;
+  line-height: 1em;
+}
+
 
 @media (min-width: $screen-sm) {
 
@@ -144,11 +168,9 @@
   .hero {
     &__title {
       font-size: $font-size--h1;
-      margin: 0;
-      padding: 0;
     }
     &__text {
-      font-size: rem(24px);
+      font-size: $font-size--h2;
     }
     &__price {
       font-size: rem(34px);
