@@ -1,20 +1,74 @@
 .header {
-  align-self: flex-start;
+  position: relative;
   &__content {
+    @include row(0);
+    padding-top: rem(30px);
+  }
+  &__contacts {
+    //@include col-offset(xs, 0, 12);
     @include col(xs, 12, 12);
-    //@include col-offset(lg, 4, 12);
-    @include col(lg, 12, 12);
+    @include col-offset(sm, 4, 16);
+    @include col(sm, 8, 16);
+    @include col-offset(md, 6, 14);
+    @include col(md, 8, 14);
+    @include col-offset(lg, 7, 14);
+    @include col(lg, 5, 14);
+    @include col-offset(xl, 7, 14);
+    @include col(xl, 5, 14);
+    @include col-offset(xxl, 7, 14);
+    @include col(xxl, 4, 14);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  &__contacts-worktime {
+    span {
+      display: block;
+
+    }
+  }
+  &__mail-link {
+    color: #fff;
+    font-family: $font-family--serif;
+    text-decoration: none;
+    font-weight: 600;
+    transition: $transition-time;
+    &:hover {
+      color: rgba(#fff, 0.65);
+      text-decoration: underline;
+    }
+  }
+  &__ico {
+    width: 30px;
+    height: 30px;
+    fill: #fff;
+    cursor: pointer;
+    margin-right: rem(10px);
+    transition: $transition-time;
+    &:hover {
+      fill-opacity: 0.65;
+    }
   }
 }
 @media (min-width: $screen-sm) {
-  
+  .header {
+    &__contacts-worktime {
+      margin-top: rem(15px);
+    }
+
+  }
+}
+@media (min-width: 679px) {
+  .header {
+    &__contacts-worktime {
+      margin-top: 0;
+    }
+  }
 }
 @media (min-width: $screen-md) {
   .header {
     &__ico {
-      width: 30px;
-      height: 30px;
-      fill: #fff;
+      margin-right: rem(15px);
     }
   }
 }

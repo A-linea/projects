@@ -23,13 +23,12 @@
     opacity: 0.85;
   }
   &__inner {
-    height: 100vh;
+    height: calc(100vh - 66px);
     width: 100%;
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
-
   }
   &__title {
     text-transform: uppercase;
@@ -50,10 +49,11 @@
   }
   &__features {
     flex-wrap: wrap;
+    margin-bottom: rem(20px);
   }
   &__text {
     font-family: $font-family--serif;
-    font-size: rem(24px);
+    font-size: rem(18px);
     padding-right: rem(45px);
     padding-top: rem(10px);
     padding-bottom: rem(10px);
@@ -68,6 +68,9 @@
       transform-origin: 12px;
       transform: rotate(45deg);
     }
+    &:last-child {
+      padding-right: 0;
+    }
     &:last-child::after {
       @include visuallyhidden();
     }
@@ -78,7 +81,7 @@
     font-weight: 200;
     width: 100%;
     text-align: center;
-    font-size: rem(34px);
+    font-size: rem(24px);
     position: relative;
     padding: rem(15px 0);
   }
@@ -103,7 +106,7 @@
     margin: auto;
     background-color: transparent;
     font-weight: 400;
-    font-size: rem(24px);
+    font-size: rem(18px);
     border: 1px solid white;
     border-radius: 0;
     padding: rem(10px 55px);
@@ -161,15 +164,22 @@
 
 
 @media (min-width: $screen-sm) {
-
+  .hero {
+    &__text {
+      font-size: rem(24px);
+    }
+    &__price {
+      font-size: rem(34px);
+    }
+    &__btn {
+      font-size: rem(24px);
+    }
+  }
 }
 @media (min-width: $screen-md) {
   .hero {
     &__title {
       font-size: $font-size--h1;
-    }
-    &__text {
-      font-size: $font-size--h2;
     }
     &__price {
       font-size: rem(34px);
@@ -187,7 +197,7 @@
       padding: 0;
     }
     &__text {
-      font-size: rem(24px);
+      font-size: $font-size--h2;
     }
     &__features {
       margin-bottom: rem(60px);

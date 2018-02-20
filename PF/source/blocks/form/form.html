@@ -1,16 +1,31 @@
 <section class="form">
-  <div class="container">
-    <div class="form__inner">
-      <div class="form__wrapper">
-        <h2 class="form__title">Need a Project?</h2>
-        <p class="form__text">Let us know what you're looking for in an agency. We'll take a look and see if this could be the start of something beautiful.</p>
-        <form>
-          <input type="text" class="form__input  form__input--name" name="name" placeholder="Your name" required>
-          <input type="text" class="form__input  form__input--text" name="email" placeholder="Your email" required>
-          <input type="text" class="form__input  form__input--title" name="title" placeholder="Title" required>
-          <textarea class="form__input  form__input--textarea" name="textarea" placeholder="Textarea" cols="30" rows="10"></textarea>
-          <button class="btn  form__form-btn">Send message</button>
-        </form>
+  <div class="form__overlay">
+    <div class="container">
+      <div class="form__inner">
+        <div class="form__wrapper">
+          <h2 class="form__title">Верстка сайта</h2>
+          <button class="form__close-btn" type="button">Закрыть</button>
+          <p class="form__text">Оставьте пожалуйста сообщение и я свяжусь с вами! Без посредников, регистраций и смс.</p>
+          <form class="callback">
+            <div class="form__success"><span>Спасибо за заявку!</span></div>
+            <input type="hidden" name="project_name" value="Site Name">
+            <input type="hidden" name="admin_email" value="ravenio@ex.ua">
+            <input type="hidden" name="form_subject" value="Form Subject">
+            <input type="text" class="form__input  form__input--name" name="Имя" placeholder="Ваше имя" required autofocus>
+            <input type="text" class="form__input  form__input--text" name="email" placeholder="Электронная почта" required>
+            <p class="form__text"> Выберите вид услуги</p>
+            <select class="form__select" name="Выбор услуги">
+              <option value="Site" name="Site">Многостраничный сайт</option>
+              <option value="Landing" name="Landing" selected>Лендинг</option>
+              <option value="Help" name="Help">Правки, корректировки</option>
+              <option value="Consult" name="Consult">Проконсультироваться</option>
+              <option value="Cooperation" name="Cooperation">Сотрудничать</option>
+            </select>
+            <!--<input type="text" class="form__input  form__input&#45;&#45;title" name="title" placeholder="Title">-->
+            <textarea class="form__input  form__input--textarea" name="Сообщение" placeholder="Введите пожалуйста сообщение" cols="30" rows="10"></textarea>
+            <button type="submit" class="btn  form__btn">Отправить</button>
+          </form>
+        </div>
       </div>
     </div>
   </div>

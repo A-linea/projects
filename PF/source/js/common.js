@@ -76,5 +76,47 @@
          delay: 1000
        });
    });
+
+   //Modal
+   var modalOverlay = $('.form__overlay');
+   var showFormBtn = $('.hero__btn');
+   var modalBtnClose = $('.form__close-btn');
+   var showForm =$('.form__wrapper');
+   showFormBtn.click(function(event) {
+     event.preventDefault();
+     modalOverlay.fadeIn(400);
+     showForm.addClass('form__wrapper--is-active');
+   });
+   modalBtnClose.click(function(e) {
+     e.preventDefault();
+     modalOverlay.fadeOut(400);
+     showForm.removeClass('form__overlay--is-active');
+   });
+   $(window).keydown(function(e) {
+     if (e.keyCode == 27) {
+     e.preventDefault();
+     modalOverlay.fadeOut(400);
+     showForm.removeClass('form__overlay--is-active');
+     }
+   });
+
+   $("form.callback").submit(function() { //Change
+     var self = $(this);
+     $.ajax({
+       type: "POST",
+       url: "/mail.php", //Change
+       data: self.serialize()
+     }).done(function() {
+       $(self).find('.form__success').addClass('form__success--is-active').css("display", "flex").hide().fadeIn(400);
+       setTimeout(function() {
+         console.log(modalOverlay, showForm);
+         modalOverlay.fadeOut(400);
+         showForm.removeClass('form__overlay--is-active');
+         $(self).find('.form__success').removeClass('form__success--is-active').fadeOut(400);
+         self.trigger("reset");
+       }, 4000);
+     });
+     return false;
+   });
 });
 
