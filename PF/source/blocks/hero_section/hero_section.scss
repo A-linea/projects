@@ -28,6 +28,7 @@
     position: relative;
     display: flex;
     justify-content: center;
+    overflow: hidden;
     align-items: center;
   }
   &__title {
@@ -54,7 +55,7 @@
   &__text {
     font-family: $font-family--serif;
     font-size: rem(18px);
-    padding-right: rem(45px);
+    padding-right: rem(25px);
     padding-top: rem(10px);
     padding-bottom: rem(10px);
     position: relative;
@@ -62,10 +63,10 @@
       @include centerer-y();
       content: '';
       background-color: #fff;
-      margin-left: rem(15px);
-      width: 10px;
-      height: 10px;
-      transform-origin: 12px;
+      margin-left: rem(8px);
+      width: 6px;
+      height: 6px;
+      transform-origin: 6px;
       transform: rotate(45deg);
     }
     &:last-child {
@@ -167,9 +168,19 @@
   .hero {
     &__text {
       font-size: rem(24px);
+      padding-right: rem(45px);
+      &::after {
+        margin-left: rem(15px);
+        transform-origin: 12px;
+        width: 10px;
+        height: 10px;
+      }
     }
     &__price {
       font-size: rem(34px);
+    }
+    &__inner {
+      height: calc(100vh - 116px);
     }
     &__btn {
       font-size: rem(24px);
@@ -183,6 +194,9 @@
     }
     &__price {
       font-size: rem(34px);
+    }
+    &__inner {
+      height: calc(100vh - 66px);
     }
   }
 }

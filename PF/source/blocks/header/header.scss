@@ -33,10 +33,6 @@
     text-decoration: none;
     font-weight: 600;
     transition: $transition-time;
-    &:hover {
-      color: rgba(#fff, 0.65);
-      text-decoration: underline;
-    }
   }
   &__ico {
     width: 30px;
@@ -58,7 +54,7 @@
 
   }
 }
-@media (min-width: 679px) {
+@media (min-width: 662px) {
   .header {
     &__contacts-worktime {
       margin-top: 0;
