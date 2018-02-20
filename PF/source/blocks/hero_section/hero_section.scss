@@ -31,8 +31,6 @@
     align-items: center;
 
   }
-  &__title-container {
-  }
   &__title {
     text-transform: uppercase;
     text-align: center;
@@ -87,6 +85,7 @@
   &__feautures-line1,
   &__feautures-line2 {
     @include centerer-y();
+    overflow: hidden;
     content: '';
     width: 30%;
     height: 1px;

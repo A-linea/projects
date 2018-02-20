@@ -28,6 +28,13 @@
          }
        })
        .add({
+         targets: '.hero__price',
+         opacity: [0,1],
+         duration: 1500,
+         easing: 'easeInQuad',
+         offset: '-=275'
+       })
+       .add({
          targets: '.line',
          scaleY: [0,0],
          opacity: 0,
@@ -38,27 +45,27 @@
          targets: '.hero__text',
          scaleY: [0,1],
          opacity: [0,1],
-         duration: 3500,
+         duration: 4500,
          easing: 'easeInOutElastic',
          offset: '-=3275',
          delay: 100
        })
        .add({
          targets: '.hero__feautures-line1',
-         translateX: [-2000,0],
-         opacity: [0,1],
-         duration: 2500,
+         translateX: [-500,0],
+         opacity: [0,0.3],
+         duration: 2200,
          easing: 'easeInQuad',
          offset: '-=3275',
          delay: 100
        })
        .add({
          targets: '.hero__feautures-line2',
-         translateX: [2000,0],
-         opacity: [0,1],
+         translateX: [500,0],
+         opacity: [0,0.3],
          duration: 2500,
          easing: 'easeInQuad',
-         offset: '-=3275',
+         offset: '-=3580',
          delay: 100
        })
        .add({

@@ -1,10 +1,22 @@
-.main-header {
+.header {
+  align-self: flex-start;
+  &__content {
+    @include col(xs, 12, 12);
+    //@include col-offset(lg, 4, 12);
+    @include col(lg, 12, 12);
+  }
 }
 @media (min-width: $screen-sm) {
   
 }
 @media (min-width: $screen-md) {
-
+  .header {
+    &__ico {
+      width: 30px;
+      height: 30px;
+      fill: #fff;
+    }
+  }
 }
 @media (min-width: $screen-lg) {
 
